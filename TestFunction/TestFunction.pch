@@ -1,0 +1,15 @@
+//
+//  TestFunction.pch
+//  TestFunction
+//
+//  Created by 怀达 on 2019/5/11.
+//  Copyright © 2019 white. All rights reserved.
+//
+
+#ifndef TestFunction_h
+#define TestFunction_h
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#endif /* TestFunction_h */
