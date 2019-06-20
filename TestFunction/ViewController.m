@@ -97,6 +97,7 @@ typedef void (^someBlock)(void);
 //    [self testArray];
 //    [self testMutabelArray];
 //    测试github连接
+    [self testLabel];
 }
 - (void)testMutabelArray{
     NSMutableArray *mArr = @[@1,@2].mutableCopy;
@@ -297,26 +298,41 @@ typedef void (^someBlock)(void);
 }
 - (void)testLabel{
     UILabel *rLabel = [[UILabel alloc] init];
-    rLabel.text = @"sjfngoiyaijop";
+    rLabel.text = @"我是名字";
 //    NSDictionary *attrs = @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 12.0],NSForegroundColorAttributeName: [UIColor whiteColor],NSStrokeWidthAttributeName:@-5,NSStrokeColorAttributeName: [UIColor colorWithRed:184/255.0 green:184/255.0 blue:184/255.0 alpha:0.7]};
 //    CGSize size = [rLabel.text sizeWithAttributes:attrs];
 //     NSLog(@"%@",NSStringFromCGSize(size));
     
-    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:rLabel.text attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 12.0],NSForegroundColorAttributeName: [UIColor whiteColor],NSStrokeWidthAttributeName:@-5,NSStrokeColorAttributeName: [UIColor colorWithRed:184/255.0 green:184/255.0 blue:184/255.0 alpha:0.7]}];
+//    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:rLabel.text attributes: @{NSFontAttributeName: [UIFont fontWithName:@"PingFangSC-Medium" size: 12.0],NSForegroundColorAttributeName: [UIColor whiteColor],NSStrokeWidthAttributeName:@-5,NSStrokeColorAttributeName: [UIColor colorWithRed:184/255.0 green:184/255.0 blue:184/255.0 alpha:0.7]}];
 
-    rLabel.attributedText = string;
+//    rLabel.attributedText = string;
 
 //    rLabel.text = @"sjfngoiyaijop";
 
     
     rLabel.backgroundColor = [UIColor cyanColor];
-//    rLabel.frame = CGRectMake(100, 500, 500, 100);
+    rLabel.frame = CGRectMake(100, 100, 100, 18);
+    rLabel.font = [UIFont systemFontOfSize:12];
 //    [rLabel adjustsFontSizeToFitWidth];
-    [rLabel sizeToFit];
+//    [rLabel sizeToFit];
     
-     NSLog(@"%@",NSStringFromCGRect(rLabel.bounds));
+    rLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:rLabel];
+    
+        NSString * str = [NSString stringWithFormat:@" | %@",rLabel.text];
+        NSMutableAttributedString * attStr = [[NSMutableAttributedString alloc]initWithString:str];
+        NSTextAttachment *attchment = [[NSTextAttachment alloc] init];
+        // 表情图片
+        attchment.image = [UIImage imageNamed:@"企业认证"];
+        // 设置图片大小
+        attchment.bounds = CGRectMake(0, -3 , 24, 14 );
+        NSAttributedString *stringImage = [NSAttributedString attributedStringWithAttachment:attchment];
+        [attStr insertAttributedString:stringImage atIndex:0];
+        
+        rLabel.attributedText = attStr;
+    
 }
+
 - (void)testLottie{
 //    UIButton *centerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 //    centerButton.center = self.view.center;
