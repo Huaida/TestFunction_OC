@@ -330,7 +330,7 @@ typedef void (^someBlock)(void);
         [attStr insertAttributedString:stringImage atIndex:0];
         
         rLabel.attributedText = attStr;
-    
+//    
 }
 
 - (void)testLottie{
