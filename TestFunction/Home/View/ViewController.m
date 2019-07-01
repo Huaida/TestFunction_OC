@@ -15,7 +15,7 @@
 #import <objc/NSObjCRuntime.h>
 #import "HDCheckArray.h"
 #import "HDViewController.h"
-#import "TestYYModel/TestOneModel.h"
+#import "TestOneModel.h"
 #import "YYModel.h"
 #import "NetworkTool.h"
 #import "WKWebViewController.h"
