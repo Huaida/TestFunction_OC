@@ -85,7 +85,7 @@
 		B186049D2233EA3200C93644 /* HDNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNetworkTool.m; sourceTree = "<group>"; };
 		B186049F2233EADC00C93644 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18604A12233EAE300C93644 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B18E3B962293898700D6E34B /* cjsss_big.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = cjsss_big.json; path = resources/cjsss_big.json; sourceTree = "<group>"; };
+		B18E3B962293898700D6E34B /* cjsss_big.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjsss_big.json; sourceTree = "<group>"; };
 		B18E3BA62293920D00D6E34B /* wytcdj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wytcdj.json; sourceTree = "<group>"; };
 		B18E3BA82293A3B500D6E34B /* fff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fff.json; sourceTree = "<group>"; };
 		B18E3BA92293A3B500D6E34B /* yymm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yymm.json; sourceTree = "<group>"; };
@@ -174,6 +174,8 @@
 		B1954C662269DDC0005CEF6C /* TestYYModel */ = {
 			isa = PBXGroup;
 			children = (
+				B153A79F226D91FD002A6184 /* NetworkTool.h */,
+				B153A7A0226D91FD002A6184 /* NetworkTool.m */,
 				B1954C672269DDE7005CEF6C /* TestOneModel.h */,
 				B1954C682269DDE7005CEF6C /* TestOneModel.m */,
 				B1954C6A2269DE7C005CEF6C /* TestTwoModel.h */,
@@ -182,6 +184,93 @@
 				B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */,
 			);
 			path = TestYYModel;
+			sourceTree = "<group>";
+		};
+		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5D11621C2B9B9001D763B /* Main.storyboard */,
+				B1F5D11921C2B9B9001D763B /* Assets.xcassets */,
+				B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */,
+				B1F5D11E21C2B9B9001D763B /* Info.plist */,
+				B1F5D11F21C2B9B9001D763B /* main.m */,
+				B150DBD02285DD4D00498D86 /* TestFunction.pch */,
+				B18E3B962293898700D6E34B /* cjsss_big.json */,
+				B1F5D11021C2B9B9001D763B /* AppDelegate.h */,
+				B1F5D11121C2B9B9001D763B /* AppDelegate.m */,
+				B18E3BA62293920D00D6E34B /* wytcdj.json */,
+				B1954C662269DDC0005CEF6C /* TestYYModel */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1B1475222C9F96A00A96AB9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B1B1475522C9F98500A96AB9 /* Presenter */,
+				B1B1475422C9F98000A96AB9 /* View */,
+				B1B1475322C9F96F00A96AB9 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B1B1475322C9F96F00A96AB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B1B1475422C9F98000A96AB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B164B788226381DD0097AF63 /* HDViewController.h */,
+				B164B789226381DD0097AF63 /* HDViewController.m */,
+				B150DBCD2285C22500498D86 /* WKWebViewController.h */,
+				B150DBCE2285C22500498D86 /* WKWebViewController.m */,
+				B1F5D11321C2B9B9001D763B /* ViewController.h */,
+				B1F5D11421C2B9B9001D763B /* ViewController.m */,
+				B13A9FF3229BB78D00BC84EA /* MZBarrageSwitch.h */,
+				B13A9FF4229BB78D00BC84EA /* MZBarrageSwitch.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1B1475522C9F98500A96AB9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1B1475622C9F9B200A96AB9 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				B164B78B226382B20097AF63 /* HDViewController+Logging.h */,
+				B164B78C226382B20097AF63 /* HDViewController+Logging.m */,
+				B1FC070A224A3E1F0030FED3 /* NSObject+run.h */,
+				B1FC070B224A3E1F0030FED3 /* NSObject+run.m */,
+				B107FCDD21E6F5E500AAF725 /* Person+Cat.h */,
+				B107FCDE21E6F5E500AAF725 /* Person+Cat.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		B1B1475722C9F9F300A96AB9 /* testClass */ = {
+			isa = PBXGroup;
+			children = (
+				B148B6E52260A74700C8BFDA /* HDCheckArray.h */,
+				B148B6E62260A74700C8BFDA /* HDCheckArray.m */,
+				B186049C2233EA3200C93644 /* HDNetworkTool.h */,
+				B186049D2233EA3200C93644 /* HDNetworkTool.m */,
+				B1F5D29821C49DCA001D763B /* Person.h */,
+				B1F5D29921C49DCA001D763B /* Person.m */,
+				B107FCDA21E5B25A00AAF725 /* Son.h */,
+				B107FCDB21E5B25A00AAF725 /* Son.m */,
+				B107FCD721DFACED00AAF725 /* SubView.h */,
+				B107FCD821DFACED00AAF725 /* SubView.m */,
+			);
+			path = testClass;
 			sourceTree = "<group>";
 		};
 		B1F5D10421C2B9B9001D763B = {
@@ -205,44 +294,11 @@
 		B1F5D10F21C2B9B9001D763B /* TestFunction */ = {
 			isa = PBXGroup;
 			children = (
-				B1954C662269DDC0005CEF6C /* TestYYModel */,
-				B1F5D11021C2B9B9001D763B /* AppDelegate.h */,
-				B1F5D11121C2B9B9001D763B /* AppDelegate.m */,
-				B1F5D11321C2B9B9001D763B /* ViewController.h */,
-				B1F5D11421C2B9B9001D763B /* ViewController.m */,
-				B13A9FF3229BB78D00BC84EA /* MZBarrageSwitch.h */,
-				B13A9FF4229BB78D00BC84EA /* MZBarrageSwitch.m */,
-				B153A79F226D91FD002A6184 /* NetworkTool.h */,
-				B153A7A0226D91FD002A6184 /* NetworkTool.m */,
-				B164B78B226382B20097AF63 /* HDViewController+Logging.h */,
-				B164B78C226382B20097AF63 /* HDViewController+Logging.m */,
-				B164B788226381DD0097AF63 /* HDViewController.h */,
-				B164B789226381DD0097AF63 /* HDViewController.m */,
-				B150DBCD2285C22500498D86 /* WKWebViewController.h */,
-				B150DBCE2285C22500498D86 /* WKWebViewController.m */,
-				B18E3BA62293920D00D6E34B /* wytcdj.json */,
-				B18E3B962293898700D6E34B /* cjsss_big.json */,
+				B1B1475722C9F9F300A96AB9 /* testClass */,
+				B1B1475222C9F96A00A96AB9 /* Home */,
+				B1B1475622C9F9B200A96AB9 /* category */,
+				B1B1475122C9F92500A96AB9 /* Supporting Files */,
 				B150DBD32286E0F400498D86 /* resources */,
-				B148B6E52260A74700C8BFDA /* HDCheckArray.h */,
-				B148B6E62260A74700C8BFDA /* HDCheckArray.m */,
-				B186049C2233EA3200C93644 /* HDNetworkTool.h */,
-				B186049D2233EA3200C93644 /* HDNetworkTool.m */,
-				B1F5D29821C49DCA001D763B /* Person.h */,
-				B1F5D29921C49DCA001D763B /* Person.m */,
-				B107FCDA21E5B25A00AAF725 /* Son.h */,
-				B107FCDB21E5B25A00AAF725 /* Son.m */,
-				B1FC070A224A3E1F0030FED3 /* NSObject+run.h */,
-				B1FC070B224A3E1F0030FED3 /* NSObject+run.m */,
-				B107FCDD21E6F5E500AAF725 /* Person+Cat.h */,
-				B107FCDE21E6F5E500AAF725 /* Person+Cat.m */,
-				B107FCD721DFACED00AAF725 /* SubView.h */,
-				B107FCD821DFACED00AAF725 /* SubView.m */,
-				B1F5D11621C2B9B9001D763B /* Main.storyboard */,
-				B1F5D11921C2B9B9001D763B /* Assets.xcassets */,
-				B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */,
-				B1F5D11E21C2B9B9001D763B /* Info.plist */,
-				B1F5D11F21C2B9B9001D763B /* main.m */,
-				B150DBD02285DD4D00498D86 /* TestFunction.pch */,
 			);
 			path = TestFunction;
 			sourceTree = "<group>";
@@ -282,7 +338,7 @@
 				TargetAttributes = {
 					B1F5D10C21C2B9B9001D763B = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -560,7 +616,8 @@
 			baseConfigurationReference = 7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1554417228@qq.com (3679E29XJ8)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -579,7 +636,8 @@
 			baseConfigurationReference = 3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 1554417228@qq.com (3679E29XJ8)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

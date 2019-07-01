@@ -97,7 +97,37 @@ typedef void (^someBlock)(void);
 //    [self testArray];
 //    [self testMutabelArray];
 //    测试github连接
-    [self testLabel];
+//    [self testLabel];
+//    [self testScrollView];
+    [self testNavigationBar];
+}
+- (void)testNavigationBar{
+     NSLog(@"%@",NSStringFromCGRect(self.navigationController.navigationBar.frame));
+    self.navigationController.navigationBarHidden = YES;
+    
+     NSLog(@"%f",[[UIApplication sharedApplication] statusBarFrame].size.height);
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self testNavigationBar];
+    //    [self pushToNextController];
+    //    UIButton *nextVCB = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    //    [self.view addSubview:nextVCB];
+    //    [nextVCB setTitle:@"presentVC" forState:UIControlStateNormal];
+    //    [nextVCB setBackgroundColor:[UIColor redColor]];
+    //    [nextVCB addTarget:self action:@selector(pushToNextController) forControlEvents:UIControlEventTouchUpInside];
+    //
+}
+- (void)testScrollView{
+    UIScrollView * scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 100, 300, 300)];
+    [self.view addSubview:scrollView];
+    scrollView.backgroundColor = [UIColor cyanColor];
+//    scrollView.contentInset = UIEdgeInsetsMake(0, -30, 0, 0);
+    scrollView.contentSize = CGSizeMake(300, 200);
+    scrollView.contentOffset = CGPointMake(30, 100);
+    
+    
 }
 - (void)testMutabelArray{
     NSMutableArray *mArr = @[@1,@2].mutableCopy;
@@ -422,17 +452,7 @@ typedef void (^someBlock)(void);
     
     
 }
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-//    [self pushToNextController];
-//    UIButton *nextVCB = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-//    [self.view addSubview:nextVCB];
-//    [nextVCB setTitle:@"presentVC" forState:UIControlStateNormal];
-//    [nextVCB setBackgroundColor:[UIColor redColor]];
-//    [nextVCB addTarget:self action:@selector(pushToNextController) forControlEvents:UIControlEventTouchUpInside];
-//
-}
+
 - (void)navigateToWeb{
     WKWebViewController *web = [[WKWebViewController alloc] init];
     [self.navigationController pushViewController:web animated:YES];
