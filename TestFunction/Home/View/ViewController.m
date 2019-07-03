@@ -23,6 +23,8 @@
 #import <lottie-ios/Lottie/Lottie.h>
 #import "MZBarrageSwitch.h"
 #import "NSMutableArray+SafeForData.h"
+#import "HDHomeTableView.h"
+#import "HDImageView.h"
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
@@ -32,8 +34,6 @@ typedef void (^someBlock)(void);
 @property (nonatomic, copy) someBlock myBlock;
 @property (nonatomic, strong) Person *p;
 @property (nonatomic, strong) Son *son;
-//@property (nonatomic, assign) Person *p;
-//@property (nonatomic, weak) Person *p;
 @property (nonatomic, strong) NSMutableArray *mArray;
 @property (nonatomic, weak) NSString *bString;
 @property (nonatomic, strong) NSMutableString *mString;
@@ -41,15 +41,15 @@ typedef void (^someBlock)(void);
 @property (nonatomic, strong) UISwitch *mySwitch;
 @property (nonatomic, strong) UILabel *sLabel;
 @property (nonatomic, strong) UIButton *button;
+@property (nonatomic ,strong) HDHomeTableView *tableView;
+@property (nonatomic ,strong) HDImageView *imageView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"VC";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self setBaseProperty];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
 //    [self testAssignFunction];
@@ -99,7 +99,53 @@ typedef void (^someBlock)(void);
 //    测试github连接
 //    [self testLabel];
 //    [self testScrollView];
-    [self testNavigationBar];
+//    [self testNavigationBar];
+    [self testImage];
+}
+- (void)testImage{
+    UIImage *bgImage = [UIImage imageNamed:@"bgImage"];
+    CGRect frame = CGRectMake(0, 200, self.view.bounds.size.width, 100);
+    HDImageView *imageView = [[HDImageView alloc] initWithImage:bgImage];
+    self.imageView = imageView;
+    UIView *topView = [[UIView alloc] initWithFrame:frame];
+    [self.view addSubview:imageView];
+    [self.view addSubview:topView];
+    topView.alpha = 0.1;
+    topView.backgroundColor = [UIColor greenColor];
+    imageView.backgroundColor = [UIColor grayColor];
+    
+    imageView.clipsToBounds = YES;// 避免图片超出边界
+//    CGSize imageSize = bgImage.size;
+//    拉伸填充，拉伸最小的边，填充容器
+//    拉伸宽度
+//    CGFloat scale = frame.size.width/imageSize.width;
+    
+    
+    
+//    imageView.image = bgImage;
+//    imageView.contentMode = UIViewContentModeScaleToFill;
+//    imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    imageView.contentMode = UIViewContentModeScaleAspectFill ;
+//    imageView.contentMode = UIViewContentModeTopLeft | UIViewContentModeScaleAspectFill ;
+//    CALayer *imageLayer = imageView.layer;
+//    imageLayer.anchorPoint = CGPointMake(0, 0);
+    
+
+    
+//    NSLog(@"imageView.bounds = %@,imageLayer.bounds = %@",NSStringFromCGRect(imageView.bounds),NSStringFromCGRect(imageLayer.bounds));
+//    NSLog(@"imageView.center = %@,imageLayer.position = %@",NSStringFromCGPoint(imageView.center),NSStringFromCGPoint(imageLayer.position));
+//    NSLog(@"imageLayer.zPosition = %f",imageLayer.zPosition);
+//    NSLog(@"imageLayer.anchorPoint = %@",NSStringFromCGPoint(imageLayer.anchorPoint));
+//    NSLog(@"imageView.frame = %@,imageLayer.frame = %@",NSStringFromCGRect(imageView.frame),NSStringFromCGRect(imageLayer.frame));
+//    NSLog(@"fordImage.size = %@",NSStringFromCGSize(self.fordImage.size)); // 图片的原始大小
+    [self setImageViewFrame];
+}
+- (void)setImageViewFrame{
+    CGRect frame = CGRectMake(0, 200, self.view.bounds.size.width, 100);
+    self.imageView.frame = frame;
+//    [self.imageView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"bgImage"]];
+    self.imageView.image = [UIImage imageNamed:@"bgImage"];
+    [self.imageView customLayoutSubviews];
 }
 - (void)testNavigationBar{
      NSLog(@"%@",NSStringFromCGRect(self.navigationController.navigationBar.frame));
@@ -107,6 +153,20 @@ typedef void (^someBlock)(void);
     
      NSLog(@"%f",[[UIApplication sharedApplication] statusBarFrame].size.height);
 }
+- (void)setBaseProperty{
+    self.title = @"HOME";
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+- (void)customAddSubviews{
+    self.tableView = [[HDHomeTableView alloc] init];
+    [self.view addSubview:self.tableView];
+}
+- (void)customLayoutSubviews{
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.equalTo(self.view);
+    }];
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     

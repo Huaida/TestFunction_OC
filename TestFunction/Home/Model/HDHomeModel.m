@@ -7,8 +7,10 @@
 //
 
 #import "HDHomeModel.h"
+
 @interface HDHomeModel ()
 @property (nonatomic ,weak) id<HDHomeModelProtocol> delegate;
+@property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
 @implementation HDHomeModel
 - (instancetype)initWithDelegate:(id<HDHomeModelProtocol>)delegate{
@@ -18,6 +20,16 @@
     return self;
 }
 -(void)modelLoadData{
-    
+//     加载数据 一般会在请求接口
+    self.dataArray = @[@"iPhone X 适配",
+                       @"String",].mutableCopy;
+    [self.delegate modelLoadDataSuccess:self.dataArray];
+}
+#pragma mark - getter
+- (NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
 }
 @end

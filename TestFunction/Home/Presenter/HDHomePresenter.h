@@ -13,7 +13,7 @@
 - (void)presenterStartLoading;
 - (void)presenterEndLoading;
 // 加载数据
--(void)presenterLoadDataSuccess:(id *)model;
+-(void)presenterLoadDataSuccess:(NSMutableArray *)dataArray;
 -(void)presenterLoadDataError:(NSError *)error;
 
 @end

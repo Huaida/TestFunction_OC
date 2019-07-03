@@ -7,7 +7,26 @@
 //
 
 #import "HDHomePresenter.h"
+#import "HDHomeModel.h"
 
-@implementation HDHomePresenter
-
+@interface HDHomePresenter()<HDHomeModelProtocol>
+@property (nonatomic ,weak) id<HDHomePresenterProtocol> delegate;
+@property (nonatomic ,strong) HDHomeModel *model;
 @end
+@implementation HDHomePresenter
+-(instancetype)initWithDelegate:(id<HDHomePresenterProtocol>)delegate{
+    if (self == [super init]) {
+        self.delegate = delegate;
+    }
+    return self;
+}
+- (void)presenterLoadData;{
+//    model组数据
+    self.model = [[HDHomeModel alloc] initWithDelegate:self];
+    [self.model modelLoadData];
+}
+- (void)modelLoadDataSuccess:(NSMutableArray *)dataArray{
+    [self.delegate presenterLoadDataSuccess:dataArray];
+}
+@end
+

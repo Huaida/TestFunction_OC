@@ -11,4 +11,5 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'YYModel'
 pod 'lottie-ios'
+pod 'Masonry'
 end
