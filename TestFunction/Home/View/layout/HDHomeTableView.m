@@ -7,7 +7,15 @@
 //
 
 #import "HDHomeTableView.h"
-
+#import "HDHomePresenter.h"
+@interface HDHomeTableView ()<HDHomePresenterProtocol>
+@property (nonatomic ,strong) HDHomePresenter *presenter;
+@end
 @implementation HDHomeTableView
-
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self  == [super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
 @end
