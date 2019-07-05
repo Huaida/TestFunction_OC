@@ -100,7 +100,12 @@ typedef void (^someBlock)(void);
 //    [self testLabel];
 //    [self testScrollView];
 //    [self testNavigationBar];
-    [self testImage];
+//    [self testImage];
+    [self testSafeArea];
+}
+-(void)testSafeArea{
+    
+     NSLog(@"safeAreaInsets %@",NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
 }
 - (void)testImage{
     UIImage *bgImage = [UIImage imageNamed:@"bgImage"];
