@@ -25,12 +25,13 @@
 #import "NSMutableArray+SafeForData.h"
 #import "HDHomeTableView.h"
 #import "HDImageView.h"
+#import "HDHomePresenter.h"
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
 typedef void (^someBlock)(void);
 
-@interface ViewController ()<UIGestureRecognizerDelegate>
+@interface ViewController ()<UIGestureRecognizerDelegate,HDHomePresenterProtocol>
 @property (nonatomic, copy) someBlock myBlock;
 @property (nonatomic, strong) Person *p;
 @property (nonatomic, strong) Son *son;
@@ -43,6 +44,7 @@ typedef void (^someBlock)(void);
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic ,strong) HDHomeTableView *tableView;
 @property (nonatomic ,strong) HDImageView *imageView;
+@property (nonatomic ,strong) HDHomePresenter *presenter;
 @end
 
 @implementation ViewController
@@ -50,6 +52,9 @@ typedef void (^someBlock)(void);
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBaseProperty];
+    self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
+    [self customAddSubviews];
+    [self.presenter presenterLoadData];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
 //    [self testAssignFunction];
@@ -101,8 +106,13 @@ typedef void (^someBlock)(void);
 //    [self testScrollView];
 //    [self testNavigationBar];
 //    [self testImage];
-    [self testSafeArea];
+//    [self testSafeArea];
 }
+
+- (void)presenterLoadDataSuccess:(NSMutableArray *)dataArray{
+    [self.tableView addDataToTableView:dataArray];
+}
+
 -(void)testSafeArea{
     
      NSLog(@"safeAreaInsets %@",NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
@@ -161,9 +171,10 @@ typedef void (^someBlock)(void);
 - (void)setBaseProperty{
     self.title = @"HOME";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.extendedLayoutIncludesOpaqueBars = YES;
 }
 - (void)customAddSubviews{
-    self.tableView = [[HDHomeTableView alloc] init];
+    self.tableView = [[HDHomeTableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
 }
 - (void)customLayoutSubviews{

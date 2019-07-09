@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HDHomeTableView : UITableView
 
+- (void)addDataToTableView:(NSMutableArray *)dataArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

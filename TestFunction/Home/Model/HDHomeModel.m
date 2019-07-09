@@ -22,7 +22,8 @@
 -(void)modelLoadData{
 //     加载数据 一般会在请求接口
     self.dataArray = @[@"iPhone X 适配",
-                       @"String",].mutableCopy;
+                       @"String",
+                       @"动态绑定方法",].mutableCopy;
     [self.delegate modelLoadDataSuccess:self.dataArray];
 }
 #pragma mark - getter

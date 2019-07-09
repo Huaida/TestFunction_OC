@@ -25,6 +25,7 @@
     self.model = [[HDHomeModel alloc] initWithDelegate:self];
     [self.model modelLoadData];
 }
+#pragma mark - model delegate
 - (void)modelLoadDataSuccess:(NSMutableArray *)dataArray{
     [self.delegate presenterLoadDataSuccess:dataArray];
 }
