@@ -107,6 +107,7 @@ typedef void (^someBlock)(void);
 //    [self testNavigationBar];
 //    [self testImage];
 //    [self testSafeArea];
+//    [self testNOEmplementationFunction];
 }
 
 - (void)presenterLoadDataSuccess:(NSMutableArray *)dataArray{
