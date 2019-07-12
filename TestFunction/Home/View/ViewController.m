@@ -26,6 +26,7 @@
 #import "HDHomeTableView.h"
 #import "HDImageView.h"
 #import "HDHomePresenter.h"
+#import "MZADScrollView.h"
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
@@ -52,9 +53,11 @@ typedef void (^someBlock)(void);
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBaseProperty];
-    self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
-    [self customAddSubviews];
-    [self.presenter presenterLoadData];
+    [self testADScrollView];
+    
+//    self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
+//    [self customAddSubviews];
+//    [self.presenter presenterLoadData];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
 //    [self testAssignFunction];
@@ -109,7 +112,12 @@ typedef void (^someBlock)(void);
 //    [self testSafeArea];
 //    [self testNOEmplementationFunction];
 }
-
+-(void)testADScrollView{
+    MZADScrollView *scrollView = [[MZADScrollView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZTotalScreenHeight)];
+    [self.view addSubview:scrollView];
+    scrollView.dataArray = @[@"名片背景3",@"名片背景3",@"名片背景3"].mutableCopy;
+    scrollView.backgroundColor = [UIColor cyanColor];
+}
 - (void)presenterLoadDataSuccess:(NSMutableArray *)dataArray{
     [self.tableView addDataToTableView:dataArray];
 }
@@ -173,6 +181,8 @@ typedef void (^someBlock)(void);
     self.title = @"HOME";
     self.view.backgroundColor = [UIColor whiteColor];
     self.extendedLayoutIncludesOpaqueBars = YES;
+    
+    
 }
 - (void)customAddSubviews{
     self.tableView = [[HDHomeTableView alloc] initWithFrame:self.view.bounds];

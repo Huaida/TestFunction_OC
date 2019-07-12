@@ -39,6 +39,7 @@
 		B18E3BB92293A3B600D6E34B /* cjwyf.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BB02293A3B600D6E34B /* cjwyf.json */; };
 		B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C682269DDE7005CEF6C /* TestOneModel.m */; };
 		B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */; };
+		B1A6BF2C22D8565A00AD35A2 /* MZADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A6BF2A22D8565A00AD35A2 /* MZADScrollView.m */; };
 		B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */; };
 		B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
 		B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
@@ -104,6 +105,8 @@
 		B1954C682269DDE7005CEF6C /* TestOneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneModel.m; sourceTree = "<group>"; };
 		B1954C6A2269DE7C005CEF6C /* TestTwoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTwoModel.h; sourceTree = "<group>"; };
 		B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTwoModel.m; sourceTree = "<group>"; };
+		B1A6BF2A22D8565A00AD35A2 /* MZADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZADScrollView.m; sourceTree = "<group>"; };
+		B1A6BF2B22D8565A00AD35A2 /* MZADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZADScrollView.h; sourceTree = "<group>"; };
 		B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableView.h; sourceTree = "<group>"; };
 		B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableView.m; sourceTree = "<group>"; };
 		B1B1475C22C9FB3B00A96AB9 /* HDHomePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomePresenter.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 			children = (
 				B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */,
 				B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */,
+				B1A6BF2B22D8565A00AD35A2 /* MZADScrollView.h */,
+				B1A6BF2A22D8565A00AD35A2 /* MZADScrollView.m */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
 				B13A9FF5229BB78D00BC84EA /* MZBarrageSwitch.m in Sources */,
+				B1A6BF2C22D8565A00AD35A2 /* MZADScrollView.m in Sources */,
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,
 				B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */,

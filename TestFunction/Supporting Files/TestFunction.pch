@@ -9,8 +9,25 @@
 #ifndef TestFunction_h
 #define TestFunction_h
 
+//是不是iphone X系列（有刘海的设计）
+#define IPHONE_X \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
+
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define MZScreenHeight  (IPHONE_X ? ([UIScreen mainScreen].bounds.size.height - 34) :  ([UIScreen mainScreen].bounds.size.height))
+#define MZTotalScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define MZScreenWidth   ([UIScreen mainScreen].bounds.size.width)
+#define MZ_SW           ((MZScreenWidth<MZScreenHeight)?MZScreenWidth:MZScreenHeight) // 取小值
+#define MZ_SH           ((MZScreenWidth<MZScreenHeight)?MZScreenHeight:MZScreenWidth)
+#define MZ_RATE         (MZ_SW/375.0)//以ip6为标准 ip5缩小 ip6p放大 zoom
+#define MZ_RATE_6P      ((MZ_SW>375.0)?MZ_SW/375.0:1.0)//只有6p会放大
+#define MZ_RATE_SCALE   ((MZ_RATE>1)?1:MZ_RATE)         //只有小设备会缩小  6p不放大
+#define WeaklySelf(weakSelf)  __weak __typeof(&*self)weakSelf = self
 
 #import "Masonry.h"
 
