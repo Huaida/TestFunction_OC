@@ -8,10 +8,10 @@
 
 #import "HDHomeTableView.h"
 #import "HDHomePresenter.h"
+#import "HDHomeTableViewCell.h"
 
 
-
-@interface HDHomeTableView ()<UITableViewDataSource>
+@interface HDHomeTableView ()<UITableViewDataSource,UITableViewDelegate>
 //@property (nonatomic ,strong) HDHomePresenter *presenter;
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
@@ -20,6 +20,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self  == [super initWithFrame:frame]) {
         self.dataSource = self;
+        self.delegate = self;
     }
     return self;
 }
@@ -35,15 +36,21 @@
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    HDHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([self class])];
+        cell = [[HDHomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([self class])];
     }
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = self.dataArray[indexPath.row];
-    [cell addSubview:titleLabel];
+    cell.cellTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44)];
+    cell.cellTitleLabel.textAlignment = NSTextAlignmentCenter;
+    cell.cellTitleLabel.text = self.dataArray[indexPath.row][0];
+    [cell addSubview:cell.cellTitleLabel];
+    cell.classNameString = self.dataArray[indexPath.row][1];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HDHomeTableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+     NSLog(@"%@",cell.classNameString);
+    [self.selectedDelegate homeTableViewDidSelectedRowWithClassName:cell.classNameString];
 }
 
 @end

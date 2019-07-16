@@ -1,5 +1,5 @@
 //
-//  MZBarrageSwitch.m
+//  HDBarrageSwitch.m
 //  TestFunction
 //
 //  Created by 怀达 on 2019/5/27.
@@ -7,12 +7,12 @@
 //
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
-#import "MZBarrageSwitch.h"
-@interface MZBarrageSwitch ()
+#import "HDBarrageSwitch.h"
+@interface HDBarrageSwitch ()
 @property (nonatomic, strong) UIImageView *circleImageView;
 @end
 
-@implementation MZBarrageSwitch
+@implementation HDBarrageSwitch
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

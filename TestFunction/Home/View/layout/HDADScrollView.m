@@ -1,17 +1,17 @@
 //
-//  MZADScrollView.m
-//  MengZhu
+//  HDADScrollView.m
+//  huaida
 //
 //  Created by 怀达 on 2019/7/12.
-//  Copyright © 2019 www.mengzhu.com. All rights reserved.
+//  Copyright © 2019 www.huaida.com. All rights reserved.
 //
 
-#import "MZADScrollView.h"
+#import "HDADScrollView.h"
 #import "HDImageView.h"
-@interface MZADScrollView()<UIScrollViewDelegate>
+@interface HDADScrollView()<UIScrollViewDelegate>
 @property (nonatomic ,strong) NSMutableArray *imageArray;
 @end
-@implementation MZADScrollView
+@implementation HDADScrollView
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
         self.delegate = self;
@@ -64,12 +64,12 @@
 //    CGPoint target = *targetContentOffset;
 ////    如果target和当前距离较远，靠近当前页一页距离
 //    CGFloat space =  fabs(target.x - scrollView.contentOffset.x);
-//    if (space > MZ_SW/2) {
+//    if (space > HD_SW/2) {
 //        if (target.x>scrollView.contentOffset.x) {
 //
-//            target = CGPointMake(target.x-MZ_SW/2, 0);
+//            target = CGPointMake(target.x-HD_SW/2, 0);
 //        }else{
-//            target = CGPointMake(target.x+MZ_SW/2, 0);
+//            target = CGPointMake(target.x+HD_SW/2, 0);
 //        }
 //    }
 //    target = CGPointMake([self calculatePagesWithContentOffset:target.x], 0) ;

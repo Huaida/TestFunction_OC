@@ -9,6 +9,12 @@
 #ifndef TestFunction_h
 #define TestFunction_h
 
+#pragma mark 颜色设置宏
+
+#define MakeColor(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+#define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
+#define MakeColorRGBA(hex,a) ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:a])
+
 //是不是iphone X系列（有刘海的设计）
 #define IPHONE_X \
 ({BOOL isPhoneX = NO;\

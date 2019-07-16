@@ -21,18 +21,18 @@
 #import "WKWebViewController.h"
 #import "HDNetworkTool.h"
 #import <lottie-ios/Lottie/Lottie.h>
-#import "MZBarrageSwitch.h"
+//#import "HDBarrageSwitch.h"
 #import "NSMutableArray+SafeForData.h"
 #import "HDHomeTableView.h"
 #import "HDImageView.h"
 #import "HDHomePresenter.h"
-#import "MZADScrollView.h"
+//#import "HDADScrollView.h"
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
 typedef void (^someBlock)(void);
 
-@interface ViewController ()<UIGestureRecognizerDelegate,HDHomePresenterProtocol>
+@interface ViewController ()<UIGestureRecognizerDelegate,HDHomePresenterProtocol,HDHomeTableViewProtocol>
 @property (nonatomic, copy) someBlock myBlock;
 @property (nonatomic, strong) Person *p;
 @property (nonatomic, strong) Son *son;
@@ -123,10 +123,10 @@ typedef void (^someBlock)(void);
     [self.view addSubview:label];
 }
 -(void)testADScrollView{
-    MZADScrollView *scrollView = [[MZADScrollView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZTotalScreenHeight)];
-    [self.view addSubview:scrollView];
-    scrollView.dataArray = @[@"名片背景3",@"名片背景3",@"名片背景3"].mutableCopy;
-    scrollView.backgroundColor = [UIColor cyanColor];
+//    HDADScrollView *scrollView = [[HDADScrollView alloc] initWithFrame:CGRectMake(0, 0, HD_SW, HDTotalScreenHeight)];
+//    [self.view addSubview:scrollView];
+//    scrollView.dataArray = @[@"名片背景3",@"名片背景3",@"名片背景3"].mutableCopy;
+//    scrollView.backgroundColor = [UIColor cyanColor];
 }
 - (void)presenterLoadDataSuccess:(NSMutableArray *)dataArray{
     [self.tableView addDataToTableView:dataArray];
@@ -197,6 +197,11 @@ typedef void (^someBlock)(void);
 - (void)customAddSubviews{
     self.tableView = [[HDHomeTableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
+    self.tableView.selectedDelegate = self;
+}
+- (void)homeTableViewDidSelectedRowWithClassName:(NSString *)classNameString{
+    Class vcClass = NSClassFromString(classNameString);
+    [self.navigationController pushViewController:[[vcClass alloc] init] animated:YES];
 }
 - (void)customLayoutSubviews{
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -343,7 +348,7 @@ typedef void (^someBlock)(void);
 //
 //
 //
-//    MZBarrageSwitch *sw = [[MZBarrageSwitch alloc] initWithFrame:CGRectMake(200, 250, 150, 75)];
+//    HDBarrageSwitch *sw = [[HDBarrageSwitch alloc] initWithFrame:CGRectMake(200, 250, 150, 75)];
 //    [self.view addSubview:sw];
 //    [sw addTarget:self action:@selector(switchONorOFF:) forControlEvents:UIControlEventValueChanged];
 //    [sw addTarget:self action:@selector(switchONorOFF2:) forControlEvents:UIControlEventValueChanged];

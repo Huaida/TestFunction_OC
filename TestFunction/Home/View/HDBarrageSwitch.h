@@ -1,5 +1,5 @@
 //
-//  MZBarrageSwitch.h
+//  HDBarrageSwitch.h
 //  TestFunction
 //
 //  Created by 怀达 on 2019/5/27.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZBarrageSwitch : UISwitch
+@interface HDBarrageSwitch : UISwitch
 @property (nonatomic, strong) UILabel *sLabel;
 @end
 
