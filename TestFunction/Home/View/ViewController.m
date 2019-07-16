@@ -53,11 +53,13 @@ typedef void (^someBlock)(void);
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBaseProperty];
-    [self testADScrollView];
     
-//    self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
-//    [self customAddSubviews];
-//    [self.presenter presenterLoadData];
+    
+    self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
+    [self customAddSubviews];
+    [self.presenter presenterLoadData];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
 //    [self testAssignFunction];
@@ -107,10 +109,18 @@ typedef void (^someBlock)(void);
 //    测试github连接
 //    [self testLabel];
 //    [self testScrollView];
-//    [self testNavigationBar];
+//    [self testNavigationB`ar];
 //    [self testImage];
 //    [self testSafeArea];
 //    [self testNOEmplementationFunction];
+//    [self testADScrollView];
+//    [self testLabelheight];
+}
+- (void)testLabelheight{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 100, 10)];
+    label.backgroundColor = [UIColor grayColor];
+    label.text = @"label 高度测试";
+    [self.view addSubview:label];
 }
 -(void)testADScrollView{
     MZADScrollView *scrollView = [[MZADScrollView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZTotalScreenHeight)];
