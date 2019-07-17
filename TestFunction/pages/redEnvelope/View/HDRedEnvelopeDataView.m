@@ -1,14 +1,14 @@
 
 
-#import "MZRedEnvelopeDataView.h"
-#import "MZDisableTouchTextField.h"
-#import "MZGiveRedEnvelopePresenter.h"
+#import "HDRedEnvelopeDataView.h"
+#import "HDDisableTouchTextField.h"
+#import "HDGiveRedEnvelopePresenter.h"
+#import "HDTools.h"
 
-
-@interface MZRedEnvelopeDataView()<UITextFieldDelegate,MZGiveRedEnvelopePresenterProtocol>
+@interface HDRedEnvelopeDataView()<UITextFieldDelegate,HDGiveRedEnvelopePresenterProtocol>
 @property (nonatomic ,strong) UILabel *NumTipLabel; // 红包个数那一行
 @property (nonatomic ,strong) UILabel *geLabel; // 红包个数的单位
-@property (nonatomic ,strong) MZDisableTouchTextField * numTextField;// 红包个数填写区域
+@property (nonatomic ,strong) HDDisableTouchTextField * numTextField;// 红包个数填写区域
 
 @property (nonatomic ,strong) UIImageView *pinImageView;
 
@@ -19,7 +19,7 @@
 
 @property (nonatomic ,strong) UILabel * moneyTipLabel;// 总金额
 @property (nonatomic ,strong) UILabel * yuanLabel;// 金额单位
-@property (nonatomic ,strong) MZDisableTouchTextField * moneyTextField;//输入金额
+@property (nonatomic ,strong) HDDisableTouchTextField * moneyTextField;//输入金额
 
 @property (nonatomic ,strong) UITextField * luckyNoteTextField;  // 祝福语占位图  最多15个字
 //@property (nonatomic ,strong) UIView *totalMoneyContainerView;
@@ -33,13 +33,13 @@
 
 @property (nonatomic ,strong) UILabel *ErrorHintLabel;
 
-@property (nonatomic ,strong) MZGiveRedEnvelopePresenter *presenter;
+@property (nonatomic ,strong) HDGiveRedEnvelopePresenter *presenter;
 @end
-@implementation MZRedEnvelopeDataView
+@implementation HDRedEnvelopeDataView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self == [super initWithFrame:frame]) {
-        self.presenter = [[MZGiveRedEnvelopePresenter alloc] initWithDelegate:self];
+        self.presenter = [[HDGiveRedEnvelopePresenter alloc] initWithDelegate:self];
         self.backgroundColor = MakeColorRGB(0xF3F3F3);
         [self customAddSubviews];
         [self customLayoutSubviews];
@@ -75,7 +75,7 @@
     self.moneyTipLabel = moneyTipLabel;
     
     
-    MZDisableTouchTextField *moneyTextField = [[MZDisableTouchTextField alloc]init];
+    HDDisableTouchTextField *moneyTextField = [[HDDisableTouchTextField alloc]init];
     moneyTextField.keyboardType = UIKeyboardTypeNumberPad;
     [moneyTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
     moneyTextField.font = [UIFont systemFontOfSize:14*MZ_RATE];
@@ -113,7 +113,7 @@
     [self addSubview:NumTipLabel];
     self.NumTipLabel = NumTipLabel;
     
-    MZDisableTouchTextField *numTextField = [[MZDisableTouchTextField alloc]init];
+    HDDisableTouchTextField *numTextField = [[HDDisableTouchTextField alloc]init];
     numTextField.keyboardType = UIKeyboardTypeNumberPad;
     [numTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
     numTextField.font = [UIFont systemFontOfSize:14*MZ_RATE];
@@ -281,7 +281,7 @@
         make.right.equalTo(self);
         make.bottom.equalTo(self.luckyNoteTextField);
     }];
-    CGFloat halfUnitLabel = self.unitMoneyLabel.width/2.0;
+    CGFloat halfUnitLabel = self.unitMoneyLabel.frame.size.width/2.0;
     [self.totalMoneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self).offset(halfUnitLabel);
         make.top.equalTo(self.luckyNoteTextField.mas_bottom).offset(20 * MZ_RATE);
@@ -318,15 +318,15 @@
     
 //    NSString * money = [NSString stringWithFormat:@"%.2f",[_moneyTextField.text doubleValue]];
 //    NSString * count = self.num
-//    [MZRedPacketPayWay initWithPayWayViewMoney:money clickResponse:^(MZPayType payWay)  {
+//    [HDRedPacketPayWay initWithPayWayViewMoney:money clickResponse:^(HDPayType payWay)  {
 //        _currentPayWay = payWay;
 //        [weakSelf showAlertView];
-//    } showTip:YES isRecharge:NO buttonKeys:MZPayWeiXinPay,MZPayAliPay,nil];
+//    } showTip:YES isRecharge:NO buttonKeys:HDPayWeiXinPay,HDPayAliPay,nil];
 }
 #pragma mark textFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-//    if (self.type == MZRedPacketViewTypeLucky) {
+//    if (self.type == HDRedPacketViewTypeLucky) {
 //        double aver = [_moneyTextField.text doubleValue] / ([_numTextField.text integerValue] * 1.0);
 //        if ((textField == _luckyNoteTextField) && (aver >= 0.5 && aver <= 200.00)) {
 //            _isTextView = YES;
@@ -351,10 +351,11 @@
 - (void)textFieldDidChange:(UITextField *)textField
 {
 //     限制所有的输入文字都不得超过 15 个字
-        if (![MZTools isLealString:textField.text limitStringSizeOf:30]) {
-            _luckyNoteTextField.text = [MZTools limitString:textField.text sizeOf:30];
-            return;
-        }
+    if (textField.text.length > 15) {
+        textField.text = [textField.text substringToIndex:15];
+        return;
+    }
+    
     
     [self.presenter checkValidityWithMoney:self.moneyTextField.text :self.numTextField.text isMoneyTextField:(textField == _moneyTextField )];
     
@@ -396,7 +397,7 @@
             return NO;
         }
 //        将要输入的内容大于1000 被禁止
-        NSString * totalNumeStr = [NSString stringWithFormat:@"%@%@",EmptyForNil(_numTextField.text),EmptyForNil(string)];
+        NSString * totalNumeStr = [NSString stringWithFormat:@"%@%@",_numTextField.text,string];
         if ([totalNumeStr integerValue] >999) {
             return NO;
         }
@@ -431,7 +432,7 @@
         }else{
             temp=fee;
         }
-        if(![MZTools isFloat:temp])
+        if(![HDTools isFloat:temp])
         {
             return NO;
         }

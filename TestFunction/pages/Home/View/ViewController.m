@@ -164,8 +164,6 @@ typedef void (^someBlock)(void);
 //    CALayer *imageLayer = imageView.layer;
 //    imageLayer.anchorPoint = CGPointMake(0, 0);
     
-
-    
 //    NSLog(@"imageView.bounds = %@,imageLayer.bounds = %@",NSStringFromCGRect(imageView.bounds),NSStringFromCGRect(imageLayer.bounds));
 //    NSLog(@"imageView.center = %@,imageLayer.position = %@",NSStringFromCGPoint(imageView.center),NSStringFromCGPoint(imageLayer.position));
 //    NSLog(@"imageLayer.zPosition = %f",imageLayer.zPosition);
@@ -190,7 +188,7 @@ typedef void (^someBlock)(void);
 - (void)setBaseProperty{
     self.title = @"HOME";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.extendedLayoutIncludesOpaqueBars = YES;
+//    self.extendedLayoutIncludesOpaqueBars = YES;
     
     
 }
@@ -212,7 +210,7 @@ typedef void (^someBlock)(void);
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [self testNavigationBar];
+//    [self testNavigationBar];
     //    [self pushToNextController];
     //    UIButton *nextVCB = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     //    [self.view addSubview:nextVCB];

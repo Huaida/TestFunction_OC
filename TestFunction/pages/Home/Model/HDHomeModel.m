@@ -25,7 +25,7 @@
                        @[@"String",@""],
                        @[@"动态绑定方法",@""],
                        @[@"红包数据页封装",@"HDRedEnvelopeViewController"],
-                       
+                        @[@"自定义NavigationBar",@"HDTestNavigationBarViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];
