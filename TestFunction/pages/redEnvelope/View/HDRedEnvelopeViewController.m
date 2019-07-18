@@ -9,6 +9,7 @@
 #import "HDRedEnvelopeViewController.h"
 #import "HDRedEnvelopeDataView.h"
 
+
 @interface HDRedEnvelopeViewController ()
 
 @end

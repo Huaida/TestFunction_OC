@@ -10,7 +10,7 @@
 
 @protocol HDHomeTableViewProtocol <NSObject>
 
-- (void)homeTableViewDidSelectedRowWithClassName:(NSString *)classNameString;
+- (void)homeTableViewDidSelectedRowWithClassName:(NSString *_Nullable)classNameString;
 
 @end
 NS_ASSUME_NONNULL_BEGIN
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic ,weak) id<HDHomeTableViewProtocol> selectedDelegate;
 - (void)addDataToTableView:(NSMutableArray *)dataArray;
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 @end
 
 NS_ASSUME_NONNULL_END
