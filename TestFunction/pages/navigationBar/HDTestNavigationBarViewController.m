@@ -52,11 +52,15 @@
 }
 - (void)testFunction{
     
-//    UINavigationBar *newbar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 100, MZ_SW-200, 20)];
-//    UINavigationItem *item1 =[[UINavigationItem alloc] initWithTitle:@"UIBarStyleDefault"];
-//    [newbar1 pushNavigationItem:item1 animated:YES];
-//    [self.view addSubview:newbar1];
-//    newbar1.backgroundColor = [UIColor purpleColor];
+    UINavigationBar *newbar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 100, MZ_SW-200, 20)];
+    UINavigationItem *item1 =[[UINavigationItem alloc] initWithTitle:@"UIBarStyleDefault"];
+    [newbar1 pushNavigationItem:item1 animated:YES];
+    [self.view addSubview:newbar1];
+    newbar1.backgroundColor = [UIColor purpleColor];
+    
+//    替换bar
+//    self.navigationController.navigationBar = newbar1;
+    
 //
 //    UINavigationBar *newbar2 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 200, MZ_SW-100, 20)];
 //    UINavigationItem *item2 =[[UINavigationItem alloc] initWithTitle:@"UIBarStyleBlack"];
@@ -77,9 +81,12 @@
     
     NSLog(@"%@---%@",bar,NSStringFromCGRect(bar.frame));
     bar.barStyle = UIBarStyleDefault;
-    bar.translucent = YES;// 最上层view是否有透明度
     
 #pragma mark  -    调整navigationBar
+    
+    bar.translucent = YES;// 最上层view是否有透明度
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bgImage"] forBarMetrics:UIBarMetricsDefault];//给导航条设置背景图片
+    
 //    bar.backgroundColor = [UIColor greenColor]; //bar的颜色不直接决定外观
 //    bar.barTintColor = [UIColor purpleColor];  // 改变bar的颜色
     
@@ -88,22 +95,25 @@
     
 //    透明
     // 导航栏背景透明度设置
-    UIView *barBackgroundView = [[self.navigationController.navigationBar subviews] objectAtIndex:0];// _UIBarBackground
-    UIImageView *backgroundImageView = [[barBackgroundView subviews] objectAtIndex:0];// UIImageView
-    if (bar.isTranslucent) {
-        if (backgroundImageView != nil && backgroundImageView.image != nil) {
-            barBackgroundView.alpha = 0;
-        } else {
-            UIView *backgroundEffectView = [[barBackgroundView subviews] objectAtIndex:1];// UIVisualEffectView
-            if (backgroundEffectView != nil) {
-                backgroundEffectView.alpha = 0;
-            }
-        }
-    } else {
-        barBackgroundView.alpha = 0;
-    }
-//    对导航栏下面那条线做处理
-    bar.clipsToBounds = YES ;
+    
+//   1， 通过设置背景图为nil，如果图像为空[UIImage imageNamed:@""];也能让背景透明，但是push之后的控制器导航栏会卡一下。
+    
+//    UIView *barBackgroundView = [[self.navigationController.navigationBar subviews] objectAtIndex:0];// _UIBarBackground
+//    UIImageView *backgroundImageView = [[barBackgroundView subviews] objectAtIndex:0];// UIImageView
+//    if (bar.isTranslucent) {
+//        if (backgroundImageView != nil && backgroundImageView.image != nil) {
+//            barBackgroundView.alpha = 0;
+//        } else {
+//            UIView *backgroundEffectView = [[barBackgroundView subviews] objectAtIndex:1];// UIVisualEffectView
+//            if (backgroundEffectView != nil) {
+//                backgroundEffectView.alpha = 0;
+//            }
+//        }
+//    } else {
+//        barBackgroundView.alpha = 0;
+//    }
+////    对导航栏下面那条线做处理
+//    bar.clipsToBounds = YES ;
 //    互不影响的控制
 //    如果是隐藏naviBar 自己添加view的话可以达到效果
     
@@ -136,7 +146,9 @@
     
 //    如果是图片作为titleView时，当该VC被成为第二位的VC时，左侧返回按钮显示的仍然是title内容
 //    如果是label作为titleView时，当该VC被成为第二位的VC时，左侧返回按钮显示的仍然是title内容
-//    UIBarButtonItem *leftItem1 = [[UIBarButtonItem alloc] initWithCustomView:testLabel1];
+    UIBarButtonItem *leftItem1 = [[UIBarButtonItem alloc] initWithCustomView:testLabel1];
+    item1.leftBarButtonItem = leftItem1;
+    
 //    UIBarButtonItem *leftItem2 = [[UIBarButtonItem alloc] initWithCustomView:testLabel2];
 //    UIBarButtonItem *leftItem3 = [[UIBarButtonItem alloc] initWithCustomView:testLabel3];
     UIBarButtonItem *leftItem4 = [[UIBarButtonItem alloc] initWithCustomView:titleImageView];
@@ -161,7 +173,7 @@
 //    Cannot call pushNavigationItem:animated: directly on a UINavigationBar managed by a controller.'
 //    [bar popNavigationItemAnimated:YES];
     
-//    [newbar pushNavigationItem:item animated:YES];
+//    [bar pushNavigationItem:self.navigationItem animated:YES];
 //    self.navigationController.navigationBar  = newbar;
     
     
