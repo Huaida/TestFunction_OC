@@ -26,7 +26,6 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.title = @"Bar";
     
-    
 }
 - (void)customAddSubviews{
     UILabel *testTransparenceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, 44)];
@@ -159,12 +158,19 @@
 //    self.navigationItem.leftBarButtonItems = @[leftItem1,leftItem2,leftItem3];
     
 //   可以添加bar button item但是不能设置frame
-    self.navigationItem.rightBarButtonItem = leftItem4;
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    space.width = -8;
+    
+//    leftItem4.width = 20;
+    self.navigationItem.leftBarButtonItems = @[space,leftItem4];
+//    titleImageView.frame = CGRectMake(0, 0, 30, 20);  size能放大不能压缩
+//    让右侧的间距变小  or 变大
     
 
 
 #pragma mark  -    调整左右单个或者多个item的样式位置
 //    调整左右Item的位置以及样式
+    
 //    调整items颜色
     bar.tintColor = [UIColor greenColor];
 //    items指的是左右端展示的按钮 这些items表示的导航过程中前面一整串的中间标题的位置

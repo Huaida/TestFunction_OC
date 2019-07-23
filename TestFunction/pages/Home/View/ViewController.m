@@ -57,14 +57,21 @@ typedef void (^someBlock)(void);
     self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
     [self customAddSubviews];
     [self.presenter presenterLoadData];
-    
+
 //    模拟点击第N个cell
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
-        
-        [self.tableView tableView:self.tableView didSelectRowAtIndexPath:indexPath];
-        
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+//
+//        [self.tableView tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+//
+//    });
+
+    
+    
+    
+    
+    
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
@@ -121,6 +128,20 @@ typedef void (^someBlock)(void);
 //    [self testNOEmplementationFunction];
 //    [self testADScrollView];
 //    [self testLabelheight];
+}
+- (void)storArray{
+//    排序测试
+    
+    //    NSArray *tMlist = @[@1,@5,@2,@6,@3,@7,@9];
+    //    NSArray *tArray = [tMlist sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    //        NSNumber *tNumber1 = (NSNumber *)obj1;
+    //        NSNumber *tNumber2 = (NSNumber *)obj2;
+    //        // 因为不满足sortedArrayUsingComparator方法的默认排序顺序，则需要交换
+    //        if ([tNumber1 integerValue] < [tNumber2 integerValue]) return NSOrderedDescending;
+    //        return NSOrderedAscending;
+    //    }];
+    //    NSLog(@"降序%@",tArray.description);
+    
 }
 - (void)testLabelheight{
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 100, 10)];
