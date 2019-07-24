@@ -55,6 +55,9 @@
 		B1E72F3B22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F3A22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m */; };
 		B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE60E22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m */; };
 		B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61122E6B71300CB8BC7 /* MZFullScreenViewModel.m */; };
+		B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */; };
+		B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */; };
+		B1EAE61C22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */; };
 		B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11121C2B9B9001D763B /* AppDelegate.m */; };
 		B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11421C2B9B9001D763B /* ViewController.m */; };
 		B1F5D11821C2B9B9001D763B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11621C2B9B9001D763B /* Main.storyboard */; };
@@ -148,6 +151,12 @@
 		B1EAE60E22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDShowAsynchronismViewViewController.m; sourceTree = "<group>"; };
 		B1EAE61022E6B71300CB8BC7 /* MZFullScreenViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFullScreenViewModel.h; sourceTree = "<group>"; };
 		B1EAE61122E6B71300CB8BC7 /* MZFullScreenViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFullScreenViewModel.m; sourceTree = "<group>"; };
+		B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		B1EAE61522E8416700CB8BC7 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		B1EAE61622E8416700CB8BC7 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		B1EAE61A22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TestSpace.h"; sourceTree = "<group>"; };
+		B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TestSpace.m"; sourceTree = "<group>"; };
 		B1F5D10D21C2B9B9001D763B /* TestFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F5D11021C2B9B9001D763B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1F5D11121C2B9B9001D763B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -355,6 +364,7 @@
 		B1CCC26822DF1C0A00E9FE0D /* navigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				B1EAE61322E8416700CB8BC7 /* WRNavigationBar */,
 				B1CCC26922DF1C2C00E9FE0D /* HDTestNavigationBarViewController.h */,
 				B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */,
 			);
@@ -437,6 +447,19 @@
 				B1EAE61122E6B71300CB8BC7 /* MZFullScreenViewModel.m */,
 			);
 			path = showsomeview;
+			sourceTree = "<group>";
+		};
+		B1EAE61322E8416700CB8BC7 /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				B1EAE61622E8416700CB8BC7 /* WRNavigationBar.h */,
+				B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */,
+				B1EAE61522E8416700CB8BC7 /* WRCustomNavigationBar.h */,
+				B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */,
+				B1EAE61A22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.h */,
+				B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */,
+			);
+			path = WRNavigationBar;
 			sourceTree = "<group>";
 		};
 		B1F5D10421C2B9B9001D763B = {
@@ -630,9 +653,12 @@
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
+				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
+				B1EAE61C22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
+				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

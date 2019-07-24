@@ -8,6 +8,8 @@
 
 #import "HDTestNavigationBarViewController.h"
 #import "HDRedEnvelopeViewController.h"
+#import "WRNavigationBar.h"
+
 @interface HDTestNavigationBarViewController ()
 
 @end
@@ -25,6 +27,18 @@
     self.view.backgroundColor = [UIColor redColor];
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.title = @"Bar";
+//    测试
+    [self wr_setNavBarTintColor:[UIColor redColor]];
+    [self wr_setNavBarBarTintColor:[UIColor greenColor]];
+    [self wr_setNavBarTitleColor:[UIColor blueColor]];
+    
+//    测试调整左右按钮间距
+    for (UIView *subview in self.navigationController.navigationBar.subviews) {
+        if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
+            subview.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0);
+            break;
+        }
+    }
     
 }
 - (void)customAddSubviews{
@@ -46,16 +60,16 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 //    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.navigationBar.barTintColor = MakeColorRGBA(0xEFCE73, 1);
+//    self.navigationController.navigationBar.barTintColor = MakeColorRGBA(0xEFCE73, 1);
     self.title = @"bar title";
 }
 - (void)testFunction{
     
-    UINavigationBar *newbar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 100, MZ_SW-200, 20)];
-    UINavigationItem *item1 =[[UINavigationItem alloc] initWithTitle:@"UIBarStyleDefault"];
-    [newbar1 pushNavigationItem:item1 animated:YES];
-    [self.view addSubview:newbar1];
-    newbar1.backgroundColor = [UIColor purpleColor];
+//    UINavigationBar *newbar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 100, MZ_SW-200, 20)];
+//    UINavigationItem *item1 =[[UINavigationItem alloc] initWithTitle:@"UIBarStyleDefault"];
+//    [newbar1 pushNavigationItem:item1 animated:YES];
+//    [self.view addSubview:newbar1];
+//    newbar1.backgroundColor = [UIColor purpleColor];
     
 //    替换bar
 //    self.navigationController.navigationBar = newbar1;
@@ -84,10 +98,10 @@
 #pragma mark  -    调整navigationBar
     
     bar.translucent = YES;// 最上层view是否有透明度
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bgImage"] forBarMetrics:UIBarMetricsDefault];//给导航条设置背景图片
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bgImage"] forBarMetrics:UIBarMetricsDefault];//给导航条设置背景图片
     
 //    bar.backgroundColor = [UIColor greenColor]; //bar的颜色不直接决定外观
-//    bar.barTintColor = [UIColor purpleColor];  // 改变bar的颜色
+    bar.barTintColor = [UIColor purpleColor];  // 改变bar的颜色
     
 //    渐变色的控制
 //    在viewWillAppear中添加相关设置颜色方法，会自动进行颜色渐变。
@@ -146,7 +160,7 @@
 //    如果是图片作为titleView时，当该VC被成为第二位的VC时，左侧返回按钮显示的仍然是title内容
 //    如果是label作为titleView时，当该VC被成为第二位的VC时，左侧返回按钮显示的仍然是title内容
     UIBarButtonItem *leftItem1 = [[UIBarButtonItem alloc] initWithCustomView:testLabel1];
-    item1.leftBarButtonItem = leftItem1;
+    self.navigationItem.leftBarButtonItem = leftItem1;
     
 //    UIBarButtonItem *leftItem2 = [[UIBarButtonItem alloc] initWithCustomView:testLabel2];
 //    UIBarButtonItem *leftItem3 = [[UIBarButtonItem alloc] initWithCustomView:testLabel3];
@@ -162,7 +176,7 @@
     space.width = -8;
     
 //    leftItem4.width = 20;
-    self.navigationItem.leftBarButtonItems = @[space,leftItem4];
+//    self.navigationItem.leftBarButtonItems = @[space,leftItem4];
 //    titleImageView.frame = CGRectMake(0, 0, 30, 20);  size能放大不能压缩
 //    让右侧的间距变小  or 变大
     
