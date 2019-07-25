@@ -19,10 +19,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setBaseProperty];
+    
 }
 - (void)setBaseProperty{
     self.view.backgroundColor = [UIColor whiteColor];
 
+    //    把自定义的导航栏view 添加到上层
+//    [self.view insertSubview:self.customNavBar aboveSubview:self.view];
+//    self.customNavBar.title =  @"自定义导航栏";
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //    把自定义的导航栏view 添加到上层
     [self.view insertSubview:self.customNavBar aboveSubview:self.view];
     self.customNavBar.title =  @"自定义导航栏";

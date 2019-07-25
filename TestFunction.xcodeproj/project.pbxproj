@@ -47,6 +47,7 @@
 		B1A9930822E983B500B4E1AA /* HDNavBarThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930722E983B500B4E1AA /* HDNavBarThreeViewController.m */; };
 		B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */; };
 		B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930D22E9868F00B4E1AA /* BaseViewController.m */; };
+		B1A9931222E9E49000B4E1AA /* HDShowADViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */; };
 		B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */; };
 		B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
 		B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
@@ -127,8 +128,8 @@
 		B1954C682269DDE7005CEF6C /* TestOneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneModel.m; sourceTree = "<group>"; };
 		B1954C6A2269DE7C005CEF6C /* TestTwoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTwoModel.h; sourceTree = "<group>"; };
 		B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTwoModel.m; sourceTree = "<group>"; };
-		B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDADScrollView.m; sourceTree = "<group>"; };
-		B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDADScrollView.h; sourceTree = "<group>"; };
+		B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HDADScrollView.m; path = ../Home/View/layout/HDADScrollView.m; sourceTree = "<group>"; };
+		B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HDADScrollView.h; path = ../Home/View/layout/HDADScrollView.h; sourceTree = "<group>"; };
 		B1A992F822E9792300B4E1AA /* HDNavigartionBarPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNavigartionBarPresenter.h; sourceTree = "<group>"; };
 		B1A992F922E9792300B4E1AA /* HDNavigartionBarPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavigartionBarPresenter.m; sourceTree = "<group>"; };
 		B1A992FC22E97A1500B4E1AA /* HDTestNavigationBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestNavigationBarModel.h; sourceTree = "<group>"; };
@@ -143,6 +144,8 @@
 		B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNavBarFourViewController.m; sourceTree = "<group>"; };
 		B1A9930C22E9868E00B4E1AA /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B1A9930D22E9868F00B4E1AA /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDShowADViewsViewController.h; sourceTree = "<group>"; };
+		B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDShowADViewsViewController.m; sourceTree = "<group>"; };
 		B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableView.h; sourceTree = "<group>"; };
 		B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableView.m; sourceTree = "<group>"; };
 		B1B1475C22C9FB3B00A96AB9 /* HDHomePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomePresenter.h; sourceTree = "<group>"; };
@@ -304,6 +307,17 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		B1A9930F22E9E41700B4E1AA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */,
+				B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */,
+				B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */,
+				B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,8 +419,6 @@
 				B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */,
 				B1E72F1D22DD758E00CD4FDD /* HDHomeTableViewCell.h */,
 				B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */,
-				B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */,
-				B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -414,6 +426,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9930F22E9E41700B4E1AA /* New Group */,
 				B1EAE60C22E6B58800CB8BC7 /* showsomeview */,
 				B1CCC26822DF1C0A00E9FE0D /* navigationBar */,
 				B1E72F1C22DD74AF00CD4FDD /* redEnvelope */,
@@ -693,6 +706,7 @@
 				B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */,
 				B1A9930222E9801B00B4E1AA /* HDNavBarOneViewController.m in Sources */,
 				B1E72F3B22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m in Sources */,
+				B1A9931222E9E49000B4E1AA /* HDShowADViewsViewController.m in Sources */,
 				B164B78A226381DD0097AF63 /* HDViewController.m in Sources */,
 				B107FCDC21E5B25A00AAF725 /* Son.m in Sources */,
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,

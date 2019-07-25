@@ -59,7 +59,7 @@ typedef void (^someBlock)(void);
     [self.presenter presenterLoadData];
 
 //    模拟点击第N个cell
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
 
         [self.tableView tableView:self.tableView didSelectRowAtIndexPath:indexPath];

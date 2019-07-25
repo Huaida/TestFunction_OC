@@ -83,8 +83,15 @@
 //    self.navigationController.navigationBar.barTintColor = MakeColorRGBA(0xEFCE73, 1);
     
     
+    self.navigationController.navigationBar.hidden = NO;
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
-    
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+//    self.navigationController.navigationBar.hidden = YES;
 }
 - (void)testFunction{
     

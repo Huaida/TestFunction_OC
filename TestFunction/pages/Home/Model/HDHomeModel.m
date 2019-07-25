@@ -27,6 +27,8 @@
                        @[@"红包数据页封装",@"HDRedEnvelopeViewController"],
                         @[@"自定义NavigationBar",@"HDTestNavigationBarViewController"],
                        @[@"异步多弹窗排序算法",@"HDShowAsynchronismViewViewController"],
+                       @[@"暖场广告图",@"HDShowADViewsViewController"],
+                       
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

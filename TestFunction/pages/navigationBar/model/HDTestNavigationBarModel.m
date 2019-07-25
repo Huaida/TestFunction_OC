@@ -24,7 +24,7 @@
     //     加载数据 一般会在请求接口
     self.dataArray = @[@[@"[系统]透明渐变",@"HDNavBarOneViewController"],
                        @[@"[系统]颜色渐变",@"HDNavBarTwoViewController"],
-                       @[@"[系统]",@"HDNavBarThreeViewController"],
+                       @[@"[系统]设置背景图",@"HDNavBarThreeViewController"],
                        @[@"[自定义]导航栏",@"HDNavBarFourViewController"],
                        
                        ].mutableCopy;

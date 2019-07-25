@@ -35,25 +35,25 @@
 - (void)customLayoutSubviews{
     dispatch_async(dispatch_get_main_queue(), ^{
         
-//    根据图片的长宽比 设置内部imageView 的frame
-    
-    CGSize imageSize = self.image.size;
-    CGSize containerSize = self.frame.size;
-    
-    CGFloat imageHeightWithScale = imageSize.height/imageSize.width;
-    CGFloat innerImageViewWith;
-    CGFloat innerImageViewHeight;
-//    图片比容器细长
-    if (imageHeightWithScale > containerSize.height/containerSize.width) {
-//        保持宽度与容器一致
-        innerImageViewWith = containerSize.width;
-        innerImageViewHeight = innerImageViewWith * imageHeightWithScale;
-    }else{
-//        保持高度与容器一致
-        innerImageViewHeight = containerSize.height;
-        innerImageViewWith = innerImageViewHeight/imageHeightWithScale;
-    }
-    self.innerImageView.frame =  CGRectMake(0, 0, innerImageViewWith, innerImageViewHeight);
+        //    根据图片的长宽比 设置内部imageView 的frame
+        
+        CGSize imageSize = self.image.size;
+        CGSize containerSize = self.frame.size;
+        
+        CGFloat imageHeightWithScale = imageSize.height/imageSize.width;
+        CGFloat innerImageViewWith;
+        CGFloat innerImageViewHeight;
+        //    图片比容器细长
+        if (imageHeightWithScale > containerSize.height/containerSize.width) {
+            //        保持宽度与容器一致
+            innerImageViewWith = containerSize.width;
+            innerImageViewHeight = innerImageViewWith * imageHeightWithScale;
+        }else{
+            //        保持高度与容器一致
+            innerImageViewHeight = containerSize.height;
+            innerImageViewWith = innerImageViewHeight/imageHeightWithScale;
+        }
+        self.innerImageView.frame =  CGRectMake(0, 0, innerImageViewWith, innerImageViewHeight);
     });
     
 }
