@@ -9,19 +9,24 @@
 #import "HDTestNavigationBarViewController.h"
 #import "HDRedEnvelopeViewController.h"
 #import "WRNavigationBar.h"
+#import "HDHomeTableView.h"
+#import "HDNavigartionBarPresenter.h"
 
-@interface HDTestNavigationBarViewController ()
-
+@interface HDTestNavigationBarViewController ()<HDHomeTableViewProtocol,HDNavigartionBarPresenterProtocol>
+@property (nonatomic ,strong) HDHomeTableView *tableView;
+@property (nonatomic ,strong) HDNavigartionBarPresenter *presenter;
 @end
 
 @implementation HDTestNavigationBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setBaseProperty];
+//    [self setBaseProperty];
     [self customAddSubviews];
+    self.presenter = [[HDNavigartionBarPresenter alloc] initWithDelegate:self];
+    [self.presenter presenterLoadData];
     
-    [self testFunction];
+//    [self testFunction];
 }
 - (void)setBaseProperty{
     self.view.backgroundColor = [UIColor redColor];
@@ -41,18 +46,33 @@
 //    }
     
 }
+
 - (void)customAddSubviews{
-    UILabel *testTransparenceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, 44)];
-    testTransparenceLabel.text = @"测试透明";
-    testTransparenceLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:testTransparenceLabel];
+    self.tableView = [[HDHomeTableView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.tableView];
+    self.tableView.selectedDelegate = self;
+//    UILabel *testTransparenceLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, 44)];
+//    testTransparenceLabel.text = @"测试透明";
+//    testTransparenceLabel.textAlignment = NSTextAlignmentCenter;
+//    [self.view addSubview:testTransparenceLabel];
     
-    UIButton *pushButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 500, MZ_SW, 50)];
-    [self.view addSubview:pushButton];
-    pushButton.backgroundColor = [UIColor grayColor];
-    [pushButton addTarget:self action:@selector(pushButtonDidClick) forControlEvents:UIControlEventTouchUpInside];
-    [pushButton setTitle:@"push button" forState:UIControlStateNormal];
+//    UIButton *pushButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 500, MZ_SW, 50)];
+//    [self.view addSubview:pushButton];
+//    pushButton.backgroundColor = [UIColor grayColor];
+//    [pushButton addTarget:self action:@selector(pushButtonDidClick) forControlEvents:UIControlEventTouchUpInside];
+//    [pushButton setTitle:@"push button" forState:UIControlStateNormal];
+    
 }
+- (void)presenterLoadDataSuccess:(NSMutableArray *)dataArray{
+    [self.tableView addDataToTableView:dataArray];
+}
+- (void)homeTableViewDidSelectedRowWithClassName:(NSString *_Nullable)classNameString;{
+    Class vcClass = NSClassFromString(classNameString);
+    [self.navigationController pushViewController:[[vcClass alloc] init] animated:YES];
+}
+
+
+
 - (void)pushButtonDidClick{
     [self.navigationController pushViewController:[[HDRedEnvelopeViewController alloc] init] animated:YES];
     
@@ -61,7 +81,10 @@
     [super viewWillAppear:animated];
 //    self.navigationController.navigationBar.translucent = YES;
 //    self.navigationController.navigationBar.barTintColor = MakeColorRGBA(0xEFCE73, 1);
-    self.title = @"bar title";
+    
+    
+    
+    
 }
 - (void)testFunction{
     

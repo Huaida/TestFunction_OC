@@ -13,6 +13,7 @@
 @property (nonatomic ,weak) id<HDHomePresenterProtocol> delegate;
 @property (nonatomic ,strong) HDHomeModel *model;
 @end
+
 @implementation HDHomePresenter
 -(instancetype)initWithDelegate:(id<HDHomePresenterProtocol>)delegate{
     if (self == [super init]) {

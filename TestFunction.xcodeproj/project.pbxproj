@@ -40,6 +40,13 @@
 		B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C682269DDE7005CEF6C /* TestOneModel.m */; };
 		B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */; };
 		B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */; };
+		B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A992F922E9792300B4E1AA /* HDNavigartionBarPresenter.m */; };
+		B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A992FD22E97A1500B4E1AA /* HDTestNavigationBarModel.m */; };
+		B1A9930222E9801B00B4E1AA /* HDNavBarOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930122E9801B00B4E1AA /* HDNavBarOneViewController.m */; };
+		B1A9930522E9829E00B4E1AA /* HDNavBarTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930322E9829E00B4E1AA /* HDNavBarTwoViewController.m */; };
+		B1A9930822E983B500B4E1AA /* HDNavBarThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930722E983B500B4E1AA /* HDNavBarThreeViewController.m */; };
+		B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */; };
+		B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930D22E9868F00B4E1AA /* BaseViewController.m */; };
 		B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */; };
 		B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
 		B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
@@ -122,6 +129,20 @@
 		B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTwoModel.m; sourceTree = "<group>"; };
 		B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDADScrollView.m; sourceTree = "<group>"; };
 		B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDADScrollView.h; sourceTree = "<group>"; };
+		B1A992F822E9792300B4E1AA /* HDNavigartionBarPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNavigartionBarPresenter.h; sourceTree = "<group>"; };
+		B1A992F922E9792300B4E1AA /* HDNavigartionBarPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavigartionBarPresenter.m; sourceTree = "<group>"; };
+		B1A992FC22E97A1500B4E1AA /* HDTestNavigationBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestNavigationBarModel.h; sourceTree = "<group>"; };
+		B1A992FD22E97A1500B4E1AA /* HDTestNavigationBarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestNavigationBarModel.m; sourceTree = "<group>"; };
+		B1A9930022E9801B00B4E1AA /* HDNavBarOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNavBarOneViewController.h; sourceTree = "<group>"; };
+		B1A9930122E9801B00B4E1AA /* HDNavBarOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavBarOneViewController.m; sourceTree = "<group>"; };
+		B1A9930322E9829E00B4E1AA /* HDNavBarTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNavBarTwoViewController.m; sourceTree = "<group>"; };
+		B1A9930422E9829E00B4E1AA /* HDNavBarTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNavBarTwoViewController.h; sourceTree = "<group>"; };
+		B1A9930622E983B500B4E1AA /* HDNavBarThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNavBarThreeViewController.h; sourceTree = "<group>"; };
+		B1A9930722E983B500B4E1AA /* HDNavBarThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNavBarThreeViewController.m; sourceTree = "<group>"; };
+		B1A9930922E983BF00B4E1AA /* HDNavBarFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNavBarFourViewController.h; sourceTree = "<group>"; };
+		B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNavBarFourViewController.m; sourceTree = "<group>"; };
+		B1A9930C22E9868E00B4E1AA /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		B1A9930D22E9868F00B4E1AA /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableView.h; sourceTree = "<group>"; };
 		B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableView.m; sourceTree = "<group>"; };
 		B1B1475C22C9FB3B00A96AB9 /* HDHomePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomePresenter.h; sourceTree = "<group>"; };
@@ -246,6 +267,43 @@
 			path = TestYYModel;
 			sourceTree = "<group>";
 		};
+		B1A992F722E9790300B4E1AA /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1A992F822E9792300B4E1AA /* HDNavigartionBarPresenter.h */,
+				B1A992F922E9792300B4E1AA /* HDNavigartionBarPresenter.m */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		B1A992FB22E979F900B4E1AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B1A992FC22E97A1500B4E1AA /* HDTestNavigationBarModel.h */,
+				B1A992FD22E97A1500B4E1AA /* HDTestNavigationBarModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B1A992FF22E97BDB00B4E1AA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9930C22E9868E00B4E1AA /* BaseViewController.h */,
+				B1A9930D22E9868F00B4E1AA /* BaseViewController.m */,
+				B1CCC26922DF1C2C00E9FE0D /* HDTestNavigationBarViewController.h */,
+				B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */,
+				B1A9930022E9801B00B4E1AA /* HDNavBarOneViewController.h */,
+				B1A9930122E9801B00B4E1AA /* HDNavBarOneViewController.m */,
+				B1A9930422E9829E00B4E1AA /* HDNavBarTwoViewController.h */,
+				B1A9930322E9829E00B4E1AA /* HDNavBarTwoViewController.m */,
+				B1A9930622E983B500B4E1AA /* HDNavBarThreeViewController.h */,
+				B1A9930722E983B500B4E1AA /* HDNavBarThreeViewController.m */,
+				B1A9930922E983BF00B4E1AA /* HDNavBarFourViewController.h */,
+				B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,9 +425,10 @@
 		B1CCC26822DF1C0A00E9FE0D /* navigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				B1A992FF22E97BDB00B4E1AA /* view */,
+				B1A992FB22E979F900B4E1AA /* model */,
+				B1A992F722E9790300B4E1AA /* presenter */,
 				B1EAE61322E8416700CB8BC7 /* WRNavigationBar */,
-				B1CCC26922DF1C2C00E9FE0D /* HDTestNavigationBarViewController.h */,
-				B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */,
 			);
 			path = navigationBar;
 			sourceTree = "<group>";
@@ -627,8 +686,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */,
+				B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */,
 				B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */,
+				B1A9930822E983B500B4E1AA /* HDNavBarThreeViewController.m in Sources */,
 				B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */,
+				B1A9930222E9801B00B4E1AA /* HDNavBarOneViewController.m in Sources */,
 				B1E72F3B22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m in Sources */,
 				B164B78A226381DD0097AF63 /* HDViewController.m in Sources */,
 				B107FCDC21E5B25A00AAF725 /* Son.m in Sources */,
@@ -641,7 +704,9 @@
 				B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */,
 				B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */,
 				B1E72F1F22DD758E00CD4FDD /* HDHomeTableViewCell.m in Sources */,
+				B1A9930522E9829E00B4E1AA /* HDNavBarTwoViewController.m in Sources */,
 				B153A7A1226D91FD002A6184 /* NetworkTool.m in Sources */,
+				B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */,
 				B1F5D12021C2B9B9001D763B /* main.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
@@ -662,6 +727,7 @@
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
+				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,
