@@ -8,6 +8,8 @@
 //  Github地址：https://github.com/wangrui460/WRNavigationBar
 
 #import <UIKit/UIKit.h>
+#import "UINavigationConfig.h"
+#import "NSObject+SXRuntime.h"
 @class WRCustomNavigationBar;
 
 @interface WRNavigationBar : UIView

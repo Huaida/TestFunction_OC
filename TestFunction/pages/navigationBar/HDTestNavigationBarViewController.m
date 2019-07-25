@@ -32,13 +32,13 @@
     [self wr_setNavBarBarTintColor:[UIColor greenColor]];
     [self wr_setNavBarTitleColor:[UIColor blueColor]];
     
-//    测试调整左右按钮间距
-    for (UIView *subview in self.navigationController.navigationBar.subviews) {
-        if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
-            subview.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0);
-            break;
-        }
-    }
+////    测试调整左右按钮间距
+//    for (UIView *subview in self.navigationController.navigationBar.subviews) {
+//        if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
+//            subview.layoutMargins = UIEdgeInsetsMake(0, 0, 0, 0);
+//            break;
+//        }
+//    }
     
 }
 - (void)customAddSubviews{
@@ -152,7 +152,7 @@
     UILabel *testLabel3 = [[UILabel alloc] init];
     testLabel3.text = @"testlabel3";
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"一路發"]];
-    self.navigationItem.titleView = testLabel;
+//    self.navigationItem.titleView = testLabel;
     testLabel.frame =CGRectMake(0, 0, 10, 10);
 // titleImageView 一定是居中的，frame的size修改在一定范围内是有效的 可以放大但是不能缩小
 //    在自定义titleView时，可以先添加容器然后对内部进行控制

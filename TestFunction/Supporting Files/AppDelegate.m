@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "HDNavigationController.h"
+#import "UINavigationConfig.h"
 @interface AppDelegate ()
 
 @end
@@ -21,6 +22,8 @@
     self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     // Override point for customization after application launch.
+    [UINavigationConfig shared].sx_disableFixSpace = YES;
+    [UINavigationConfig shared].sx_defaultFixSpace = 20;
     return YES;
 }
 

@@ -184,6 +184,36 @@ static char kWRDefaultNavBarShadowImageHiddenKey;
 //=============================================================================
 #pragma mark - UINavigationBar
 //=============================================================================
+@implementation UINavigationBar (SXFixSpace)
+
++(void)load {
+    if (@available(iOS 11.0, *)) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSArray <NSString *>*oriSels = @[@"layoutSubviews"];
+            
+            [oriSels enumerateObjectsUsingBlock:^(NSString * _Nonnull oriSel, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *swiSel = [NSString stringWithFormat:@"sx_%@", oriSel];
+                [self swizzleInstanceMethodWithOriginSel:NSSelectorFromString(oriSel) swizzledSel:NSSelectorFromString(swiSel)];
+            }];
+        });
+    }
+}
+// 布局之前需要取消layoutmargins
+-(void)sx_layoutSubviews{
+    [self sx_layoutSubviews];
+    if (![UINavigationConfig shared].sx_disableFixSpace) {//需要调节
+        CGFloat space = [UINavigationConfig shared].sx_defaultFixSpace;
+        for (UIView *subview in self.subviews) {
+            if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
+                subview.layoutMargins = UIEdgeInsetsMake(0, space, 0, space);
+                break;
+            }
+        }
+    }
+}
+@end
+
 @implementation UINavigationBar (WRAddition)
 
 static char kWRBackgroundViewKey;
@@ -385,6 +415,109 @@ static char kWRBackgroundImageKey;
 
 @interface UIViewController (Addition)
 - (void)setPushToCurrentVCFinished:(BOOL)isFinished;
+@end
+//==========================================================================
+#pragma mark - UINavigationItem
+//==========================================================================
+@implementation UINavigationItem (SXFixSpace)
+
++(void)load {
+    if (@available(iOS 11.0, *)) {} else {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSArray <NSString *>*oriSels = @[@"setLeftBarButtonItem:",
+                                             @"setLeftBarButtonItem:animated:",
+                                             @"setLeftBarButtonItems:",
+                                             @"setLeftBarButtonItems:animated:",
+                                             @"setRightBarButtonItem:",
+                                             @"setRightBarButtonItem:animated:",
+                                             @"setRightBarButtonItems:",
+                                             @"setRightBarButtonItems:animated:"];
+            
+            [oriSels enumerateObjectsUsingBlock:^(NSString * _Nonnull oriSel, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *swiSel = [NSString stringWithFormat:@"sx_%@", oriSel];
+                [self swizzleInstanceMethodWithOriginSel:NSSelectorFromString(oriSel) swizzledSel:NSSelectorFromString(swiSel)];
+            }];
+        });
+    }
+}
+
+-(void)sx_setLeftBarButtonItem:(UIBarButtonItem *)leftBarButtonItem {
+    [self setLeftBarButtonItem:leftBarButtonItem animated:NO];
+}
+
+-(void)sx_setLeftBarButtonItem:(UIBarButtonItem *)leftBarButtonItem animated:(BOOL)animated {
+    if (![UINavigationConfig shared].sx_disableFixSpace && leftBarButtonItem) {//存在按钮且需要调节
+        [self setLeftBarButtonItems:@[leftBarButtonItem] animated:animated];
+    } else {//不存在按钮,或者不需要调节
+        [self sx_setLeftBarButtonItem:leftBarButtonItem animated:animated];
+    }
+}
+
+
+-(void)sx_setLeftBarButtonItems:(NSArray<UIBarButtonItem *> *)leftBarButtonItems {
+    [self setLeftBarButtonItems:leftBarButtonItems animated:NO];
+}
+// 多个按钮的调整全部统一到这一个入口
+-(void)sx_setLeftBarButtonItems:(NSArray<UIBarButtonItem *> *)leftBarButtonItems animated:(BOOL)animated {
+    if (![UINavigationConfig shared].sx_disableFixSpace && leftBarButtonItems.count) {//存在按钮且需要调节
+        UIBarButtonItem *firstItem = leftBarButtonItems.firstObject;
+        CGFloat width = [UINavigationConfig shared].sx_defaultFixSpace - self.fixedSpace;
+        if (firstItem.width == width) {//已经存在space
+            [self sx_setLeftBarButtonItems:leftBarButtonItems animated:animated];
+        } else {
+            NSMutableArray *items = [NSMutableArray arrayWithArray:leftBarButtonItems];
+            [items insertObject:[self fixedSpaceWithWidth:width] atIndex:0];
+            [self sx_setLeftBarButtonItems:items animated:animated];
+        }
+    } else {//不存在按钮,或者不需要调节
+        [self sx_setLeftBarButtonItems:leftBarButtonItems animated:animated];
+    }
+}
+
+-(void)sx_setRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem{
+    [self setRightBarButtonItem:rightBarButtonItem animated:NO];
+}
+
+- (void)sx_setRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem animated:(BOOL)animated {
+    if (![UINavigationConfig shared].sx_disableFixSpace && rightBarButtonItem) {//存在按钮且需要调节
+        [self setRightBarButtonItems:@[rightBarButtonItem] animated:animated];
+    } else {//不存在按钮,或者不需要调节
+        [self sx_setRightBarButtonItem:rightBarButtonItem animated:animated];
+    }
+}
+
+-(void)sx_setRightBarButtonItems:(NSArray<UIBarButtonItem *> *)rightBarButtonItems{
+    [self setRightBarButtonItems:rightBarButtonItems animated:NO];
+}
+
+- (void)sx_setRightBarButtonItems:(NSArray<UIBarButtonItem *> *)rightBarButtonItems animated:(BOOL)animated {
+    if (![UINavigationConfig shared].sx_disableFixSpace && rightBarButtonItems.count) {//存在按钮且需要调节
+        UIBarButtonItem *firstItem = rightBarButtonItems.firstObject;
+        CGFloat width = [UINavigationConfig shared].sx_defaultFixSpace - self.fixedSpace;
+        if (firstItem.width == width) {//已经存在space
+            [self sx_setRightBarButtonItems:rightBarButtonItems animated:animated];
+        } else {
+            NSMutableArray *items = [NSMutableArray arrayWithArray:rightBarButtonItems];
+            [items insertObject:[self fixedSpaceWithWidth:width] atIndex:0];
+            [self sx_setRightBarButtonItems:items animated:animated];
+        }
+    } else {//不存在按钮,或者不需要调节
+        [self sx_setRightBarButtonItems:rightBarButtonItems animated:animated];
+    }
+}
+
+-(UIBarButtonItem *)fixedSpaceWithWidth:(CGFloat)width {
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    fixedSpace.width = width;
+    return fixedSpace;
+}
+// 如果是plus 那么压缩的宽度为20 否则压缩16
+- (CGFloat)fixedSpace {
+    CGSize screentSize = [UIScreen mainScreen].bounds.size;
+    return MIN(screentSize.width, screentSize.height) > 375 ? 20 : 16;
+}
+
 @end
 
 //==========================================================================
@@ -628,6 +761,31 @@ static int wrPushDisplayCount = 0;
 //==========================================================================
 #pragma mark - UIViewController
 //==========================================================================
+@implementation UIViewController (SXFixSpace)
+
++(void)load {
+    if (@available(iOS 11.0, *)) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            NSArray <NSString *>*oriSels = @[@"viewWillAppear:"];
+            
+            [oriSels enumerateObjectsUsingBlock:^(NSString * _Nonnull oriSel, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *swiSel = [NSString stringWithFormat:@"sx_%@", oriSel];
+                [self swizzleInstanceMethodWithOriginSel:NSSelectorFromString(oriSel) swizzledSel:NSSelectorFromString(swiSel)];
+            }];
+        });
+    }
+}
+
+
+-(void)sx_viewWillAppear:(BOOL)animated {
+    [self sx_viewWillAppear:animated];
+    if (!animated && self.navigationController) {
+        [self.navigationController.navigationBar setNeedsLayout];
+    }
+}
+
+@end
 @implementation UIViewController (WRAddition)
 
 static char kWRPushToCurrentVCFinishedKey; // push到了当前的VC了

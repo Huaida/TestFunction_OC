@@ -57,7 +57,8 @@
 		B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61122E6B71300CB8BC7 /* MZFullScreenViewModel.m */; };
 		B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */; };
 		B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */; };
-		B1EAE61C22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */; };
+		B1EAE61F22E885B900CB8BC7 /* UINavigationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61E22E885B900CB8BC7 /* UINavigationConfig.m */; };
+		B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE62022E885F800CB8BC7 /* NSObject+SXRuntime.m */; };
 		B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11121C2B9B9001D763B /* AppDelegate.m */; };
 		B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11421C2B9B9001D763B /* ViewController.m */; };
 		B1F5D11821C2B9B9001D763B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11621C2B9B9001D763B /* Main.storyboard */; };
@@ -155,8 +156,10 @@
 		B1EAE61522E8416700CB8BC7 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		B1EAE61622E8416700CB8BC7 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
-		B1EAE61A22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TestSpace.h"; sourceTree = "<group>"; };
-		B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TestSpace.m"; sourceTree = "<group>"; };
+		B1EAE61D22E885B900CB8BC7 /* UINavigationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationConfig.h; sourceTree = "<group>"; };
+		B1EAE61E22E885B900CB8BC7 /* UINavigationConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationConfig.m; sourceTree = "<group>"; };
+		B1EAE62022E885F800CB8BC7 /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
+		B1EAE62122E885F800CB8BC7 /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
 		B1F5D10D21C2B9B9001D763B /* TestFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F5D11021C2B9B9001D763B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1F5D11121C2B9B9001D763B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -452,12 +455,14 @@
 		B1EAE61322E8416700CB8BC7 /* WRNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				B1EAE62122E885F800CB8BC7 /* NSObject+SXRuntime.h */,
+				B1EAE62022E885F800CB8BC7 /* NSObject+SXRuntime.m */,
+				B1EAE61D22E885B900CB8BC7 /* UINavigationConfig.h */,
+				B1EAE61E22E885B900CB8BC7 /* UINavigationConfig.m */,
 				B1EAE61622E8416700CB8BC7 /* WRNavigationBar.h */,
 				B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */,
 				B1EAE61522E8416700CB8BC7 /* WRCustomNavigationBar.h */,
 				B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */,
-				B1EAE61A22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.h */,
-				B1EAE61B22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m */,
 			);
 			path = WRNavigationBar;
 			sourceTree = "<group>";
@@ -631,6 +636,7 @@
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
+				B1EAE61F22E885B900CB8BC7 /* UINavigationConfig.m in Sources */,
 				B1E72F3722DD80C600CD4FDD /* HDTools.m in Sources */,
 				B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */,
 				B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */,
@@ -640,6 +646,7 @@
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
+				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
@@ -655,7 +662,6 @@
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
-				B1EAE61C22E85E5D00CB8BC7 /* UINavigationBar+TestSpace.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,
