@@ -8,6 +8,7 @@
 
 #import "HDNavBarFourViewController.h"
 #import "WRNavigationBar.h"
+#import "MZCustomNavigationBar.h"
 
 @interface HDNavBarFourViewController ()
 
@@ -19,6 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setBaseProperty];
+    
+    MZCustomNavigationBar *navBar = [MZCustomNavigationBar CustomNavigationBar];
+    [self.view addSubview:navBar];
+    
+    navBar.frame = CGRectMake(0, 100, MZ_SW, 44);
     
 }
 - (void)setBaseProperty{

@@ -11,6 +11,7 @@
 		B107FCD921DFACED00AAF725 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
 		B107FCDC21E5B25A00AAF725 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDB21E5B25A00AAF725 /* Son.m */; };
 		B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDE21E6F5E500AAF725 /* Person+Cat.m */; };
+		B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B108ACBE22EAE7720061A13A /* MZCustomNavigationBar.m */; };
 		B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */; };
 		B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B148B6E62260A74700C8BFDA /* HDCheckArray.m */; };
 		B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B150DBCE2285C22500498D86 /* WKWebViewController.m */; };
@@ -90,6 +91,8 @@
 		B107FCDB21E5B25A00AAF725 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		B107FCDD21E6F5E500AAF725 /* Person+Cat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+Cat.h"; sourceTree = "<group>"; };
 		B107FCDE21E6F5E500AAF725 /* Person+Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+Cat.m"; sourceTree = "<group>"; };
+		B108ACBD22EAE7720061A13A /* MZCustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCustomNavigationBar.h; sourceTree = "<group>"; };
+		B108ACBE22EAE7720061A13A /* MZCustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCustomNavigationBar.m; sourceTree = "<group>"; };
 		B13A9FF3229BB78D00BC84EA /* HDBarrageSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDBarrageSwitch.h; sourceTree = "<group>"; };
 		B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDBarrageSwitch.m; sourceTree = "<group>"; };
 		B148B6E52260A74700C8BFDA /* HDCheckArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCheckArray.h; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 				B1EAE61422E8416700CB8BC7 /* WRNavigationBar.m */,
 				B1EAE61522E8416700CB8BC7 /* WRCustomNavigationBar.h */,
 				B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */,
+				B108ACBD22EAE7720061A13A /* MZCustomNavigationBar.h */,
+				B108ACBE22EAE7720061A13A /* MZCustomNavigationBar.m */,
 			);
 			path = WRNavigationBar;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
+				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,

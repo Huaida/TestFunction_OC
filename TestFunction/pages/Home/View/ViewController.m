@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Person.h"
+//#import "Person.h"
 #import "SubView.h"
 #import "Son.h"
 #import "Person+Cat.h"
