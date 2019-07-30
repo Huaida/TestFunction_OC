@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
+		B10342B222EED66B0054A8B9 /* HDTestDeallocView.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B122EED66B0054A8B9 /* HDTestDeallocView.m */; };
+		B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
 		B107FCD921DFACED00AAF725 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
 		B107FCDC21E5B25A00AAF725 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDB21E5B25A00AAF725 /* Son.m */; };
 		B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDE21E6F5E500AAF725 /* Person+Cat.m */; };
@@ -85,6 +87,10 @@
 		7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.debug.xcconfig"; sourceTree = "<group>"; };
 		B10292F4229E535D0030B0A3 /* NSMutableArray+SafeForData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeForData.h"; sourceTree = "<group>"; };
 		B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeForData.m"; sourceTree = "<group>"; };
+		B10342B022EED66B0054A8B9 /* HDTestDeallocView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestDeallocView.h; sourceTree = "<group>"; };
+		B10342B122EED66B0054A8B9 /* HDTestDeallocView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestDeallocView.m; sourceTree = "<group>"; };
+		B10342B322EED6860054A8B9 /* HDTestDeallocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestDeallocViewController.h; sourceTree = "<group>"; };
+		B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestDeallocViewController.m; sourceTree = "<group>"; };
 		B107FCD721DFACED00AAF725 /* SubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubView.h; sourceTree = "<group>"; };
 		B107FCD821DFACED00AAF725 /* SubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubView.m; sourceTree = "<group>"; };
 		B107FCDA21E5B25A00AAF725 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
@@ -310,15 +316,19 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		B1A9930F22E9E41700B4E1AA /* New Group */ = {
+		B1A9930F22E9E41700B4E1AA /* adViews */ = {
 			isa = PBXGroup;
 			children = (
 				B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */,
 				B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */,
+				B10342B322EED6860054A8B9 /* HDTestDeallocViewController.h */,
+				B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */,
+				B10342B022EED66B0054A8B9 /* HDTestDeallocView.h */,
+				B10342B122EED66B0054A8B9 /* HDTestDeallocView.m */,
 				B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */,
 				B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */,
 			);
-			path = "New Group";
+			path = adViews;
 			sourceTree = "<group>";
 		};
 		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
@@ -429,7 +439,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
-				B1A9930F22E9E41700B4E1AA /* New Group */,
+				B1A9930F22E9E41700B4E1AA /* adViews */,
 				B1EAE60C22E6B58800CB8BC7 /* showsomeview */,
 				B1CCC26822DF1C0A00E9FE0D /* navigationBar */,
 				B1E72F1C22DD74AF00CD4FDD /* redEnvelope */,
@@ -728,6 +738,7 @@
 				B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */,
 				B1F5D12021C2B9B9001D763B /* main.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
+				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
@@ -745,6 +756,7 @@
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
+				B10342B222EED66B0054A8B9 /* HDTestDeallocView.m in Sources */,
 				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
