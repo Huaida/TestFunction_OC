@@ -539,7 +539,7 @@ static int wrPushDisplayCount = 0;
 - (CGFloat)wrPushProgress {
     CGFloat all = 60 * wrPushDuration;// 测试发现，push需要31帧，所以all 实际应为31，这样发现过渡效果过于柔和，push完成的回调之前页面其实已经显示了，作者是设置更合适
     int current = MIN(all, wrPushDisplayCount); // push操作时，会自增
-     NSLog(@"current / all---%f",current / all);
+//     NSLog(@"current / all---%f",current / all);
     return current / all;
 }
 
@@ -688,7 +688,7 @@ static int wrPushDisplayCount = 0;
 - (void)pushNeedDisplay {
     if (self.topViewController != nil && self.topViewController.transitionCoordinator != nil) {
         wrPushDisplayCount += 1;
-         NSLog(@"wrPushDisplayCount %d",wrPushDisplayCount);
+//         NSLog(@"wrPushDisplayCount %d",wrPushDisplayCount);
         CGFloat pushProgress = [self wrPushProgress];
         UIViewController *fromVC = [self.topViewController.transitionCoordinator viewControllerForKey:UITransitionContextFromViewControllerKey];
         UIViewController *toVC = [self.topViewController.transitionCoordinator viewControllerForKey:UITransitionContextToViewControllerKey];

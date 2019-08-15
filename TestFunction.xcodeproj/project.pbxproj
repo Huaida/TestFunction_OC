@@ -14,6 +14,58 @@
 		B107FCDC21E5B25A00AAF725 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDB21E5B25A00AAF725 /* Son.m */; };
 		B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDE21E6F5E500AAF725 /* Person+Cat.m */; };
 		B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B108ACBE22EAE7720061A13A /* MZCustomNavigationBar.m */; };
+		B10DD58723040B4B0063C80B /* HDDownloadAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD58623040B4B0063C80B /* HDDownloadAnimationViewController.m */; };
+		B10DD5BA23040C6E0063C80B /* button_gift_么么哒.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58923040C6D0063C80B /* button_gift_么么哒.json */; };
+		B10DD5BB23040C6E0063C80B /* 圆圆满满-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58A23040C6D0063C80B /* 圆圆满满-h-X.json */; };
+		B10DD5BC23040C6E0063C80B /* button_gift_金元宝.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58B23040C6D0063C80B /* button_gift_金元宝.json */; };
+		B10DD5BD23040C6E0063C80B /* cjylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58C23040C6D0063C80B /* cjylf.json */; };
+		B10DD5BE23040C6E0063C80B /* gift_连击.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58D23040C6D0063C80B /* gift_连击.json */; };
+		B10DD5BF23040C6E0063C80B /* gift_跑车.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58E23040C6D0063C80B /* gift_跑车.json */; };
+		B10DD5C023040C6E0063C80B /* 超级顺顺顺-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58F23040C6D0063C80B /* 超级顺顺顺-h-X.json */; };
+		B10DD5C123040C6E0063C80B /* 一生一世-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59023040C6D0063C80B /* 一生一世-X.json */; };
+		B10DD5C223040C6E0063C80B /* 圆圆满满-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59123040C6D0063C80B /* 圆圆满满-h.json */; };
+		B10DD5C323040C6E0063C80B /* 超级一路發-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59223040C6D0063C80B /* 超级一路發-X.json */; };
+		B10DD5C423040C6E0063C80B /* button_gift_给力.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59323040C6D0063C80B /* button_gift_给力.json */; };
+		B10DD5C523040C6E0063C80B /* ysys.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59423040C6E0063C80B /* ysys.json */; };
+		B10DD5C623040C6E0063C80B /* button_gift_皇冠.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59523040C6E0063C80B /* button_gift_皇冠.json */; };
+		B10DD5C723040C6E0063C80B /* button_gift_为你打call.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59623040C6E0063C80B /* button_gift_为你打call.json */; };
+		B10DD5C823040C6E0063C80B /* button_gift_666.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59723040C6E0063C80B /* button_gift_666.json */; };
+		B10DD5C923040C6E0063C80B /* button_gift_加油.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59823040C6E0063C80B /* button_gift_加油.json */; };
+		B10DD5CA23040C6E0063C80B /* cjsss.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59923040C6E0063C80B /* cjsss.json */; };
+		B10DD5CB23040C6E0063C80B /* button_gift_烟花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59A23040C6E0063C80B /* button_gift_烟花.json */; };
+		B10DD5CC23040C6E0063C80B /* 超级我要發.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59B23040C6E0063C80B /* 超级我要發.json */; };
+		B10DD5CD23040C6E0063C80B /* button_gift_谢谢.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59C23040C6E0063C80B /* button_gift_谢谢.json */; };
+		B10DD5CE23040C6E0063C80B /* 超级顺顺顺-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59D23040C6E0063C80B /* 超级顺顺顺-X.json */; };
+		B10DD5CF23040C6E0063C80B /* 一生一世-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59E23040C6E0063C80B /* 一生一世-h.json */; };
+		B10DD5D023040C6E0063C80B /* button_gift_跑车.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59F23040C6E0063C80B /* button_gift_跑车.json */; };
+		B10DD5D123040C6E0063C80B /* button_gift_干杯.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A023040C6E0063C80B /* button_gift_干杯.json */; };
+		B10DD5D223040C6E0063C80B /* 超级一路發-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A123040C6E0063C80B /* 超级一路發-h.json */; };
+		B10DD5D323040C6E0063C80B /* 圆圆满满-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A223040C6E0063C80B /* 圆圆满满-X.json */; };
+		B10DD5D423040C6E0063C80B /* wan.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A323040C6E0063C80B /* wan.json */; };
+		B10DD5D523040C6E0063C80B /* fff.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A423040C6E0063C80B /* fff.json */; };
+		B10DD5D623040C6E0063C80B /* yymm.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A523040C6E0063C80B /* yymm.json */; };
+		B10DD5D723040C6E0063C80B /* 天长地久.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A623040C6E0063C80B /* 天长地久.json */; };
+		B10DD5D823040C6E0063C80B /* 圆圆满满.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A723040C6E0063C80B /* 圆圆满满.json */; };
+		B10DD5D923040C6E0063C80B /* 一生一世.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A823040C6E0063C80B /* 一生一世.json */; };
+		B10DD5DA23040C6E0063C80B /* ylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A923040C6E0063C80B /* ylf.json */; };
+		B10DD5DB23040C6E0063C80B /* tcdj.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AA23040C6E0063C80B /* tcdj.json */; };
+		B10DD5DC23040C6E0063C80B /* button_gift_福袋.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AB23040C6E0063C80B /* button_gift_福袋.json */; };
+		B10DD5DD23040C6E0063C80B /* 超级一路發-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AC23040C6E0063C80B /* 超级一路發-h-X.json */; };
+		B10DD5DE23040C6E0063C80B /* button_gift_锦鲤.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AD23040C6E0063C80B /* button_gift_锦鲤.json */; };
+		B10DD5DF23040C6E0063C80B /* gift_摇钱树.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AE23040C6E0063C80B /* gift_摇钱树.json */; };
+		B10DD5E023040C6E0063C80B /* button_gift_金话筒.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AF23040C6E0063C80B /* button_gift_金话筒.json */; };
+		B10DD5E123040C6E0063C80B /* cjwyf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B023040C6E0063C80B /* cjwyf.json */; };
+		B10DD5E223040C6E0063C80B /* 超级一路發.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B123040C6E0063C80B /* 超级一路發.json */; };
+		B10DD5E323040C6E0063C80B /* 超级顺顺顺-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B223040C6E0063C80B /* 超级顺顺顺-h.json */; };
+		B10DD5E423040C6E0063C80B /* button_gift_摇钱树.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B323040C6E0063C80B /* button_gift_摇钱树.json */; };
+		B10DD5E523040C6E0063C80B /* gift_烟花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B423040C6E0063C80B /* gift_烟花.json */; };
+		B10DD5E623040C6E0063C80B /* button_gift_鲜花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B523040C6E0063C80B /* button_gift_鲜花.json */; };
+		B10DD5E723040C6E0063C80B /* 超级顺顺顺.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B623040C6E0063C80B /* 超级顺顺顺.json */; };
+		B10DD5E823040C6E0063C80B /* button_gift_鼓掌.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B723040C6E0063C80B /* button_gift_鼓掌.json */; };
+		B10DD5E923040C6E0063C80B /* button_gift_幸运星.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B823040C6E0063C80B /* button_gift_幸运星.json */; };
+		B10DD5EA23040C6E0063C80B /* 一生一世-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B923040C6E0063C80B /* 一生一世-h-X.json */; };
+		B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EC23040F630063C80B /* HDFileManager.m */; };
+		B10DD5F0230410160063C80B /* constant.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EF230410160063C80B /* constant.m */; };
 		B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */; };
 		B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B148B6E62260A74700C8BFDA /* HDCheckArray.m */; };
 		B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B150DBCE2285C22500498D86 /* WKWebViewController.m */; };
@@ -26,6 +78,27 @@
 		B153A7A1226D91FD002A6184 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B153A7A0226D91FD002A6184 /* NetworkTool.m */; };
 		B164B78A226381DD0097AF63 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
 		B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
+		B17E6E2023043DC1003BC1F2 /* mz_strm_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6DFE23043DC1003BC1F2 /* mz_strm_os_posix.c */; };
+		B17E6E2123043DC1003BC1F2 /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6DFF23043DC1003BC1F2 /* mz_strm_pkcrypt.c */; };
+		B17E6E2223043DC1003BC1F2 /* mz_strm_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0223043DC1003BC1F2 /* mz_strm_zlib.c */; };
+		B17E6E2323043DC1003BC1F2 /* mz_zip.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0323043DC1003BC1F2 /* mz_zip.c */; };
+		B17E6E2423043DC1003BC1F2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B17E6E0523043DC1003BC1F2 /* LICENSE */; };
+		B17E6E2523043DC1003BC1F2 /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0623043DC1003BC1F2 /* mz_zip_rw.c */; };
+		B17E6E2623043DC1003BC1F2 /* mz_crypt_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0923043DC1003BC1F2 /* mz_crypt_apple.c */; };
+		B17E6E2723043DC1003BC1F2 /* mz_strm_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0B23043DC1003BC1F2 /* mz_strm_mem.c */; };
+		B17E6E2823043DC1003BC1F2 /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0C23043DC1003BC1F2 /* mz_crypt.c */; };
+		B17E6E2923043DC1003BC1F2 /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0D23043DC1003BC1F2 /* mz_strm_wzaes.c */; };
+		B17E6E2A23043DC1003BC1F2 /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E0F23043DC1003BC1F2 /* mz_compat.c */; };
+		B17E6E2B23043DC1003BC1F2 /* mz_os.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1223043DC1003BC1F2 /* mz_os.c */; };
+		B17E6E2C23043DC1003BC1F2 /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1423043DC1003BC1F2 /* mz_os_posix.c */; };
+		B17E6E2D23043DC1003BC1F2 /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1623043DC1003BC1F2 /* mz_strm_buf.c */; };
+		B17E6E2E23043DC1003BC1F2 /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1723043DC1003BC1F2 /* mz_strm_split.c */; };
+		B17E6E2F23043DC1003BC1F2 /* mz_strm.c in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1A23043DC1003BC1F2 /* mz_strm.c */; };
+		B17E6E3023043DC1003BC1F2 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = B17E6E1E23043DC1003BC1F2 /* SSZipArchive.m */; };
+		B17E6E3123043DC1003BC1F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B17E6E1F23043DC1003BC1F2 /* Info.plist */; };
+		B17E6E3323043F9E003BC1F2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E6E3223043F9E003BC1F2 /* libz.tbd */; };
+		B17E6E3523043FAA003BC1F2 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E6E3423043FAA003BC1F2 /* libiconv.tbd */; };
+		B17E6E3723043FB4003BC1F2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E6E3623043FB4003BC1F2 /* Security.framework */; };
 		B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B186049D2233EA3200C93644 /* HDNetworkTool.m */; };
 		B18604A02233EADC00C93644 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B186049F2233EADC00C93644 /* libAFNetworking.a */; };
 		B18604A22233EAE300C93644 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B18604A12233EAE300C93644 /* libSDWebImage.a */; };
@@ -99,6 +172,61 @@
 		B107FCDE21E6F5E500AAF725 /* Person+Cat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+Cat.m"; sourceTree = "<group>"; };
 		B108ACBD22EAE7720061A13A /* MZCustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCustomNavigationBar.h; sourceTree = "<group>"; };
 		B108ACBE22EAE7720061A13A /* MZCustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCustomNavigationBar.m; sourceTree = "<group>"; };
+		B10DD58523040B4B0063C80B /* HDDownloadAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDownloadAnimationViewController.h; sourceTree = "<group>"; };
+		B10DD58623040B4B0063C80B /* HDDownloadAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDownloadAnimationViewController.m; sourceTree = "<group>"; };
+		B10DD58923040C6D0063C80B /* button_gift_么么哒.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_么么哒.json"; sourceTree = "<group>"; };
+		B10DD58A23040C6D0063C80B /* 圆圆满满-h-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "圆圆满满-h-X.json"; sourceTree = "<group>"; };
+		B10DD58B23040C6D0063C80B /* button_gift_金元宝.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_金元宝.json"; sourceTree = "<group>"; };
+		B10DD58C23040C6D0063C80B /* cjylf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjylf.json; sourceTree = "<group>"; };
+		B10DD58D23040C6D0063C80B /* gift_连击.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gift_连击.json"; sourceTree = "<group>"; };
+		B10DD58E23040C6D0063C80B /* gift_跑车.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gift_跑车.json"; sourceTree = "<group>"; };
+		B10DD58F23040C6D0063C80B /* 超级顺顺顺-h-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级顺顺顺-h-X.json"; sourceTree = "<group>"; };
+		B10DD59023040C6D0063C80B /* 一生一世-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "一生一世-X.json"; sourceTree = "<group>"; };
+		B10DD59123040C6D0063C80B /* 圆圆满满-h.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "圆圆满满-h.json"; sourceTree = "<group>"; };
+		B10DD59223040C6D0063C80B /* 超级一路發-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级一路發-X.json"; sourceTree = "<group>"; };
+		B10DD59323040C6D0063C80B /* button_gift_给力.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_给力.json"; sourceTree = "<group>"; };
+		B10DD59423040C6E0063C80B /* ysys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ysys.json; sourceTree = "<group>"; };
+		B10DD59523040C6E0063C80B /* button_gift_皇冠.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_皇冠.json"; sourceTree = "<group>"; };
+		B10DD59623040C6E0063C80B /* button_gift_为你打call.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_为你打call.json"; sourceTree = "<group>"; };
+		B10DD59723040C6E0063C80B /* button_gift_666.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button_gift_666.json; sourceTree = "<group>"; };
+		B10DD59823040C6E0063C80B /* button_gift_加油.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_加油.json"; sourceTree = "<group>"; };
+		B10DD59923040C6E0063C80B /* cjsss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjsss.json; sourceTree = "<group>"; };
+		B10DD59A23040C6E0063C80B /* button_gift_烟花.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_烟花.json"; sourceTree = "<group>"; };
+		B10DD59B23040C6E0063C80B /* 超级我要發.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级我要發.json"; sourceTree = "<group>"; };
+		B10DD59C23040C6E0063C80B /* button_gift_谢谢.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_谢谢.json"; sourceTree = "<group>"; };
+		B10DD59D23040C6E0063C80B /* 超级顺顺顺-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级顺顺顺-X.json"; sourceTree = "<group>"; };
+		B10DD59E23040C6E0063C80B /* 一生一世-h.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "一生一世-h.json"; sourceTree = "<group>"; };
+		B10DD59F23040C6E0063C80B /* button_gift_跑车.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_跑车.json"; sourceTree = "<group>"; };
+		B10DD5A023040C6E0063C80B /* button_gift_干杯.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_干杯.json"; sourceTree = "<group>"; };
+		B10DD5A123040C6E0063C80B /* 超级一路發-h.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级一路發-h.json"; sourceTree = "<group>"; };
+		B10DD5A223040C6E0063C80B /* 圆圆满满-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "圆圆满满-X.json"; sourceTree = "<group>"; };
+		B10DD5A323040C6E0063C80B /* wan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wan.json; sourceTree = "<group>"; };
+		B10DD5A423040C6E0063C80B /* fff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fff.json; sourceTree = "<group>"; };
+		B10DD5A523040C6E0063C80B /* yymm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yymm.json; sourceTree = "<group>"; };
+		B10DD5A623040C6E0063C80B /* 天长地久.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "天长地久.json"; sourceTree = "<group>"; };
+		B10DD5A723040C6E0063C80B /* 圆圆满满.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "圆圆满满.json"; sourceTree = "<group>"; };
+		B10DD5A823040C6E0063C80B /* 一生一世.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "一生一世.json"; sourceTree = "<group>"; };
+		B10DD5A923040C6E0063C80B /* ylf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ylf.json; sourceTree = "<group>"; };
+		B10DD5AA23040C6E0063C80B /* tcdj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tcdj.json; sourceTree = "<group>"; };
+		B10DD5AB23040C6E0063C80B /* button_gift_福袋.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_福袋.json"; sourceTree = "<group>"; };
+		B10DD5AC23040C6E0063C80B /* 超级一路發-h-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级一路發-h-X.json"; sourceTree = "<group>"; };
+		B10DD5AD23040C6E0063C80B /* button_gift_锦鲤.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_锦鲤.json"; sourceTree = "<group>"; };
+		B10DD5AE23040C6E0063C80B /* gift_摇钱树.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gift_摇钱树.json"; sourceTree = "<group>"; };
+		B10DD5AF23040C6E0063C80B /* button_gift_金话筒.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_金话筒.json"; sourceTree = "<group>"; };
+		B10DD5B023040C6E0063C80B /* cjwyf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjwyf.json; sourceTree = "<group>"; };
+		B10DD5B123040C6E0063C80B /* 超级一路發.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级一路發.json"; sourceTree = "<group>"; };
+		B10DD5B223040C6E0063C80B /* 超级顺顺顺-h.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级顺顺顺-h.json"; sourceTree = "<group>"; };
+		B10DD5B323040C6E0063C80B /* button_gift_摇钱树.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_摇钱树.json"; sourceTree = "<group>"; };
+		B10DD5B423040C6E0063C80B /* gift_烟花.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gift_烟花.json"; sourceTree = "<group>"; };
+		B10DD5B523040C6E0063C80B /* button_gift_鲜花.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_鲜花.json"; sourceTree = "<group>"; };
+		B10DD5B623040C6E0063C80B /* 超级顺顺顺.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "超级顺顺顺.json"; sourceTree = "<group>"; };
+		B10DD5B723040C6E0063C80B /* button_gift_鼓掌.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_鼓掌.json"; sourceTree = "<group>"; };
+		B10DD5B823040C6E0063C80B /* button_gift_幸运星.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "button_gift_幸运星.json"; sourceTree = "<group>"; };
+		B10DD5B923040C6E0063C80B /* 一生一世-h-X.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "一生一世-h-X.json"; sourceTree = "<group>"; };
+		B10DD5EB23040F630063C80B /* HDFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDFileManager.h; sourceTree = "<group>"; };
+		B10DD5EC23040F630063C80B /* HDFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDFileManager.m; sourceTree = "<group>"; };
+		B10DD5EE230410160063C80B /* constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constant.h; sourceTree = "<group>"; };
+		B10DD5EF230410160063C80B /* constant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = constant.m; sourceTree = "<group>"; };
 		B13A9FF3229BB78D00BC84EA /* HDBarrageSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDBarrageSwitch.h; sourceTree = "<group>"; };
 		B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDBarrageSwitch.m; sourceTree = "<group>"; };
 		B148B6E52260A74700C8BFDA /* HDCheckArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCheckArray.h; sourceTree = "<group>"; };
@@ -118,6 +246,44 @@
 		B164B789226381DD0097AF63 /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
 		B164B78B226382B20097AF63 /* HDViewController+Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDViewController+Logging.h"; sourceTree = "<group>"; };
 		B164B78C226382B20097AF63 /* HDViewController+Logging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HDViewController+Logging.m"; sourceTree = "<group>"; };
+		B17E6DFC23043DC1003BC1F2 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		B17E6DFE23043DC1003BC1F2 /* mz_strm_os_posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_os_posix.c; sourceTree = "<group>"; };
+		B17E6DFF23043DC1003BC1F2 /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_pkcrypt.c; sourceTree = "<group>"; };
+		B17E6E0023043DC1003BC1F2 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_wzaes.h; sourceTree = "<group>"; };
+		B17E6E0123043DC1003BC1F2 /* mz_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_compat.h; sourceTree = "<group>"; };
+		B17E6E0223043DC1003BC1F2 /* mz_strm_zlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_zlib.c; sourceTree = "<group>"; };
+		B17E6E0323043DC1003BC1F2 /* mz_zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_zip.c; sourceTree = "<group>"; };
+		B17E6E0423043DC1003BC1F2 /* mz_os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_os.h; sourceTree = "<group>"; };
+		B17E6E0523043DC1003BC1F2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B17E6E0623043DC1003BC1F2 /* mz_zip_rw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_zip_rw.c; sourceTree = "<group>"; };
+		B17E6E0723043DC1003BC1F2 /* mz_strm_split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_split.h; sourceTree = "<group>"; };
+		B17E6E0823043DC1003BC1F2 /* mz_strm_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_buf.h; sourceTree = "<group>"; };
+		B17E6E0923043DC1003BC1F2 /* mz_crypt_apple.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_crypt_apple.c; sourceTree = "<group>"; };
+		B17E6E0A23043DC1003BC1F2 /* mz_strm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm.h; sourceTree = "<group>"; };
+		B17E6E0B23043DC1003BC1F2 /* mz_strm_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_mem.c; sourceTree = "<group>"; };
+		B17E6E0C23043DC1003BC1F2 /* mz_crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_crypt.c; sourceTree = "<group>"; };
+		B17E6E0D23043DC1003BC1F2 /* mz_strm_wzaes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_wzaes.c; sourceTree = "<group>"; };
+		B17E6E0E23043DC1003BC1F2 /* mz_strm_zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_zlib.h; sourceTree = "<group>"; };
+		B17E6E0F23043DC1003BC1F2 /* mz_compat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_compat.c; sourceTree = "<group>"; };
+		B17E6E1023043DC1003BC1F2 /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_pkcrypt.h; sourceTree = "<group>"; };
+		B17E6E1123043DC1003BC1F2 /* mz_zip_rw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_zip_rw.h; sourceTree = "<group>"; };
+		B17E6E1223043DC1003BC1F2 /* mz_os.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_os.c; sourceTree = "<group>"; };
+		B17E6E1323043DC1003BC1F2 /* mz_zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_zip.h; sourceTree = "<group>"; };
+		B17E6E1423043DC1003BC1F2 /* mz_os_posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_os_posix.c; sourceTree = "<group>"; };
+		B17E6E1523043DC1003BC1F2 /* mz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz.h; sourceTree = "<group>"; };
+		B17E6E1623043DC1003BC1F2 /* mz_strm_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_buf.c; sourceTree = "<group>"; };
+		B17E6E1723043DC1003BC1F2 /* mz_strm_split.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm_split.c; sourceTree = "<group>"; };
+		B17E6E1823043DC1003BC1F2 /* mz_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_crypt.h; sourceTree = "<group>"; };
+		B17E6E1923043DC1003BC1F2 /* mz_strm_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_mem.h; sourceTree = "<group>"; };
+		B17E6E1A23043DC1003BC1F2 /* mz_strm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mz_strm.c; sourceTree = "<group>"; };
+		B17E6E1B23043DC1003BC1F2 /* mz_strm_os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mz_strm_os.h; sourceTree = "<group>"; };
+		B17E6E1C23043DC1003BC1F2 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		B17E6E1D23043DC1003BC1F2 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		B17E6E1E23043DC1003BC1F2 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		B17E6E1F23043DC1003BC1F2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17E6E3223043F9E003BC1F2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B17E6E3423043FAA003BC1F2 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		B17E6E3623043FB4003BC1F2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B186049C2233EA3200C93644 /* HDNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNetworkTool.h; sourceTree = "<group>"; };
 		B186049D2233EA3200C93644 /* HDNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNetworkTool.m; sourceTree = "<group>"; };
 		B186049F2233EADC00C93644 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +380,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17E6E3723043FB4003BC1F2 /* Security.framework in Frameworks */,
+				B17E6E3523043FAA003BC1F2 /* libiconv.tbd in Frameworks */,
+				B17E6E3323043F9E003BC1F2 /* libz.tbd in Frameworks */,
 				B18604A22233EAE300C93644 /* libSDWebImage.a in Frameworks */,
 				B18604A02233EADC00C93644 /* libAFNetworking.a in Frameworks */,
 				F9BD95685274A2ED995AAFB2 /* libPods-TestFunction.a in Frameworks */,
@@ -235,11 +404,88 @@
 		79541E1C940988EB6C6C3244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B17E6E3623043FB4003BC1F2 /* Security.framework */,
+				B17E6E3423043FAA003BC1F2 /* libiconv.tbd */,
+				B17E6E3223043F9E003BC1F2 /* libz.tbd */,
 				B18604A12233EAE300C93644 /* libSDWebImage.a */,
 				B186049F2233EADC00C93644 /* libAFNetworking.a */,
 				6B823C7A01753B3E9483091A /* libPods-TestFunction.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B10DD58423040B250063C80B /* downloadAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				B10DD58823040C6D0063C80B /* jsonAnimation */,
+				B10DD58523040B4B0063C80B /* HDDownloadAnimationViewController.h */,
+				B10DD58623040B4B0063C80B /* HDDownloadAnimationViewController.m */,
+			);
+			path = downloadAnimations;
+			sourceTree = "<group>";
+		};
+		B10DD58823040C6D0063C80B /* jsonAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B10DD58923040C6D0063C80B /* button_gift_么么哒.json */,
+				B10DD58A23040C6D0063C80B /* 圆圆满满-h-X.json */,
+				B10DD58B23040C6D0063C80B /* button_gift_金元宝.json */,
+				B10DD58C23040C6D0063C80B /* cjylf.json */,
+				B10DD58D23040C6D0063C80B /* gift_连击.json */,
+				B10DD58E23040C6D0063C80B /* gift_跑车.json */,
+				B10DD58F23040C6D0063C80B /* 超级顺顺顺-h-X.json */,
+				B10DD59023040C6D0063C80B /* 一生一世-X.json */,
+				B10DD59123040C6D0063C80B /* 圆圆满满-h.json */,
+				B10DD59223040C6D0063C80B /* 超级一路發-X.json */,
+				B10DD59323040C6D0063C80B /* button_gift_给力.json */,
+				B10DD59423040C6E0063C80B /* ysys.json */,
+				B10DD59523040C6E0063C80B /* button_gift_皇冠.json */,
+				B10DD59623040C6E0063C80B /* button_gift_为你打call.json */,
+				B10DD59723040C6E0063C80B /* button_gift_666.json */,
+				B10DD59823040C6E0063C80B /* button_gift_加油.json */,
+				B10DD59923040C6E0063C80B /* cjsss.json */,
+				B10DD59A23040C6E0063C80B /* button_gift_烟花.json */,
+				B10DD59B23040C6E0063C80B /* 超级我要發.json */,
+				B10DD59C23040C6E0063C80B /* button_gift_谢谢.json */,
+				B10DD59D23040C6E0063C80B /* 超级顺顺顺-X.json */,
+				B10DD59E23040C6E0063C80B /* 一生一世-h.json */,
+				B10DD59F23040C6E0063C80B /* button_gift_跑车.json */,
+				B10DD5A023040C6E0063C80B /* button_gift_干杯.json */,
+				B10DD5A123040C6E0063C80B /* 超级一路發-h.json */,
+				B10DD5A223040C6E0063C80B /* 圆圆满满-X.json */,
+				B10DD5A323040C6E0063C80B /* wan.json */,
+				B10DD5A423040C6E0063C80B /* fff.json */,
+				B10DD5A523040C6E0063C80B /* yymm.json */,
+				B10DD5A623040C6E0063C80B /* 天长地久.json */,
+				B10DD5A723040C6E0063C80B /* 圆圆满满.json */,
+				B10DD5A823040C6E0063C80B /* 一生一世.json */,
+				B10DD5A923040C6E0063C80B /* ylf.json */,
+				B10DD5AA23040C6E0063C80B /* tcdj.json */,
+				B10DD5AB23040C6E0063C80B /* button_gift_福袋.json */,
+				B10DD5AC23040C6E0063C80B /* 超级一路發-h-X.json */,
+				B10DD5AD23040C6E0063C80B /* button_gift_锦鲤.json */,
+				B10DD5AE23040C6E0063C80B /* gift_摇钱树.json */,
+				B10DD5AF23040C6E0063C80B /* button_gift_金话筒.json */,
+				B10DD5B023040C6E0063C80B /* cjwyf.json */,
+				B10DD5B123040C6E0063C80B /* 超级一路發.json */,
+				B10DD5B223040C6E0063C80B /* 超级顺顺顺-h.json */,
+				B10DD5B323040C6E0063C80B /* button_gift_摇钱树.json */,
+				B10DD5B423040C6E0063C80B /* gift_烟花.json */,
+				B10DD5B523040C6E0063C80B /* button_gift_鲜花.json */,
+				B10DD5B623040C6E0063C80B /* 超级顺顺顺.json */,
+				B10DD5B723040C6E0063C80B /* button_gift_鼓掌.json */,
+				B10DD5B823040C6E0063C80B /* button_gift_幸运星.json */,
+				B10DD5B923040C6E0063C80B /* 一生一世-h-X.json */,
+			);
+			path = jsonAnimation;
+			sourceTree = "<group>";
+		};
+		B10DD5F123043D640063C80B /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				B17E6DFB23043DC1003BC1F2 /* SSZipArchive */,
+			);
+			path = ThirdLib;
 			sourceTree = "<group>";
 		};
 		B150DBD32286E0F400498D86 /* resources */ = {
@@ -262,6 +508,56 @@
 				B150DBD12286BC1100498D86 /* JStoOC.html */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		B17E6DFB23043DC1003BC1F2 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				B17E6DFC23043DC1003BC1F2 /* ZipArchive.h */,
+				B17E6DFD23043DC1003BC1F2 /* minizip */,
+				B17E6E1C23043DC1003BC1F2 /* SSZipArchive.h */,
+				B17E6E1D23043DC1003BC1F2 /* SSZipCommon.h */,
+				B17E6E1E23043DC1003BC1F2 /* SSZipArchive.m */,
+				B17E6E1F23043DC1003BC1F2 /* Info.plist */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		B17E6DFD23043DC1003BC1F2 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				B17E6DFE23043DC1003BC1F2 /* mz_strm_os_posix.c */,
+				B17E6DFF23043DC1003BC1F2 /* mz_strm_pkcrypt.c */,
+				B17E6E0023043DC1003BC1F2 /* mz_strm_wzaes.h */,
+				B17E6E0123043DC1003BC1F2 /* mz_compat.h */,
+				B17E6E0223043DC1003BC1F2 /* mz_strm_zlib.c */,
+				B17E6E0323043DC1003BC1F2 /* mz_zip.c */,
+				B17E6E0423043DC1003BC1F2 /* mz_os.h */,
+				B17E6E0523043DC1003BC1F2 /* LICENSE */,
+				B17E6E0623043DC1003BC1F2 /* mz_zip_rw.c */,
+				B17E6E0723043DC1003BC1F2 /* mz_strm_split.h */,
+				B17E6E0823043DC1003BC1F2 /* mz_strm_buf.h */,
+				B17E6E0923043DC1003BC1F2 /* mz_crypt_apple.c */,
+				B17E6E0A23043DC1003BC1F2 /* mz_strm.h */,
+				B17E6E0B23043DC1003BC1F2 /* mz_strm_mem.c */,
+				B17E6E0C23043DC1003BC1F2 /* mz_crypt.c */,
+				B17E6E0D23043DC1003BC1F2 /* mz_strm_wzaes.c */,
+				B17E6E0E23043DC1003BC1F2 /* mz_strm_zlib.h */,
+				B17E6E0F23043DC1003BC1F2 /* mz_compat.c */,
+				B17E6E1023043DC1003BC1F2 /* mz_strm_pkcrypt.h */,
+				B17E6E1123043DC1003BC1F2 /* mz_zip_rw.h */,
+				B17E6E1223043DC1003BC1F2 /* mz_os.c */,
+				B17E6E1323043DC1003BC1F2 /* mz_zip.h */,
+				B17E6E1423043DC1003BC1F2 /* mz_os_posix.c */,
+				B17E6E1523043DC1003BC1F2 /* mz.h */,
+				B17E6E1623043DC1003BC1F2 /* mz_strm_buf.c */,
+				B17E6E1723043DC1003BC1F2 /* mz_strm_split.c */,
+				B17E6E1823043DC1003BC1F2 /* mz_crypt.h */,
+				B17E6E1923043DC1003BC1F2 /* mz_strm_mem.h */,
+				B17E6E1A23043DC1003BC1F2 /* mz_strm.c */,
+				B17E6E1B23043DC1003BC1F2 /* mz_strm_os.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 		B1954C662269DDC0005CEF6C /* TestYYModel */ = {
@@ -439,6 +735,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B10DD58423040B250063C80B /* downloadAnimations */,
 				B1A9930F22E9E41700B4E1AA /* adViews */,
 				B1EAE60C22E6B58800CB8BC7 /* showsomeview */,
 				B1CCC26822DF1C0A00E9FE0D /* navigationBar */,
@@ -511,8 +808,12 @@
 		B1E72F3422DD807800CD4FDD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B10DD5EB23040F630063C80B /* HDFileManager.h */,
+				B10DD5EC23040F630063C80B /* HDFileManager.m */,
 				B1E72F3522DD80C600CD4FDD /* HDTools.h */,
 				B1E72F3622DD80C600CD4FDD /* HDTools.m */,
+				B10DD5EE230410160063C80B /* constant.h */,
+				B10DD5EF230410160063C80B /* constant.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -575,6 +876,7 @@
 		B1F5D10F21C2B9B9001D763B /* TestFunction */ = {
 			isa = PBXGroup;
 			children = (
+				B10DD5F123043D640063C80B /* ThirdLib */,
 				B1CCC26F22DF24E000E9FE0D /* base */,
 				B1CCC26722DF1BE900E9FE0D /* pages */,
 				B1E72F3422DD807800CD4FDD /* Tools */,
@@ -646,26 +948,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10DD5D823040C6E0063C80B /* 圆圆满满.json in Resources */,
+				B10DD5D723040C6E0063C80B /* 天长地久.json in Resources */,
 				B150DBD22286BC1100498D86 /* JStoOC.html in Resources */,
+				B10DD5C123040C6E0063C80B /* 一生一世-X.json in Resources */,
+				B10DD5E223040C6E0063C80B /* 超级一路發.json in Resources */,
+				B10DD5D523040C6E0063C80B /* fff.json in Resources */,
 				B18E3BB92293A3B600D6E34B /* cjwyf.json in Resources */,
+				B10DD5CF23040C6E0063C80B /* 一生一世-h.json in Resources */,
+				B10DD5DD23040C6E0063C80B /* 超级一路發-h-X.json in Resources */,
+				B10DD5BE23040C6E0063C80B /* gift_连击.json in Resources */,
+				B10DD5DB23040C6E0063C80B /* tcdj.json in Resources */,
 				B18E3BA72293920D00D6E34B /* wytcdj.json in Resources */,
+				B10DD5DC23040C6E0063C80B /* button_gift_福袋.json in Resources */,
+				B10DD5E523040C6E0063C80B /* gift_烟花.json in Resources */,
 				B18E3BB62293A3B600D6E34B /* cjylf.json in Resources */,
 				B18E3BB82293A3B600D6E34B /* tcdj.json in Resources */,
+				B10DD5D123040C6E0063C80B /* button_gift_干杯.json in Resources */,
+				B10DD5D023040C6E0063C80B /* button_gift_跑车.json in Resources */,
+				B10DD5E323040C6E0063C80B /* 超级顺顺顺-h.json in Resources */,
 				B18E3BB12293A3B600D6E34B /* fff.json in Resources */,
 				B150DBDA2286E11700498D86 /* girl.png in Resources */,
+				B10DD5C523040C6E0063C80B /* ysys.json in Resources */,
+				B10DD5E423040C6E0063C80B /* button_gift_摇钱树.json in Resources */,
+				B10DD5C423040C6E0063C80B /* button_gift_给力.json in Resources */,
+				B17E6E2423043DC1003BC1F2 /* LICENSE in Resources */,
+				B10DD5EA23040C6E0063C80B /* 一生一世-h-X.json in Resources */,
 				B150DBDE2286E11700498D86 /* backbutton@2x.png in Resources */,
+				B10DD5E123040C6E0063C80B /* cjwyf.json in Resources */,
+				B10DD5DF23040C6E0063C80B /* gift_摇钱树.json in Resources */,
 				B1F5D11D21C2B9B9001D763B /* LaunchScreen.storyboard in Resources */,
 				B18E3BB52293A3B600D6E34B /* wan.json in Resources */,
 				B18E3BB42293A3B600D6E34B /* ysys.json in Resources */,
+				B10DD5D223040C6E0063C80B /* 超级一路發-h.json in Resources */,
+				B10DD5E823040C6E0063C80B /* button_gift_鼓掌.json in Resources */,
+				B10DD5DE23040C6E0063C80B /* button_gift_锦鲤.json in Resources */,
+				B10DD5BC23040C6E0063C80B /* button_gift_金元宝.json in Resources */,
+				B10DD5C923040C6E0063C80B /* button_gift_加油.json in Resources */,
 				B150DBDF2286E11700498D86 /* webRefreshButton@2x.png in Resources */,
+				B10DD5C623040C6E0063C80B /* button_gift_皇冠.json in Resources */,
+				B10DD5CD23040C6E0063C80B /* button_gift_谢谢.json in Resources */,
+				B10DD5E623040C6E0063C80B /* button_gift_鲜花.json in Resources */,
 				B18E3BA52293898700D6E34B /* cjsss_big.json in Resources */,
+				B17E6E3123043DC1003BC1F2 /* Info.plist in Resources */,
+				B10DD5BB23040C6E0063C80B /* 圆圆满满-h-X.json in Resources */,
+				B10DD5DA23040C6E0063C80B /* ylf.json in Resources */,
 				B150DBDD2286E11700498D86 /* backbutton@3x.png in Resources */,
+				B10DD5C323040C6E0063C80B /* 超级一路發-X.json in Resources */,
 				B18E3BB22293A3B600D6E34B /* yymm.json in Resources */,
+				B10DD5CC23040C6E0063C80B /* 超级我要發.json in Resources */,
+				B10DD5D623040C6E0063C80B /* yymm.json in Resources */,
+				B10DD5C723040C6E0063C80B /* button_gift_为你打call.json in Resources */,
+				B10DD5C223040C6E0063C80B /* 圆圆满满-h.json in Resources */,
+				B10DD5CE23040C6E0063C80B /* 超级顺顺顺-X.json in Resources */,
+				B10DD5C823040C6E0063C80B /* button_gift_666.json in Resources */,
+				B10DD5CB23040C6E0063C80B /* button_gift_烟花.json in Resources */,
+				B10DD5BF23040C6E0063C80B /* gift_跑车.json in Resources */,
+				B10DD5D423040C6E0063C80B /* wan.json in Resources */,
+				B10DD5D323040C6E0063C80B /* 圆圆满满-X.json in Resources */,
+				B10DD5BA23040C6E0063C80B /* button_gift_么么哒.json in Resources */,
+				B10DD5C023040C6E0063C80B /* 超级顺顺顺-h-X.json in Resources */,
+				B10DD5BD23040C6E0063C80B /* cjylf.json in Resources */,
 				B1F5D11A21C2B9B9001D763B /* Assets.xcassets in Resources */,
+				B10DD5E923040C6E0063C80B /* button_gift_幸运星.json in Resources */,
+				B10DD5D923040C6E0063C80B /* 一生一世.json in Resources */,
 				B18E3BB32293A3B600D6E34B /* ylf.json in Resources */,
+				B10DD5E023040C6E0063C80B /* button_gift_金话筒.json in Resources */,
 				B150DBDB2286E11700498D86 /* webRefreshButton@3x.png in Resources */,
 				B18E3BB72293A3B600D6E34B /* cjsss.json in Resources */,
 				B1F5D11821C2B9B9001D763B /* Main.storyboard in Resources */,
+				B10DD5E723040C6E0063C80B /* 超级顺顺顺.json in Resources */,
+				B10DD5CA23040C6E0063C80B /* cjsss.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +1067,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17E6E2D23043DC1003BC1F2 /* mz_strm_buf.c in Sources */,
 				B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */,
 				B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */,
 				B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */,
@@ -724,17 +1078,22 @@
 				B1A9931222E9E49000B4E1AA /* HDShowADViewsViewController.m in Sources */,
 				B164B78A226381DD0097AF63 /* HDViewController.m in Sources */,
 				B107FCDC21E5B25A00AAF725 /* Son.m in Sources */,
+				B17E6E2223043DC1003BC1F2 /* mz_strm_zlib.c in Sources */,
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
+				B17E6E2623043DC1003BC1F2 /* mz_crypt_apple.c in Sources */,
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
 				B1EAE61F22E885B900CB8BC7 /* UINavigationConfig.m in Sources */,
+				B10DD5F0230410160063C80B /* constant.m in Sources */,
 				B1E72F3722DD80C600CD4FDD /* HDTools.m in Sources */,
+				B17E6E3023043DC1003BC1F2 /* SSZipArchive.m in Sources */,
 				B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */,
 				B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */,
 				B1E72F1F22DD758E00CD4FDD /* HDHomeTableViewCell.m in Sources */,
 				B1A9930522E9829E00B4E1AA /* HDNavBarTwoViewController.m in Sources */,
 				B153A7A1226D91FD002A6184 /* NetworkTool.m in Sources */,
+				B17E6E2C23043DC1003BC1F2 /* mz_os_posix.c in Sources */,
 				B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */,
 				B1F5D12021C2B9B9001D763B /* main.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
@@ -744,19 +1103,32 @@
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
+				B17E6E2723043DC1003BC1F2 /* mz_strm_mem.c in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
+				B17E6E2923043DC1003BC1F2 /* mz_strm_wzaes.c in Sources */,
+				B17E6E2E23043DC1003BC1F2 /* mz_strm_split.c in Sources */,
+				B17E6E2523043DC1003BC1F2 /* mz_zip_rw.c in Sources */,
 				B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */,
+				B17E6E2B23043DC1003BC1F2 /* mz_os.c in Sources */,
 				B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */,
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,
 				B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */,
 				B107FCD921DFACED00AAF725 /* SubView.m in Sources */,
+				B17E6E2A23043DC1003BC1F2 /* mz_compat.c in Sources */,
+				B17E6E2823043DC1003BC1F2 /* mz_crypt.c in Sources */,
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
+				B17E6E2F23043DC1003BC1F2 /* mz_strm.c in Sources */,
+				B17E6E2323043DC1003BC1F2 /* mz_zip.c in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
+				B10DD58723040B4B0063C80B /* HDDownloadAnimationViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
 				B10342B222EED66B0054A8B9 /* HDTestDeallocView.m in Sources */,
+				B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */,
+				B17E6E2123043DC1003BC1F2 /* mz_strm_pkcrypt.c in Sources */,
+				B17E6E2023043DC1003BC1F2 /* mz_strm_os_posix.c in Sources */,
 				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
