@@ -12,4 +12,5 @@ pod 'SDWebImage'
 pod 'YYModel'
 pod 'lottie-ios'
 pod 'Masonry'
+pod 'SSZipArchive'
 end

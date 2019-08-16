@@ -32,7 +32,7 @@
 {
     //分割获取下载链接和参数
     NSString *requestURLString;
-    NSString *fileId;
+    
     NSString *fileName;
    
     requestURLString = params[@"url"];
@@ -55,7 +55,7 @@
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
 //        指定下载地址
-        NSString *fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent: @"jsonAnimation.zip"];
+        NSString *fullPath = [NSTemporaryDirectory() stringByAppendingPathComponent: @"jsonAnimation.zip"];
         return [NSURL fileURLWithPath:fullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
