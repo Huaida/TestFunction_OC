@@ -60,6 +60,10 @@
 //         NSLog(@"%@",zipData);
         if ([SSZipArchive unzipFileAtPath:zipPath  toDestination:unzipPath delegate:self]){
             NSLog(@"解压成功");
+//            修改iOS 文件夹名称
+//            [self renameFolder];
+//            [self writeToFile];
+//            [self readFile];
         }
         else {
             NSLog(@"解压失败");
@@ -81,5 +85,38 @@
 
 - (void)zipArchiveDidUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString *)unzippedPat uniqueId:(NSString *)uniqueId {
     NSLog(@"解压完成！");
+}
+#pragma mark  -  修改文件名 删除文件 创建文件 修改文件夹名称 测试
+- (void)renameFolder{
+    NSString *folderPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    folderPath = [folderPath stringByAppendingPathComponent:@"animation"];
+}
+- (void)writeToFile{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    if (!docDir) {
+        NSLog(@"Documents 目录未找到");
+    }
+    NSArray *array = [[NSArray alloc] initWithObjects:@"内容",@"content",nil];
+    NSString *filePath = [docDir stringByAppendingPathComponent:@"testFile.txt"];
+    [array writeToFile:filePath atomically:YES];
+    
+//    写入的文件是xml类型
+//    <?xml version="1.0" encoding="UTF-8"?>
+//    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+//    <plist version="1.0">
+//    <array>
+//    <string>内容</string>
+//    <string>content</string>
+//    </array>
+//    </plist>
+
+}
+- (void)readFile{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *filePath = [docDir stringByAppendingPathComponent:@"testFile.txt"];
+    NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
+    NSLog(@"%@", array);
 }
 @end

@@ -28,7 +28,7 @@
                         @[@"自定义NavigationBar",@"HDTestNavigationBarViewController"],
                        @[@"异步多弹窗排序算法",@"HDShowAsynchronismViewViewController"],
                        @[@"暖场广告图",@"HDShowADViewsViewController"],
-                       @[@"网络加载动画本地播放",@"HDDownloadAnimationViewController"],
+                       @[@"网络下载ZIP解压 文件及文件夹操作",@"HDDownloadAnimationViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];
