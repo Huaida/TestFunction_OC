@@ -61,7 +61,7 @@
         if ([SSZipArchive unzipFileAtPath:zipPath  toDestination:unzipPath delegate:self]){
             NSLog(@"解压成功");
 //            修改iOS 文件夹名称
-//            [self renameFolder];
+            [self renameFolder:@"v3.6.2"];
 //            [self writeToFile];
 //            [self readFile];
         }
@@ -87,10 +87,106 @@
     NSLog(@"解压完成！");
 }
 #pragma mark  -  修改文件名 删除文件 创建文件 修改文件夹名称 测试
-- (void)renameFolder{
-    NSString *folderPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    folderPath = [folderPath stringByAppendingPathComponent:@"animation"];
+- (void)renameFolder:(NSString *)version{
+//    方案移动到 同一路径下新的文件夹中
+    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *oldFolderPath = [docPath stringByAppendingString:@"/animation"];
+    NSString *newFolderPath = [docPath stringByAppendingPathComponent:[NSString stringWithFormat:@"/animation%@",version]];
+     NSLog(@"%@-%@",oldFolderPath, newFolderPath);
+//    把现有的文件移动上新的
+    [self renameFileName:oldFolderPath toNewName:newFolderPath];
+    
 }
+-(BOOL)deleteFileByPath:(NSString *)path{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    BOOL res=[fileManager removeItemAtPath:path error:nil];
+    return res;
+//    NSLog(@"文件是否存在: %@",[fileManager isExecutableFileAtPath:path]?@"YES":@"NO");
+}
+//根据路径复制文件
++(BOOL)copyFile:(NSString *)path topath:(NSString *)topath
+{
+    
+    BOOL result = NO;
+    NSError * error = nil;
+    
+    result = [[NSFileManager defaultManager]copyItemAtPath:path toPath:topath error:&error ];
+    
+    if (error){
+        NSLog(@"copy失败：%@",[error localizedDescription]);
+    }
+    return result;
+}
+//根据路径剪切文件
++(BOOL)cutFile:(NSString *)path topath:(NSString *)topath
+{
+    
+    BOOL result = NO;
+    NSError * error = nil;
+    result = [[NSFileManager defaultManager]moveItemAtPath:path toPath:topath error:&error ];
+    if (error){
+        NSLog(@"cut失败：%@",[error localizedDescription]);
+    }
+    return result;
+    
+}
+//根据路径获取该路径下所有目录
++(NSArray *)getAllFileByName:(NSString *)path
+{
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    NSArray *array = [defaultManager contentsOfDirectoryAtPath:path error:nil];
+    return array;
+}
+//根据路径获取文件目录下所有文件
++(NSArray *)getAllFloderByName:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSArray * fileAndFloderArr = [self getAllFileByName:path];
+    
+    NSMutableArray *dirArray = [[NSMutableArray alloc] init];
+    BOOL isDir = NO;
+    //在上面那段程序中获得的fileList中列出文件夹名
+    for (NSString * file in fileAndFloderArr){
+        
+        NSString *paths = [path stringByAppendingPathComponent:file];
+        [fileManager fileExistsAtPath:paths isDirectory:(&isDir)];
+        if (isDir) {
+            [dirArray addObject:file];
+        }
+        isDir = NO;
+    }
+    return dirArray;
+}
+//获取文件及目录的大小
++(float)sizeOfDirectory:(NSString *)dir{
+    NSDirectoryEnumerator *direnum = [[NSFileManager defaultManager] enumeratorAtPath:dir];
+    NSString *pname;
+    int64_t s=0;
+    while (pname = [direnum nextObject]){
+        //NSLog(@"pname   %@",pname);
+        NSDictionary *currentdict=[direnum fileAttributes];
+        NSString *filesize=[NSString stringWithFormat:@"%@",[currentdict objectForKey:NSFileSize]];
+        NSString *filetype=[currentdict objectForKey:NSFileType];
+        
+        if([filetype isEqualToString:NSFileTypeDirectory]) continue;
+        s=s+[filesize longLongValue];
+    }
+    return s*1.0;
+}
+//重命名文件或目录  原理：ios下不会保留空文件夹，所以移动文件夹下所有文件去新文件夹，实际上附带是删除本文件夹操作，如果新旧文件夹在同一个目录下，从而达到重命名的效果
+-(BOOL)renameFileName:(NSString *)oldPath toNewName:(NSString *)newPath
+{
+    BOOL result = NO;
+    NSError * error = nil;
+    result = [[NSFileManager defaultManager] moveItemAtPath:oldPath toPath:newPath error:&error];
+    if (error){
+        NSLog(@"重命名失败：%@",[error localizedDescription]);
+    }
+    return result;
+}
+
 - (void)writeToFile{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docDir = [paths objectAtIndex:0];
