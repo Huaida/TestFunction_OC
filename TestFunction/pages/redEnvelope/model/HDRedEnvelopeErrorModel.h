@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HDRedEnvelopeErrorModel : NSObject
 @property (nonatomic,assign) NSInteger weight;
 @property (nonatomic ,copy) NSString *errorHint;
+@property (nonatomic,assign) BOOL moneyLegal;
+@property (nonatomic,assign) BOOL countLegal;
 
 + (instancetype)numberError;
 + (instancetype)moneyError;

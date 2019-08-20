@@ -356,8 +356,8 @@
         return;
     }
     
-    
-    [self.presenter checkValidityWithMoney:self.moneyTextField.text :self.numTextField.text isMoneyTextField:(textField == _moneyTextField )];
+    [self.presenter checkValidityWithMoney:self.moneyTextField.text :self.numTextField.text];
+//    [self.presenter checkValidityWithMoney:self.moneyTextField.text :self.numTextField.text isMoneyTextField:(textField == _moneyTextField )];
     
         double aver = [_moneyTextField.text doubleValue] / ([_numTextField.text integerValue] * 1.0);
         if (([_numTextField.text integerValue] > 0) && ((aver >= 0.5) && (aver <= 200.00))) {
