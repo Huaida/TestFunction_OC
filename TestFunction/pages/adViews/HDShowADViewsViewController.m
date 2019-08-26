@@ -8,6 +8,7 @@
 
 #import "HDShowADViewsViewController.h"
 #import "HDADScrollView.h"
+#import "HDAutoADScrollView.h"
 
 @interface HDShowADViewsViewController ()
 
@@ -22,10 +23,15 @@
     [self customAddSubviews];
 }
 - (void)customAddSubviews{
-        HDADScrollView *scrollView = [[HDADScrollView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZTotalScreenHeight)];
+        HDADScrollView *scrollView = [[HDADScrollView alloc] initWithFrame:CGRectMake(0, 100, MZ_SW, 100)];
         [self.view addSubview:scrollView];
-        scrollView.dataArray = @[@"名片背景3",@"名片背景3",@"名片背景3"].mutableCopy;
+        scrollView.dataArray = @[@"testImage1",@"testImage2",@"testImage3"].mutableCopy;
         scrollView.backgroundColor = [UIColor cyanColor];
+    
+    HDAutoADScrollView *autoScrollView = [[HDAutoADScrollView alloc] initWithFrame:CGRectMake(0, 300, MZ_SW, 100)];
+    [self.view addSubview:autoScrollView];
+    autoScrollView.dataArray = @[@"testImage1",@"testImage2",@"testImage3"].mutableCopy;
+    autoScrollView.backgroundColor = [UIColor cyanColor];
 }
 
 /*

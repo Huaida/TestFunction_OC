@@ -1,8 +1,8 @@
 //
-//  HDTestDeallocView.h
+//  HDAutoADTableView.h
 //  TestFunction
 //
-//  Created by 怀达 on 2019/7/29.
+//  Created by 怀达 on 2019/8/26.
 //  Copyright © 2019 white. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HDTestDeallocView : UIView
-
+@interface HDAutoADTableView : UITableView
+@property (nonatomic ,strong) NSArray *dataArray;
 @end
 
 NS_ASSUME_NONNULL_END

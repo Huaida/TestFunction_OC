@@ -26,7 +26,7 @@
                        @[@"[系统]颜色渐变",@"HDNavBarTwoViewController"],
                        @[@"[系统]设置背景图",@"HDNavBarThreeViewController"],
                        @[@"[自定义]导航栏",@"HDNavBarFourViewController"],
-                       
+                       @[@"[自定义]尝试获取当前导航栏",@"HDNavBarCaptureViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

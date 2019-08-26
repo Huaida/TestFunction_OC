@@ -29,13 +29,13 @@
 }
 - (void)customAddSubviews{
     self.innerImageView = [[UIImageView alloc] init];
-    self.innerImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.innerImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:self.innerImageView];
 }
 - (void)customLayoutSubviews{
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        //    根据图片的长宽比 设置内部imageView 的frame
+        //    根据图片的长宽比 设置内部imageView 的frame  图片左上角布局
         
         CGSize imageSize = self.image.size;
         CGSize containerSize = self.frame.size;

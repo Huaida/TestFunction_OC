@@ -30,12 +30,11 @@
     self.contentSize = CGSizeMake(MZ_SW*dataArray.count, MZTotalScreenHeight);
     
     for (int i = 0; i < dataArray.count; i ++) {
-        HDImageView *adView = [[HDImageView alloc] initWithFrame:CGRectMake(i * MZ_SW, 0, MZ_SW, MZTotalScreenHeight) :[UIImage imageNamed:@"testImageView"]];
+        HDImageView *adView = [[HDImageView alloc] initWithFrame:CGRectMake(i * MZ_SW, 0, MZ_SW, MZTotalScreenHeight) :[UIImage imageNamed:@"bgImage"]];
         [self addSubview:adView];
         [self.imageArray addObject:adView];
-        
-        
-        [adView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dataArray[i]]] placeholderImage:[UIImage imageNamed:@"testImageView"]];
+//        [adView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dataArray[i]]] placeholderImage:[UIImage imageNamed:@"bgImage"]];
+        [adView setImage:[UIImage imageNamed:dataArray[i]]];
         [adView customLayoutSubviews];
     }
     
