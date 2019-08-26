@@ -7,9 +7,9 @@
 //
 
 #import "HDAutoADScrollView.h"
-#import "HDAutoADTableView.h"
+#import "HDAutoADCollectionView.h"
 @interface HDAutoADScrollView()
-@property (nonatomic ,strong) HDAutoADTableView *tableView;
+@property (nonatomic ,strong) HDAutoADCollectionView *collectionView;
 @property (nonatomic ,strong) UIPageControl *pageControl;
 
 @end
@@ -21,20 +21,31 @@
     return self;
 }
 - (void)setBaseProperty{
-    self.tableView = [[HDAutoADTableView alloc] init];
-    [self addSubview:self.tableView];
+    [self customAddCollectionView];
     self.pageControl = [[UIPageControl alloc] init];
     [self addSubview:self.pageControl];
 }
+- (void)customAddCollectionView{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    flowLayout.itemSize = CGSizeMake(MZ_SW, 100);
+    flowLayout.minimumLineSpacing = 0;
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    self.collectionView = [[HDAutoADCollectionView alloc]initWithFrame:CGRectMake(0,0,MZ_SW,100) collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = [UIColor redColor];
+
+    [self addSubview:self.collectionView];
+}
 -(void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
-    [self updateTableView:dataArray];
+    [self updateCollectionView:dataArray];
     
     
 }
-- (void)updateTableView:(NSArray *)dataArray{
-    self.tableView.frame = self.bounds;
-    self.tableView.backgroundColor = [UIColor redColor];
-    self.tableView.dataArray = dataArray;
+- (void)updateCollectionView:(NSArray *)dataArray{
+//    self.collectionView.frame = self.bounds;
+//    self.collectionView.backgroundColor = [UIColor redColor];
+    self.collectionView.dataArray = [dataArray mutableCopy];
 }
 @end

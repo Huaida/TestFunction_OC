@@ -1,5 +1,5 @@
 //
-//  HDAutoADTableView.h
+//  HDAutoADCollectionViewCell.h
 //  TestFunction
 //
 //  Created by 怀达 on 2019/8/26.
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HDAutoADTableView : UITableView
-@property (nonatomic ,strong) NSMutableArray *dataArray;
+@interface HDAutoADCollectionViewCell : UICollectionViewCell
+
 @end
 
 NS_ASSUME_NONNULL_END
