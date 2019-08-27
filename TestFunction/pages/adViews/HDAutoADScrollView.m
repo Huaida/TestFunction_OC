@@ -22,7 +22,10 @@
 }
 - (void)setBaseProperty{
     [self customAddCollectionView];
-    self.pageControl = [[UIPageControl alloc] init];
+    [self customAddPageControl];
+}
+- (void)customAddPageControl{
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 80, MZ_SW, 20)];
     [self addSubview:self.pageControl];
 }
 - (void)customAddCollectionView{
@@ -39,13 +42,14 @@
 }
 -(void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
-    [self updateCollectionView:dataArray];
+    [self updateSubviewsWithData:dataArray];
     
     
 }
-- (void)updateCollectionView:(NSArray *)dataArray{
-//    self.collectionView.frame = self.bounds;
-//    self.collectionView.backgroundColor = [UIColor redColor];
+- (void)updateSubviewsWithData:(NSArray *)dataArray{
+
     self.collectionView.dataArray = [dataArray mutableCopy];
+    self.pageControl.numberOfPages = dataArray.count;
+    self.pageControl.currentPage = 0;
 }
 @end
