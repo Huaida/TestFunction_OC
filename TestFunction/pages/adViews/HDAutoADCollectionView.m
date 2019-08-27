@@ -88,6 +88,9 @@
         NSLog(@"要滚动到的位置%ld",(long)indexPath.row);
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
+    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(currentDisplayPageNumber:)]) {
+        [self.pageDelegate currentDisplayPageNumber:(currentCellRow%self.numberOfContents)];
+    }
 }
 
 @end

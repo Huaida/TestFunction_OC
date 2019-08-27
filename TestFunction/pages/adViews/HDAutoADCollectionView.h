@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@protocol HDAutoADCollectionViewPagesProtocal<NSObject>
+-(void)currentDisplayPageNumber:(NSInteger)pageNumber;
+@end
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HDAutoADCollectionView : UICollectionView
+@property (nonatomic ,weak) id<HDAutoADCollectionViewPagesProtocal> pageDelegate;
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
 
