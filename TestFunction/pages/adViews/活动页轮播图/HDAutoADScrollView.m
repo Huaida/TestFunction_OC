@@ -13,7 +13,7 @@
 @property (nonatomic ,strong) HDAutoADCollectionView *collectionView;
 @property (nonatomic ,strong) HDPageControl *pageControl;
 @property (nonatomic ,strong) NSTimer *timer;
-//@property (nonatomic ,strong) UIView *bgView;
+
 
 @end
 @implementation HDAutoADScrollView
@@ -25,16 +25,9 @@
 }
 - (void)setBaseProperty{
     [self customAddCollectionView];
-//    [self customAddBgView];
     [self customAddPageControl];
 }
-//- (void)customAddBgView{
-//    self.bgView = [[UIView alloc] init];
-//    self.bgView.backgroundColor = MakeColorRGBA(0x000000, 0.3);
-//    self.bgView.layer.cornerRadius = 2;
-//    self.bgView.layer.masksToBounds = YES;
-//    [self addSubview:self.bgView];
-//}
+
 - (void)customAddPageControl{
     self.pageControl = [[HDPageControl alloc] init];
     self.pageControl.backgroundColor = MakeColorRGBA(0x000000, 0.3);
@@ -62,8 +55,6 @@
     
 }
 - (void)updateSubviewsWithData:(NSArray *)dataArray{
-//    self.bgView.frame = CGRectMake(0, 0, dataArray.count * 10 +6, 10);
-//    self.bgView.center = self.pageControl.center;
     self.collectionView.dataArray = [dataArray mutableCopy];
     CGFloat widthValue = dataArray.count * 10 + 6;
     CGFloat xValue = (MZ_SW - widthValue)/2.0;

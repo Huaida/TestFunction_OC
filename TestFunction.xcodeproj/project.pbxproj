@@ -112,6 +112,7 @@
 		B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26D22DF204B00E9FE0D /* HDRedEnvelopeDataView.m */; };
 		B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */; };
 		B1CF542523150AB400B09ED3 /* HDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF542423150AB400B09ED3 /* HDPageControl.m */; };
+		B1CF542A23151E3300B09ED3 /* HDScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF542923151E3300B09ED3 /* HDScrollTextView.m */; };
 		B1E72F1F22DD758E00CD4FDD /* HDHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */; };
 		B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2122DD791200CD4FDD /* HDRedEnvelopeViewController.m */; };
 		B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2E22DD7B9500CD4FDD /* HDDisableTouchTextField.m */; };
@@ -290,6 +291,8 @@
 		B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavigationController.m; sourceTree = "<group>"; };
 		B1CF542323150AB400B09ED3 /* HDPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageControl.h; sourceTree = "<group>"; };
 		B1CF542423150AB400B09ED3 /* HDPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageControl.m; sourceTree = "<group>"; };
+		B1CF542823151E3300B09ED3 /* HDScrollTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDScrollTextView.h; sourceTree = "<group>"; };
+		B1CF542923151E3300B09ED3 /* HDScrollTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDScrollTextView.m; sourceTree = "<group>"; };
 		B1E72F1D22DD758E00CD4FDD /* HDHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableViewCell.h; sourceTree = "<group>"; };
 		B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableViewCell.m; sourceTree = "<group>"; };
 		B1E72F2022DD791200CD4FDD /* HDRedEnvelopeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRedEnvelopeViewController.h; sourceTree = "<group>"; };
@@ -551,24 +554,14 @@
 		B1A9930F22E9E41700B4E1AA /* adViews */ = {
 			isa = PBXGroup;
 			children = (
+				B1CF542723151E0A00B09ED3 /* 文字跑马灯 */,
+				B1CF542623151DA500B09ED3 /* 活动页轮播图 */,
 				B1A6BF2B22D8565A00AD35A2 /* HDADScrollView.h */,
 				B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */,
 				B10342B322EED6860054A8B9 /* HDTestDeallocViewController.h */,
 				B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */,
-				B1FAA23A2313CF09008200C8 /* HDAutoADScrollView.h */,
-				B1FAA23B2313CF09008200C8 /* HDAutoADScrollView.m */,
 				B1FAA23D2313CF67008200C8 /* HDAutoADTableView.h */,
 				B1FAA23E2313CF67008200C8 /* HDAutoADTableView.m */,
-				B1FAA2402313E5B7008200C8 /* HDAutoADCollectionView.h */,
-				B1FAA2412313E5B7008200C8 /* HDAutoADCollectionView.m */,
-				B1FAA2432313FDD9008200C8 /* HDAutoADCollectionViewCell.h */,
-				B1FAA2442313FDD9008200C8 /* HDAutoADCollectionViewCell.m */,
-				B1CF542323150AB400B09ED3 /* HDPageControl.h */,
-				B1CF542423150AB400B09ED3 /* HDPageControl.m */,
-				B1FAA24623140A96008200C8 /* HDAutoADModel.h */,
-				B1FAA24723140A96008200C8 /* HDAutoADModel.m */,
-				B1FAA24923140B06008200C8 /* HDCustomTextADModel.h */,
-				B1FAA24A23140B06008200C8 /* HDCustomTextADModel.m */,
 				B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */,
 				B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */,
 			);
@@ -719,6 +712,34 @@
 				B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */,
 			);
 			path = navigationController;
+			sourceTree = "<group>";
+		};
+		B1CF542623151DA500B09ED3 /* 活动页轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				B1FAA2402313E5B7008200C8 /* HDAutoADCollectionView.h */,
+				B1FAA23A2313CF09008200C8 /* HDAutoADScrollView.h */,
+				B1FAA23B2313CF09008200C8 /* HDAutoADScrollView.m */,
+				B1FAA2412313E5B7008200C8 /* HDAutoADCollectionView.m */,
+				B1FAA2432313FDD9008200C8 /* HDAutoADCollectionViewCell.h */,
+				B1FAA2442313FDD9008200C8 /* HDAutoADCollectionViewCell.m */,
+				B1CF542323150AB400B09ED3 /* HDPageControl.h */,
+				B1CF542423150AB400B09ED3 /* HDPageControl.m */,
+				B1FAA24623140A96008200C8 /* HDAutoADModel.h */,
+				B1FAA24723140A96008200C8 /* HDAutoADModel.m */,
+				B1FAA24923140B06008200C8 /* HDCustomTextADModel.h */,
+				B1FAA24A23140B06008200C8 /* HDCustomTextADModel.m */,
+			);
+			path = "活动页轮播图";
+			sourceTree = "<group>";
+		};
+		B1CF542723151E0A00B09ED3 /* 文字跑马灯 */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF542823151E3300B09ED3 /* HDScrollTextView.h */,
+				B1CF542923151E3300B09ED3 /* HDScrollTextView.m */,
+			);
+			path = "文字跑马灯";
 			sourceTree = "<group>";
 		};
 		B1E72F1C22DD74AF00CD4FDD /* redEnvelope */ = {
@@ -1049,6 +1070,7 @@
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,
+				B1CF542A23151E3300B09ED3 /* HDScrollTextView.m in Sources */,
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,

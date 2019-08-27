@@ -9,6 +9,7 @@
 #import "HDShowADViewsViewController.h"
 #import "HDADScrollView.h"
 #import "HDAutoADScrollView.h"
+#import "HDScrollTextView.h"
 
 @interface HDShowADViewsViewController ()
 
@@ -32,6 +33,12 @@
     [self.view addSubview:autoScrollView];
     autoScrollView.dataArray = @[@"testImage1",@"testImage2",@"testImage3"].mutableCopy;
     autoScrollView.backgroundColor = [UIColor cyanColor];
+    
+    HDScrollTextView *scrollTextView = [[HDScrollTextView alloc] initWithFrame:CGRectMake(0, 400, MZ_SW, 30)];
+    [self.view addSubview:scrollTextView];
+    scrollTextView.backgroundColor = MakeColorRGBA(0xFFFF00, 0.3);
+    scrollTextView.bulletinString = @"设置了就显示，两个跑马灯之间间隔40px";
+    
 }
 
 /*
