@@ -111,6 +111,7 @@
 		B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */; };
 		B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26D22DF204B00E9FE0D /* HDRedEnvelopeDataView.m */; };
 		B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */; };
+		B1CF542523150AB400B09ED3 /* HDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF542423150AB400B09ED3 /* HDPageControl.m */; };
 		B1E72F1F22DD758E00CD4FDD /* HDHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */; };
 		B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2122DD791200CD4FDD /* HDRedEnvelopeViewController.m */; };
 		B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2E22DD7B9500CD4FDD /* HDDisableTouchTextField.m */; };
@@ -287,6 +288,8 @@
 		B1CCC26D22DF204B00E9FE0D /* HDRedEnvelopeDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRedEnvelopeDataView.m; sourceTree = "<group>"; };
 		B1CCC27122DF251E00E9FE0D /* HDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDNavigationController.h; sourceTree = "<group>"; };
 		B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDNavigationController.m; sourceTree = "<group>"; };
+		B1CF542323150AB400B09ED3 /* HDPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageControl.h; sourceTree = "<group>"; };
+		B1CF542423150AB400B09ED3 /* HDPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageControl.m; sourceTree = "<group>"; };
 		B1E72F1D22DD758E00CD4FDD /* HDHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableViewCell.h; sourceTree = "<group>"; };
 		B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableViewCell.m; sourceTree = "<group>"; };
 		B1E72F2022DD791200CD4FDD /* HDRedEnvelopeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDRedEnvelopeViewController.h; sourceTree = "<group>"; };
@@ -560,6 +563,8 @@
 				B1FAA2412313E5B7008200C8 /* HDAutoADCollectionView.m */,
 				B1FAA2432313FDD9008200C8 /* HDAutoADCollectionViewCell.h */,
 				B1FAA2442313FDD9008200C8 /* HDAutoADCollectionViewCell.m */,
+				B1CF542323150AB400B09ED3 /* HDPageControl.h */,
+				B1CF542423150AB400B09ED3 /* HDPageControl.m */,
 				B1FAA24623140A96008200C8 /* HDAutoADModel.h */,
 				B1FAA24723140A96008200C8 /* HDAutoADModel.m */,
 				B1FAA24923140B06008200C8 /* HDCustomTextADModel.h */,
@@ -1064,6 +1069,7 @@
 				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
+				B1CF542523150AB400B09ED3 /* HDPageControl.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,

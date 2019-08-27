@@ -28,7 +28,7 @@
         scrollView.dataArray = @[@"testImage1",@"testImage2",@"testImage3"].mutableCopy;
         scrollView.backgroundColor = [UIColor cyanColor];
     
-    HDAutoADScrollView *autoScrollView = [[HDAutoADScrollView alloc] initWithFrame:CGRectMake(0, 300, MZ_SW, 100)];
+    HDAutoADScrollView *autoScrollView = [[HDAutoADScrollView alloc] initWithFrame:CGRectMake(0, 300, MZ_SW, 80)];
     [self.view addSubview:autoScrollView];
     autoScrollView.dataArray = @[@"testImage1",@"testImage2",@"testImage3"].mutableCopy;
     autoScrollView.backgroundColor = [UIColor cyanColor];

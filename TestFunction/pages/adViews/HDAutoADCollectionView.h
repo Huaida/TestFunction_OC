@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol HDAutoADCollectionViewPagesProtocal<NSObject>
--(void)currentDisplayPageNumber:(NSInteger)pageNumber;
+@protocol HDAutoADCollectionViewProtocal<NSObject>
+-(void)AutoADCollectionViewcurrentDisplayPageNumber:(NSInteger)pageNumber;
+-(void)AutoADCollectionViewSelectedLink:(NSString *_Nullable)link;
+-(void)AutoADCollectionViewPauseTimerForDragging;
+-(void)AutoADCollectionViewStartTimerForEndDragging;
 @end
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HDAutoADCollectionView : UICollectionView
-@property (nonatomic ,weak) id<HDAutoADCollectionViewPagesProtocal> pageDelegate;
+@property (nonatomic ,weak) id<HDAutoADCollectionViewProtocal> pageDelegate;
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
 

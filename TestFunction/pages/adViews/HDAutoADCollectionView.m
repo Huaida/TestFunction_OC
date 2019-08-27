@@ -8,6 +8,8 @@
 
 #import "HDAutoADCollectionView.h"
 #import "HDAutoADCollectionViewCell.h"
+#import "HDAutoADModel.h"
+
 #define FYColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define FYRandomColor FYColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 
@@ -58,6 +60,7 @@
     return _dataArray.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     UICollectionViewCell * cell = [self dequeueReusableCellWithReuseIdentifier:NSStringFromClass([HDAutoADCollectionViewCell class]) forIndexPath:indexPath];
     
     if (!cell) {
@@ -68,28 +71,59 @@
 }
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
 //    保持展示的内容在中间一组数据上  先
-    NSLog(@"willDisplayCell %ld",(long)indexPath.row);
+//    NSLog(@"willDisplayCell %ld",(long)indexPath.row);
 }
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
 //    消失后回调˚
-    NSLog(@"didEndDisplayingCell %ld",(long)indexPath.row);
+//    NSLog(@"didEndDisplayingCell %ld",(long)indexPath.row);
     UICollectionViewCell *currentCell = self.visibleCells.firstObject;
-     NSLog(@"currentCell %@",[self indexPathForCell:currentCell]);
+//     NSLog(@"currentCell %@",[self indexPathForCell:currentCell]);
     NSInteger disappearCellRow = indexPath.row;
     NSInteger currentCellRow = [self indexPathForCell:currentCell].row;
 //    3-->2 变为 2->5
     if (disappearCellRow == self.numberOfContents && currentCellRow == self.numberOfContents-1) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:(2*self.numberOfContents-1) inSection:0];
-        NSLog(@"要滚动到的位置%ld",(long)indexPath.row);
+//        NSLog(@"要滚动到的位置%ld",(long)indexPath.row);
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
-    if (disappearCellRow == (2*self.numberOfContents-1) && currentCellRow == 2*self.numberOfContents) {
+    if (disappearCellRow == (2 * self.numberOfContents-1) && currentCellRow == 2*self.numberOfContents) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.numberOfContents inSection:0];
-        NSLog(@"要滚动到的位置%ld",(long)indexPath.row);
+//        NSLog(@"要滚动到的位置%ld",(long)indexPath.row);
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
     }
-    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(currentDisplayPageNumber:)]) {
-        [self.pageDelegate currentDisplayPageNumber:(currentCellRow%self.numberOfContents)];
+    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewcurrentDisplayPageNumber:)]) {
+        [self.pageDelegate AutoADCollectionViewcurrentDisplayPageNumber:(currentCellRow%self.numberOfContents)];
+    }
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSInteger dataIndex = indexPath.row%self.numberOfContents;
+    HDAutoADModel *model = self.dataArray[dataIndex];
+    if ([model isMemberOfClass:[HDAutoADModel class]]) {
+        
+    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewSelectedLink:)]) {
+        [self.pageDelegate AutoADCollectionViewSelectedLink:model.link];
+    }
+    
+    }
+}
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+     NSLog(@"%s",__func__);
+}
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"%s",__func__);
+//    timer停止
+    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewPauseTimerForDragging)]) {
+        [self.pageDelegate AutoADCollectionViewPauseTimerForDragging];
+    }
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    NSLog(@"%s",__func__);
+}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    NSLog(@"%s",__func__);
+//    timer开启
+    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewStartTimerForEndDragging)]) {
+        [self.pageDelegate AutoADCollectionViewStartTimerForEndDragging];
     }
 }
 
