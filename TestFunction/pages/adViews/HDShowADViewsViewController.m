@@ -39,16 +39,15 @@
     scrollTextView.backgroundColor = MakeColorRGBA(0xFFFF00, 0.3);
     scrollTextView.bulletinString = @"设置了就显示，两个跑马灯之间间隔40px";
     
+    
+//    self.view.backgroundColor = MakeColorRGB([self integerFromHexString:@"#110000"]);
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger )integerFromHexString:(NSString *)hexString{
+    
+    NSString *valueString = [hexString substringWithRange:NSMakeRange(1,6)];
+    valueString = [NSString stringWithFormat:@"%ld",strtoul([valueString UTF8String],0,16)];
+    return [valueString integerValue];
 }
-*/
 
 @end

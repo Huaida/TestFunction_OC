@@ -22,9 +22,6 @@
     return self;
 }
 - (void)customAddSubviews{
-    _maskView = [[UIView alloc] init];
-//    _maskView.backgroundColor = [UIColor redColor];
-    [self addSubview:_maskView];
     
     _trumpetImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"trumpetImage"]];
     [self addSubview:_trumpetImageView];
@@ -40,36 +37,14 @@
     _bulletinLabel.textColor = MakeColorRGB(0xFF5B29);
     _bulletinLabel.font = [UIFont systemFontOfSize:12];
     [self addSubview:_bulletinLabel];
+    
+    _maskView = [[UIView alloc] init];
+    _maskView.backgroundColor = [UIColor whiteColor];
+    [self addSubview:_maskView];
+}
 
-    
-}
-- (CAShapeLayer *)maskStyle2:(CGRect)rect {
-    //
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:rect];
-    
-//    CGFloat x = rect.size.width/2.0;
-//    CGFloat y = rect.size.height/2.0;
-//    CGFloat radius = MIN(x, y)*0.8;
-//    //
-//    UIBezierPath *cycle = [UIBezierPath bezierPathWithArcCenter:CGPointMake(x, y)
-//                                                         radius:radius
-//                                                     startAngle:0.0
-//                                                       endAngle:2*M_PI
-//                                                      clockwise:YES];
-//    [path appendPath:cycle];
-    //
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.path = [path CGPath];
-    maskLayer.frame = rect;
-    maskLayer.fillRule = kCAFillRuleEvenOdd;
-    
-    return maskLayer;
-}
 - (void)customLayoutSubviews{
-    [_maskView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.bottom.equalTo(self);
-        make.right.equalTo(_tipLabel);
-    }];
+    
     [_trumpetImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.left.equalTo(self).offset(12);
@@ -83,15 +58,18 @@
         make.centerY.equalTo(self);
         make.left.equalTo(self.tipLabel.mas_right).offset(3);
     }];
-    
+    [_maskView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.left.equalTo(self.tipLabel.mas_right);
+        make.right.top.bottom.equalTo(self);
+    }];
 }
 - (void)setBulletinString:(NSString *)bulletinString{
     _bulletinString = bulletinString;
     _bulletinLabel.text = bulletinString;
     [_bulletinLabel sizeToFit];
     //    添加遮罩
-//    _bulletinLabel.layer.mask = [self maskStyle2:_maskView.frame];
-    
+    _bulletinLabel.maskView = _maskView;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         [self startAnimation:_bulletinString.length*0.2];
