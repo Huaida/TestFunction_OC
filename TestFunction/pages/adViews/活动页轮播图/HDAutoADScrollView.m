@@ -76,14 +76,14 @@
     self.pageControl.currentPage = pageNumber;
 }
 -(void)AutoADCollectionViewSelectedLink:(NSString *)link{
-     NSLog(@"%@",link);
+//     NSLog(@"%@",link);
 }
 - (void)AutoADCollectionViewPauseTimerForDragging{
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     [self.timer setFireDate:[NSDate distantFuture]];
 }
 - (void)AutoADCollectionViewStartTimerForEndDragging{
-    NSLog(@"%s",__func__);
+//    NSLog(@"%s",__func__);
     [self.timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:3]];
 }
 @end

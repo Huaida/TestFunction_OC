@@ -37,7 +37,7 @@
     HDScrollTextView *scrollTextView = [[HDScrollTextView alloc] initWithFrame:CGRectMake(0, 400, MZ_SW, 30)];
     [self.view addSubview:scrollTextView];
     scrollTextView.backgroundColor = MakeColorRGBA(0xFFFF00, 0.3);
-    scrollTextView.bulletinString = @"设置了就显示，两个跑马灯之间间隔40px";
+    scrollTextView.bulletinString = @"井冈山精神和苏区精神，承载着中国共产党人的初心和使命，铸就了中国共产党的伟大革命精神。这些伟大革命精神跨越时空、永不过时，是砥砺我们不忘初心、牢记使命的不竭精神动力。";
     
     
 //    self.view.backgroundColor = MakeColorRGB([self integerFromHexString:@"#110000"]);

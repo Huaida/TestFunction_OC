@@ -8,8 +8,13 @@
 
 #import "HDAutoADCollectionViewCell.h"
 #import "UIImageView+WebCache.h"
-
+@interface HDAutoADCollectionViewCell()
+@property (nonatomic ,strong) UILabel *label;
+@end
 @implementation HDAutoADCollectionViewCell
+
+
+
 -(void)setModel:(HDAutoADModel *)model{
     _model = model;
     [self updateSubviewsWithModel:model];
@@ -49,4 +54,5 @@
     }
     return hexStr;
 }
+
 @end
