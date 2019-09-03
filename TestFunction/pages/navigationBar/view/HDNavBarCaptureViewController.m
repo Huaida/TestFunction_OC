@@ -16,6 +16,7 @@
 @property (nonatomic, assign) IBInspectable float hbd_barAlpha;
 @property (nonatomic, strong, readonly) UIImage *hbd_computedBarImage;
 @property (nonatomic, strong) IBInspectable UIColor *hbd_barTintColor;
+@property (nonatomic, strong) UIImageView *fromFakeShadow;
 @end
 
 @implementation HDNavBarCaptureViewController
@@ -29,23 +30,26 @@
 }
 - (void)showFakeBarFrom:(HDNavBarCaptureViewController *)from {
     //    首先从现有的navigationBar获取图片 做成图片加到vc.view上
-   UIImage *fakeImageView = [[UINavigationBar appearance] backgroundImageForBarMetrics:UIBarMetricsDefault];
+//   UIImage *fakeImageView = [[UINavigationBar appearance] backgroundImageForBarMetrics:UIBarMetricsDefault];
+    self.fromFakeImageView = [[UIImageView alloc] init];
     self.fromFakeImageView.image = [UIImage imageNamed:@"bgImage"];
     self.fromFakeImageView.alpha = 1;
     self.fromFakeImageView.frame = [self fakeBarFrameForViewController:from];
     [from.view addSubview:self.fromFakeImageView];
     //      添加一层bar 放到上面
-    self.fromFakeBar.subviews.lastObject.backgroundColor = from.hbd_computedBarTintColor;
-    self.fromFakeBar.alpha = from.hbd_barAlpha == 0 || from.hbd_computedBarImage ? 0.01:from.hbd_barAlpha;
-    if (from.hbd_barAlpha == 0 || from.hbd_computedBarImage) {
-        self.fromFakeBar.subviews.lastObject.alpha = 0.01;
-    }
+    self.fromFakeBar.subviews.lastObject.backgroundColor = [UIColor greenColor];
+    self.fromFakeBar.alpha = 1;
     self.fromFakeBar.frame = [self fakeBarFrameForViewController:from];
+     NSLog(@"self.fromFakeBar.subviews %@",self.fromFakeBar.subviews);
+    self.fromFakeBar.subviews.lastObject.alpha = 0.5;
     [from.view addSubview:self.fromFakeBar];
 //    //    添加一个阴影 放到最上面
-//    self.fromFakeShadow.alpha = from.hbd_computedBarShadowAlpha;
-//    self.fromFakeShadow.frame = [self fakeShadowFrameWithBarFrame:self.fromFakeBar.frame];
-//    [from.view addSubview:self.fromFakeShadow];
+    self.fromFakeShadow.alpha = 1;
+    self.fromFakeShadow.frame = [self fakeShadowFrameWithBarFrame:self.fromFakeBar.frame];
+    [from.view addSubview:self.fromFakeShadow];
+}
+- (CGRect)fakeShadowFrameWithBarFrame:(CGRect)frame {
+    return CGRectMake(frame.origin.x, frame.size.height + frame.origin.y - 0.5, frame.size.width, 0.5);
 }
 - (CGRect)fakeBarFrameForViewController:(UIViewController *)vc {
     UIView *back = self.navigationController.navigationBar.subviews[0];
@@ -61,7 +65,8 @@
             frame.origin.y = -(isIPhoneX ? 88 : 64);
         }
     }
-    return frame;
+//    return frame;
+    return CGRectMake(0, 100, MZ_SW, 44);
 }
 - (UIVisualEffectView *)fromFakeBar {
     if (!_fromFakeBar) {
@@ -86,5 +91,11 @@
     }
     return color;
 }
-
+- (UIImageView *)fromFakeShadow {
+    if (!_fromFakeShadow) {
+        _fromFakeShadow = [[UIImageView alloc] initWithImage:nil];
+        _fromFakeShadow.backgroundColor = [UIColor yellowColor];
+    }
+    return _fromFakeShadow;
+}
 @end
