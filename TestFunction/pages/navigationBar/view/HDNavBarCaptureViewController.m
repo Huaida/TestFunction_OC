@@ -27,6 +27,36 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self showFakeBarFrom:self];
     
+    [self shorterThanScreenWidth];
+}
+-(void)shorterThanScreenWidth{
+    UILabel *label = [[UILabel alloc] init];
+    [self.view addSubview:label];
+    label.font = [UIFont systemFontOfSize:22];
+    label.backgroundColor = [UIColor yellowColor];
+    
+    label.text = @"我的CGRect textRect = [label.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22]}  context:nil];";
+    [label sizeToFit];
+    label.lineBreakMode = NSLineBreakByWordWrapping;
+    label.center  = self.view.center;
+//    label.frame = CGRectMake(0, 200, MZ_SW, 30);
+     NSLog(@"label.frame.size.width %f",label.frame.size.width);
+    
+}
+- (NSString *)string:(NSString *)string height:(CGFloat)height FitForWidth:(CGFloat)width fontSize:(CGFloat)fontSize{
+    if (string.length<=1) {
+        return nil;
+    }
+   
+    CGRect textRect = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}  context:nil];
+    NSString *subString = string;
+    while (textRect.size.height>height) {
+        subString = [subString substringToIndex:subString.length-1];
+         NSLog(@"subString %@",subString);
+        textRect = [subString boundingRectWithSize:CGSizeMake(width, MAXFLOAT)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22]}  context:nil];
+         NSLog(@"textRect %@",NSStringFromCGRect(textRect));
+    }
+    return subString;
 }
 - (void)showFakeBarFrom:(HDNavBarCaptureViewController *)from {
     //    首先从现有的navigationBar获取图片 做成图片加到vc.view上
