@@ -28,6 +28,19 @@
     [self showFakeBarFrom:self];
     
     [self shorterThanScreenWidth];
+    
+//    打印build 号
+    NSLog(@"build: %@",[[[NSBundle mainBundle]infoDictionary]valueForKey:@"CFBundleVersion"]);
+    
+    //这个方法被废弃了
+    NSString *urlString = @"http://b.t.zmengzhu.com/#/home/我";
+    NSString* encodedString1 = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"encodedString1 %@",encodedString1); //这个方法一般能解决url中含有中文字符的问题，效果同上，但是同时有中文和特殊字符的话，特殊字符会被转换成%234这样的字符串，又出问题了。o(╯□╰)o
+    NSString* encodedString2 = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSLog(@"encodedString2 %@",encodedString2);
+    //这个方法能够解决既含有中文又含有特殊字符的解决办法 ^_^
+    NSString *encodedString3 = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)urlString, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));
+    NSLog(@"encodedString3 %@",encodedString3);
 }
 -(void)shorterThanScreenWidth{
     UILabel *label = [[UILabel alloc] init];
@@ -35,12 +48,15 @@
     label.font = [UIFont systemFontOfSize:22];
     label.backgroundColor = [UIColor yellowColor];
     
-    label.text = @"我的CGRect textRect = [label.text boundingRectWithSize:CGSizeMake(width, MAXFLOAT)  options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:22]}  context:nil];";
+    label.text = @"优质输出的前提是要有输出。虽然今天不如人意，但做，就会有收获！望坚持，坚持，坚持！";
     [label sizeToFit];
     label.lineBreakMode = NSLineBreakByWordWrapping;
-    label.center  = self.view.center;
 //    label.frame = CGRectMake(0, 200, MZ_SW, 30);
      NSLog(@"label.frame.size.width %f",label.frame.size.width);
+   NSString *fitString = [self string:label.text height:label.frame.size.height FitForWidth:MZ_SW fontSize:22];
+    label.text = fitString;
+    [label sizeToFit];
+    label.center  = self.view.center;
     
 }
 - (NSString *)string:(NSString *)string height:(CGFloat)height FitForWidth:(CGFloat)width fontSize:(CGFloat)fontSize{
@@ -67,11 +83,13 @@
     self.fromFakeImageView.frame = [self fakeBarFrameForViewController:from];
     [from.view addSubview:self.fromFakeImageView];
     //      添加一层bar 放到上面
+//    最上层的visualEffetSubview 在最上层  设置为绿色
     self.fromFakeBar.subviews.lastObject.backgroundColor = [UIColor greenColor];
+    self.fromFakeBar.subviews.lastObject.alpha = 1;
+    
     self.fromFakeBar.alpha = 1;
     self.fromFakeBar.frame = [self fakeBarFrameForViewController:from];
-     NSLog(@"self.fromFakeBar.subviews %@",self.fromFakeBar.subviews);
-    self.fromFakeBar.subviews.lastObject.alpha = 0.5;
+     
     [from.view addSubview:self.fromFakeBar];
 //    //    添加一个阴影 放到最上面
     self.fromFakeShadow.alpha = 1;
@@ -96,7 +114,7 @@
         }
     }
 //    return frame;
-    return CGRectMake(0, 100, MZ_SW, 44);
+    return CGRectMake(0, 200, MZ_SW, 44);
 }
 - (UIVisualEffectView *)fromFakeBar {
     if (!_fromFakeBar) {
@@ -123,7 +141,7 @@
 }
 - (UIImageView *)fromFakeShadow {
     if (!_fromFakeShadow) {
-        _fromFakeShadow = [[UIImageView alloc] initWithImage:nil];
+        _fromFakeShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testImage1"]];
         _fromFakeShadow.backgroundColor = [UIColor yellowColor];
     }
     return _fromFakeShadow;
