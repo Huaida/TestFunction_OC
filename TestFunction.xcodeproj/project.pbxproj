@@ -868,7 +868,6 @@
 				B1F5D10921C2B9B9001D763B /* Sources */,
 				B1F5D10A21C2B9B9001D763B /* Frameworks */,
 				B1F5D10B21C2B9B9001D763B /* Resources */,
-				B1CF6B5322B7634C00FFA234 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -992,23 +991,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B1CF6B5322B7634C00FFA234 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "REV=`date +%y%m%d`  #输出格式141120的六位日期格式,可以根据自己喜欢改变格式\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion ${REV}\" \"${TARGET_BUILD_DIR}\"/${INFOPLIST_PATH}\n\n";
-		};
 		CFF2A061CC878A62C5061DED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
