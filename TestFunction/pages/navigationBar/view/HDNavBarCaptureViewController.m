@@ -29,11 +29,25 @@
     
     [self shorterThanScreenWidth];
     
+//    https://www.jianshu.com/p/09988b13e804
 //    打印build 号
     NSLog(@"build: %@",[[[NSBundle mainBundle]infoDictionary]valueForKey:@"CFBundleVersion"]);
     
     //这个方法被废弃了
     NSString *urlString = @"http://b.t.zmengzhu.com/#/home/我";
+    NSString* encodedString1 = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"encodedString1 %@",encodedString1); //这个方法一般能解决url中含有中文字符的问题，效果同上，但是同时有中文和特殊字符的话，特殊字符会被转换成%234这样的字符串，又出问题了。o(╯□╰)o
+    NSString* encodedString2 = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSLog(@"encodedString2 %@",encodedString2);
+    //这个方法能够解决既含有中文又含有特殊字符的解决办法 ^_^
+    NSString *encodedString3 = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)urlString, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL, kCFStringEncodingUTF8));
+    NSLog(@"encodedString3 %@",encodedString3);
+}
+- (void)testZhuanYi{
+    //    https://www.jianshu.com/p/09988b13e804
+    
+    //这个方法被废弃了
+    NSString *urlString = @"https://www.cnblogs.com/huaida/#/怀达";
     NSString* encodedString1 = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"encodedString1 %@",encodedString1); //这个方法一般能解决url中含有中文字符的问题，效果同上，但是同时有中文和特殊字符的话，特殊字符会被转换成%234这样的字符串，又出问题了。o(╯□╰)o
     NSString* encodedString2 = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];

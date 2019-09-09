@@ -66,6 +66,9 @@
 		B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EC23040F630063C80B /* HDFileManager.m */; };
 		B10DD5F0230410160063C80B /* constant.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EF230410160063C80B /* constant.m */; };
 		B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */; };
+		B13D7E662322299A00C82848 /* MZCustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E652322299A00C82848 /* MZCustomTableView.m */; };
+		B13D7E69232229DB00C82848 /* HDCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E68232229DB00C82848 /* HDCustomTableViewController.m */; };
+		B13D7E6C232268B200C82848 /* MZHorizontalScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */; };
 		B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B148B6E62260A74700C8BFDA /* HDCheckArray.m */; };
 		B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B150DBCE2285C22500498D86 /* WKWebViewController.m */; };
 		B150DBD22286BC1100498D86 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD12286BC1100498D86 /* JStoOC.html */; };
@@ -216,6 +219,12 @@
 		B10DD5EF230410160063C80B /* constant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = constant.m; sourceTree = "<group>"; };
 		B13A9FF3229BB78D00BC84EA /* HDBarrageSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDBarrageSwitch.h; sourceTree = "<group>"; };
 		B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDBarrageSwitch.m; sourceTree = "<group>"; };
+		B13D7E642322299A00C82848 /* MZCustomTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZCustomTableView.h; sourceTree = "<group>"; };
+		B13D7E652322299A00C82848 /* MZCustomTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZCustomTableView.m; sourceTree = "<group>"; };
+		B13D7E67232229DB00C82848 /* HDCustomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomTableViewController.h; sourceTree = "<group>"; };
+		B13D7E68232229DB00C82848 /* HDCustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomTableViewController.m; sourceTree = "<group>"; };
+		B13D7E6A232268B200C82848 /* MZHorizontalScrollTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHorizontalScrollTableViewCell.h; sourceTree = "<group>"; };
+		B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHorizontalScrollTableViewCell.m; sourceTree = "<group>"; };
 		B148B6E52260A74700C8BFDA /* HDCheckArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCheckArray.h; sourceTree = "<group>"; };
 		B148B6E62260A74700C8BFDA /* HDCheckArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCheckArray.m; sourceTree = "<group>"; };
 		B150DBCD2285C22500498D86 /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
@@ -457,6 +466,19 @@
 			path = ThirdLib;
 			sourceTree = "<group>";
 		};
+		B13D7E63232228F200C82848 /* customTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B13D7E642322299A00C82848 /* MZCustomTableView.h */,
+				B13D7E652322299A00C82848 /* MZCustomTableView.m */,
+				B13D7E67232229DB00C82848 /* HDCustomTableViewController.h */,
+				B13D7E68232229DB00C82848 /* HDCustomTableViewController.m */,
+				B13D7E6A232268B200C82848 /* MZHorizontalScrollTableViewCell.h */,
+				B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */,
+			);
+			path = customTableView;
+			sourceTree = "<group>";
+		};
 		B150DBD32286E0F400498D86 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -676,6 +698,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B13D7E63232228F200C82848 /* customTableView */,
 				B10DD58423040B250063C80B /* downloadAnimations */,
 				B1A9930F22E9E41700B4E1AA /* adViews */,
 				B1EAE60C22E6B58800CB8BC7 /* showsomeview */,
@@ -991,7 +1014,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-
 		CFF2A061CC878A62C5061DED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1058,6 +1080,7 @@
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
 				B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */,
+				B13D7E662322299A00C82848 /* MZCustomTableView.m in Sources */,
 				B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */,
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,
@@ -1073,9 +1096,11 @@
 				B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */,
 				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
+				B13D7E69232229DB00C82848 /* HDCustomTableViewController.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
 				B1CF542523150AB400B09ED3 /* HDPageControl.m in Sources */,
 				B1EAE60F22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m in Sources */,
+				B13D7E6C232268B200C82848 /* MZHorizontalScrollTableViewCell.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,
 			);
