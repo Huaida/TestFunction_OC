@@ -19,15 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor  = [UIColor whiteColor];
-//    [self customAddSubviews];
+    [self customAddSubviews];
     
-    [self testShortLink];
+//    [self testShortLink];
 }
 - (void)customAddSubviews{
     self.tableView = [[MZCustomTableView alloc] initWithFrame:CGRectMake(0, 100, MZ_SW, MZ_SH-100) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     
-    NSArray *dataArray = @[@[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3],@[@1]];
+    NSArray *dataArray = @[@[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3],@[@1]];
     self.tableView.dataArray = dataArray;
 }
 -(void)testShortLink{

@@ -21,24 +21,25 @@
 }
 - (void)customAddSubviews{
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    flowLayout.itemSize = CGSizeMake(MZ_SW, 80);
+    flowLayout.itemSize = CGSizeMake(MZ_SW, 600);
     flowLayout.minimumLineSpacing = 0;
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,0,MZ_SW,600) collectionViewLayout:flowLayout];
-        self.collectionView.showsVerticalScrollIndicator = NO;
-        self.collectionView.showsHorizontalScrollIndicator = NO;
-        self.collectionView.dataSource = self;
-        self.collectionView.delegate = self;
-        self.collectionView.pagingEnabled = YES;
-        self.collectionView.bounces = NO;
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    self.collectionView.pagingEnabled = YES;
+    self.collectionView.bounces = NO;
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"dequeueReusableCellWithReuseIdentifier"];
     self.backgroundColor = [UIColor greenColor];
     [self addSubview:self.collectionView];
 }
 - (NSArray *)dataArray{
     if (!_dataArray) {
-        _dataArray = @[@1,@2,@3,@4];
+        _dataArray = @[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,];
     }
     return _dataArray;
 }

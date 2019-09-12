@@ -11,7 +11,8 @@
 
 #import "MZCustomTableView.h"
 #import "MZHorizontalScrollTableViewCell.h"
-@interface MZCustomTableView()<UITableViewDelegate,UITableViewDataSource>
+#import "MZSectionHeaderCollectionView.h"
+@interface MZCustomTableView()<UITableViewDelegate,UITableViewDataSource,MZSectionHeaderCollectionViewProtocol>
 
 @end
 @implementation MZCustomTableView
@@ -19,7 +20,6 @@
     if (self == [super initWithFrame:frame]) {
         self.dataSource = self;
         self.delegate = self;
-        
     }
     return self;
 }
@@ -27,39 +27,46 @@
     if (self == [super initWithFrame:frame style:style]) {
         self.dataSource = self;
         self.delegate = self;
-        
+        [self customAddHeaderView];
+        [self registerClass:[MZHorizontalScrollTableViewCell class] forCellReuseIdentifier:NSStringFromClass([UICollectionViewCell class])];
         [self registerClass:[MZHorizontalScrollTableViewCell class] forCellReuseIdentifier:NSStringFromClass([MZHorizontalScrollTableViewCell class])];
     }
     return self;
 }
-//- (void)customHeaderFooterForSection{
-//     NSLog(@"%ld",self.numberOfSections);
-//   UITableViewHeaderFooterView *headerFooterView = [self headerViewForSection:0];
-//     NSLog(@"%@",headerFooterView);
-//    UIView *cView= [[UIView alloc ] initWithFrame:CGRectMake(0, 0, MZ_SW, 100)];
-//    cView.backgroundColor = [UIColor yellowColor];
-//    [headerFooterView.superview addSubview:cView];
-//}
+
+- (void)customAddHeaderView{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
+    headerView.backgroundColor = [UIColor cyanColor];
+    self.tableHeaderView = headerView;
+}
+#pragma mark - MZSectionHeaderCollectionView delegate
+- (void)sectionHeaderCollectionViewDidSelectedIndex:(NSIndexPath *)index{
+     NSLog(@"%@",index);
+    
+}
+#pragma mark - UICollectionView dataSource & delegate
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *cView= [[UIView alloc ] initWithFrame:CGRectMake(0, 0, MZ_SW, 100)];
-        cView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"testImage3"]];
-    return cView;
+    if (section == 1) {
+        MZSectionHeaderCollectionView *cView = [MZSectionHeaderCollectionView sectionHeaderFromData:@[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,]];
+        cView.sectionHeaderDelegate = self;
+//        UILabel *label = [[UILabel alloc] init];
+//        label.text = @"header";
+//        [label sizeToFit];
+//        [cView addSubview:label];
+//        label.center = cView.center;
+        return cView;
+    }
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     //设置 title 区域高度
+    if (section == 0) {
+        return 20;
+    }
     return 100.f;
 }
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//    return nil;
-//}
-#pragma mark - dataSource & delegate
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    return @"test Header";
-//}
-//- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-//    return @"test Footer";
-//}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
     return self.dataArray.count;
