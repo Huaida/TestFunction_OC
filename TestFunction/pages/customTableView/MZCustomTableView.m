@@ -13,7 +13,8 @@
 #import "MZHorizontalScrollTableViewCell.h"
 #import "MZSectionHeaderCollectionView.h"
 @interface MZCustomTableView()<UITableViewDelegate,UITableViewDataSource,MZSectionHeaderCollectionViewProtocol>
-
+@property (nonatomic, assign) BOOL canScroll;
+@property (nonatomic, strong) MZHorizontalScrollTableViewCell *contentCell;
 @end
 @implementation MZCustomTableView
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -27,6 +28,9 @@
     if (self == [super initWithFrame:frame style:style]) {
         self.dataSource = self;
         self.delegate = self;
+        self.canScroll = YES;
+        self.bounces = YES;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeScrollStatus) name:@"leaveTop" object:nil];
         [self customAddHeaderView];
         [self registerClass:[MZHorizontalScrollTableViewCell class] forCellReuseIdentifier:NSStringFromClass([UICollectionViewCell class])];
         [self registerClass:[MZHorizontalScrollTableViewCell class] forCellReuseIdentifier:NSStringFromClass([MZHorizontalScrollTableViewCell class])];
@@ -88,6 +92,7 @@
         if (!cell) {
             cell = [[MZHorizontalScrollTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([MZHorizontalScrollTableViewCell class])];
         }
+        self.contentCell = (MZHorizontalScrollTableViewCell *)cell;
         [(MZHorizontalScrollTableViewCell *)cell updateUI];
     }
     return cell;
@@ -102,5 +107,37 @@
 - (void)setDataArray:(NSArray *)dataArray{
     _dataArray = dataArray;
     [self reloadData];
+}
+
+#pragma mark 嵌套滚动处理
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES; 
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"outer  %f",scrollView.contentOffset.y);
+//    这里的 1 是嵌套tableView的位置   64=44+20  猜测这里的tableView是顶到头的
+    CGFloat bottomCellOffset = [self rectForSection:1].origin.y - 64;
+    if (scrollView.contentOffset.y >= bottomCellOffset) {
+//        上滑 划不动  停留在bottomCellOffset位置
+        scrollView.contentOffset = CGPointMake(0, bottomCellOffset); // 控制外层的tableView偏移量
+        if (self.canScroll) {
+            self.canScroll = NO;
+            self.contentCell.cellCanScroll = YES;
+        }
+    }else{
+//        下滑时 在不允许滑动时控制到 指定位置
+        if (!self.canScroll) {//子视图没到顶部
+            scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
+        }
+    }
+    self.showsVerticalScrollIndicator = _canScroll?YES:NO;
+}
+
+- (void)changeScrollStatus//改变主视图的状态
+{
+    self.canScroll = YES;
+    self.contentCell.cellCanScroll = NO;
 }
 @end

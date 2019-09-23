@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MZCustomTableView : UITableView
+@interface MZCustomTableView : UITableView<UIGestureRecognizerDelegate>
 @property (nonatomic ,strong) NSArray *dataArray;
 @end
 

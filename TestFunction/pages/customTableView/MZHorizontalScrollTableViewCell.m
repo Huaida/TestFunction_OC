@@ -9,17 +9,50 @@
 #define FYRandomColor FYColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 
 #import "MZHorizontalScrollTableViewCell.h"
-@interface MZHorizontalScrollTableViewCell()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface MZHorizontalScrollTableViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UICollectionView *collectionView;
+@property (nonatomic ,strong) UITableView *tableView;
 @end
 
 @implementation MZHorizontalScrollTableViewCell
+- (NSArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = @[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,];
+    }
+    return _dataArray;
+}
 
 - (void)updateUI;{
     self.backgroundColor = [UIColor cyanColor];
     [self customAddSubviews];
 }
 - (void)customAddSubviews{
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZ_SH) style:UITableViewStylePlain];
+    [self.contentView addSubview:tableView];
+    self.tableView = tableView;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.bounces = YES;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"testCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testCell"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    return cell;
+}
+
+
+
+
+
+// 咱还是不用
+- (void)customAddSubviews1{
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.itemSize = CGSizeMake(MZ_SW, 600);
     flowLayout.minimumLineSpacing = 0;
@@ -37,18 +70,13 @@
     self.backgroundColor = [UIColor greenColor];
     [self addSubview:self.collectionView];
 }
-- (NSArray *)dataArray{
-    if (!_dataArray) {
-        _dataArray = @[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,];
-    }
-    return _dataArray;
-}
+
 #pragma mark - datasource & delegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.dataArray.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+//
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dequeueReusableCellWithReuseIdentifier" forIndexPath:indexPath];
     if (!cell) {
         cell = [[UICollectionViewCell alloc] initWithFrame:self.bounds];
@@ -63,72 +91,31 @@
     label.text = [NSString stringWithFormat:@"%ld--%ld",(long)indexPath.section,(long)indexPath.row];
     return cell;
 }
-//- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%s",__func__);
-//    //    保持展示的内容在中间一组数据上  先
-//    //    NSLog(@"willDisplayCell %ld",(long)indexPath.row);
-//}
-//- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%s",__func__);
-//    //    消失后回调˚
-//    //    NSLog(@"didEndDisplayingCell %ld",(long)indexPath.row);
-//    UICollectionViewCell *currentCell = self.visibleCells.firstObject;
-//    //    NSLog(@"currentCell: %@",currentCell);
-//    ////     NSLog(@"currentCell %@",[self indexPathForCell:currentCell]);
-//    NSInteger disappearCellRow = indexPath.row;
-//    NSInteger currentCellRow = [self indexPathForCell:currentCell].row;
-//    //    NSLog(@"currentCellRow: %ld",(long)currentCellRow);
-//    ////    3-->2 变为 2->5  往回倒
-//    if (disappearCellRow == 1 *self.numberOfContents && currentCellRow == 1*self.numberOfContents-1) {
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:((times - 1)*self.numberOfContents-1) inSection:0];
-//        NSLog(@"back 要从 %ld变化到 %ld位置",currentCellRow,(long)indexPath.row);
-//        [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-//    }
-//    //    往前走
-//    if (disappearCellRow == ((times - 1) * self.numberOfContents-1) && currentCellRow == (times - 1)*self.numberOfContents) {
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.numberOfContents inSection:0];
-//
-//        NSLog(@"forward 要从 %ld变化到 %ld位置",currentCellRow,(long)indexPath.row);
-//        [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-//    }
-//    if (currentCell) {
-//
-//        if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewcurrentDisplayPageNumber:)]) {
-//            NSLog(@"当前page：  %ld",(long)(currentCellRow%self.numberOfContents));
-//            [self.pageDelegate AutoADCollectionViewcurrentDisplayPageNumber:(currentCellRow%self.numberOfContents)];
-//        }
-//    }
-//}
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSInteger dataIndex = indexPath.row%self.numberOfContents;
-//    HDAutoADModel *model = self.dataArray[dataIndex];
-//    if ([model isMemberOfClass:[HDAutoADModel class]]) {
-//
-//        if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewSelectedLink:)]) {
-//            [self.pageDelegate AutoADCollectionViewSelectedLink:model.link];
-//        }
-//
-//    }
-//}
-//- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%s",__func__);
-//}
-//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-//    NSLog(@"%s",__func__);
-//    //    timer停止
-//    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewPauseTimerForDragging)]) {
-//        [self.pageDelegate AutoADCollectionViewPauseTimerForDragging];
-//    }
-//}
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    NSLog(@"%s",__func__);
-//}
-//- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-//    NSLog(@"%s",__func__);
-//    //    timer开启
-//    if (self.pageDelegate && [self.pageDelegate respondsToSelector:@selector(AutoADCollectionViewStartTimerForEndDragging)]) {
-//        [self.pageDelegate AutoADCollectionViewStartTimerForEndDragging];
-//    }
-//}
 
+#pragma mark 嵌套滚动处理
+
+- (void)setCellCanScroll:(BOOL)cellCanScroll
+{
+    _cellCanScroll = cellCanScroll;
+    if (!cellCanScroll) {//如果cell不能滑动，代表到了顶部，修改所有子vc的状态回到顶部
+        self.tableView.contentOffset = CGPointZero;
+    }
+
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"innter %f",scrollView.contentOffset.y);
+    if (!self.cellCanScroll) {
+        scrollView.contentOffset = CGPointZero;
+    }
+    if (scrollView.contentOffset.y <= 0) {
+       
+        self.cellCanScroll = NO;
+        scrollView.contentOffset = CGPointZero;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"leaveTop" object:nil];//到顶通知父视图改变状态
+    }else{
+        self.tableView.bounces = YES;
+    }
+    self.tableView.showsVerticalScrollIndicator = self.cellCanScroll?YES:NO;
+}
 @end

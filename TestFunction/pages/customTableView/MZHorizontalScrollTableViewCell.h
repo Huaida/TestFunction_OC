@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MZHorizontalScrollTableViewCell : UITableViewCell
 @property (nonatomic ,strong) NSArray *dataArray;
+@property (nonatomic, assign) BOOL cellCanScroll;
 - (void)updateUI;
 @end
 
