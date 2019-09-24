@@ -78,6 +78,7 @@
 		B150DBDE2286E11700498D86 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD82286E11600498D86 /* backbutton@2x.png */; };
 		B150DBDF2286E11700498D86 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD92286E11700498D86 /* webRefreshButton@2x.png */; };
 		B153A7A1226D91FD002A6184 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B153A7A0226D91FD002A6184 /* NetworkTool.m */; };
+		B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AF2C72338A5DD004CB9C9 /* MZHomepageSegment.m */; };
 		B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */; };
 		B164B78A226381DD0097AF63 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
 		B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
@@ -239,6 +240,8 @@
 		B150DBD92286E11700498D86 /* webRefreshButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@2x.png"; sourceTree = "<group>"; };
 		B153A79F226D91FD002A6184 /* NetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkTool.h; sourceTree = "<group>"; };
 		B153A7A0226D91FD002A6184 /* NetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
+		B15AF2C62338A5DD004CB9C9 /* MZHomepageSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZHomepageSegment.h; sourceTree = "<group>"; };
+		B15AF2C72338A5DD004CB9C9 /* MZHomepageSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZHomepageSegment.m; sourceTree = "<group>"; };
 		B15CA64323050A8800434AC7 /* HDDownloadAnimationsPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDDownloadAnimationsPresenter.h; sourceTree = "<group>"; };
 		B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDDownloadAnimationsPresenter.m; sourceTree = "<group>"; };
 		B164B788226381DD0097AF63 /* HDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDViewController.h; sourceTree = "<group>"; };
@@ -476,6 +479,8 @@
 				B13D7E652322299A00C82848 /* MZCustomTableView.m */,
 				B13D7E67232229DB00C82848 /* HDCustomTableViewController.h */,
 				B13D7E68232229DB00C82848 /* HDCustomTableViewController.m */,
+				B15AF2C62338A5DD004CB9C9 /* MZHomepageSegment.h */,
+				B15AF2C72338A5DD004CB9C9 /* MZHomepageSegment.m */,
 				B13D7E6A232268B200C82848 /* MZHorizontalScrollTableViewCell.h */,
 				B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */,
 				B1EEA311232659EF00C16268 /* MZSectionHeaderCollectionView.h */,
@@ -1078,6 +1083,7 @@
 				B1FAA24B23140B06008200C8 /* HDCustomTextADModel.m in Sources */,
 				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
+				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,

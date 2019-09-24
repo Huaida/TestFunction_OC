@@ -12,6 +12,8 @@
 #import "MZCustomTableView.h"
 #import "MZHorizontalScrollTableViewCell.h"
 #import "MZSectionHeaderCollectionView.h"
+#import "MZHomepageSegment.h"
+
 @interface MZCustomTableView()<UITableViewDelegate,UITableViewDataSource,MZSectionHeaderCollectionViewProtocol>
 @property (nonatomic, assign) BOOL canScroll;
 @property (nonatomic, strong) MZHorizontalScrollTableViewCell *contentCell;
@@ -42,6 +44,11 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
     headerView.backgroundColor = [UIColor cyanColor];
     self.tableHeaderView = headerView;
+    
+//    测试segment
+    MZHomepageSegment *segment = [[MZHomepageSegment alloc] initWithFrame:CGRectMake(0, 0, 144 , 44)];
+    [headerView addSubview:segment];
+    
 }
 #pragma mark - MZSectionHeaderCollectionView delegate
 - (void)sectionHeaderCollectionViewDidSelectedIndex:(NSIndexPath *)index{
