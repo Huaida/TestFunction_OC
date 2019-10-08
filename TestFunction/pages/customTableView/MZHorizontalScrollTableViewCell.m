@@ -104,18 +104,18 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"innter %f",scrollView.contentOffset.y);
-    if (!self.cellCanScroll) {
-        scrollView.contentOffset = CGPointZero;
-    }
-    if (scrollView.contentOffset.y <= 0) {
-       
-        self.cellCanScroll = NO;
-        scrollView.contentOffset = CGPointZero;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"leaveTop" object:nil];//到顶通知父视图改变状态
-    }else{
-        self.tableView.bounces = YES;
-    }
-    self.tableView.showsVerticalScrollIndicator = self.cellCanScroll?YES:NO;
+//    NSLog(@"innter %f",scrollView.contentOffset.y);
+//    if (!self.cellCanScroll) {
+//        scrollView.contentOffset = CGPointZero;
+//    }
+//    if (scrollView.contentOffset.y <= 0) {
+//
+//        self.cellCanScroll = NO;
+//        scrollView.contentOffset = CGPointZero;
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"leaveTop" object:nil];//到顶通知父视图改变状态
+//    }else{
+//        self.tableView.bounces = YES;
+//    }
+//    self.tableView.showsVerticalScrollIndicator = self.cellCanScroll?YES:NO;
 }
 @end

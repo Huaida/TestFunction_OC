@@ -41,13 +41,13 @@
 }
 
 - (void)customAddHeaderView{
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
-    headerView.backgroundColor = [UIColor cyanColor];
-    self.tableHeaderView = headerView;
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
+//    headerView.backgroundColor = [UIColor blackColor];
+//    self.tableHeaderView = headerView;
     
 //    测试segment
-    MZHomepageSegment *segment = [[MZHomepageSegment alloc] initWithFrame:CGRectMake(0, 0, 144 , 44)];
-    [headerView addSubview:segment];
+//    MZHomepageSegment *segment = [[MZHomepageSegment alloc] initWithFrame:CGRectMake(0, 0, 144 , 44)];
+//    [headerView addSubview:segment];
     
 }
 #pragma mark - MZSectionHeaderCollectionView delegate
@@ -73,7 +73,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     //设置 title 区域高度
     if (section == 0) {
-        return 20;
+        return 100;
     }
     return 100.f;
 }
@@ -123,23 +123,33 @@
 }
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"outer  %f",scrollView.contentOffset.y);
-//    这里的 1 是嵌套tableView的位置   64=44+20  猜测这里的tableView是顶到头的
-    CGFloat bottomCellOffset = [self rectForSection:1].origin.y - 64;
-    if (scrollView.contentOffset.y >= bottomCellOffset) {
-//        上滑 划不动  停留在bottomCellOffset位置
-        scrollView.contentOffset = CGPointMake(0, bottomCellOffset); // 控制外层的tableView偏移量
-        if (self.canScroll) {
-            self.canScroll = NO;
-            self.contentCell.cellCanScroll = YES;
-        }
-    }else{
-//        下滑时 在不允许滑动时控制到 指定位置
-        if (!self.canScroll) {//子视图没到顶部
-            scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
-        }
+    
+        CGFloat sectionHeaderHeight = 44;
+    if(scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+//        未全部滚动  偏移部分
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+//        全部滚动  偏移全部
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
     }
-    self.showsVerticalScrollIndicator = _canScroll?YES:NO;
+    
+    NSLog(@"outer  %f",scrollView.contentOffset.y);
+////    这里的 1 是嵌套tableView的位置   64=44+20  猜测这里的tableView是顶到头的
+//    CGFloat bottomCellOffset = [self rectForSection:1].origin.y - 64;
+//    if (scrollView.contentOffset.y >= bottomCellOffset) {
+////        上滑 划不动  停留在bottomCellOffset位置
+//        scrollView.contentOffset = CGPointMake(0, bottomCellOffset); // 控制外层的tableView偏移量
+//        if (self.canScroll) {
+//            self.canScroll = NO;
+//            self.contentCell.cellCanScroll = YES;
+//        }
+//    }else{
+////        下滑时 在不允许滑动时控制到 指定位置
+//        if (!self.canScroll) {//子视图没到顶部
+//            scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
+//        }
+//    }
+//    self.showsVerticalScrollIndicator = _canScroll?YES:NO;
 }
 
 - (void)changeScrollStatus//改变主视图的状态
