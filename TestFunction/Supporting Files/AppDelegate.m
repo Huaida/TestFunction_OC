@@ -16,7 +16,7 @@
 
 @implementation AppDelegate
 
-
+// 测试ssh 是否被覆盖
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
