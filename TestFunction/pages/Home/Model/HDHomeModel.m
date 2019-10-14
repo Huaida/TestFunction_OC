@@ -21,7 +21,7 @@
 }
 -(void)modelLoadData{
 //     加载数据 一般会在请求接口
-    self.dataArray = @[@[@"0 iPhone X 适配",@""],
+    self.dataArray = @[@[@"0 用于测试方法",@"HDFunctionViewController"],
                        @[@"1 String",@""],
                        @[@"2 动态绑定方法",@""],
                        @[@"3 红包数据页封装",@"HDRedEnvelopeViewController"],

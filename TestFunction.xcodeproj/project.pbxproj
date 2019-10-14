@@ -82,6 +82,9 @@
 		B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */; };
 		B164B78A226381DD0097AF63 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
 		B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
+		B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE0672354678C007E8B76 /* HDFunctionViewController.m */; };
+		B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */; };
+		B16FE06F23546B52007E8B76 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */; };
 		B17E6E3323043F9E003BC1F2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E6E3223043F9E003BC1F2 /* libz.tbd */; };
 		B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B186049D2233EA3200C93644 /* HDNetworkTool.m */; };
 		B18604A02233EADC00C93644 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B186049F2233EADC00C93644 /* libAFNetworking.a */; };
@@ -248,6 +251,12 @@
 		B164B789226381DD0097AF63 /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
 		B164B78B226382B20097AF63 /* HDViewController+Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDViewController+Logging.h"; sourceTree = "<group>"; };
 		B164B78C226382B20097AF63 /* HDViewController+Logging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HDViewController+Logging.m"; sourceTree = "<group>"; };
+		B16FE0662354678C007E8B76 /* HDFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDFunctionViewController.h; sourceTree = "<group>"; };
+		B16FE0672354678C007E8B76 /* HDFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDFunctionViewController.m; sourceTree = "<group>"; };
+		B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ErrorHandle.m"; sourceTree = "<group>"; };
+		B16FE06B23546B24007E8B76 /* NSDictionary+ErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ErrorHandle.h"; sourceTree = "<group>"; };
+		B16FE06D23546B52007E8B76 /* NSObject+SwizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwizzleMethod.h"; sourceTree = "<group>"; };
+		B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleMethod.m"; sourceTree = "<group>"; };
 		B17E6E3223043F9E003BC1F2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B17E6E3423043FAA003BC1F2 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		B17E6E3623043FB4003BC1F2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -529,6 +538,15 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		B16FE0692354679D007E8B76 /* function */ = {
+			isa = PBXGroup;
+			children = (
+				B16FE0662354678C007E8B76 /* HDFunctionViewController.h */,
+				B16FE0672354678C007E8B76 /* HDFunctionViewController.m */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
 		B1954C662269DDC0005CEF6C /* TestYYModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +683,10 @@
 		B1B1475622C9F9B200A96AB9 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				B16FE06D23546B52007E8B76 /* NSObject+SwizzleMethod.h */,
+				B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */,
+				B16FE06B23546B24007E8B76 /* NSDictionary+ErrorHandle.h */,
+				B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */,
 				B164B78B226382B20097AF63 /* HDViewController+Logging.h */,
 				B164B78C226382B20097AF63 /* HDViewController+Logging.m */,
 				B1FC070A224A3E1F0030FED3 /* NSObject+run.h */,
@@ -708,6 +730,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B16FE0692354679D007E8B76 /* function */,
 				B13D7E63232228F200C82848 /* customTableView */,
 				B10DD58423040B250063C80B /* downloadAnimations */,
 				B1A9930F22E9E41700B4E1AA /* adViews */,
@@ -1067,6 +1090,8 @@
 				B1FAA23923138AE0008200C8 /* HDNavBarCaptureViewController.m in Sources */,
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
 				B1EAE61F22E885B900CB8BC7 /* UINavigationConfig.m in Sources */,
+				B16FE06F23546B52007E8B76 /* NSObject+SwizzleMethod.m in Sources */,
+				B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */,
 				B10DD5F0230410160063C80B /* constant.m in Sources */,
 				B1E72F3722DD80C600CD4FDD /* HDTools.m in Sources */,
 				B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */,
@@ -1104,6 +1129,7 @@
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
 				B10DD58723040B4B0063C80B /* HDDownloadAnimationViewController.m in Sources */,
+				B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
 				B1FAA23F2313CF67008200C8 /* HDAutoADTableView.m in Sources */,
 				B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */,
