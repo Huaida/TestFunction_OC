@@ -132,6 +132,7 @@
 		B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61722E8416700CB8BC7 /* WRCustomNavigationBar.m */; };
 		B1EAE61F22E885B900CB8BC7 /* UINavigationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61E22E885B900CB8BC7 /* UINavigationConfig.m */; };
 		B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE62022E885F800CB8BC7 /* NSObject+SXRuntime.m */; };
+		B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ECF3B723570F5100268E39 /* HDContainerCollectionViewCell.m */; };
 		B1EEA313232659EF00C16268 /* MZSectionHeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEA312232659EF00C16268 /* MZSectionHeaderCollectionView.m */; };
 		B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11121C2B9B9001D763B /* AppDelegate.m */; };
 		B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11421C2B9B9001D763B /* ViewController.m */; };
@@ -339,6 +340,8 @@
 		B1EAE61E22E885B900CB8BC7 /* UINavigationConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationConfig.m; sourceTree = "<group>"; };
 		B1EAE62022E885F800CB8BC7 /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
 		B1EAE62122E885F800CB8BC7 /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
+		B1ECF3B623570F5100268E39 /* HDContainerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDContainerCollectionViewCell.h; sourceTree = "<group>"; };
+		B1ECF3B723570F5100268E39 /* HDContainerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDContainerCollectionViewCell.m; sourceTree = "<group>"; };
 		B1EEA311232659EF00C16268 /* MZSectionHeaderCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZSectionHeaderCollectionView.h; sourceTree = "<group>"; };
 		B1EEA312232659EF00C16268 /* MZSectionHeaderCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZSectionHeaderCollectionView.m; sourceTree = "<group>"; };
 		B1F5D10D21C2B9B9001D763B /* TestFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -494,6 +497,8 @@
 				B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */,
 				B1EEA311232659EF00C16268 /* MZSectionHeaderCollectionView.h */,
 				B1EEA312232659EF00C16268 /* MZSectionHeaderCollectionView.m */,
+				B1ECF3B623570F5100268E39 /* HDContainerCollectionViewCell.h */,
+				B1ECF3B723570F5100268E39 /* HDContainerCollectionViewCell.m */,
 			);
 			path = customTableView;
 			sourceTree = "<group>";
@@ -1117,6 +1122,7 @@
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
+				B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */,
 				B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */,
 				B13D7E662322299A00C82848 /* MZCustomTableView.m in Sources */,
 				B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */,

@@ -9,6 +9,7 @@
 #define FYRandomColor FYColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
 
 #import "MZHorizontalScrollTableViewCell.h"
+#import "HDContainerCollectionViewCell.h"
 @interface MZHorizontalScrollTableViewCell()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic ,strong) UICollectionView *collectionView;
 @property (nonatomic ,strong) UITableView *tableView;
@@ -26,33 +27,35 @@
     self.backgroundColor = [UIColor cyanColor];
     [self customAddSubviews];
 }
-- (void)customAddSubviews{
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZ_SH) style:UITableViewStylePlain];
-    [self.contentView addSubview:tableView];
-    self.tableView = tableView;
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.bounces = YES;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.dataArray.count;
-}
+//  用一个tableView
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"testCell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testCell"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
-    return cell;
-}
+//- (void)customAddSubviews{
+//    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZ_SH) style:UITableViewStylePlain];
+//    [self.contentView addSubview:tableView];
+//    self.tableView = tableView;
+//    tableView.delegate = self;
+//    tableView.dataSource = self;
+//    tableView.bounces = YES;
+//}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return self.dataArray.count;
+//}
+//
+//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"testCell"];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"testCell"];
+//    }
+//    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+//    return cell;
+//}
 
 
 
 
 
 // 咱还是不用
-- (void)customAddSubviews1{
+- (void)customAddSubviews{
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.itemSize = CGSizeMake(MZ_SW, 600);
     flowLayout.minimumLineSpacing = 0;
@@ -66,7 +69,7 @@
     self.collectionView.delegate = self;
     self.collectionView.pagingEnabled = YES;
     self.collectionView.bounces = NO;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"dequeueReusableCellWithReuseIdentifier"];
+    [self.collectionView registerClass:[HDContainerCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([HDContainerCollectionViewCell class])];
     self.backgroundColor = [UIColor greenColor];
     [self addSubview:self.collectionView];
 }
@@ -77,9 +80,9 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 //
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dequeueReusableCellWithReuseIdentifier" forIndexPath:indexPath];
+    HDContainerCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([HDContainerCollectionViewCell class]) forIndexPath:indexPath];
     if (!cell) {
-        cell = [[UICollectionViewCell alloc] initWithFrame:self.bounds];
+        cell = [[HDContainerCollectionViewCell alloc] initWithFrame:self.bounds];
     }
     cell.backgroundColor = FYRandomColor;
     for (UIView *sub in cell.contentView.subviews) {
@@ -102,8 +105,8 @@
     }
 
 }
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
 //    NSLog(@"innter %f",scrollView.contentOffset.y);
 //    if (!self.cellCanScroll) {
 //        scrollView.contentOffset = CGPointZero;
@@ -117,5 +120,5 @@
 //        self.tableView.bounces = YES;
 //    }
 //    self.tableView.showsVerticalScrollIndicator = self.cellCanScroll?YES:NO;
-}
+//}
 @end

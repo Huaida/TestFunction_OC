@@ -24,7 +24,7 @@
 //    [self testShortLink];
 }
 - (void)customAddSubviews{
-    self.tableView = [[MZCustomTableView alloc] initWithFrame:CGRectMake(0, 100, MZ_SW, MZ_SH-100) style:UITableViewStylePlain];
+    self.tableView = [[MZCustomTableView alloc] initWithFrame:CGRectMake(0, 0, MZ_SW, MZ_SH) style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     
     NSArray *dataArray = @[@[@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3,@1,@2,@3],@[@1]];
