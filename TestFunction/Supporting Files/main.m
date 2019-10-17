@@ -14,3 +14,21 @@ int main(int argc, char * argv[]) {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
+__attribute__((constructor)) static void beforeMain(){
+     NSLog(@"%@",@"beforeMain");
+}
+static  __attribute__((constructor(101))) void before1()
+{
+    
+    printf("before1\n");
+}
+static  __attribute__((constructor(102))) void before2()
+{
+    
+    printf("before2\n");
+}
+static  __attribute__((constructor(88))) void before3()
+{
+    
+    printf("before3\n");
+}
