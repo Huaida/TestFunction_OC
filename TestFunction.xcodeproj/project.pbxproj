@@ -1291,8 +1291,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
+				INFOPLIST_FILE = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1312,8 +1312,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
+				INFOPLIST_FILE = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
