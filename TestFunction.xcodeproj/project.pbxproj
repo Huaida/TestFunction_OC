@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */; };
 		B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
 		B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
 		B107FCD921DFACED00AAF725 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
@@ -153,6 +154,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13DC575823C5E36F00E20C5F /* HDOC_JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOC_JSInteractionViewController.h; sourceTree = "<group>"; };
+		13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOC_JSInteractionViewController.m; sourceTree = "<group>"; };
 		3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.release.xcconfig"; sourceTree = "<group>"; };
 		6B823C7A01753B3E9483091A /* libPods-TestFunction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFunction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.debug.xcconfig"; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 		B13D7E63232228F200C82848 /* customTableView */ = {
 			isa = PBXGroup;
 			children = (
+				13DC575823C5E36F00E20C5F /* HDOC_JSInteractionViewController.h */,
+				13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */,
 				B13D7E642322299A00C82848 /* MZCustomTableView.h */,
 				B13D7E652322299A00C82848 /* MZCustomTableView.m */,
 				B13D7E67232229DB00C82848 /* HDCustomTableViewController.h */,
@@ -1090,6 +1095,7 @@
 				B1FAA23C2313CF09008200C8 /* HDAutoADScrollView.m in Sources */,
 				B107FCDC21E5B25A00AAF725 /* Son.m in Sources */,
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,
+				13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
 				B1FAA23923138AE0008200C8 /* HDNavBarCaptureViewController.m in Sources */,

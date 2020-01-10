@@ -30,6 +30,7 @@
                        @[@"6 暖场广告图",@"HDShowADViewsViewController"],
                        @[@"7 网络下载ZIP解压 文件及文件夹操作",@"HDDownloadAnimationViewController"],
                        @[@"8 自定义tableView测试",@"HDCustomTableViewController"],
+                       @[@"9 原生与JS交互",@"HDOC_JSInteractionViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];
