@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
+		137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
+		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
+		137F4C9F23C876B500149B14 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */; };
 		13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */; };
 		B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
 		B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
@@ -154,6 +158,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		137F4C9723C876B500149B14 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		137F4C9823C876B500149B14 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		137F4C9A23C876B500149B14 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		137F4C9B23C876B500149B14 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		13DC575823C5E36F00E20C5F /* HDOC_JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOC_JSInteractionViewController.h; sourceTree = "<group>"; };
 		13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOC_JSInteractionViewController.m; sourceTree = "<group>"; };
 		3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.release.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +404,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137F4C9323C876B500149B14 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				137F4C9723C876B500149B14 /* WebViewJavascriptBridge_JS.h */,
+				137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */,
+				137F4C9A23C876B500149B14 /* WebViewJavascriptBridge.h */,
+				137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */,
+				137F4C9823C876B500149B14 /* WebViewJavascriptBridgeBase.h */,
+				137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */,
+				137F4C9B23C876B500149B14 /* WKWebViewJavascriptBridge.h */,
+				137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
 		2E53F32AC740AB7BF22ACC8A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +510,7 @@
 		B10DD5F123043D640063C80B /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				137F4C9323C876B500149B14 /* WebViewJavascriptBridge */,
 			);
 			path = ThirdLib;
 			sourceTree = "<group>";
@@ -1134,12 +1162,15 @@
 				B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */,
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,
+				137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */,
 				B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */,
 				B1FAA2452313FDD9008200C8 /* HDAutoADCollectionViewCell.m in Sources */,
 				B107FCD921DFACED00AAF725 /* SubView.m in Sources */,
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
+				137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
+				137F4C9F23C876B500149B14 /* WebViewJavascriptBridge_JS.m in Sources */,
 				B10DD58723040B4B0063C80B /* HDDownloadAnimationViewController.m in Sources */,
 				B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */,
 				B1EAE61822E8416700CB8BC7 /* WRNavigationBar.m in Sources */,
@@ -1147,6 +1178,7 @@
 				B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */,
 				B108ACBF22EAE7720061A13A /* MZCustomNavigationBar.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
+				137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */,
 				B13D7E69232229DB00C82848 /* HDCustomTableViewController.m in Sources */,
 				B1A992FA22E9792300B4E1AA /* HDNavigartionBarPresenter.m in Sources */,
 				B1CF542523150AB400B09ED3 /* HDPageControl.m in Sources */,
