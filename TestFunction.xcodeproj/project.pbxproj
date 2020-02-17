@@ -87,6 +87,7 @@
 		B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */; };
 		B164B78A226381DD0097AF63 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
 		B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
+		B167227523F4D278004A0FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B167227723F4D278004A0FAA /* Localizable.strings */; };
 		B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE0672354678C007E8B76 /* HDFunctionViewController.m */; };
 		B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */; };
 		B16FE06F23546B52007E8B76 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */; };
@@ -267,6 +268,12 @@
 		B164B789226381DD0097AF63 /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
 		B164B78B226382B20097AF63 /* HDViewController+Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDViewController+Logging.h"; sourceTree = "<group>"; };
 		B164B78C226382B20097AF63 /* HDViewController+Logging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HDViewController+Logging.m"; sourceTree = "<group>"; };
+		B167226F23F4D1CD004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B167227023F4D1CD004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B167227123F4D228004A0FAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		B167227223F4D228004A0FAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B167227623F4D278004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B167227823F4D29F004A0FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B16FE0662354678C007E8B76 /* HDFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDFunctionViewController.h; sourceTree = "<group>"; };
 		B16FE0672354678C007E8B76 /* HDFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDFunctionViewController.m; sourceTree = "<group>"; };
 		B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ErrorHandle.m"; sourceTree = "<group>"; };
@@ -921,6 +928,7 @@
 		B1F5D10421C2B9B9001D763B = {
 			isa = PBXGroup;
 			children = (
+				B167227723F4D278004A0FAA /* Localizable.strings */,
 				B1F5D10F21C2B9B9001D763B /* TestFunction */,
 				B1F5D10E21C2B9B9001D763B /* Products */,
 				2E53F32AC740AB7BF22ACC8A /* Pods */,
@@ -995,6 +1003,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
 			mainGroup = B1F5D10421C2B9B9001D763B;
 			productRefGroup = B1F5D10E21C2B9B9001D763B /* Products */;
@@ -1056,6 +1066,7 @@
 				B10DD5DA23040C6E0063C80B /* ylf.json in Resources */,
 				B150DBDD2286E11700498D86 /* backbutton@3x.png in Resources */,
 				B10DD5C323040C6E0063C80B /* 超级一路發-X.json in Resources */,
+				B167227523F4D278004A0FAA /* Localizable.strings in Resources */,
 				B18E3BB22293A3B600D6E34B /* yymm.json in Resources */,
 				B10DD5CC23040C6E0063C80B /* 超级我要發.json in Resources */,
 				B10DD5D623040C6E0063C80B /* yymm.json in Resources */,
@@ -1192,10 +1203,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B167227723F4D278004A0FAA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B167227623F4D278004A0FAA /* zh-Hans */,
+				B167227823F4D29F004A0FAA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B1F5D11621C2B9B9001D763B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B1F5D11721C2B9B9001D763B /* Base */,
+				B167226F23F4D1CD004A0FAA /* zh-Hans */,
+				B167227123F4D228004A0FAA /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1204,6 +1226,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B1F5D11C21C2B9B9001D763B /* Base */,
+				B167227023F4D1CD004A0FAA /* zh-Hans */,
+				B167227223F4D228004A0FAA /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1215,6 +1239,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1272,6 +1297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1329,8 +1355,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
+				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1350,8 +1376,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/cage_bbx/Desktop/Test_projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
+				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
