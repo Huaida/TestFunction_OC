@@ -31,6 +31,7 @@
                        @[@"7 网络下载ZIP解压 文件及文件夹操作",@"HDDownloadAnimationViewController"],
                        @[@"8 自定义tableView测试",@"HDCustomTableViewController"],
                        @[@"9 原生与JS交互",@"HDOC_JSInteractionViewController"],
+                       @[@"10 信号量测试",@"HDSignalViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

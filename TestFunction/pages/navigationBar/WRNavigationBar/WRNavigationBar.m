@@ -697,31 +697,31 @@ static int wrPushDisplayCount = 0;
 }
 
 #pragma mark - deal the gesture of return
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-    __weak typeof (self) weakSelf = self;
-    id<UIViewControllerTransitionCoordinator> coor = [self.topViewController transitionCoordinator];
-    if ([coor initiallyInteractive] == YES) {
-        NSString *sysVersion = [[UIDevice currentDevice] systemVersion];
-        if ([sysVersion floatValue] >= 10) {
-            [coor notifyWhenInteractionChangesUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-                __strong typeof (self) pThis = weakSelf;
-                [pThis dealInteractionChanges:context];
-            }];
-        } else {
-            [coor notifyWhenInteractionEndsUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-                __strong typeof (self) pThis = weakSelf;
-                [pThis dealInteractionChanges:context];
-            }];
-        }
-        return YES;
-    }
-    
-    NSUInteger itemCount = self.navigationBar.items.count;
-    NSUInteger n = self.viewControllers.count >= itemCount ? 2 : 1;
-    UIViewController *popToVC = self.viewControllers[self.viewControllers.count - n];
-    [self popToViewController:popToVC animated:YES];
-    return YES;
-}
+//- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
+//    __weak typeof (self) weakSelf = self;
+//    id<UIViewControllerTransitionCoordinator> coor = [self.topViewController transitionCoordinator];
+//    if ([coor initiallyInteractive] == YES) {
+//        NSString *sysVersion = [[UIDevice currentDevice] systemVersion];
+//        if ([sysVersion floatValue] >= 10) {
+//            [coor notifyWhenInteractionChangesUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+//                __strong typeof (self) pThis = weakSelf;
+//                [pThis dealInteractionChanges:context];
+//            }];
+//        } else {
+//            [coor notifyWhenInteractionEndsUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+//                __strong typeof (self) pThis = weakSelf;
+//                [pThis dealInteractionChanges:context];
+//            }];
+//        }
+//        return YES;
+//    }
+//    
+//    NSUInteger itemCount = self.navigationBar.items.count;
+//    NSUInteger n = self.viewControllers.count >= itemCount ? 2 : 1;
+//    UIViewController *popToVC = self.viewControllers[self.viewControllers.count - n];
+//    [self popToViewController:popToVC animated:YES];
+//    return YES;
+//}
 
 // deal the gesture of return break off
 - (void)dealInteractionChanges:(id<UIViewControllerTransitionCoordinatorContext>)context {

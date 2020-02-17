@@ -121,6 +121,8 @@
 		B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
 		B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
 		B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1477622CC91B900A96AB9 /* HDImageView.m */; };
+		B1BE371223FA86AC004B063D /* HDSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BE371123FA86AC004B063D /* HDSignalViewController.m */; };
+		B1BE371523FA86F8004B063D /* BTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BE371323FA86F8004B063D /* BTEvent.m */; };
 		B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */; };
 		B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26D22DF204B00E9FE0D /* HDRedEnvelopeDataView.m */; };
 		B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */; };
@@ -328,6 +330,10 @@
 		B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeModel.m; sourceTree = "<group>"; };
 		B1B1477522CC91B900A96AB9 /* HDImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDImageView.h; sourceTree = "<group>"; };
 		B1B1477622CC91B900A96AB9 /* HDImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDImageView.m; sourceTree = "<group>"; };
+		B1BE371023FA86AC004B063D /* HDSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSignalViewController.h; sourceTree = "<group>"; };
+		B1BE371123FA86AC004B063D /* HDSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSignalViewController.m; sourceTree = "<group>"; };
+		B1BE371323FA86F8004B063D /* BTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTEvent.m; sourceTree = "<group>"; };
+		B1BE371423FA86F8004B063D /* BTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEvent.h; sourceTree = "<group>"; };
 		B1CCC26922DF1C2C00E9FE0D /* HDTestNavigationBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestNavigationBarViewController.h; sourceTree = "<group>"; };
 		B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestNavigationBarViewController.m; sourceTree = "<group>"; };
 		B1CCC26C22DF204B00E9FE0D /* HDRedEnvelopeDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRedEnvelopeDataView.h; sourceTree = "<group>"; };
@@ -772,9 +778,21 @@
 			path = layout;
 			sourceTree = "<group>";
 		};
+		B1BE370F23FA8685004B063D /* signalTest */ = {
+			isa = PBXGroup;
+			children = (
+				B1BE371023FA86AC004B063D /* HDSignalViewController.h */,
+				B1BE371123FA86AC004B063D /* HDSignalViewController.m */,
+				B1BE371423FA86F8004B063D /* BTEvent.h */,
+				B1BE371323FA86F8004B063D /* BTEvent.m */,
+			);
+			path = signalTest;
+			sourceTree = "<group>";
+		};
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B1BE370F23FA8685004B063D /* signalTest */,
 				B16FE0692354679D007E8B76 /* function */,
 				B13D7E63232228F200C82848 /* customTableView */,
 				B10DD58423040B250063C80B /* downloadAnimations */,
@@ -1136,6 +1154,7 @@
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,
 				13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
+				B1BE371523FA86F8004B063D /* BTEvent.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
 				B1FAA23923138AE0008200C8 /* HDNavBarCaptureViewController.m in Sources */,
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
@@ -1162,6 +1181,7 @@
 				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
+				B1BE371223FA86AC004B063D /* HDSignalViewController.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,
 				B1CF542A23151E3300B09ED3 /* HDScrollTextView.m in Sources */,
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
@@ -1267,7 +1287,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
