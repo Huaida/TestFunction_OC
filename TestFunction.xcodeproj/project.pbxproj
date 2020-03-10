@@ -253,7 +253,6 @@
 		B148B6E62260A74700C8BFDA /* HDCheckArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCheckArray.m; sourceTree = "<group>"; };
 		B150DBCD2285C22500498D86 /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		B150DBCE2285C22500498D86 /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
-		B150DBD02285DD4D00498D86 /* TestFunction.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFunction.pch; sourceTree = "<group>"; };
 		B150DBD12286BC1100498D86 /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
 		B150DBD42286E11600498D86 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		B150DBD52286E11600498D86 /* webRefreshButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@3x.png"; sourceTree = "<group>"; };
@@ -322,6 +321,7 @@
 		B1A9930D22E9868F00B4E1AA /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDShowADViewsViewController.h; sourceTree = "<group>"; };
 		B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDShowADViewsViewController.m; sourceTree = "<group>"; };
+		B1AAB5BA2417897C002FDD9C /* TestFunction.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFunction.pch; path = TestFunction/TestFunction.pch; sourceTree = SOURCE_ROOT; };
 		B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableView.h; sourceTree = "<group>"; };
 		B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableView.m; sourceTree = "<group>"; };
 		B1B1475C22C9FB3B00A96AB9 /* HDHomePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomePresenter.h; sourceTree = "<group>"; };
@@ -672,12 +672,12 @@
 		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1AAB5BA2417897C002FDD9C /* TestFunction.pch */,
 				B1F5D11621C2B9B9001D763B /* Main.storyboard */,
 				B1F5D11921C2B9B9001D763B /* Assets.xcassets */,
 				B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */,
 				B1F5D11E21C2B9B9001D763B /* Info.plist */,
 				B1F5D11F21C2B9B9001D763B /* main.m */,
-				B150DBD02285DD4D00498D86 /* TestFunction.pch */,
 				B18E3B962293898700D6E34B /* cjsss_big.json */,
 				B1F5D11021C2B9B9001D763B /* AppDelegate.h */,
 				B1F5D11121C2B9B9001D763B /* AppDelegate.m */,
@@ -1375,8 +1375,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1396,8 +1396,8 @@
 				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = RK6SS8FXJ5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/TestFunction.pch";
-				INFOPLIST_FILE = "/Users/huaida/Desktop/projects/TestFunction_OC/TestFunction/Supporting Files/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
