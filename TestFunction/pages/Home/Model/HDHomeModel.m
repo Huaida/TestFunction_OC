@@ -32,6 +32,7 @@
                        @[@"8 自定义tableView测试",@"HDCustomTableViewController"],
                        @[@"9 原生与JS交互",@"HDOC_JSInteractionViewController"],
                        @[@"10 信号量测试",@"HDSignalViewController"],
+                       @[@"11 国际化测试",@"HDChangeLanguageViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

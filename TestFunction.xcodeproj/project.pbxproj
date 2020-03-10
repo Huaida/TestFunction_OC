@@ -87,7 +87,6 @@
 		B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */; };
 		B164B78A226381DD0097AF63 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
 		B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
-		B167227523F4D278004A0FAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B167227723F4D278004A0FAA /* Localizable.strings */; };
 		B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE0672354678C007E8B76 /* HDFunctionViewController.m */; };
 		B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */; };
 		B16FE06F23546B52007E8B76 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */; };
@@ -117,6 +116,9 @@
 		B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */; };
 		B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930D22E9868F00B4E1AA /* BaseViewController.m */; };
 		B1A9931222E9E49000B4E1AA /* HDShowADViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */; };
+		B1AAB5C024178CBA002FDD9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1AAB5C224178CBA002FDD9C /* Localizable.strings */; };
+		B1AAB5CB2417ABCC002FDD9C /* NSBundle+CLLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AAB5C92417ABCC002FDD9C /* NSBundle+CLLanguage.m */; };
+		B1AAB5CF2417AD9E002FDD9C /* HDChangeLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AAB5CE2417AD9E002FDD9C /* HDChangeLanguageViewController.m */; };
 		B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */; };
 		B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
 		B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
@@ -269,12 +271,6 @@
 		B164B789226381DD0097AF63 /* HDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDViewController.m; sourceTree = "<group>"; };
 		B164B78B226382B20097AF63 /* HDViewController+Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDViewController+Logging.h"; sourceTree = "<group>"; };
 		B164B78C226382B20097AF63 /* HDViewController+Logging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HDViewController+Logging.m"; sourceTree = "<group>"; };
-		B167226F23F4D1CD004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		B167227023F4D1CD004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		B167227123F4D228004A0FAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		B167227223F4D228004A0FAA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		B167227623F4D278004A0FAA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		B167227823F4D29F004A0FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B16FE0662354678C007E8B76 /* HDFunctionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDFunctionViewController.h; sourceTree = "<group>"; };
 		B16FE0672354678C007E8B76 /* HDFunctionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDFunctionViewController.m; sourceTree = "<group>"; };
 		B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ErrorHandle.m"; sourceTree = "<group>"; };
@@ -322,6 +318,12 @@
 		B1A9931022E9E49000B4E1AA /* HDShowADViewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDShowADViewsViewController.h; sourceTree = "<group>"; };
 		B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDShowADViewsViewController.m; sourceTree = "<group>"; };
 		B1AAB5BA2417897C002FDD9C /* TestFunction.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFunction.pch; path = TestFunction/TestFunction.pch; sourceTree = SOURCE_ROOT; };
+		B1AAB5C124178CBA002FDD9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B1AAB5C324178D0E002FDD9C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B1AAB5C92417ABCC002FDD9C /* NSBundle+CLLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLLanguage.m"; sourceTree = "<group>"; };
+		B1AAB5CA2417ABCC002FDD9C /* NSBundle+CLLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CLLanguage.h"; sourceTree = "<group>"; };
+		B1AAB5CD2417AD9E002FDD9C /* HDChangeLanguageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDChangeLanguageViewController.h; sourceTree = "<group>"; };
+		B1AAB5CE2417AD9E002FDD9C /* HDChangeLanguageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDChangeLanguageViewController.m; sourceTree = "<group>"; };
 		B1B1475822C9FAA100A96AB9 /* HDHomeTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomeTableView.h; sourceTree = "<group>"; };
 		B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDHomeTableView.m; sourceTree = "<group>"; };
 		B1B1475C22C9FB3B00A96AB9 /* HDHomePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDHomePresenter.h; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 		B10DD5F123043D640063C80B /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				B1AAB5C42417AABB002FDD9C /* ChangeLanguage */,
 				137F4C9323C876B500149B14 /* WebViewJavascriptBridge */,
 			);
 			path = ThirdLib;
@@ -669,6 +672,32 @@
 			path = adViews;
 			sourceTree = "<group>";
 		};
+		B1AAB5C42417AABB002FDD9C /* ChangeLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				B1AAB5C52417AB3D002FDD9C /* CLLanguageManager */,
+			);
+			path = ChangeLanguage;
+			sourceTree = "<group>";
+		};
+		B1AAB5C52417AB3D002FDD9C /* CLLanguageManager */ = {
+			isa = PBXGroup;
+			children = (
+				B1AAB5CA2417ABCC002FDD9C /* NSBundle+CLLanguage.h */,
+				B1AAB5C92417ABCC002FDD9C /* NSBundle+CLLanguage.m */,
+			);
+			path = CLLanguageManager;
+			sourceTree = "<group>";
+		};
+		B1AAB5CC2417AD82002FDD9C /* changeLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				B1AAB5CD2417AD9E002FDD9C /* HDChangeLanguageViewController.h */,
+				B1AAB5CE2417AD9E002FDD9C /* HDChangeLanguageViewController.m */,
+			);
+			path = changeLanguage;
+			sourceTree = "<group>";
+		};
 		B1B1475122C9F92500A96AB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -792,6 +821,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				B1AAB5CC2417AD82002FDD9C /* changeLanguage */,
 				B1BE370F23FA8685004B063D /* signalTest */,
 				B16FE0692354679D007E8B76 /* function */,
 				B13D7E63232228F200C82848 /* customTableView */,
@@ -946,7 +976,7 @@
 		B1F5D10421C2B9B9001D763B = {
 			isa = PBXGroup;
 			children = (
-				B167227723F4D278004A0FAA /* Localizable.strings */,
+				B1AAB5C224178CBA002FDD9C /* Localizable.strings */,
 				B1F5D10F21C2B9B9001D763B /* TestFunction */,
 				B1F5D10E21C2B9B9001D763B /* Products */,
 				2E53F32AC740AB7BF22ACC8A /* Pods */,
@@ -1022,7 +1052,6 @@
 				en,
 				Base,
 				"zh-Hans",
-				ja,
 			);
 			mainGroup = B1F5D10421C2B9B9001D763B;
 			productRefGroup = B1F5D10E21C2B9B9001D763B /* Products */;
@@ -1083,8 +1112,8 @@
 				B10DD5BB23040C6E0063C80B /* 圆圆满满-h-X.json in Resources */,
 				B10DD5DA23040C6E0063C80B /* ylf.json in Resources */,
 				B150DBDD2286E11700498D86 /* backbutton@3x.png in Resources */,
+				B1AAB5C024178CBA002FDD9C /* Localizable.strings in Resources */,
 				B10DD5C323040C6E0063C80B /* 超级一路發-X.json in Resources */,
-				B167227523F4D278004A0FAA /* Localizable.strings in Resources */,
 				B18E3BB22293A3B600D6E34B /* yymm.json in Resources */,
 				B10DD5CC23040C6E0063C80B /* 超级我要發.json in Resources */,
 				B10DD5D623040C6E0063C80B /* yymm.json in Resources */,
@@ -1172,11 +1201,13 @@
 				B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */,
 				B1F5D12021C2B9B9001D763B /* main.m in Sources */,
 				B1EEA313232659EF00C16268 /* MZSectionHeaderCollectionView.m in Sources */,
+				B1AAB5CF2417AD9E002FDD9C /* HDChangeLanguageViewController.m in Sources */,
 				B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
 				B1FAA2422313E5B7008200C8 /* HDAutoADCollectionView.m in Sources */,
 				B1FAA24B23140B06008200C8 /* HDCustomTextADModel.m in Sources */,
 				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
+				B1AAB5CB2417ABCC002FDD9C /* NSBundle+CLLanguage.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
@@ -1223,11 +1254,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B167227723F4D278004A0FAA /* Localizable.strings */ = {
+		B1AAB5C224178CBA002FDD9C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B167227623F4D278004A0FAA /* zh-Hans */,
-				B167227823F4D29F004A0FAA /* en */,
+				B1AAB5C124178CBA002FDD9C /* en */,
+				B1AAB5C324178D0E002FDD9C /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1236,8 +1267,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				B1F5D11721C2B9B9001D763B /* Base */,
-				B167226F23F4D1CD004A0FAA /* zh-Hans */,
-				B167227123F4D228004A0FAA /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1246,8 +1275,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				B1F5D11C21C2B9B9001D763B /* Base */,
-				B167227023F4D1CD004A0FAA /* zh-Hans */,
-				B167227223F4D228004A0FAA /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
