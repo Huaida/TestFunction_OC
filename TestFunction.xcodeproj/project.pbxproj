@@ -675,18 +675,18 @@
 		B1AAB5C42417AABB002FDD9C /* ChangeLanguage */ = {
 			isa = PBXGroup;
 			children = (
-				B1AAB5C52417AB3D002FDD9C /* CLLanguageManager */,
+				B1AAB5C52417AB3D002FDD9C /* changeLanguage */,
 			);
 			path = ChangeLanguage;
 			sourceTree = "<group>";
 		};
-		B1AAB5C52417AB3D002FDD9C /* CLLanguageManager */ = {
+		B1AAB5C52417AB3D002FDD9C /* changeLanguage */ = {
 			isa = PBXGroup;
 			children = (
 				B1AAB5CA2417ABCC002FDD9C /* NSBundle+CLLanguage.h */,
 				B1AAB5C92417ABCC002FDD9C /* NSBundle+CLLanguage.m */,
 			);
-			path = CLLanguageManager;
+			path = changeLanguage;
 			sourceTree = "<group>";
 		};
 		B1AAB5CC2417AD82002FDD9C /* changeLanguage */ = {
