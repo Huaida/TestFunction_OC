@@ -11,6 +11,6 @@
 @interface BTEvent : NSObject
 + (instancetype)createEvent;
 - (void)signal;
-- (BOOL)wait;
+- (void)wait;
 - (BOOL)waitUntilDate:(NSDate *)limit;
 @end

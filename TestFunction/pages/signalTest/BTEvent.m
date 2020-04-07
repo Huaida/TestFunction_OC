@@ -31,25 +31,31 @@
 - (void)signal
 {
     [_condition lock];
-    ++_count;
+//    ++_count;
     [_condition broadcast];//所有阻塞线程全部唤起
+    
     [_condition unlock];
 }
 
-- (BOOL)wait
+- (void)wait
 {
-    if (_count >0) {
-//        signal 之后 立即返回
-        return YES;
-    }
-    [_condition lock];
+//    if (_count >0) {
+////        signal 之后 立即返回
+//        return YES;
+//    }
+//    [_condition lock];
     
-    if ( _count <= 0 ) {
+//    if ( _count <= 0 ) {
 //        等待signal有值
-        [_condition wait];
-    }
+//        [_condition wait];
+//    }
+//    [_condition unlock];
+//    return YES;
+    
+    
+    [_condition lock];
+    [_condition wait];
     [_condition unlock];
-    return YES;
 }
 
 - (BOOL)waitUntilDate:(NSDate *)limit
