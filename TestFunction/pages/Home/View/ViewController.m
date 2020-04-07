@@ -1022,7 +1022,7 @@ typedef void (^someBlock)(void);
 - (void)testGCD{
     self.mArray = [NSMutableArray new];
     dispatch_queue_t concurrentQueue = dispatch_queue_create("com.apple.concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
-//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(5);
 //    for (int i = 0 ; i < 100; i ++) {
 //        dispatch_async(concurrentQueue, ^{
 //            dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
