@@ -77,7 +77,7 @@
     
     HDDisableTouchTextField *moneyTextField = [[HDDisableTouchTextField alloc]init];
     moneyTextField.keyboardType = UIKeyboardTypeNumberPad;
-    [moneyTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
+//    [moneyTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
     moneyTextField.font = [UIFont systemFontOfSize:14*MZ_RATE];
     moneyTextField.textAlignment = NSTextAlignmentRight;
     moneyTextField.returnKeyType = UIReturnKeyDone;
@@ -115,7 +115,7 @@
     
     HDDisableTouchTextField *numTextField = [[HDDisableTouchTextField alloc]init];
     numTextField.keyboardType = UIKeyboardTypeNumberPad;
-    [numTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
+//    [numTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
     numTextField.font = [UIFont systemFontOfSize:14*MZ_RATE];
     numTextField.textAlignment = NSTextAlignmentRight;
     numTextField.returnKeyType = UIReturnKeyDone;
@@ -146,8 +146,8 @@
     UITextField *luckyNoteTextField = [[UITextField alloc]init];
     luckyNoteTextField.backgroundColor = [UIColor whiteColor];
     luckyNoteTextField.placeholder = @"恭喜发财，大吉大利！";
-    [luckyNoteTextField setValue:MakeColorRGB(0x9fa9ba) forKeyPath:@"_placeholderLabel.textColor"];
-    [luckyNoteTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
+//    [luckyNoteTextField setValue:MakeColorRGB(0x9fa9ba) forKeyPath:@"_placeholderLabel.textColor"];
+//    [luckyNoteTextField setValue:[UIFont systemFontOfSize:14*MZ_RATE] forKeyPath:@"_placeholderLabel.font"];
     luckyNoteTextField.textColor = MakeColorRGB(0x000000);
     [luckyNoteTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     luckyNoteTextField.font = [UIFont systemFontOfSize:14*MZ_RATE];
