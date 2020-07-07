@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
 		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
 		137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
 		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
@@ -163,6 +164,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131D6CEC24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageSwitchZHIHUViewController.h; sourceTree = "<group>"; };
+		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
 		137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
@@ -419,6 +422,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */ = {
+			isa = PBXGroup;
+			children = (
+				131D6CEC24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.h */,
+				131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */,
+			);
+			path = pageSwitchZHIHU;
+			sourceTree = "<group>";
+		};
 		137F4C9323C876B500149B14 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +833,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */,
 				B1AAB5CC2417AD82002FDD9C /* changeLanguage */,
 				B1BE370F23FA8685004B063D /* signalTest */,
 				B16FE0692354679D007E8B76 /* function */,
@@ -1211,6 +1224,7 @@
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
+				131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */,
 				B1EAE62222E885F900CB8BC7 /* NSObject+SXRuntime.m in Sources */,
 				B1BE371223FA86AC004B063D /* HDSignalViewController.m in Sources */,
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,

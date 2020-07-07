@@ -33,6 +33,7 @@
                        @[@"9 原生与JS交互",@"HDOC_JSInteractionViewController"],
                        @[@"10 信号量测试",@"HDSignalViewController"],
                        @[@"11 国际化测试",@"HDChangeLanguageViewController"],
+                       @[@"12 仿知乎页面切换",@"HDPageSwitchZHIHUViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];
