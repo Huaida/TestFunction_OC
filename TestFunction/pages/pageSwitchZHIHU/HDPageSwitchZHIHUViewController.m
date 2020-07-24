@@ -24,7 +24,7 @@
     self.scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 50, kScreenWidth, kScreenHeight)];
     [self.view addSubview:self.scrollview];
     self.scrollview.backgroundColor = [UIColor redColor];
-    self.scrollview.contentSize = CGSizeMake(kScreenWidth, kScreenHeight-1);
+    self.scrollview.contentSize = CGSizeMake(kScreenWidth, kScreenHeight+500);
     
     _containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 200, kScreenWidth, 200)];
     [self.view addSubview:_containerView];
@@ -32,6 +32,9 @@
     [self.scrollview addSubview:self.containerView];
     
     self.scrollview.delegate = self;
+    
+//    [self.scrollview setContentOffset:CGPointMake(0, 189.3) animated:NO];
+    self.scrollview.contentOffset = CGPointMake(0, 189.3);
 }
 
 
