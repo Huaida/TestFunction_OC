@@ -66,7 +66,7 @@
 }
 // 测试等宽字体和千分位符
 -(void)testFunction3{
-    NSString *testString = @"1234567890";
+    NSString *testString = @"请直接提现到个人钱包地址,1234567890";
     NSLog(@"%@",[self changeNumberFormatter:testString]);
     
     UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
@@ -80,19 +80,21 @@
     [self.view addSubview:testLabel2];
     testLabel2.backgroundColor = [UIColor lightGrayColor];
     testLabel2.numberOfLines = 0;
-    testLabel2.text = testString;
+    testLabel2.text = @"33,369,080";
+    
     UILabel *testLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10, 350, 300, 50)];
     testLabel3.font = [UIFont fontWithName:@"Helvetica Neue" size:12];
     [UIFont fontNamesForFamilyName:@""];
     [self.view addSubview:testLabel3];
     testLabel3.backgroundColor = [UIColor lightGrayColor];
     testLabel3.numberOfLines = 0;
-    testLabel3.text = testString;
+    testLabel3.text = [self changeNumberFormatterToOriginalStr:@"33,369,080"] ;
     
 }
 //转化为千分位格式,例如 :33369080 输出：33,369,080
 -(NSString*)changeNumberFormatter:(NSString*)str{
    NSString *numString = [NSString stringWithFormat:@"%@",str];
+    
    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
    NSNumber *number = [formatter numberFromString:numString];
    formatter.numberStyle=kCFNumberFormatterDecimalStyle;
@@ -103,4 +105,18 @@
    }
    return string;
 }
+-(NSString*)changeNumberFormatterToOriginalStr:(NSString*)str{
+   NSString *numString = [NSString stringWithFormat:@"%@",str];
+   NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+    formatter.numberStyle=kCFNumberFormatterDecimalStyle;
+   NSNumber *number = [formatter numberFromString:numString];
+   formatter.numberStyle=kCFNumberFormatterNoStyle;
+   NSString *string = [formatter stringFromNumber:number];
+   NSLog(@"numberFormatter == %@",string);
+   if(IsStrEmpty(string)) {
+   return str;
+   }
+   return string;
+}
+
 @end
