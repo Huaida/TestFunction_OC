@@ -9,6 +9,10 @@
 #import "HDFunctionViewController.h"
 #import "Person.h"
 
+
+//字符串是否为空
+#define IsStrEmpty(_ref)(( [(_ref) isKindOfClass:[NSNull class]]||(_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]) || ([(_ref) isEqualToString:@""]) )
+
 @interface HDFunctionViewController ()
 @property (nonatomic, strong) UIView *view1;
 @property (nonatomic, strong) UIView *view2;
@@ -23,7 +27,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFuction2];
+    [self testFunction3];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
     [self.view addGestureRecognizer:tap];
@@ -59,5 +63,44 @@
     NSLog(@"%@",self.testArrayM);
     NSLog(@"%@",self.p1.name);
     NSLog(@"%@",[(Person *)self.testArrayM.firstObject name]);
+}
+// 测试等宽字体和千分位符
+-(void)testFunction3{
+    NSString *testString = @"1234567890";
+    NSLog(@"%@",[self changeNumberFormatter:testString]);
+    
+    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
+    [self.view addSubview:testLabel];
+    testLabel.backgroundColor = [UIColor lightGrayColor];
+    testLabel.numberOfLines = 0;
+    testLabel.text = [self changeNumberFormatter:testString];
+    
+    UILabel *testLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 300, 300, 50)];
+    testLabel2.font = [UIFont systemFontOfSize:12];
+    [self.view addSubview:testLabel2];
+    testLabel2.backgroundColor = [UIColor lightGrayColor];
+    testLabel2.numberOfLines = 0;
+    testLabel2.text = testString;
+    UILabel *testLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10, 350, 300, 50)];
+    testLabel3.font = [UIFont fontWithName:@"Helvetica Neue" size:12];
+    [UIFont fontNamesForFamilyName:@""];
+    [self.view addSubview:testLabel3];
+    testLabel3.backgroundColor = [UIColor lightGrayColor];
+    testLabel3.numberOfLines = 0;
+    testLabel3.text = testString;
+    
+}
+//转化为千分位格式,例如 :33369080 输出：33,369,080
+-(NSString*)changeNumberFormatter:(NSString*)str{
+   NSString *numString = [NSString stringWithFormat:@"%@",str];
+   NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
+   NSNumber *number = [formatter numberFromString:numString];
+   formatter.numberStyle=kCFNumberFormatterDecimalStyle;
+   NSString *string = [formatter stringFromNumber:number];
+   NSLog(@"numberFormatter == %@",string);
+   if(IsStrEmpty(string)) {
+   return str;
+   }
+   return string;
 }
 @end
