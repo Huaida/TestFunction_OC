@@ -27,7 +27,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction3];
+    [self testFunction4];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
     [self.view addGestureRecognizer:tap];
@@ -67,13 +67,13 @@
 // 测试等宽字体和千分位符
 -(void)testFunction3{
     NSString *testString = @"请直接提现到个人钱包地址,1234567890";
-    NSLog(@"%@",[self changeNumberFormatter:testString]);
+    NSLog(@"%@",[self OriginalStringToNumberFormatter:testString]);
     
     UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
     [self.view addSubview:testLabel];
     testLabel.backgroundColor = [UIColor lightGrayColor];
     testLabel.numberOfLines = 0;
-    testLabel.text = [self changeNumberFormatter:testString];
+    testLabel.text = [self OriginalStringToNumberFormatter:testString];
     
     UILabel *testLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 300, 300, 50)];
     testLabel2.font = [UIFont systemFontOfSize:12];
@@ -88,11 +88,11 @@
     [self.view addSubview:testLabel3];
     testLabel3.backgroundColor = [UIColor lightGrayColor];
     testLabel3.numberOfLines = 0;
-    testLabel3.text = [self changeNumberFormatterToOriginalStr:@"33,369,080"] ;
+    testLabel3.text = [self NumberFormatterToOriginalString:@"33,369,080"] ;
     
 }
 //转化为千分位格式,例如 :33369080 输出：33,369,080
--(NSString*)changeNumberFormatter:(NSString*)str{
+-(NSString*)OriginalStringToNumberFormatter:(NSString*)str{
    NSString *numString = [NSString stringWithFormat:@"%@",str];
     
    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
@@ -105,18 +105,33 @@
    }
    return string;
 }
--(NSString*)changeNumberFormatterToOriginalStr:(NSString*)str{
+-(NSString*)NumberFormatterToOriginalString:(NSString*)str{
    NSString *numString = [NSString stringWithFormat:@"%@",str];
    NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
     formatter.numberStyle=kCFNumberFormatterDecimalStyle;
    NSNumber *number = [formatter numberFromString:numString];
    formatter.numberStyle=kCFNumberFormatterNoStyle;
    NSString *string = [formatter stringFromNumber:number];
-   NSLog(@"numberFormatter == %@",string);
    if(IsStrEmpty(string)) {
    return str;
    }
    return string;
 }
 
+- (void)testFunction4{
+    CGPoint point1 = CGPointMake(50, 400);
+    CGPoint point2 = CGPointMake(250, 400);
+    CGPoint point3 = CGPointMake(150, 250);
+    UIBezierPath *BPath = [UIBezierPath bezierPath];
+    [BPath moveToPoint:point1];
+    [BPath addLineToPoint:point2];
+    [BPath addLineToPoint:point3];
+    [BPath addLineToPoint:point1];
+    CAShapeLayer *l = [CAShapeLayer layer];
+    l.contentsScale = UIScreen.mainScreen.scale;
+    l.path = BPath.CGPath;
+    
+    l.fillColor =[UIColor redColor].CGColor;
+    [self.view.layer addSublayer:l];
+}
 @end
