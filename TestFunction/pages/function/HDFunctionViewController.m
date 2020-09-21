@@ -27,10 +27,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction4];
+    [self testFunction5];
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
-    [self.view addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
+//    [self.view addGestureRecognizer:tap];
 }
 -(void)testFuction{
 //    NSMutableDictionary *dictM = [[NSDictionary dictionaryWithObjectsAndKeys:[NSNull null],[NSNull null],nil] mutableCopy];
@@ -133,5 +133,31 @@
     
     l.fillColor =[UIColor redColor].CGColor;
     [self.view.layer addSublayer:l];
+}
+//测试数组移动  倒叙遍历移动数组
+- (void)testFunction5{
+    NSArray *farray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"];
+    NSMutableArray *mArray = [NSMutableArray arrayWithArray:farray];
+    NSLog(@"%@",mArray);
+    NSMutableArray *reverseMArray = (NSMutableArray *)[[mArray reverseObjectEnumerator] allObjects];
+    NSLog(@"%@",reverseMArray);
+    [reverseMArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isEqualToString:@"7"]) {
+            [mArray removeObject:obj];
+            [mArray insertObject:obj atIndex:0];
+        }
+        if ([obj isEqualToString:@"8"]) {
+            [mArray removeObject:obj];
+            [mArray insertObject:obj atIndex:0];
+        }
+    }];
+//    [mArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if ([obj isEqualToString:@"7"]) {
+//            [mArray replaceObjectAtIndex:0 withObject:obj];
+//            [mArray removeObject:obj];
+//            [mArray insertObject:obj atIndex:0];
+//        }
+//    }];
+    NSLog(@"%@",mArray);
 }
 @end
