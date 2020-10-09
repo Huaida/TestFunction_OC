@@ -8,6 +8,7 @@
 
 #import "HDFunctionViewController.h"
 #import "Person.h"
+#import "BBXMarginSliderView.h"
 
 
 //字符串是否为空
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction5];
+    [self testFunction6];
     
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
 //    [self.view addGestureRecognizer:tap];
@@ -159,5 +160,11 @@
 //        }
 //    }];
     NSLog(@"%@",mArray);
+}
+- (void)testFunction6{
+    BBXMarginSliderView *sliderView = [BBXMarginSliderView new];
+    [self.view addSubview:sliderView];
+    sliderView.frame = CGRectMake(10, 100, 400, 50);
+    sliderView.backgroundColor = [UIColor grayColor];
 }
 @end

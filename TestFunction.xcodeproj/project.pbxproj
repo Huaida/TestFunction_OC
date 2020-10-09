@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
+		1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
 		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
 		137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
 		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
@@ -166,6 +167,8 @@
 /* Begin PBXFileReference section */
 		131D6CEC24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageSwitchZHIHUViewController.h; sourceTree = "<group>"; };
 		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
+		1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBXMarginSliderView.m; sourceTree = "<group>"; };
+		1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBXMarginSliderView.h; sourceTree = "<group>"; };
 		137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
@@ -429,6 +432,15 @@
 				131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */,
 			);
 			path = pageSwitchZHIHU;
+			sourceTree = "<group>";
+		};
+		1346BBAD2530196700B44E0B /* MarginSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */,
+				1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */,
+			);
+			path = MarginSliderView;
 			sourceTree = "<group>";
 		};
 		137F4C9323C876B500149B14 /* WebViewJavascriptBridge */ = {
@@ -792,6 +804,7 @@
 		B1B1475722C9F9F300A96AB9 /* testClass */ = {
 			isa = PBXGroup;
 			children = (
+				1346BBAD2530196700B44E0B /* MarginSliderView */,
 				B148B6E52260A74700C8BFDA /* HDCheckArray.h */,
 				B148B6E62260A74700C8BFDA /* HDCheckArray.m */,
 				B186049C2233EA3200C93644 /* HDNetworkTool.h */,
@@ -1230,6 +1243,7 @@
 				B1CCC26B22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m in Sources */,
 				B1CF542A23151E3300B09ED3 /* HDScrollTextView.m in Sources */,
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
+				1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
 				B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */,
