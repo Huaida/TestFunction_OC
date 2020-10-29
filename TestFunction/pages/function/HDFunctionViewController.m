@@ -10,7 +10,15 @@
 #import "Person.h"
 #import "BBXMarginSliderView.h"
 
-
+@interface UIFont(BBXFontName)
++(instancetype)font_SFMono_Regular_Size:(CGFloat)size;
+@end
+@implementation UIFont(BBXFontName)
++(instancetype)font_SFMono_Regular_Size:(CGFloat)size;{
+    UIFont *result = [UIFont fontWithName:@"SFMono-Regular" size:size];
+    return result;
+}
+@end
 //字符串是否为空
 #define IsStrEmpty(_ref)(( [(_ref) isKindOfClass:[NSNull class]]||(_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]) || ([(_ref) isEqualToString:@""]) )
 
@@ -84,8 +92,8 @@
     testLabel2.text = @"+0.12993295";
     
     UILabel *testLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10, 350, 300, 50)];
-    testLabel3.font = [UIFont fontWithName:@"SFMono-Regular" size:16];
-    
+//    testLabel3.font = [UIFont fontWithName:@"SFMono-Regular" size:16];
+    testLabel3.font = [UIFont font_SFMono_Regular_Size:16];
     [self.view addSubview:testLabel3];
     testLabel3.backgroundColor = [UIColor lightGrayColor];
     testLabel3.numberOfLines = 0;
