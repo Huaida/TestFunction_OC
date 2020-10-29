@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction6];
+    [self testFunction3];
     
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
 //    [self.view addGestureRecognizer:tap];
@@ -67,30 +67,48 @@
 }
 // 测试等宽字体和千分位符
 -(void)testFunction3{
-    NSString *testString = @"请直接提现到个人钱包地址,1234567890";
-    NSLog(@"%@",[self OriginalStringToNumberFormatter:testString]);
+//    NSString *testString = @"请直接提现到个人钱包地址,1234567890";
+//    NSLog(@"%@",[self OriginalStringToNumberFormatter:testString]);
     
-    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
-    [self.view addSubview:testLabel];
-    testLabel.backgroundColor = [UIColor lightGrayColor];
-    testLabel.numberOfLines = 0;
-    testLabel.text = [self OriginalStringToNumberFormatter:testString];
+//    UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 200)];
+//    [self.view addSubview:testLabel];
+//    testLabel.backgroundColor = [UIColor lightGrayColor];
+//    testLabel.numberOfLines = 0;
+//    testLabel.text = [self OriginalStringToNumberFormatter:testString];
     
     UILabel *testLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10, 300, 300, 50)];
-    testLabel2.font = [UIFont systemFontOfSize:12];
+    testLabel2.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:testLabel2];
     testLabel2.backgroundColor = [UIColor lightGrayColor];
     testLabel2.numberOfLines = 0;
-    testLabel2.text = @"33,369,080";
+    testLabel2.text = @"+0.12993295";
     
     UILabel *testLabel3 = [[UILabel alloc] initWithFrame:CGRectMake(10, 350, 300, 50)];
-    testLabel3.font = [UIFont fontWithName:@"Helvetica Neue" size:12];
-    [UIFont fontNamesForFamilyName:@""];
+    testLabel3.font = [UIFont fontWithName:@"SFMono-Regular" size:16];
+    
     [self.view addSubview:testLabel3];
     testLabel3.backgroundColor = [UIColor lightGrayColor];
     testLabel3.numberOfLines = 0;
-    testLabel3.text = [self NumberFormatterToOriginalString:@"33,369,080"] ;
+//    testLabel3.text = [self NumberFormatterToOriginalString:@"33,369,080"] ;
+    testLabel3.text = @"+0.12993295";
     
+//    NSArray *familyNames = [UIFont fontNamesForFamilyName:@"SFMono"];
+//    NSLog(@"%@",familyNames);
+    [self getFontNames];
+}
+- (void)getFontNames
+{
+    NSArray *familyNames = [UIFont familyNames];
+    
+    for (NSString *familyName in familyNames) {
+        printf("familyNames = %s\n",[familyName UTF8String]);
+        
+        NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+        
+        for (NSString *fontName in fontNames) {
+            printf("\tfontName = %s\n",[fontName UTF8String]);
+        }
+    }
 }
 //转化为千分位格式,例如 :33369080 输出：33,369,080
 -(NSString*)OriginalStringToNumberFormatter:(NSString*)str{
@@ -167,4 +185,57 @@
     sliderView.frame = CGRectMake(10, 100, 400, 50);
     sliderView.backgroundColor = [UIColor grayColor];
 }
+
+//{TCSwapDataCenter *center = [TCSwapDataCenter defaultCenter];
+//    NSDictionary *tmpdic = nil;
+//    NSArray *tmparr = nil;
+//    NSMutableArray *dataList = [NSMutableArray array];
+//    __block NSInteger index = 5;
+//    NSEnumerationOptions enop = NSEnumerationConcurrent;
+//    if (sortType == BBXHomeSortType_24h) {
+//        tmpdic = [center market_allMarketDataWithSortType:TC_MarketSortType_Amount24];
+//    }else {
+//        tmpdic = [center market_allMarketDataWithSortType:TC_MarketSortType_Rate];
+//    }
+//    if (sortType == BBXHomeSortType_up) {
+//        enop = NSEnumerationReverse;
+//    }
+//    if (rollType == BBXHomeRollType_spot_usdt) {
+//        tmparr = tmpdic[@"spot"][@"spot_usdt"];
+//        [tmparr enumerateObjectsWithOptions:enop usingBlock:^(TCSpotInfoModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+//            index--;
+//            if (index == 0) *stop = YES;
+//            BBXHomeViewModel *m = [[BBXHomeViewModel alloc] init];
+//            m.name = model.stock.showName_view;
+//            m.quote_coin = @"现货";
+//            m.price = model.ticker.last_price;
+//            if (sortType == BBXHomeSortType_24h) {
+//                m.amount = model.ticker.amount24;
+//            }else {
+//                m.rate = model.ticker.rise_fall_rate;
+//            }
+//            [dataList addObject:m];
+//        }];
+//
+//    }else {
+//        if (rollType == BBXHomeRollType_swap_usdt) {
+//            tmparr = tmpdic[@"swap"][@"swap_usdt"];
+//        }else if (rollType == BBXHomeRollType_swap_coin) {
+//            tmparr = tmpdic[@"swap"][@"swap_coin"];
+//        }
+//        [tmparr enumerateObjectsWithOptions:enop usingBlock:^(TCSwapInfoModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
+//            index--;
+//            if (index == 0) *stop = YES;
+//            BBXHomeViewModel *m = [[BBXHomeViewModel alloc] init];
+//            m.name = model.contract.showName_view;
+//            m.quote_coin = model.contract.margin_coin_view;
+//            m.price = model.ticker.last_price;
+//            if (sortType == BBXHomeSortType_24h) {
+//                m.amount = model.ticker.amount24;
+//            }else {
+//                m.rate = model.ticker.rise_fall_rate;
+//            }
+//            [dataList addObject:m];
+//        }];
+//    }}
 @end

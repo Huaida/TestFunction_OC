@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
 		1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
+		136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136D029E254ACE6F000B4DC3 /* mono.ttf */; };
 		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
 		137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
 		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
@@ -169,6 +170,7 @@
 		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
 		1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBXMarginSliderView.m; sourceTree = "<group>"; };
 		1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBXMarginSliderView.h; sourceTree = "<group>"; };
+		136D029E254ACE6F000B4DC3 /* mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mono.ttf; sourceTree = "<group>"; };
 		137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
@@ -1002,6 +1004,7 @@
 		B1F5D10421C2B9B9001D763B = {
 			isa = PBXGroup;
 			children = (
+				136D029E254ACE6F000B4DC3 /* mono.ttf */,
 				B1AAB5C224178CBA002FDD9C /* Localizable.strings */,
 				B1F5D10F21C2B9B9001D763B /* TestFunction */,
 				B1F5D10E21C2B9B9001D763B /* Products */,
@@ -1099,6 +1102,7 @@
 				B150DBD22286BC1100498D86 /* JStoOC.html in Resources */,
 				B10DD5C123040C6E0063C80B /* 一生一世-X.json in Resources */,
 				B10DD5E223040C6E0063C80B /* 超级一路發.json in Resources */,
+				136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */,
 				B10DD5D523040C6E0063C80B /* fff.json in Resources */,
 				B18E3BB92293A3B600D6E34B /* cjwyf.json in Resources */,
 				B10DD5CF23040C6E0063C80B /* 一生一世-h.json in Resources */,
