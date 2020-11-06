@@ -28,15 +28,16 @@
 @property (nonatomic, strong) NSArray *testArray;
 @property (nonatomic, strong) NSMutableArray *testArrayM;
 @property (nonatomic, strong) Person *p1;
+@property (nonatomic, strong) dispatch_queue_t sQueue;
 @end
 
 @implementation HDFunctionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.sQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction3];
+    [self testFunction7];
     
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
 //    [self.view addGestureRecognizer:tap];
@@ -193,57 +194,29 @@
     sliderView.frame = CGRectMake(10, 100, 400, 50);
     sliderView.backgroundColor = [UIColor grayColor];
 }
+- (void)testFunction7{
+    dispatch_queue_t sQueue = self.sQueue;
+    dispatch_async(sQueue, ^{
+        NSLog(@"%@",@"1");
+        sleep(4);
+        NSLog(@"%@----%@",@"11",[NSThread currentThread]);
+    });
+    dispatch_async(sQueue, ^{
+        NSLog(@"%@",@"2");
+        sleep(3);
+        NSLog(@"%@----%@",@"22",[NSThread currentThread]);
+    });
+    sleep(6);
+    dispatch_async(sQueue, ^{
+        NSLog(@"%@",@"3");
+        sleep(2);
+        NSLog(@"%@----%@",@"33",[NSThread currentThread]);
+    });
+    dispatch_async(sQueue, ^{
+        NSLog(@"%@",@"4");
+        sleep(1);
+        NSLog(@"%@----%@",@"44",[NSThread currentThread]);
+    });
+}
 
-//{TCSwapDataCenter *center = [TCSwapDataCenter defaultCenter];
-//    NSDictionary *tmpdic = nil;
-//    NSArray *tmparr = nil;
-//    NSMutableArray *dataList = [NSMutableArray array];
-//    __block NSInteger index = 5;
-//    NSEnumerationOptions enop = NSEnumerationConcurrent;
-//    if (sortType == BBXHomeSortType_24h) {
-//        tmpdic = [center market_allMarketDataWithSortType:TC_MarketSortType_Amount24];
-//    }else {
-//        tmpdic = [center market_allMarketDataWithSortType:TC_MarketSortType_Rate];
-//    }
-//    if (sortType == BBXHomeSortType_up) {
-//        enop = NSEnumerationReverse;
-//    }
-//    if (rollType == BBXHomeRollType_spot_usdt) {
-//        tmparr = tmpdic[@"spot"][@"spot_usdt"];
-//        [tmparr enumerateObjectsWithOptions:enop usingBlock:^(TCSpotInfoModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
-//            index--;
-//            if (index == 0) *stop = YES;
-//            BBXHomeViewModel *m = [[BBXHomeViewModel alloc] init];
-//            m.name = model.stock.showName_view;
-//            m.quote_coin = @"现货";
-//            m.price = model.ticker.last_price;
-//            if (sortType == BBXHomeSortType_24h) {
-//                m.amount = model.ticker.amount24;
-//            }else {
-//                m.rate = model.ticker.rise_fall_rate;
-//            }
-//            [dataList addObject:m];
-//        }];
-//
-//    }else {
-//        if (rollType == BBXHomeRollType_swap_usdt) {
-//            tmparr = tmpdic[@"swap"][@"swap_usdt"];
-//        }else if (rollType == BBXHomeRollType_swap_coin) {
-//            tmparr = tmpdic[@"swap"][@"swap_coin"];
-//        }
-//        [tmparr enumerateObjectsWithOptions:enop usingBlock:^(TCSwapInfoModel *model, NSUInteger idx, BOOL * _Nonnull stop) {
-//            index--;
-//            if (index == 0) *stop = YES;
-//            BBXHomeViewModel *m = [[BBXHomeViewModel alloc] init];
-//            m.name = model.contract.showName_view;
-//            m.quote_coin = model.contract.margin_coin_view;
-//            m.price = model.ticker.last_price;
-//            if (sortType == BBXHomeSortType_24h) {
-//                m.amount = model.ticker.amount24;
-//            }else {
-//                m.rate = model.ticker.rise_fall_rate;
-//            }
-//            [dataList addObject:m];
-//        }];
-//    }}
 @end
