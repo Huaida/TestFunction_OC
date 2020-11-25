@@ -8,7 +8,7 @@
 
 #import "HDFunctionViewController.h"
 #import "Person.h"
-#import "BBXMarginSliderView.h"
+//#import "BBXMarginSliderView.h"
 
 @interface UIFont(BBXFontName)
 +(instancetype)font_SFMono_Regular_Size:(CGFloat)size;
@@ -37,7 +37,7 @@
     [super viewDidLoad];
     self.sQueue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
     self.view.backgroundColor = [UIColor whiteColor];
-    [self testFunction7];
+    [self testFunction8];
     
 //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
 //    [self.view addGestureRecognizer:tap];
@@ -188,12 +188,12 @@
 //    }];
     NSLog(@"%@",mArray);
 }
-- (void)testFunction6{
-    BBXMarginSliderView *sliderView = [BBXMarginSliderView new];
-    [self.view addSubview:sliderView];
-    sliderView.frame = CGRectMake(10, 100, 400, 50);
-    sliderView.backgroundColor = [UIColor grayColor];
-}
+//- (void)testFunction6{
+//    BBXMarginSliderView *sliderView = [BBXMarginSliderView new];
+//    [self.view addSubview:sliderView];
+//    sliderView.frame = CGRectMake(10, 100, 400, 50);
+//    sliderView.backgroundColor = [UIColor grayColor];
+//}
 - (void)testFunction7{
     dispatch_queue_t sQueue = self.sQueue;
     dispatch_async(sQueue, ^{
@@ -218,5 +218,18 @@
         NSLog(@"%@----%@",@"44",[NSThread currentThread]);
     });
 }
-
+-(void)testFunction8{
+    UIButton *feedbackButton = [UIButton new];
+    [self.view addSubview:feedbackButton];
+    feedbackButton.frame = CGRectMake(100, 300, 200, 200);
+    feedbackButton.backgroundColor = [UIColor redColor];
+    [feedbackButton addTarget:self action:@selector(shake) forControlEvents:UIControlEventTouchUpInside];
+}
+-(void)shake{
+    if (@available(iOS 11.0, *))
+    {
+        UIImpactFeedbackGenerator *feedBackGenertor = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleSoft];
+        [feedBackGenertor impactOccurred];
+     }
+}
 @end
