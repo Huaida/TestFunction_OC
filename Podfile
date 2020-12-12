@@ -13,4 +13,5 @@ pod 'YYModel'
 pod 'lottie-ios'
 pod 'Masonry'
 pod 'SSZipArchive'
+pod 'YYText'
 end

@@ -21,6 +21,7 @@ PODS:
   - SDWebImage/Core (4.0.0)
   - SSZipArchive (1.7)
   - YYModel (1.0.4)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking
@@ -29,15 +30,18 @@ DEPENDENCIES:
   - SDWebImage
   - SSZipArchive
   - YYModel
+  - YYText
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - lottie-ios
     - Masonry
     - SDWebImage
     - SSZipArchive
     - YYModel
+  trunk:
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -46,7 +50,8 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SSZipArchive: 63f8e11cfcc33e03e4cd666b4359ea8bd6facd0c
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 546022b6dfb67de004e10eac00ea6ed40d272806
+PODFILE CHECKSUM: 32fe5b2c6d76796c1ca5093b6a9375a54f27f88e
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.9.1
