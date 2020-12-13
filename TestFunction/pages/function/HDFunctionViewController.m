@@ -292,23 +292,14 @@
     [self.view addSubview:testLabel];
     NSString *text = @"登录即代表您已阅读并同意 BBX 的《服务协议》及《风险披露》";
     
-    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-       //行间距为
-       [paragraphStyle setLineSpacing:2];
-       NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName :  [UIColor blueColor], NSParagraphStyleAttributeName: paragraphStyle,  NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}] ;
-     
-       //设置特殊字体文本格式
-       NSRange range = [text rangeOfString:@"《服务协议》"];
-//       [string addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor],
-//                               NSFontAttributeName:[UIFont boldSystemFontOfSize:12],
-//                               NSBackgroundColorAttributeName:[UIColor yellowColor],
-////                               NSKernAttributeName:@(12),
-////                               NSStrikethroughStyleAttributeName:@(NSUnderlineStyleDouble),
-////                               NSStrikethroughColorAttributeName:[UIColor purpleColor]
-//
-//       } range:range];//添加属性
-//    NSAttributedString *aString = [[NSAttributedString alloc] initWithString:text];
-//    aString yy_set
+//    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+//    //行间距为
+//    [paragraphStyle setLineSpacing:2];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName :  [UIColor blueColor],  NSFontAttributeName:[UIFont boldSystemFontOfSize:12]}] ;
+    
+    //设置特殊字体文本格式
+    NSRange range = [text rangeOfString:@"《服务协议》"];
+    
     [string yy_setTextHighlightRange:range color:[UIColor purpleColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
         NSLog(@"%@",text);
     }];
