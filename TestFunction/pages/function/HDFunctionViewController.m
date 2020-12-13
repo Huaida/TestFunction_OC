@@ -9,7 +9,7 @@
 #import "HDFunctionViewController.h"
 #import "Person.h"
 //#import "BBXMarginSliderView.h"
-#import <YYText/YYText.h>
+#import <YYKit/YYKit.h>
 #import "NSAttributedString+YYText.h"
 
 //字符串是否为空
@@ -300,7 +300,7 @@
     //设置特殊字体文本格式
     NSRange range = [text rangeOfString:@"《服务协议》"];
     
-    [string yy_setTextHighlightRange:range color:[UIColor purpleColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+    [string setTextHighlightRange:range color:[UIColor purpleColor] backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
         NSLog(@"%@",text);
     }];
     

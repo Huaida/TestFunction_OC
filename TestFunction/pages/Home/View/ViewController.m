@@ -16,7 +16,7 @@
 #import "HDCheckArray.h"
 #import "HDViewController.h"
 #import "TestOneModel.h"
-#import "YYModel.h"
+#import <YYKit/YYKit.h>
 #import "NetworkTool.h"
 #import "WKWebViewController.h"
 #import "HDNetworkTool.h"
@@ -575,7 +575,7 @@ typedef void (^someBlock)(void);
                                     @"price":@99
                                     }
                           };
-    self.modelOne = [TestOneModel yy_modelWithJSON:dic];
+    self.modelOne = [TestOneModel modelWithJSON:dic];
     
     Class cls;
     

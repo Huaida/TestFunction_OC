@@ -445,6 +445,13 @@
 			path = MarginSliderView;
 			sourceTree = "<group>";
 		};
+		13664068258649FD004EBC68 /* 倒计时label */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "倒计时label";
+			sourceTree = "<group>";
+		};
 		137F4C9323C876B500149B14 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +855,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				13664068258649FD004EBC68 /* 倒计时label */,
 				131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */,
 				B1AAB5CC2417AD82002FDD9C /* changeLanguage */,
 				B1BE370F23FA8685004B063D /* signalTest */,

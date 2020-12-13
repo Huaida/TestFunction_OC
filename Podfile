@@ -9,9 +9,10 @@ target 'TestFunction' do
 
 pod 'AFNetworking'
 pod 'SDWebImage'
-pod 'YYModel'
+#pod 'YYModel'
 pod 'lottie-ios'
 pod 'Masonry'
 pod 'SSZipArchive'
-pod 'YYText'
+#pod 'YYText'
+pod 'YYKit'
 end
