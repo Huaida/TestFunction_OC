@@ -54,19 +54,19 @@ typedef void (^someBlock)(void);
     [super viewDidLoad];
     [self setBaseProperty];
 //    bgImage
-    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
-    UIImage *bg = [UIImage imageNamed:@"bgImage"];
-    UIImageView *view = [[UIImageView alloc] initWithImage:bg];
-    [self.view addSubview:view];
-    CFAbsoluteTime linkTime =  CFAbsoluteTimeGetCurrent()-start;
-    NSLog(@"imageNamed耗时：%f ms",linkTime*1000.0);
+//    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+//    UIImage *bg = [UIImage imageNamed:@"bgImage"];
+//    UIImageView *view = [[UIImageView alloc] initWithImage:bg];
+//    [self.view addSubview:view];
+//    CFAbsoluteTime linkTime =  CFAbsoluteTimeGetCurrent()-start;
+//    NSLog(@"imageNamed耗时：%f ms",linkTime*1000.0);
     
     
     
     
     self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
     [self customAddSubviews];
-//    [self.presenter presenterLoadData];
+    [self.presenter presenterLoadData];
     
      
 
@@ -140,8 +140,14 @@ typedef void (^someBlock)(void);
 //    [self testNOEmplementationFunction];
 //    [self testADScrollView];
 //    [self testLabelheight];
-    [self testNil];
+//    [self testNil];
+    [self testSubThreadFunction];
 }
+- (void)testSubThreadFunction{
+    
+   
+}
+
 - (void)testNil{
     
 //    NSMutableArray *mArray = [NSMutableArray arrayWithObject:@[@1,[NSNull null]]];

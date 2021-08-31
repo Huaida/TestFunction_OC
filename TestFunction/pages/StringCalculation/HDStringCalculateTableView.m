@@ -1,21 +1,19 @@
 //
-//  HDHomeTableView.m
+//  HDStringCalculateTableView.m
 //  TestFunction
 //
 //  Created by 怀达 on 2019/7/1.
 //  Copyright © 2019 white. All rights reserved.
 //
 
-#import "HDHomeTableView.h"
-#import "HDHomePresenter.h"
-#import "HDHomeTableViewCell.h"
+#import "HDStringCalculateTableView.h"
+#import "HDStringCalculateCell.h"
 
 
-@interface HDHomeTableView ()<UITableViewDataSource,UITableViewDelegate>
-//@property (nonatomic ,strong) HDHomePresenter *presenter;
+@interface HDStringCalculateTableView ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
-@implementation HDHomeTableView
+@implementation HDStringCalculateTableView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self  == [super initWithFrame:frame]) {
@@ -36,16 +34,16 @@
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HDHomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    HDStringCalculateCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (!cell) {
-        cell = [[HDHomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([self class])];
+        cell = [[HDStringCalculateCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([self class])];
     }
     cell.dataArray = self.dataArray[indexPath.row];
     
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    HDHomeTableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    HDStringCalculateCell * cell = [tableView cellForRowAtIndexPath:indexPath];
      NSLog(@"%@",cell.classNameString);
     [self.selectedDelegate homeTableViewDidSelectedRowWithClassName:cell.classNameString];
 }

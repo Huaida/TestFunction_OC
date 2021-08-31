@@ -34,6 +34,7 @@
                        @[@"10 信号量测试",@"HDSignalViewController"],
                        @[@"11 国际化测试",@"HDChangeLanguageViewController"],
                        @[@"12 仿知乎页面切换",@"HDPageSwitchZHIHUViewController"],
+                       @[@"13 子线程处理string计算，加千分位符",@"HDStringCalculationViewController"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

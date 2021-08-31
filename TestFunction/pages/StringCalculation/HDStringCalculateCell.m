@@ -1,14 +1,14 @@
 //
-//  HDHomeTableViewCell.m
+//  HDStringCalculateCell.m
 //  TestFunction
 //
 //  Created by 怀达 on 2019/7/16.
 //  Copyright © 2019 white. All rights reserved.
 //
 
-#import "HDHomeTableViewCell.h"
+#import "HDStringCalculateCell.h"
 
-@implementation HDHomeTableViewCell
+@implementation HDStringCalculateCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

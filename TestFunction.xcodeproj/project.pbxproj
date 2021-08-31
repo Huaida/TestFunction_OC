@@ -15,6 +15,9 @@
 		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
 		137F4C9F23C876B500149B14 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */; };
 		13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */; };
+		13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */; };
+		13E3512526DE131100374157 /* HDStringCalculateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512326DE131100374157 /* HDStringCalculateCell.m */; };
+		13E3512826DE138E00374157 /* HDStringCalculateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512626DE138E00374157 /* HDStringCalculateTableView.m */; };
 		B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
 		B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
 		B107FCD921DFACED00AAF725 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
@@ -181,6 +184,12 @@
 		137F4C9B23C876B500149B14 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		13DC575823C5E36F00E20C5F /* HDOC_JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOC_JSInteractionViewController.h; sourceTree = "<group>"; };
 		13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOC_JSInteractionViewController.m; sourceTree = "<group>"; };
+		13E3512026DE0AE600374157 /* HDStringCalculationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDStringCalculationViewController.h; sourceTree = "<group>"; };
+		13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDStringCalculationViewController.m; sourceTree = "<group>"; };
+		13E3512326DE131100374157 /* HDStringCalculateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDStringCalculateCell.m; sourceTree = "<group>"; };
+		13E3512426DE131100374157 /* HDStringCalculateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDStringCalculateCell.h; sourceTree = "<group>"; };
+		13E3512626DE138E00374157 /* HDStringCalculateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDStringCalculateTableView.m; sourceTree = "<group>"; };
+		13E3512726DE138E00374157 /* HDStringCalculateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDStringCalculateTableView.h; sourceTree = "<group>"; };
 		3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.release.xcconfig"; sourceTree = "<group>"; };
 		6B823C7A01753B3E9483091A /* libPods-TestFunction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFunction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.debug.xcconfig"; sourceTree = "<group>"; };
@@ -465,6 +474,19 @@
 				137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */,
 			);
 			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		13E3511F26DE0AAB00374157 /* StringCalculation */ = {
+			isa = PBXGroup;
+			children = (
+				13E3512026DE0AE600374157 /* HDStringCalculationViewController.h */,
+				13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */,
+				13E3512426DE131100374157 /* HDStringCalculateCell.h */,
+				13E3512326DE131100374157 /* HDStringCalculateCell.m */,
+				13E3512726DE138E00374157 /* HDStringCalculateTableView.h */,
+				13E3512626DE138E00374157 /* HDStringCalculateTableView.m */,
+			);
+			path = StringCalculation;
 			sourceTree = "<group>";
 		};
 		2E53F32AC740AB7BF22ACC8A /* Pods */ = {
@@ -855,6 +877,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				13E3511F26DE0AAB00374157 /* StringCalculation */,
 				13664068258649FD004EBC68 /* 倒计时label */,
 				131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */,
 				B1AAB5CC2417AD82002FDD9C /* changeLanguage */,
@@ -1222,6 +1245,7 @@
 				13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B1BE371523FA86F8004B063D /* BTEvent.m in Sources */,
+				13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
 				B1FAA23923138AE0008200C8 /* HDNavBarCaptureViewController.m in Sources */,
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
@@ -1246,6 +1270,7 @@
 				B1FAA24B23140B06008200C8 /* HDCustomTextADModel.m in Sources */,
 				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
 				B1AAB5CB2417ABCC002FDD9C /* NSBundle+CLLanguage.m in Sources */,
+				13E3512526DE131100374157 /* HDStringCalculateCell.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
 				B1B1475A22C9FAA100A96AB9 /* HDHomeTableView.m in Sources */,
@@ -1288,6 +1313,7 @@
 				B13D7E6C232268B200C82848 /* MZHorizontalScrollTableViewCell.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				B1EAE61922E8416700CB8BC7 /* WRCustomNavigationBar.m in Sources */,
+				13E3512826DE138E00374157 /* HDStringCalculateTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
