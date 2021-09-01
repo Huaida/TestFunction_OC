@@ -15,4 +15,14 @@ pod 'Masonry'
 pod 'SSZipArchive'
 #pod 'YYText'
 pod 'YYKit'
+
+#  DoKit
+  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选
+  pod 'DoraemonKit/WithGPS', '~> 3.0.4', :configurations => ['Debug'] #可选
+  pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug'] #可选
+  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] #可选
+  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug'] #可选
+  pod 'DoraemonKit/WithMLeaksFinder', '~> 3.0.4', :configurations => ['Debug'] #可选
+  
+  pod 'DoraemonKit/WithWeex', '~> 3.0.4', :configurations => ['Debug'] #可选  UIWebView已不允许传APP store
 end

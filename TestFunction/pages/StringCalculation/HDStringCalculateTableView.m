@@ -8,10 +8,12 @@
 
 #import "HDStringCalculateTableView.h"
 #import "HDStringCalculateCell.h"
+#import "YYTimer.h"
 
 
 @interface HDStringCalculateTableView ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic ,strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) YYTimer *timer ;
 @end
 @implementation HDStringCalculateTableView
 
@@ -19,8 +21,18 @@
     if (self  == [super initWithFrame:frame]) {
         self.dataSource = self;
         self.delegate = self;
+        
+        [self addTimer];
     }
     return self;
+}
+- (void)addTimer;{
+     self.timer = [YYTimer timerWithTimeInterval:0.001 target:self selector:@selector(cellUpdate) repeats:YES];
+}
+- (void)cellUpdate{
+    for (HDStringCalculateCell *cell in self.visibleCells) {
+        cell.dataArray = cell.dataArray;
+    }
 }
 - (void)addDataToTableView:(NSMutableArray *)dataArray;{
     self.dataArray = dataArray;
@@ -43,9 +55,7 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    HDStringCalculateCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-     NSLog(@"%@",cell.classNameString);
-    [self.selectedDelegate homeTableViewDidSelectedRowWithClassName:cell.classNameString];
+    
 }
 
 @end

@@ -38,6 +38,11 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define MZ_RATE_SCALE   ((MZ_RATE>1)?1:MZ_RATE)         //只有小设备会缩小  6p不放大
 #define WeaklySelf(weakSelf)  __weak __typeof(&*self)weakSelf = self
 
+//字符串是否为空
+#define kIsStrEmpty(_ref)(( [(_ref) isKindOfClass:[NSNull class]]||(_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref)isEqualToString:@""]) || ([(_ref) isEqualToString:@""]) )
+
 #import "Masonry.h"
+#import "NSString+BBXTool.h"
+#import "NSNumber+BBXExtend.h"
 
 #endif /* TestFunction_h */

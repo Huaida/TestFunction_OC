@@ -14,18 +14,69 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.7.2):
+    - CocoaLumberjack/Core (= 3.7.2)
+  - CocoaLumberjack/Core (3.7.2)
+  - DoraemonKit/Core (3.0.7):
+    - FMDB
+    - GCDWebServer
+    - GCDWebServer/WebDAV
+    - GCDWebServer/WebUploader
+  - DoraemonKit/WithDatabase (3.0.7):
+    - DoraemonKit/Core
+    - YYDebugDatabase
+  - DoraemonKit/WithGPS (3.0.7):
+    - DoraemonKit/Core
+  - DoraemonKit/WithLoad (3.0.7):
+    - DoraemonKit/Core
+  - DoraemonKit/WithLogger (3.0.7):
+    - CocoaLumberjack
+    - DoraemonKit/Core
+  - DoraemonKit/WithMLeaksFinder (3.0.7):
+    - DoraemonKit/Core
+    - FBRetainCycleDetector
+  - DoraemonKit/WithWeex (3.0.7):
+    - DoraemonKit/Core
+    - WeexSDK
+    - WXDevtool
+  - FBRetainCycleDetector (0.1.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GCDWebServer/WebDAV (3.5.4):
+    - GCDWebServer/Core
+  - GCDWebServer/WebUploader (3.5.4):
+    - GCDWebServer/Core
   - lottie-ios (1.5.1)
   - Masonry (1.0.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SocketRocket (0.5.1)
   - SSZipArchive (1.7)
+  - WeexSDK (0.30.0)
+  - WXDevtool (0.24.0):
+    - SocketRocket
+    - WeexSDK
+  - YYDebugDatabase (2.1.0):
+    - FMDB
+    - GCDWebServer
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking
+  - DoraemonKit/Core (~> 3.0.4)
+  - DoraemonKit/WithDatabase (~> 3.0.4)
+  - DoraemonKit/WithGPS (~> 3.0.4)
+  - DoraemonKit/WithLoad (~> 3.0.4)
+  - DoraemonKit/WithLogger (~> 3.0.4)
+  - DoraemonKit/WithMLeaksFinder (~> 3.0.4)
+  - DoraemonKit/WithWeex (~> 3.0.4)
   - lottie-ios
   - Masonry
   - SDWebImage
@@ -40,16 +91,34 @@ SPEC REPOS:
     - SDWebImage
     - SSZipArchive
   trunk:
+    - CocoaLumberjack
+    - DoraemonKit
+    - FBRetainCycleDetector
+    - FMDB
+    - GCDWebServer
+    - SocketRocket
+    - WeexSDK
+    - WXDevtool
+    - YYDebugDatabase
     - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
+  DoraemonKit: 32fb97f3aa82efa133111d193080ca5462cef135
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SSZipArchive: 63f8e11cfcc33e03e4cd666b4359ea8bd6facd0c
+  WeexSDK: 8e01e33244f51cb11f9f000b5200d93de5f4fa97
+  WXDevtool: 95b70c73c06fc3299d65bd53ba4b3e0b0087f3cb
+  YYDebugDatabase: e684a7f79fca2e3673a23347cefb822f911f3124
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e50056d2e014da77d2ce15a285247b12191237af
+PODFILE CHECKSUM: 925e158b655cb6007724b59110d2859e3ab70b4c
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

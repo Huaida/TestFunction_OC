@@ -18,6 +18,8 @@
 		13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */; };
 		13E3512526DE131100374157 /* HDStringCalculateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512326DE131100374157 /* HDStringCalculateCell.m */; };
 		13E3512826DE138E00374157 /* HDStringCalculateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512626DE138E00374157 /* HDStringCalculateTableView.m */; };
+		13E3512B26DE1C3300374157 /* NSString+BBXTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512926DE1C3300374157 /* NSString+BBXTool.m */; };
+		13E3513026DE279200374157 /* NSNumber+BBXExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512F26DE279200374157 /* NSNumber+BBXExtend.m */; };
 		B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
 		B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
 		B107FCD921DFACED00AAF725 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
@@ -190,6 +192,10 @@
 		13E3512426DE131100374157 /* HDStringCalculateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDStringCalculateCell.h; sourceTree = "<group>"; };
 		13E3512626DE138E00374157 /* HDStringCalculateTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDStringCalculateTableView.m; sourceTree = "<group>"; };
 		13E3512726DE138E00374157 /* HDStringCalculateTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDStringCalculateTableView.h; sourceTree = "<group>"; };
+		13E3512926DE1C3300374157 /* NSString+BBXTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BBXTool.m"; sourceTree = "<group>"; };
+		13E3512A26DE1C3300374157 /* NSString+BBXTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BBXTool.h"; sourceTree = "<group>"; };
+		13E3512E26DE279100374157 /* NSNumber+BBXExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+BBXExtend.h"; sourceTree = "<group>"; };
+		13E3512F26DE279200374157 /* NSNumber+BBXExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+BBXExtend.m"; sourceTree = "<group>"; };
 		3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.release.xcconfig"; sourceTree = "<group>"; };
 		6B823C7A01753B3E9483091A /* libPods-TestFunction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestFunction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFunction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestFunction/Pods-TestFunction.debug.xcconfig"; sourceTree = "<group>"; };
@@ -818,6 +824,10 @@
 		B1B1475622C9F9B200A96AB9 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				13E3512E26DE279100374157 /* NSNumber+BBXExtend.h */,
+				13E3512F26DE279200374157 /* NSNumber+BBXExtend.m */,
+				13E3512A26DE1C3300374157 /* NSString+BBXTool.h */,
+				13E3512926DE1C3300374157 /* NSString+BBXTool.m */,
 				B16FE06D23546B52007E8B76 /* NSObject+SwizzleMethod.h */,
 				B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */,
 				B16FE06B23546B24007E8B76 /* NSDictionary+ErrorHandle.h */,
@@ -1078,6 +1088,8 @@
 				B1F5D10921C2B9B9001D763B /* Sources */,
 				B1F5D10A21C2B9B9001D763B /* Frameworks */,
 				B1F5D10B21C2B9B9001D763B /* Resources */,
+				8EBBEC5E3464E321966BFE60 /* [CP] Embed Pods Frameworks */,
+				DF6D506C539C75A83A5E977D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1205,6 +1217,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8EBBEC5E3464E321966BFE60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-frameworks.sh",
+				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CFF2A061CC878A62C5061DED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1221,6 +1251,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF6D506C539C75A83A5E977D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle",
+				"${PODS_ROOT}/GCDWebServer/GCDWebUploader/GCDWebUploader.bundle",
+				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-main-jsfm.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-polyfill.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-rax-api.js",
+				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
+				"${PODS_ROOT}/YYDebugDatabase/DebugDatabase/Web.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DoraemonKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GCDWebUploader.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-main-jsfm.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-polyfill.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-rax-api.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Web.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1290,9 +1352,11 @@
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,
 				137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */,
+				13E3512B26DE1C3300374157 /* NSString+BBXTool.m in Sources */,
 				B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */,
 				B1FAA2452313FDD9008200C8 /* HDAutoADCollectionViewCell.m in Sources */,
 				B107FCD921DFACED00AAF725 /* SubView.m in Sources */,
+				13E3513026DE279200374157 /* NSNumber+BBXExtend.m in Sources */,
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
 				137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */,
