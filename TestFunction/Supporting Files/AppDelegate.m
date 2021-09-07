@@ -20,10 +20,10 @@
 
 @implementation AppDelegate
 
-// 测试ssh 是否被覆盖
+// 测试ssh 是否被覆盖s
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+//    self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     // Override point for customization after application launch.
     [UINavigationConfig shared].sx_disableFixSpace = YES;

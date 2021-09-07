@@ -48,10 +48,12 @@ typedef void (^someBlock)(void);
 @property (nonatomic ,strong) HDHomePresenter *presenter;
 @end
 
+/// <#Description#>
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setBaseProperty];
 //    bgImage
 //    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
@@ -66,7 +68,7 @@ typedef void (^someBlock)(void);
     
     self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
     [self customAddSubviews];
-    [self.presenter presenterLoadData];
+//    [self.presenter presenterLoadData];
     
      
 
@@ -141,7 +143,78 @@ typedef void (^someBlock)(void);
 //    [self testADScrollView];
 //    [self testLabelheight];
 //    [self testNil];
-    [self testSubThreadFunction];
+//    [self testSubThreadFunction];
+//    [self  testStandardNumber];
+    
+}
+- (void)testStandardNumber{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 1000, 100)];
+    label.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:label];
+    
+    CFAbsoluteTime first = CFAbsoluteTimeGetCurrent();
+//    label.text = [@"89988883483858.8858385" bbx_standardNumberString];
+//    label.text = @"89988883483858.8858385";
+        label.text =[self toStandardString:@"-0.8858385"] ;
+    CFAbsoluteTime time = CFAbsoluteTimeGetCurrent() - first;
+        NSLog(@"Label赋值耗时：%f ms",time*1000.0);
+}
+/// 加千分位符
+/// @param string 数字
+-(NSString *)toStandardString:(NSString *)string{
+    if (string == nil || string.length == 0) {
+        return @"0";
+    }
+    NSString *error = @"error number";
+    NSString *result ;
+    if ([string containsString:@"-"]) {
+        string = [string substringFromIndex:1];
+        if ([string containsString:@"."]) {
+    //        小数
+            NSArray *comp = [string componentsSeparatedByString:@"."];
+            if (comp.count != 2) {
+                return error;
+            }
+            NSString *pre = [self integerToFormat:(NSString *)[comp firstObject]];
+            result = [NSString stringWithFormat:@"-%@.%@",pre,[comp lastObject]];
+        }else{
+    //        整数
+            result = [NSString stringWithFormat:@"-%@",[self integerToFormat:string]];
+        }
+    }else{
+        if ([string containsString:@"."]) {
+    //        小数
+            NSArray *comp = [string componentsSeparatedByString:@"."];
+            if (comp.count != 2) {
+                return error;
+            }
+            NSString *pre = [self integerToFormat:(NSString *)[comp firstObject]];
+            
+            result = [NSString stringWithFormat:@"%@.%@",pre,[comp lastObject]];
+        }else{
+    //        整数
+           
+            result = [self integerToFormat:string];
+        }
+    }
+    
+    return result;
+}
+-(NSString *)integerToFormat:(NSString *)string{
+    NSMutableString *pre = [NSMutableString stringWithFormat:@"%@",string];
+//        12 345 678
+    NSUInteger length = pre.length;
+    NSInteger pointCount = length/3;
+    if (pointCount > 0 && length%3 == 0) {
+        pointCount -= 1;
+    }
+    NSUInteger insertIndex = length - 3;
+    while (pointCount > 0) {
+        [pre insertString:@"," atIndex:insertIndex];
+        insertIndex -= 3;
+        pointCount --;
+    }
+    return [pre copy];
 }
 - (void)testSubThreadFunction{
     
