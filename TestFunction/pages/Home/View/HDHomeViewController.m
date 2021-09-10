@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  HDHomeViewController.m
 //  TestFunction
 //
 //  Created by 怀达 on 2018/12/14.
 //  Copyright © 2018年 white. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HDHomeViewController.h"
 //#import "Person.h"
 #import "SubView.h"
 #import "Son.h"
@@ -27,12 +27,17 @@
 #import "HDImageView.h"
 #import "HDHomePresenter.h"
 //#import "HDADScrollView.h"
+#import "HDTestView.h"
+#import "UIImage+drawCircle.h"
+#import "UIView+drawCornerRadius.h"
+
+
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
 typedef void (^someBlock)(void);
 
-@interface ViewController ()<UIGestureRecognizerDelegate,HDHomePresenterProtocol,HDHomeTableViewProtocol>
+@interface HDHomeViewController ()<UIGestureRecognizerDelegate,HDHomePresenterProtocol,HDHomeTableViewProtocol>
 @property (nonatomic, copy) someBlock myBlock;
 @property (nonatomic, strong) Person *p;
 @property (nonatomic, strong) Son *son;
@@ -48,27 +53,17 @@ typedef void (^someBlock)(void);
 @property (nonatomic ,strong) HDHomePresenter *presenter;
 @end
 
-/// <#Description#>
-@implementation ViewController
+
+@implementation HDHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setBaseProperty];
-//    bgImage
-//    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
-//    UIImage *bg = [UIImage imageNamed:@"bgImage"];
-//    UIImageView *view = [[UIImageView alloc] initWithImage:bg];
-//    [self.view addSubview:view];
-//    CFAbsoluteTime linkTime =  CFAbsoluteTimeGetCurrent()-start;
-//    NSLog(@"imageNamed耗时：%f ms",linkTime*1000.0);
-    
-    
-    
     
     self.presenter = [[HDHomePresenter alloc] initWithDelegate:self];
     [self customAddSubviews];
-//    [self.presenter presenterLoadData];
+    [self.presenter presenterLoadData];
     
      
 
@@ -85,7 +80,7 @@ typedef void (^someBlock)(void);
     
     
     
-    
+    CFAbsoluteTime first = CFAbsoluteTimeGetCurrent();
     
     // Do any additional setup after loading the view, typically from a nib.
 //    [self testKVCFunction];
@@ -136,7 +131,7 @@ typedef void (^someBlock)(void);
 //    测试github连接
 //    [self testLabel];
 //    [self testScrollView];
-//    [self testNavigationB`ar];
+//    [self testNavigationBar];
 //    [self testImage];
 //    [self testSafeArea];
 //    [self testNOEmplementationFunction];
@@ -145,7 +140,149 @@ typedef void (^someBlock)(void);
 //    [self testNil];
 //    [self testSubThreadFunction];
 //    [self  testStandardNumber];
+//    [self testOFFScreenRedering];
+    [self testSubThreadDrawCircle];
     
+    
+    
+    
+    CFAbsoluteTime time = CFAbsoluteTimeGetCurrent() - first;
+        NSLog(@"testSubThreadDrawCircle：%f ms",time*1000.0);
+}
+- (void)testSubThreadDrawCircle{
+    
+//    遮罩还是会触发离屏渲染
+//        UIButton *testButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+//        [self.view addSubview:testButton];
+//    // 通过图片生成遮罩，
+//    UIImage *maskImage = [UIImage imageNamed:@"testImage2"];
+//    [testButton setImage:maskImage forState:UIControlStateNormal];
+//
+//    //通过贝塞尔曲线生成
+//    CAShapeLayer *mask = [CAShapeLayer new];
+//    mask.path = [UIBezierPath bezierPathWithOvalInRect:testButton.bounds].CGPath;
+//    testButton.layer.mask = mask;
+    
+//    子线程处理
+
+    UIButton *testButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+    [self.view addSubview:testButton];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageNamed:@"testImage2"];
+        image = [image hd_drawRectWithRoundedCorner:50];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [testButton setImage:image forState:UIControlStateNormal ];
+        });
+    });
+ 
+    
+    
+    
+    
+//    UIButton *testButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+//    [self.view addSubview:testButton];
+//    UIImage *image = [UIImage imageNamed:@"testImage2"];
+//    [testButton setImage:image forState:UIControlStateNormal ];
+//    testButton.layer.masksToBounds = YES;
+//    testButton.layer.cornerRadius = 50;
+        
+}
+- (void)testOFFScreenRedering{
+    CFAbsoluteTime first = CFAbsoluteTimeGetCurrent();
+    
+//    UIView设置圆角不会触发离屏渲染 仅仅设置testView.layer.cornerRadius = 18;就可以了，此时layer的content是透明的，CornerRadius能修改background和border.即使加了testView.layer.masksToBounds = YES;也不会
+//    view添加子View后就会触发父View的离屏渲染
+    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+    testView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"testImage2"]];
+    [self.view addSubview:testView];
+//    testView.alpha = 0.8;
+    //    测试子view 会触发父View的离屏渲染
+//    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+//    [testView addSubview:subView];
+//    subView.backgroundColor = [UIColor redColor];
+    //    测试组透明  父View设置透明度后，会触发
+//    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+//    [testView addSubview:subView];
+//    subView.backgroundColor = [UIColor redColor];
+//    毛玻璃效果  会触发离屏渲染
+    //iOS 8.0
+//    * * 模糊效果的三种风格
+//      *
+//      *  @param UIBlurEffectStyle
+//      *
+//      * UIBlurEffectStyleExtraLight,  //高亮
+//      * UIBlurEffectStyleLight,       //亮
+//      * UIBlurEffectStyleDark         //暗
+//    * *
+    UIBlurEffect *blurEffect =[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+
+    UIVisualEffectView *effectView =[[UIVisualEffectView alloc]initWithEffect:blurEffect];
+
+    effectView.frame = CGRectMake(testView.frame.size.width/2,0,
+                                  testView.frame.size.width/2, testView.frame.size.height);
+
+    [testView addSubview:effectView];
+    
+    
+    
+    //   iOS 9.0 之后UIImageView里png（测试发现JPEG也可以）图片设置圆角不会触发离屏渲染了,但是加了backgroundColor就会触发（同时设置） UIImageView设置圆角也不会触发离屏渲染 需要设置testView.layer.cornerRadius = 18;testView.layer.masksToBounds = YES; 单独设置一个CornerRadius是无效的。
+//    UIImageView *testView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+//    [testView setImage:[UIImage imageNamed:@"testImage2"]];
+////    testView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:testView];
+    
+
+    
+//    UIButton 是会触发离屏渲染的  只设置一个属性是无效的
+//    UIButton *testView = [[UIButton alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+//    [testView setImage:[UIImage imageNamed:@"testImage2"] forState:UIControlStateNormal ];
+//    [self.view addSubview:testView];
+    
+    //    UILabel设置圆角也不会触发离屏渲染。 UILabel, UITextField, UITextView。其中 UITextField 类自带圆角风格的外型，UILabel 和 UITextView 要想显示圆角需要表现出与周围不同的背景色才行。想要在 UILabel 和 UITextView 上实现低成本的圆角(不触发离屏渲染)，需要保证 layer 的 contents 呈现透明的背景色，文本视图类的 layer 的 contents 默认是透明的(字符就在这个透明的环境里绘制、显示)，此时只需要设置 layer 的 backgroundColor ，再加上 cornerRadius 就可以搞定了。不过 UILabel 上设置 backgroundColor 的行为被更改了，不再是设定 layer 的背景色而是为 contents 设置背景色，UITextView 则没有改变这一点，所以在 UILabel 上实现圆角要这么做：testView.layer.cornerRadius = 18;testView.layer.backgroundColor = [UIColor grayColor].CGColor;
+//    UILabel *testView = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 300, 150)];
+//    testView.backgroundColor = [UIColor grayColor];// 这里设置的是content层的backgroundColor
+//    [self.view addSubview:testView];
+//    testView.text = @"134567890";
+    
+//    testView.layer.cornerRadius = 18;
+////    testView.layer.backgroundColor = [UIColor grayColor].CGColor;
+//    testView.layer.masksToBounds = YES;
+    
+    
+//    总结:
+//    测试发现，只有Button设置圆角才会触发离屏渲染。
+    
+    
+    
+    
+    
+//    遮罩view
+//    UIView *maskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1000, 100)];
+//    maskView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"一路發"]];
+//    [testView addSubview:maskView];
+//    testView.maskView = maskView;
+    
+//    光栅化
+//    testView.layer.shouldRasterize = YES;
+//    testView.layer.rasterizationScale = [UIScreen mainScreen].scale;
+//    阴影
+//    testView.layer.shadowOpacity = 1;
+//    testView.layer.shadowColor = [UIColor redColor].CGColor;
+//    testView.layer.shadowOffset = CGSizeMake(2, 20);
+// edge antialiasing（抗锯齿）
+//    testView.layer.allowsEdgeAntialiasing = YES;
+    
+//     group opacity（不透明）
+    
+    
+//    HDTestView *testView = [[HDTestView alloc] initWithFrame:CGRectMake(50, 100, 500, 250)];
+//    testView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"testImage2"]];
+//    [self.view addSubview:testView];
+    
+    
+    
+    CFAbsoluteTime time = CFAbsoluteTimeGetCurrent() - first;
+        NSLog(@"maskView：%f ms",time*1000.0);
 }
 - (void)testStandardNumber{
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 1000, 100)];
@@ -330,7 +467,8 @@ typedef void (^someBlock)(void);
 }
 - (void)homeTableViewDidSelectedRowWithClassName:(NSString *)classNameString{
     Class vcClass = NSClassFromString(classNameString);
-    [self.navigationController pushViewController:[[vcClass alloc] init] animated:YES];
+    UIViewController *toVC = [[vcClass alloc] init];
+    [self.navigationController pushViewController:toVC animated:YES];
 }
 - (void)customLayoutSubviews{
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {

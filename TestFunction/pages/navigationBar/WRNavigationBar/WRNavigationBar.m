@@ -202,15 +202,15 @@ static char kWRDefaultNavBarShadowImageHiddenKey;
 // 布局之前需要取消layoutmargins
 -(void)sx_layoutSubviews{
     [self sx_layoutSubviews];
-    if (![UINavigationConfig shared].sx_disableFixSpace) {//需要调节
-        CGFloat space = [UINavigationConfig shared].sx_defaultFixSpace;
-        for (UIView *subview in self.subviews) {
-            if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
-                subview.layoutMargins = UIEdgeInsetsMake(0, space, 0, space);
-                break;
-            }
-        }
-    }
+//    if (![UINavigationConfig shared].sx_disableFixSpace) {//需要调节
+//        CGFloat space = [UINavigationConfig shared].sx_defaultFixSpace;
+//        for (UIView *subview in self.subviews) {
+//            if ([NSStringFromClass(subview.class) containsString:@"ContentView"]) {
+//                subview.layoutMargins = UIEdgeInsetsMake(0, space, 0, space);
+//                break;
+//            }
+//        }
+//    }
 }
 @end
 

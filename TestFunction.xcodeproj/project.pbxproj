@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
 		1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
+		1353556626EB64EF002D9A53 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353556426EB64EF002D9A53 /* HDHomeViewController.m */; };
 		136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136D029E254ACE6F000B4DC3 /* mono.ttf */; };
 		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
 		137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
 		137F4C9E23C876B500149B14 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
 		137F4C9F23C876B500149B14 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */; };
+		13A8D7D226E76A4300987A2B /* HDTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D7D126E76A4300987A2B /* HDTestView.m */; };
+		13A8D7D626E9E30900987A2B /* UIImage+drawCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D7D526E9E30900987A2B /* UIImage+drawCircle.m */; };
+		13A8D7D926E9F0F400987A2B /* UIView+drawCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D7D826E9F0F400987A2B /* UIView+drawCornerRadius.m */; };
 		13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */; };
 		13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */; };
 		13E3512526DE131100374157 /* HDStringCalculateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512326DE131100374157 /* HDStringCalculateCell.m */; };
@@ -153,8 +157,6 @@
 		B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ECF3B723570F5100268E39 /* HDContainerCollectionViewCell.m */; };
 		B1EEA313232659EF00C16268 /* MZSectionHeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEA312232659EF00C16268 /* MZSectionHeaderCollectionView.m */; };
 		B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11121C2B9B9001D763B /* AppDelegate.m */; };
-		B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11421C2B9B9001D763B /* ViewController.m */; };
-		B1F5D11821C2B9B9001D763B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11621C2B9B9001D763B /* Main.storyboard */; };
 		B1F5D11A21C2B9B9001D763B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11921C2B9B9001D763B /* Assets.xcassets */; };
 		B1F5D11D21C2B9B9001D763B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */; };
 		B1F5D12021C2B9B9001D763B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11F21C2B9B9001D763B /* main.m */; };
@@ -175,6 +177,8 @@
 		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
 		1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBXMarginSliderView.m; sourceTree = "<group>"; };
 		1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBXMarginSliderView.h; sourceTree = "<group>"; };
+		1353556426EB64EF002D9A53 /* HDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
+		1353556526EB64EF002D9A53 /* HDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		136D029E254ACE6F000B4DC3 /* mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mono.ttf; sourceTree = "<group>"; };
 		137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
@@ -184,6 +188,12 @@
 		137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
 		137F4C9A23C876B500149B14 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		137F4C9B23C876B500149B14 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		13A8D7D026E76A4300987A2B /* HDTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestView.h; sourceTree = "<group>"; };
+		13A8D7D126E76A4300987A2B /* HDTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestView.m; sourceTree = "<group>"; };
+		13A8D7D426E9E30900987A2B /* UIImage+drawCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+drawCircle.h"; sourceTree = "<group>"; };
+		13A8D7D526E9E30900987A2B /* UIImage+drawCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+drawCircle.m"; sourceTree = "<group>"; };
+		13A8D7D726E9F0F400987A2B /* UIView+drawCornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+drawCornerRadius.h"; sourceTree = "<group>"; };
+		13A8D7D826E9F0F400987A2B /* UIView+drawCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+drawCornerRadius.m"; sourceTree = "<group>"; };
 		13DC575823C5E36F00E20C5F /* HDOC_JSInteractionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOC_JSInteractionViewController.h; sourceTree = "<group>"; };
 		13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOC_JSInteractionViewController.m; sourceTree = "<group>"; };
 		13E3512026DE0AE600374157 /* HDStringCalculationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDStringCalculationViewController.h; sourceTree = "<group>"; };
@@ -400,9 +410,6 @@
 		B1F5D10D21C2B9B9001D763B /* TestFunction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFunction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F5D11021C2B9B9001D763B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1F5D11121C2B9B9001D763B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1F5D11321C2B9B9001D763B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B1F5D11421C2B9B9001D763B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B1F5D11721C2B9B9001D763B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1F5D11921C2B9B9001D763B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1F5D11C21C2B9B9001D763B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1F5D11E21C2B9B9001D763B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -763,7 +770,6 @@
 			isa = PBXGroup;
 			children = (
 				B1AAB5BA2417897C002FDD9C /* TestFunction.pch */,
-				B1F5D11621C2B9B9001D763B /* Main.storyboard */,
 				B1F5D11921C2B9B9001D763B /* Assets.xcassets */,
 				B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */,
 				B1F5D11E21C2B9B9001D763B /* Info.plist */,
@@ -804,10 +810,12 @@
 				B164B789226381DD0097AF63 /* HDViewController.m */,
 				B150DBCD2285C22500498D86 /* WKWebViewController.h */,
 				B150DBCE2285C22500498D86 /* WKWebViewController.m */,
-				B1F5D11321C2B9B9001D763B /* ViewController.h */,
-				B1F5D11421C2B9B9001D763B /* ViewController.m */,
+				1353556526EB64EF002D9A53 /* HDHomeViewController.h */,
+				1353556426EB64EF002D9A53 /* HDHomeViewController.m */,
 				B13A9FF3229BB78D00BC84EA /* HDBarrageSwitch.h */,
 				B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */,
+				13A8D7D026E76A4300987A2B /* HDTestView.h */,
+				13A8D7D126E76A4300987A2B /* HDTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -838,6 +846,10 @@
 				B1FC070B224A3E1F0030FED3 /* NSObject+run.m */,
 				B107FCDD21E6F5E500AAF725 /* Person+Cat.h */,
 				B107FCDE21E6F5E500AAF725 /* Person+Cat.m */,
+				13A8D7D426E9E30900987A2B /* UIImage+drawCircle.h */,
+				13A8D7D526E9E30900987A2B /* UIImage+drawCircle.m */,
+				13A8D7D726E9F0F400987A2B /* UIView+drawCornerRadius.h */,
+				13A8D7D826E9F0F400987A2B /* UIView+drawCornerRadius.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -1208,7 +1220,6 @@
 				B10DD5E023040C6E0063C80B /* button_gift_金话筒.json in Resources */,
 				B150DBDB2286E11700498D86 /* webRefreshButton@3x.png in Resources */,
 				B18E3BB72293A3B600D6E34B /* cjsss.json in Resources */,
-				B1F5D11821C2B9B9001D763B /* Main.storyboard in Resources */,
 				B10DD5E723040C6E0063C80B /* 超级顺顺顺.json in Resources */,
 				B10DD5CA23040C6E0063C80B /* cjsss.json in Resources */,
 			);
@@ -1295,6 +1306,7 @@
 				B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */,
 				B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */,
 				B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */,
+				1353556626EB64EF002D9A53 /* HDHomeViewController.m in Sources */,
 				B1A9930822E983B500B4E1AA /* HDNavBarThreeViewController.m in Sources */,
 				B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */,
 				B1A9930222E9801B00B4E1AA /* HDNavBarOneViewController.m in Sources */,
@@ -1316,10 +1328,10 @@
 				B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */,
 				B10DD5F0230410160063C80B /* constant.m in Sources */,
 				B1E72F3722DD80C600CD4FDD /* HDTools.m in Sources */,
-				B1F5D11521C2B9B9001D763B /* ViewController.m in Sources */,
 				B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */,
 				B1FAA24823140A96008200C8 /* HDAutoADModel.m in Sources */,
 				B1E72F1F22DD758E00CD4FDD /* HDHomeTableViewCell.m in Sources */,
+				13A8D7D926E9F0F400987A2B /* UIView+drawCornerRadius.m in Sources */,
 				B1A9930522E9829E00B4E1AA /* HDNavBarTwoViewController.m in Sources */,
 				B153A7A1226D91FD002A6184 /* NetworkTool.m in Sources */,
 				B1A992FE22E97A1500B4E1AA /* HDTestNavigationBarModel.m in Sources */,
@@ -1359,8 +1371,10 @@
 				13E3513026DE279200374157 /* NSNumber+BBXExtend.m in Sources */,
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
 				B1B1476122C9FD1000A96AB9 /* HDHomeModel.m in Sources */,
+				13A8D7D626E9E30900987A2B /* UIImage+drawCircle.m in Sources */,
 				137F4C9D23C876B500149B14 /* WKWebViewJavascriptBridge.m in Sources */,
 				B150DBCF2285C22500498D86 /* WKWebViewController.m in Sources */,
+				13A8D7D226E76A4300987A2B /* HDTestView.m in Sources */,
 				137F4C9F23C876B500149B14 /* WebViewJavascriptBridge_JS.m in Sources */,
 				B10DD58723040B4B0063C80B /* HDDownloadAnimationViewController.m in Sources */,
 				B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */,
@@ -1391,14 +1405,6 @@
 				B1AAB5C324178D0E002FDD9C /* zh-Hans */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		B1F5D11621C2B9B9001D763B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1F5D11721C2B9B9001D763B /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */ = {

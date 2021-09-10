@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+
 #import "HDNavigationController.h"
 #import "UINavigationConfig.h"
-
+#import "HDHomeViewController.h"
 #ifdef DEBUG
 #import <DoraemonKit/DoraemonManager.h>
 #endif
@@ -23,7 +23,18 @@
 // 测试ssh 是否被覆盖s
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    
+    
+//    UIWindow* window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    ViewController *vc = [[ViewController alloc] init];
+//    window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:vc];
+    
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    HDHomeViewController *vc = [[HDHomeViewController alloc] init];
+    self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:vc];
+    [self.window makeKeyAndVisible];
     
     // Override point for customization after application launch.
     [UINavigationConfig shared].sx_disableFixSpace = YES;

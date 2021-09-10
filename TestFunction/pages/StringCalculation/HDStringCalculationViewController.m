@@ -12,10 +12,31 @@
 
 @interface HDStringCalculationViewController ()<HDStringCalculateTableViewProtocol>
 @property (nonatomic, strong) HDStringCalculateTableView *tableView ;
+@property (nonatomic, strong) UIView *maskView ;
 @end
 
 @implementation HDStringCalculationViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    UIView *maskView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:maskView];
+    self.maskView = maskView;
+    maskView.backgroundColor = [UIColor greenColor];
+    maskView.alpha = 0;
+    
+    
+    self.view.maskView = maskView;
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [UIView animateWithDuration:10 animations:^{
+        self.maskView.alpha = 1;
+    }];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBaseProperty];

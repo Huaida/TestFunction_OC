@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HDHomeViewController.h
 //  TestFunction
 //
 //  Created by 怀达 on 2018/12/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HDHomeViewController : UIViewController
 
-- (void)testNOEmplementationFunction;
+//- (void)testNOEmplementationFunction;
 @end
 

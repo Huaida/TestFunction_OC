@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol  HDHomePresenterProtocol<NSObject>
+@optional
 // loading
 - (void)presenterStartLoading;
 - (void)presenterEndLoading;
