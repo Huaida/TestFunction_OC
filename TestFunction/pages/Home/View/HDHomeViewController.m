@@ -141,7 +141,7 @@ typedef void (^someBlock)(void);
 //    [self testSubThreadFunction];
 //    [self  testStandardNumber];
 //    [self testOFFScreenRedering];
-    [self testSubThreadDrawCircle];
+//    [self testSubThreadDrawCircle];
     
     
     

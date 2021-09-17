@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
+		133C4F3726F44CA90091E252 /* HDCustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3626F44CA90091E252 /* HDCustomTransitionViewController.m */; };
+		133C4F3E26F488180091E252 /* HDCustomTransitionFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3926F488180091E252 /* HDCustomTransitionFirstVC.m */; };
+		133C4F3F26F488180091E252 /* HDCustomTransitionThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3B26F488180091E252 /* HDCustomTransitionThirdVC.m */; };
+		133C4F4026F488180091E252 /* HDCustomTransitionSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3C26F488180091E252 /* HDCustomTransitionSecondVC.m */; };
 		1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
 		1353556626EB64EF002D9A53 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353556426EB64EF002D9A53 /* HDHomeViewController.m */; };
 		136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136D029E254ACE6F000B4DC3 /* mono.ttf */; };
@@ -175,6 +179,14 @@
 /* Begin PBXFileReference section */
 		131D6CEC24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageSwitchZHIHUViewController.h; sourceTree = "<group>"; };
 		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
+		133C4F3526F44CA90091E252 /* HDCustomTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionViewController.h; sourceTree = "<group>"; };
+		133C4F3626F44CA90091E252 /* HDCustomTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomTransitionViewController.m; sourceTree = "<group>"; };
+		133C4F3826F488180091E252 /* HDCustomTransitionFirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionFirstVC.h; sourceTree = "<group>"; };
+		133C4F3926F488180091E252 /* HDCustomTransitionFirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCustomTransitionFirstVC.m; sourceTree = "<group>"; };
+		133C4F3A26F488180091E252 /* HDCustomTransitionThirdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionThirdVC.h; sourceTree = "<group>"; };
+		133C4F3B26F488180091E252 /* HDCustomTransitionThirdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCustomTransitionThirdVC.m; sourceTree = "<group>"; };
+		133C4F3C26F488180091E252 /* HDCustomTransitionSecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDCustomTransitionSecondVC.m; sourceTree = "<group>"; };
+		133C4F3D26F488180091E252 /* HDCustomTransitionSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionSecondVC.h; sourceTree = "<group>"; };
 		1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBXMarginSliderView.m; sourceTree = "<group>"; };
 		1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBXMarginSliderView.h; sourceTree = "<group>"; };
 		1353556426EB64EF002D9A53 /* HDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
@@ -456,6 +468,21 @@
 				131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */,
 			);
 			path = pageSwitchZHIHU;
+			sourceTree = "<group>";
+		};
+		133C4F3426F44C5B0091E252 /* 自定义转场 */ = {
+			isa = PBXGroup;
+			children = (
+				133C4F3526F44CA90091E252 /* HDCustomTransitionViewController.h */,
+				133C4F3626F44CA90091E252 /* HDCustomTransitionViewController.m */,
+				133C4F3826F488180091E252 /* HDCustomTransitionFirstVC.h */,
+				133C4F3926F488180091E252 /* HDCustomTransitionFirstVC.m */,
+				133C4F3D26F488180091E252 /* HDCustomTransitionSecondVC.h */,
+				133C4F3C26F488180091E252 /* HDCustomTransitionSecondVC.m */,
+				133C4F3A26F488180091E252 /* HDCustomTransitionThirdVC.h */,
+				133C4F3B26F488180091E252 /* HDCustomTransitionThirdVC.m */,
+			);
+			path = "自定义转场";
 			sourceTree = "<group>";
 		};
 		1346BBAD2530196700B44E0B /* MarginSliderView */ = {
@@ -899,6 +926,7 @@
 		B1CCC26722DF1BE900E9FE0D /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				133C4F3426F44C5B0091E252 /* 自定义转场 */,
 				13E3511F26DE0AAB00374157 /* StringCalculation */,
 				13664068258649FD004EBC68 /* 倒计时label */,
 				131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */,
@@ -1303,8 +1331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133C4F4026F488180091E252 /* HDCustomTransitionSecondVC.m in Sources */,
 				B1A9930B22E983BF00B4E1AA /* HDNavBarFourViewController.m in Sources */,
 				B1A9930E22E9868F00B4E1AA /* BaseViewController.m in Sources */,
+				133C4F3726F44CA90091E252 /* HDCustomTransitionViewController.m in Sources */,
 				B1E72F2F22DD7B9500CD4FDD /* HDDisableTouchTextField.m in Sources */,
 				1353556626EB64EF002D9A53 /* HDHomeViewController.m in Sources */,
 				B1A9930822E983B500B4E1AA /* HDNavBarThreeViewController.m in Sources */,
@@ -1316,6 +1346,7 @@
 				B1FAA23C2313CF09008200C8 /* HDAutoADScrollView.m in Sources */,
 				B107FCDC21E5B25A00AAF725 /* Son.m in Sources */,
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,
+				133C4F3E26F488180091E252 /* HDCustomTransitionFirstVC.m in Sources */,
 				13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B1BE371523FA86F8004B063D /* BTEvent.m in Sources */,
@@ -1341,6 +1372,7 @@
 				B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
 				B1FAA2422313E5B7008200C8 /* HDAutoADCollectionView.m in Sources */,
+				133C4F3F26F488180091E252 /* HDCustomTransitionThirdVC.m in Sources */,
 				B1FAA24B23140B06008200C8 /* HDCustomTextADModel.m in Sources */,
 				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
 				B1AAB5CB2417ABCC002FDD9C /* NSBundle+CLLanguage.m in Sources */,

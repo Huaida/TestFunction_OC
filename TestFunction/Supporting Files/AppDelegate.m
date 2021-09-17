@@ -24,13 +24,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-    
-//    UIWindow* window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    ViewController *vc = [[ViewController alloc] init];
-//    window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:vc];
-    
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     HDHomeViewController *vc = [[HDHomeViewController alloc] init];
     self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:vc];
