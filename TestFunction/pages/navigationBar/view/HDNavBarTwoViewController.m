@@ -7,7 +7,7 @@
 //
 
 #import "HDNavBarTwoViewController.h"
-#import "WRNavigationBar.h"
+//#import "WRNavigationBar.h"
 
 @interface HDNavBarTwoViewController ()
 
@@ -24,8 +24,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
 //    [self wr_setNavBarBackgroundAlpha:0];
-    [self wr_setNavBarBarTintColor:[UIColor redColor]];
-    [self wr_setNavBarShadowImageHidden:YES];
+//    [self wr_setNavBarBarTintColor:[UIColor redColor]];
+//    [self wr_setNavBarShadowImageHidden:YES];
 }
 /*
 #pragma mark - Navigation

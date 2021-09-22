@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HDNavBarFourViewController : BaseViewController
-@property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
+//@property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @end
 
 NS_ASSUME_NONNULL_END

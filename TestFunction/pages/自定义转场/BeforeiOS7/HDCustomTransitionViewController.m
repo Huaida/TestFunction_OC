@@ -122,7 +122,7 @@
 
                                     duration:3
 
-                                    options:UIViewAnimationOptionTransitionCurlUp
+                                         options:UIViewAnimationOptionTransitionCurlUp
 
                                   animations:^{
 

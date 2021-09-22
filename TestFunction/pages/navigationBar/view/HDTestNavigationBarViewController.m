@@ -8,7 +8,7 @@
 
 #import "HDTestNavigationBarViewController.h"
 #import "HDRedEnvelopeViewController.h"
-#import "WRNavigationBar.h"
+//#import "WRNavigationBar.h"
 #import "HDHomeTableView.h"
 #import "HDNavigartionBarPresenter.h"
 
@@ -33,9 +33,9 @@
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.title = @"Bar";
 //    测试
-    [self wr_setNavBarTintColor:[UIColor redColor]];
-    [self wr_setNavBarBarTintColor:[UIColor greenColor]];
-    [self wr_setNavBarTitleColor:[UIColor blueColor]];
+//    [self wr_setNavBarTintColor:[UIColor redColor]];
+//    [self wr_setNavBarBarTintColor:[UIColor greenColor]];
+//    [self wr_setNavBarTitleColor:[UIColor blueColor]];
     
 ////    测试调整左右按钮间距
 //    for (UIView *subview in self.navigationController.navigationBar.subviews) {

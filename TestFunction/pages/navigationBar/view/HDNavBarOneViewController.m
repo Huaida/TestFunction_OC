@@ -7,7 +7,7 @@
 //
 
 #import "HDNavBarOneViewController.h"
-#import "WRNavigationBar.h"
+
 
 @interface HDNavBarOneViewController ()
 
@@ -23,7 +23,7 @@
 - (void)setBaseProperty{
     self.view.backgroundColor = [UIColor yellowColor];
     
-    [self wr_setNavBarBackgroundAlpha:0];
+//    [self wr_setNavBarBackgroundAlpha:0];
 //    [self wr_setNavBarShadowImageHidden:YES];
 }
 /*

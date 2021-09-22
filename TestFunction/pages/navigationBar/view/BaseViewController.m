@@ -9,7 +9,7 @@
 
 #import "BaseViewController.h"
 #import "AppDelegate.h"
-#import "WRNavigationBar.h"
+//#import "WRNavigationBar.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
@@ -28,25 +28,25 @@
 
 - (void)setupNavBar
 {
-    [self.view addSubview:self.customNavBar];
+//    [self.view addSubview:self.customNavBar];
 
     // 设置自定义导航栏背景图片
-    self.customNavBar.barBackgroundImage = [UIImage imageNamed:@"millcolorGrad"];
-
-    // 设置自定义导航栏标题颜色
-    self.customNavBar.titleLabelColor = [UIColor whiteColor];
-
-    if (self.navigationController.childViewControllers.count != 1) {
-        [self.customNavBar wr_setLeftButtonWithTitle:@"<<" titleColor:[UIColor whiteColor]];
-    }
+//    self.customNavBar.barBackgroundImage = [UIImage imageNamed:@"millcolorGrad"];
+//
+//    // 设置自定义导航栏标题颜色
+//    self.customNavBar.titleLabelColor = [UIColor whiteColor];
+//
+//    if (self.navigationController.childViewControllers.count != 1) {
+//        [self.customNavBar wr_setLeftButtonWithTitle:@"<<" titleColor:[UIColor whiteColor]];
+//    }
 }
 
-- (WRCustomNavigationBar *)customNavBar
-{
-    if (_customNavBar == nil) {
-        _customNavBar = [WRCustomNavigationBar CustomNavigationBar];
-    }
-    return _customNavBar;
-}
+//- (WRCustomNavigationBar *)customNavBar
+//{
+//    if (_customNavBar == nil) {
+//        _customNavBar = [WRCustomNavigationBar CustomNavigationBar];
+//    }
+//    return _customNavBar;
+//}
 
 @end

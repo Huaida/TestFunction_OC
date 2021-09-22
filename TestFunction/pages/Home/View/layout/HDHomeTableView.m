@@ -7,12 +7,11 @@
 //
 
 #import "HDHomeTableView.h"
-#import "HDHomePresenter.h"
 #import "HDHomeTableViewCell.h"
 
 
 @interface HDHomeTableView ()<UITableViewDataSource,UITableViewDelegate>
-//@property (nonatomic ,strong) HDHomePresenter *presenter;
+
 @property (nonatomic ,strong) NSMutableArray *dataArray;
 @end
 @implementation HDHomeTableView

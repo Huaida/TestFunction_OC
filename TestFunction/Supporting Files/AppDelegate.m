@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "HDNavigationController.h"
-#import "UINavigationConfig.h"
+//#import "UINavigationConfig.h"
 #import "HDHomeViewController.h"
 #ifdef DEBUG
 #import <DoraemonKit/DoraemonManager.h>
@@ -26,12 +26,12 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     HDHomeViewController *vc = [[HDHomeViewController alloc] init];
-    self.window.rootViewController = [[HDNavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     [self.window makeKeyAndVisible];
     
     // Override point for customization after application launch.
-    [UINavigationConfig shared].sx_disableFixSpace = YES;
-    [UINavigationConfig shared].sx_defaultFixSpace = 20;
+//    [UINavigationConfig shared].sx_disableFixSpace = YES;
+//    [UINavigationConfig shared].sx_defaultFixSpace = 20;
 #ifdef DEBUG
     [[DoraemonManager shareInstance] installWithPid:@"04547dd6fa46bb4bbe86445af9a53e28"];//productId为在“平台端操作指南”中申请的产品id
 #endif
