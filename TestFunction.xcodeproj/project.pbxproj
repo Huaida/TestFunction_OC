@@ -13,6 +13,14 @@
 		133C4F3F26F488180091E252 /* HDCustomTransitionThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3B26F488180091E252 /* HDCustomTransitionThirdVC.m */; };
 		133C4F4026F488180091E252 /* HDCustomTransitionSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3C26F488180091E252 /* HDCustomTransitionSecondVC.m */; };
 		1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
+		134DEB5726FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5626FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m */; };
+		134DEB5A26FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5926FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m */; };
+		134DEB5D26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5C26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m */; };
+		134DEB6226FDBD3B003B0E87 /* HDSwipeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6126FDBD3B003B0E87 /* HDSwipeFirstViewController.m */; };
+		134DEB6526FDBDF8003B0E87 /* HDSwipeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6426FDBDF8003B0E87 /* HDSwipeSecondViewController.m */; };
+		134DEB6826FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */; };
+		134DEB6B26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6A26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m */; };
+		134DEB6E26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6D26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m */; };
 		1353556626EB64EF002D9A53 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353556426EB64EF002D9A53 /* HDHomeViewController.m */; };
 		136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136D029E254ACE6F000B4DC3 /* mono.ttf */; };
 		137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
@@ -112,15 +120,6 @@
 		B18604A22233EAE300C93644 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B18604A12233EAE300C93644 /* libSDWebImage.a */; };
 		B18E3BA52293898700D6E34B /* cjsss_big.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3B962293898700D6E34B /* cjsss_big.json */; };
 		B18E3BA72293920D00D6E34B /* wytcdj.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BA62293920D00D6E34B /* wytcdj.json */; };
-		B18E3BB12293A3B600D6E34B /* fff.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BA82293A3B500D6E34B /* fff.json */; };
-		B18E3BB22293A3B600D6E34B /* yymm.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BA92293A3B500D6E34B /* yymm.json */; };
-		B18E3BB32293A3B600D6E34B /* ylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAA2293A3B500D6E34B /* ylf.json */; };
-		B18E3BB42293A3B600D6E34B /* ysys.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAB2293A3B500D6E34B /* ysys.json */; };
-		B18E3BB52293A3B600D6E34B /* wan.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAC2293A3B500D6E34B /* wan.json */; };
-		B18E3BB62293A3B600D6E34B /* cjylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAD2293A3B600D6E34B /* cjylf.json */; };
-		B18E3BB72293A3B600D6E34B /* cjsss.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAE2293A3B600D6E34B /* cjsss.json */; };
-		B18E3BB82293A3B600D6E34B /* tcdj.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BAF2293A3B600D6E34B /* tcdj.json */; };
-		B18E3BB92293A3B600D6E34B /* cjwyf.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BB02293A3B600D6E34B /* cjwyf.json */; };
 		B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C682269DDE7005CEF6C /* TestOneModel.m */; };
 		B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */; };
 		B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */; };
@@ -185,6 +184,22 @@
 		133C4F3D26F488180091E252 /* HDCustomTransitionSecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionSecondVC.h; sourceTree = "<group>"; };
 		1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBXMarginSliderView.m; sourceTree = "<group>"; };
 		1346BBAF2530196700B44E0B /* BBXMarginSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBXMarginSliderView.h; sourceTree = "<group>"; };
+		134DEB5526FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCrossDissolveFirstViewController.h; sourceTree = "<group>"; };
+		134DEB5626FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCrossDissolveFirstViewController.m; sourceTree = "<group>"; };
+		134DEB5826FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCrossDissolveSecondViewController.h; sourceTree = "<group>"; };
+		134DEB5926FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCrossDissolveSecondViewController.m; sourceTree = "<group>"; };
+		134DEB5B26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCrossDissolveTransitionAnimator.h; sourceTree = "<group>"; };
+		134DEB5C26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCrossDissolveTransitionAnimator.m; sourceTree = "<group>"; };
+		134DEB6026FDBD3B003B0E87 /* HDSwipeFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSwipeFirstViewController.h; sourceTree = "<group>"; };
+		134DEB6126FDBD3B003B0E87 /* HDSwipeFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwipeFirstViewController.m; sourceTree = "<group>"; };
+		134DEB6326FDBDF8003B0E87 /* HDSwipeSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSwipeSecondViewController.h; sourceTree = "<group>"; };
+		134DEB6426FDBDF8003B0E87 /* HDSwipeSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwipeSecondViewController.m; sourceTree = "<group>"; };
+		134DEB6626FDBEB9003B0E87 /* HDSwipeTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSwipeTransitionDelegate.h; sourceTree = "<group>"; };
+		134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwipeTransitionDelegate.m; sourceTree = "<group>"; };
+		134DEB6926FDD7D9003B0E87 /* HDSwipeTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSwipeTransitionAnimator.h; sourceTree = "<group>"; };
+		134DEB6A26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwipeTransitionAnimator.m; sourceTree = "<group>"; };
+		134DEB6C26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDSwipeTransitionInteractionController.h; sourceTree = "<group>"; };
+		134DEB6D26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSwipeTransitionInteractionController.m; sourceTree = "<group>"; };
 		1353556426EB64EF002D9A53 /* HDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		1353556526EB64EF002D9A53 /* HDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
 		136D029E254ACE6F000B4DC3 /* mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mono.ttf; sourceTree = "<group>"; };
@@ -327,15 +342,6 @@
 		B18604A12233EAE300C93644 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18E3B962293898700D6E34B /* cjsss_big.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjsss_big.json; sourceTree = "<group>"; };
 		B18E3BA62293920D00D6E34B /* wytcdj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wytcdj.json; sourceTree = "<group>"; };
-		B18E3BA82293A3B500D6E34B /* fff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fff.json; sourceTree = "<group>"; };
-		B18E3BA92293A3B500D6E34B /* yymm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = yymm.json; sourceTree = "<group>"; };
-		B18E3BAA2293A3B500D6E34B /* ylf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ylf.json; sourceTree = "<group>"; };
-		B18E3BAB2293A3B500D6E34B /* ysys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ysys.json; sourceTree = "<group>"; };
-		B18E3BAC2293A3B500D6E34B /* wan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wan.json; sourceTree = "<group>"; };
-		B18E3BAD2293A3B600D6E34B /* cjylf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjylf.json; sourceTree = "<group>"; };
-		B18E3BAE2293A3B600D6E34B /* cjsss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjsss.json; sourceTree = "<group>"; };
-		B18E3BAF2293A3B600D6E34B /* tcdj.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tcdj.json; sourceTree = "<group>"; };
-		B18E3BB02293A3B600D6E34B /* cjwyf.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cjwyf.json; sourceTree = "<group>"; };
 		B1954C672269DDE7005CEF6C /* TestOneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOneModel.h; sourceTree = "<group>"; };
 		B1954C682269DDE7005CEF6C /* TestOneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOneModel.m; sourceTree = "<group>"; };
 		B1954C6A2269DE7C005CEF6C /* TestTwoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTwoModel.h; sourceTree = "<group>"; };
@@ -476,6 +482,38 @@
 			path = MarginSliderView;
 			sourceTree = "<group>";
 		};
+		134DEB5E26FDBCF6003B0E87 /* CrossDissolve */ = {
+			isa = PBXGroup;
+			children = (
+				134DEB5526FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.h */,
+				134DEB5626FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m */,
+				134DEB5826FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.h */,
+				134DEB5926FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m */,
+				13874C7C26FB13FE0069271F /* HDNewCustomTransitionVC.h */,
+				13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */,
+				134DEB5B26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.h */,
+				134DEB5C26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m */,
+			);
+			path = CrossDissolve;
+			sourceTree = "<group>";
+		};
+		134DEB5F26FDBD0D003B0E87 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				134DEB6026FDBD3B003B0E87 /* HDSwipeFirstViewController.h */,
+				134DEB6126FDBD3B003B0E87 /* HDSwipeFirstViewController.m */,
+				134DEB6626FDBEB9003B0E87 /* HDSwipeTransitionDelegate.h */,
+				134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */,
+				134DEB6326FDBDF8003B0E87 /* HDSwipeSecondViewController.h */,
+				134DEB6426FDBDF8003B0E87 /* HDSwipeSecondViewController.m */,
+				134DEB6926FDD7D9003B0E87 /* HDSwipeTransitionAnimator.h */,
+				134DEB6A26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m */,
+				134DEB6C26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.h */,
+				134DEB6D26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
 		13664068258649FD004EBC68 /* 倒计时label */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,8 +539,8 @@
 		13874C7A26FB139E0069271F /* AfteriOS8 */ = {
 			isa = PBXGroup;
 			children = (
-				13874C7C26FB13FE0069271F /* HDNewCustomTransitionVC.h */,
-				13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */,
+				134DEB5F26FDBD0D003B0E87 /* Swipe */,
+				134DEB5E26FDBCF6003B0E87 /* CrossDissolve */,
 			);
 			path = AfteriOS8;
 			sourceTree = "<group>";
@@ -656,15 +694,6 @@
 		B150DBD32286E0F400498D86 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				B18E3BAE2293A3B600D6E34B /* cjsss.json */,
-				B18E3BB02293A3B600D6E34B /* cjwyf.json */,
-				B18E3BAD2293A3B600D6E34B /* cjylf.json */,
-				B18E3BA82293A3B500D6E34B /* fff.json */,
-				B18E3BAF2293A3B600D6E34B /* tcdj.json */,
-				B18E3BAC2293A3B500D6E34B /* wan.json */,
-				B18E3BAA2293A3B500D6E34B /* ylf.json */,
-				B18E3BAB2293A3B500D6E34B /* ysys.json */,
-				B18E3BA92293A3B500D6E34B /* yymm.json */,
 				B150DBD82286E11600498D86 /* backbutton@2x.png */,
 				B150DBD72286E11600498D86 /* backbutton@3x.png */,
 				B150DBD42286E11600498D86 /* girl.png */,
@@ -1183,7 +1212,6 @@
 				B10DD5E223040C6E0063C80B /* 超级一路發.json in Resources */,
 				136D029F254ACE6F000B4DC3 /* mono.ttf in Resources */,
 				B10DD5D523040C6E0063C80B /* fff.json in Resources */,
-				B18E3BB92293A3B600D6E34B /* cjwyf.json in Resources */,
 				B10DD5CF23040C6E0063C80B /* 一生一世-h.json in Resources */,
 				B10DD5DD23040C6E0063C80B /* 超级一路發-h-X.json in Resources */,
 				B10DD5BE23040C6E0063C80B /* gift_连击.json in Resources */,
@@ -1191,12 +1219,9 @@
 				B18E3BA72293920D00D6E34B /* wytcdj.json in Resources */,
 				B10DD5DC23040C6E0063C80B /* button_gift_福袋.json in Resources */,
 				B10DD5E523040C6E0063C80B /* gift_烟花.json in Resources */,
-				B18E3BB62293A3B600D6E34B /* cjylf.json in Resources */,
-				B18E3BB82293A3B600D6E34B /* tcdj.json in Resources */,
 				B10DD5D123040C6E0063C80B /* button_gift_干杯.json in Resources */,
 				B10DD5D023040C6E0063C80B /* button_gift_跑车.json in Resources */,
 				B10DD5E323040C6E0063C80B /* 超级顺顺顺-h.json in Resources */,
-				B18E3BB12293A3B600D6E34B /* fff.json in Resources */,
 				B150DBDA2286E11700498D86 /* girl.png in Resources */,
 				B10DD5C523040C6E0063C80B /* ysys.json in Resources */,
 				B10DD5E423040C6E0063C80B /* button_gift_摇钱树.json in Resources */,
@@ -1206,8 +1231,6 @@
 				B10DD5E123040C6E0063C80B /* cjwyf.json in Resources */,
 				B10DD5DF23040C6E0063C80B /* gift_摇钱树.json in Resources */,
 				B1F5D11D21C2B9B9001D763B /* LaunchScreen.storyboard in Resources */,
-				B18E3BB52293A3B600D6E34B /* wan.json in Resources */,
-				B18E3BB42293A3B600D6E34B /* ysys.json in Resources */,
 				B10DD5D223040C6E0063C80B /* 超级一路發-h.json in Resources */,
 				B10DD5E823040C6E0063C80B /* button_gift_鼓掌.json in Resources */,
 				B10DD5DE23040C6E0063C80B /* button_gift_锦鲤.json in Resources */,
@@ -1223,7 +1246,6 @@
 				B150DBDD2286E11700498D86 /* backbutton@3x.png in Resources */,
 				B1AAB5C024178CBA002FDD9C /* Localizable.strings in Resources */,
 				B10DD5C323040C6E0063C80B /* 超级一路發-X.json in Resources */,
-				B18E3BB22293A3B600D6E34B /* yymm.json in Resources */,
 				B10DD5CC23040C6E0063C80B /* 超级我要發.json in Resources */,
 				B10DD5D623040C6E0063C80B /* yymm.json in Resources */,
 				B10DD5C723040C6E0063C80B /* button_gift_为你打call.json in Resources */,
@@ -1240,10 +1262,8 @@
 				B1F5D11A21C2B9B9001D763B /* Assets.xcassets in Resources */,
 				B10DD5E923040C6E0063C80B /* button_gift_幸运星.json in Resources */,
 				B10DD5D923040C6E0063C80B /* 一生一世.json in Resources */,
-				B18E3BB32293A3B600D6E34B /* ylf.json in Resources */,
 				B10DD5E023040C6E0063C80B /* button_gift_金话筒.json in Resources */,
 				B150DBDB2286E11700498D86 /* webRefreshButton@3x.png in Resources */,
-				B18E3BB72293A3B600D6E34B /* cjsss.json in Resources */,
 				B10DD5E723040C6E0063C80B /* 超级顺顺顺.json in Resources */,
 				B10DD5CA23040C6E0063C80B /* cjsss.json in Resources */,
 			);
@@ -1338,6 +1358,7 @@
 				B1954C692269DDE7005CEF6C /* TestOneModel.m in Sources */,
 				B1A9930222E9801B00B4E1AA /* HDNavBarOneViewController.m in Sources */,
 				B1E72F3B22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m in Sources */,
+				134DEB6226FDBD3B003B0E87 /* HDSwipeFirstViewController.m in Sources */,
 				B1A9931222E9E49000B4E1AA /* HDShowADViewsViewController.m in Sources */,
 				B164B78A226381DD0097AF63 /* HDViewController.m in Sources */,
 				B1FAA23C2313CF09008200C8 /* HDAutoADScrollView.m in Sources */,
@@ -1345,6 +1366,7 @@
 				B164B78D226382B20097AF63 /* HDViewController+Logging.m in Sources */,
 				133C4F3E26F488180091E252 /* HDCustomTransitionFirstVC.m in Sources */,
 				13DC575A23C5E36F00E20C5F /* HDOC_JSInteractionViewController.m in Sources */,
+				134DEB6526FDBDF8003B0E87 /* HDSwipeSecondViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B1BE371523FA86F8004B063D /* BTEvent.m in Sources */,
 				13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */,
@@ -1353,6 +1375,7 @@
 				B1B1475E22C9FB3B00A96AB9 /* HDHomePresenter.m in Sources */,
 				B16FE06F23546B52007E8B76 /* NSObject+SwizzleMethod.m in Sources */,
 				B16FE06C23546B25007E8B76 /* NSDictionary+ErrorHandle.m in Sources */,
+				134DEB6826FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m in Sources */,
 				B10DD5F0230410160063C80B /* constant.m in Sources */,
 				B1E72F3722DD80C600CD4FDD /* HDTools.m in Sources */,
 				B1CCC26E22DF204B00E9FE0D /* HDRedEnvelopeDataView.m in Sources */,
@@ -1372,6 +1395,7 @@
 				B1FAA24B23140B06008200C8 /* HDCustomTextADModel.m in Sources */,
 				B10342B522EED6860054A8B9 /* HDTestDeallocViewController.m in Sources */,
 				B1AAB5CB2417ABCC002FDD9C /* NSBundle+CLLanguage.m in Sources */,
+				134DEB6B26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m in Sources */,
 				13E3512526DE131100374157 /* HDStringCalculateCell.m in Sources */,
 				B1EAE61222E6B71400CB8BC7 /* MZFullScreenViewModel.m in Sources */,
 				B15AF2C82338A5DD004CB9C9 /* MZHomepageSegment.m in Sources */,
@@ -1383,6 +1407,7 @@
 				B148B6E72260A74700C8BFDA /* HDCheckArray.m in Sources */,
 				1346BBB02530196700B44E0B /* BBXMarginSliderView.m in Sources */,
 				B1CCC27322DF251E00E9FE0D /* HDNavigationController.m in Sources */,
+				134DEB5A26FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m in Sources */,
 				B1954C6C2269DE7C005CEF6C /* TestTwoModel.m in Sources */,
 				B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */,
 				B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */,
@@ -1394,6 +1419,7 @@
 				13E3512B26DE1C3300374157 /* NSString+BBXTool.m in Sources */,
 				B186049E2233EA3300C93644 /* HDNetworkTool.m in Sources */,
 				B1FAA2452313FDD9008200C8 /* HDAutoADCollectionViewCell.m in Sources */,
+				134DEB5726FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m in Sources */,
 				B107FCD921DFACED00AAF725 /* SubView.m in Sources */,
 				13E3513026DE279200374157 /* NSNumber+BBXExtend.m in Sources */,
 				B1FC070C224A3E1F0030FED3 /* NSObject+run.m in Sources */,
@@ -1407,6 +1433,7 @@
 				B16FE0682354678C007E8B76 /* HDFunctionViewController.m in Sources */,
 				B1FAA23F2313CF67008200C8 /* HDAutoADTableView.m in Sources */,
 				B10DD5ED23040F630063C80B /* HDFileManager.m in Sources */,
+				134DEB6E26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m in Sources */,
 				B1E72F3322DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m in Sources */,
 				137F4C9C23C876B500149B14 /* WebViewJavascriptBridgeBase.m in Sources */,
 				B13D7E69232229DB00C82848 /* HDCustomTableViewController.m in Sources */,
@@ -1416,6 +1443,7 @@
 				B13D7E6C232268B200C82848 /* MZHorizontalScrollTableViewCell.m in Sources */,
 				B1E72F2222DD791200CD4FDD /* HDRedEnvelopeViewController.m in Sources */,
 				13E3512826DE138E00374157 /* HDStringCalculateTableView.m in Sources */,
+				134DEB5D26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

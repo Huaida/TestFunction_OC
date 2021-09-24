@@ -7,6 +7,8 @@
 //
 
 #import "HDNewCustomTransitionVC.h"
+#import "HDCrossDissolveFirstViewController.h"
+#import "HDSwipeFirstViewController.h"
 
 @interface HDNewCustomTransitionVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -29,7 +31,10 @@
     tableView.dataSource = self;
     tableView.delegate = self;
 //    tableView.allowsMultipleSelection = YES;
-    tableView.editing = YES;
+//    tableView.editing = YES;
+    
+    tableView.allowsSelection = YES;
+    
     
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
@@ -59,6 +64,7 @@
                     break;
             }
         }
+            break;
         case 1:
         {
             switch (indexPath.row) {
@@ -132,15 +138,9 @@
     return header;
 }   // fixed font style. use custom view (UILabel) if you want something different
 - (nullable NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section;{
-    return @"";
+    return @"footer";
 }
-//
-//// Editing
-//
-//// Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;{
-    return YES;
-}
+
 //
 //// Moving/reordering
 //
@@ -151,15 +151,37 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
     
 }
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
 - (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath{
     return proposedDestinationIndexPath;
 }
 //必须把编辑模式改成None，默认的是delete
--(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-
-{
-    
-    return UITableViewCellEditingStyleNone;
-    
+//-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+//
+//{
+//
+//    return UITableViewCellEditingStyleNone;
+//
+//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *text = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+    NSLog(@"%@",text);
+    UIViewController *toVC;
+    if ([text isEqualToString:@"Cross Dissolve"]) {
+        toVC = [[HDCrossDissolveFirstViewController alloc] init];
+        
+    }
+    if ([text isEqualToString:@"Swipe"]) {
+        toVC = [[HDSwipeFirstViewController alloc] init];
+        
+    }
+    if (toVC) {
+        
+        [self presentViewController:toVC animated:YES completion:^{
+            
+        }];
+    }
 }
 @end
