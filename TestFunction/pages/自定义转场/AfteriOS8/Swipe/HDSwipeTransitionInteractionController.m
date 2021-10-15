@@ -98,7 +98,7 @@
 //| ----------------------------------------------------------------------------
 //! Action method for the gestureRecognizer.
 //
-- (IBAction)gestureRecognizeDidUpdate:(UIScreenEdgePanGestureRecognizer *)gestureRecognizer
+- (void)gestureRecognizeDidUpdate:(UIScreenEdgePanGestureRecognizer *)gestureRecognizer
 {
     switch (gestureRecognizer.state)
     {

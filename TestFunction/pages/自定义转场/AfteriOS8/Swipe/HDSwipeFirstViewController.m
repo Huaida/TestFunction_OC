@@ -9,7 +9,7 @@
 #import "HDSwipeFirstViewController.h"
 #import "HDSwipeSecondViewController.h"
 #import "HDSwipeTransitionDelegate.h"
-@interface HDSwipeFirstViewController ()
+@interface HDSwipeFirstViewController ()<HDSwipeSecondViewControllerDelegate>
 @property (nonatomic, strong) HDSwipeTransitionDelegate *customTransitionDelegate ;
 @end
 
@@ -21,23 +21,55 @@
     
     self.view.backgroundColor = [UIColor purpleColor];
     
+    
+//    初始化边缘滑动手势
     UIScreenEdgePanGestureRecognizer *interactiveTransitionRecognizer;
     interactiveTransitionRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(interactiveTransitionRecognizerAction:)];
     interactiveTransitionRecognizer.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:interactiveTransitionRecognizer];
+    
+//    NextButton
+    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:nextButton];
+    [nextButton setTitle:@"present with custom transition" forState:UIControlStateNormal];
+    [nextButton sizeToFit];
+    [nextButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-80);
+    }];
+    [nextButton addTarget:self action:@selector(presentVC:) forControlEvents:UIControlEventTouchUpInside];
+//    BackButton
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:backButton];
+    [backButton setTitle:@"BACk" forState:UIControlStateNormal];
+    [backButton sizeToFit];
+    [backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        
+    }];
+    [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
 }
+- (void)back{
+    [self dismissViewControllerAnimated:YES
+    completion:^{
+        
+    }];
+}
+
+#pragma mark - 手势触发方法
 - (void)interactiveTransitionRecognizerAction:(UIScreenEdgePanGestureRecognizer *)sender
 {
     if (sender.state == UIGestureRecognizerStateBegan){
-       [ self presentVC];
+        [ self presentVC:sender];
         
     }
     
     // Remaining cases are handled by the
     // AAPLSwipeTransitionInteractionController.
 }
-- (void)presentVC{
-    UIViewController *destinationViewController = [HDSwipeSecondViewController new];
+//手势触发收调用方方法
+- (void)presentVC:(UIScreenEdgePanGestureRecognizer *)sender{
+    HDSwipeSecondViewController *destinationViewController = [HDSwipeSecondViewController new];
     
     // Unlike in the Cross Dissolve demo, we use a separate object as the
     // transition delegate rather then (our)self.  This promotes
@@ -50,10 +82,10 @@
     // recognizer along to our AAPLSwipeTransitionDelegate instance
     // so it can return the necessary
     // <UIViewControllerInteractiveTransitioning> for the presentation.
-//    if ([sender isKindOfClass:UIGestureRecognizer.class])
-//        transitionDelegate.gestureRecognizer = sender;
-//    else
-//        transitionDelegate.gestureRecognizer = nil;
+    if ([sender isKindOfClass:UIGestureRecognizer.class])
+        transitionDelegate.gestureRecognizer = sender;
+    else
+        transitionDelegate.gestureRecognizer = nil;
     
     // Set the edge of the screen to present the incoming view controller
     // from.  This will match the edge we configured the
@@ -75,6 +107,7 @@
     // <ContextTransitioning> to provide more accurate initial and final
     // frames of the participating view controllers.
     destinationViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    destinationViewController.delegate = self;
     
     [self presentViewController:destinationViewController animated:YES completion:^{
             
@@ -87,6 +120,10 @@
     
     return _customTransitionDelegate;
 }
-
+- (void)dismissVC{
+    [self dismissViewControllerAnimated:YES completion:^{
+            
+    }];
+}
     
 @end

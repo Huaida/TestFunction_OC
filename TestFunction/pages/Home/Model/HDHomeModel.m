@@ -36,7 +36,7 @@
                        @[@"12 仿知乎页面切换",@"HDPageSwitchZHIHUViewController"],
                        @[@"13 子线程处理string计算，加千分位符",@"HDStringCalculationViewController"],
                        @[@"14 iOS 7 之前的VC切换",@"HDCustomTransitionViewController"],
-                       @[@"15 iOS 8 之后的VC切换",@"HDNewCustomTransitionVC"],
+                       @[@"15 iOS 7 开始的VC切换",@"HDNewCustomTransitionVC"],
                        ].mutableCopy;
     
     [self.delegate modelLoadDataSuccess:self.dataArray];

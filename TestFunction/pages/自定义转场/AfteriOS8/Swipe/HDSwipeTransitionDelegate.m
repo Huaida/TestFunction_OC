@@ -20,6 +20,7 @@
 //
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
+//    出现的时候动画
     return [[HDSwipeTransitionAnimator alloc] initWithTargetEdge:self.targetEdge];
 }
 
@@ -34,6 +35,7 @@
 //
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
+//    返回时的动画
     return [[HDSwipeTransitionAnimator alloc] initWithTargetEdge:self.targetEdge];
 }
 
@@ -53,8 +55,8 @@
     if (self.gestureRecognizer)
         return [[HDSwipeTransitionInteractionController alloc] initWithGestureRecognizer:self.gestureRecognizer edgeForDragging:self.targetEdge];
     else
-        return nil;
-}
+            return nil;
+    }
 
 
 //| ----------------------------------------------------------------------------

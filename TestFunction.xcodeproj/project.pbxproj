@@ -489,8 +489,6 @@
 				134DEB5626FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m */,
 				134DEB5826FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.h */,
 				134DEB5926FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m */,
-				13874C7C26FB13FE0069271F /* HDNewCustomTransitionVC.h */,
-				13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */,
 				134DEB5B26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.h */,
 				134DEB5C26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m */,
 			);
@@ -502,12 +500,12 @@
 			children = (
 				134DEB6026FDBD3B003B0E87 /* HDSwipeFirstViewController.h */,
 				134DEB6126FDBD3B003B0E87 /* HDSwipeFirstViewController.m */,
-				134DEB6626FDBEB9003B0E87 /* HDSwipeTransitionDelegate.h */,
-				134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */,
 				134DEB6326FDBDF8003B0E87 /* HDSwipeSecondViewController.h */,
 				134DEB6426FDBDF8003B0E87 /* HDSwipeSecondViewController.m */,
 				134DEB6926FDD7D9003B0E87 /* HDSwipeTransitionAnimator.h */,
 				134DEB6A26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m */,
+				134DEB6626FDBEB9003B0E87 /* HDSwipeTransitionDelegate.h */,
+				134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */,
 				134DEB6C26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.h */,
 				134DEB6D26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m */,
 			);
@@ -539,6 +537,8 @@
 		13874C7A26FB139E0069271F /* AfteriOS8 */ = {
 			isa = PBXGroup;
 			children = (
+				13874C7C26FB13FE0069271F /* HDNewCustomTransitionVC.h */,
+				13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */,
 				134DEB5F26FDBD0D003B0E87 /* Swipe */,
 				134DEB5E26FDBCF6003B0E87 /* CrossDissolve */,
 			);

@@ -46,6 +46,8 @@
     // presented view controller's view. The animator will animate the
     // decoration view instead and the presented view controller's view will
     // be a child of the decoration view.
+
+    //    获取到需要动画展示的两个页面
     if ([transitionContext respondsToSelector:@selector(viewForKey:)]) {
         fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
         toView = [transitionContext viewForKey:UITransitionContextToViewKey];
@@ -54,11 +56,19 @@
         toView = toViewController.view;
     }
     
-    fromView.frame = [transitionContext initialFrameForViewController:fromViewController];
-    toView.frame = [transitionContext finalFrameForViewController:toViewController];
+//    fromView.frame = [transitionContext initialFrameForViewController:fromViewController];
+//    toView.frame = [transitionContext finalFrameForViewController:toViewController];
+    CGRect finalFrame = [transitionContext finalFrameForViewController:toViewController];
+    toView.frame = CGRectOffset(finalFrame, 0, [UIScreen mainScreen].bounds.size.height);
+
+//    fromView.frame = [transitionContext initialFrameForViewController:toViewController];
+//    toView.frame = [transitionContext finalFrameForViewController:fromViewController];
     
-    fromView.alpha = 1.0f;
-    toView.alpha = 0.0f;
+//    fromView.frame = CGRectMake(0, 0, 100, 100);
+//    toView.frame = CGRectMake(0, 0, 100, 100);
+    
+//    fromView.alpha = 1.0f;
+//    toView.alpha = 0.0f;
     
     // We are responsible for adding the incoming view to the containerView
     // for the presentation/dismissal.
@@ -66,13 +76,28 @@
     
     NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
     
-    [UIView animateWithDuration:transitionDuration animations:^{
-        fromView.alpha = 0.0f;
-        toView.alpha = 1.0;
+//    [UIView animateWithDuration:transitionDuration animations:^{
+////        fromView.alpha = 0.0f;
+////        toView.alpha = 1.0;
+////        toView.backgroundColor = [UIColor greenColor];
+//
+//    } completion:^(BOOL finished) {
+//        // When we complete, tell the transition context
+//        // passing along the BOOL that indicates whether the transition
+//        // finished or not.
+//        BOOL wasCancelled = [transitionContext transitionWasCancelled];
+//        [transitionContext completeTransition:!wasCancelled];
+//    }];
+    [UIView animateWithDuration:transitionDuration
+    
+                          delay:0
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:0
+   
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+        toView.frame = finalFrame;
     } completion:^(BOOL finished) {
-        // When we complete, tell the transition context
-        // passing along the BOOL that indicates whether the transition
-        // finished or not.
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
         [transitionContext completeTransition:!wasCancelled];
     }];

@@ -52,7 +52,7 @@
 - (void)presentVC{
     HDCrossDissolveSecondViewController *secondVC = [HDCrossDissolveSecondViewController new];
     secondVC.modalPresentationStyle = UIModalPresentationCustom;
-    secondVC.transitioningDelegate = self;
+    secondVC.transitioningDelegate = self;//设置了代理，切换动画被控制
     [self presentViewController:secondVC animated:YES completion:^{
             
     }];
@@ -63,7 +63,7 @@
 
 //| ----------------------------------------------------------------------------
 //  The system calls this method on the presented view controller's
-//  transitioningDelegate to retrieve the animator object used for animating
+//  transitioningDelegate to retrieve（返回） the animator object used for animating
 //  the presentation of the incoming view controller.  Your implementation is
 //  expected to return an object that conforms to the
 //  UIViewControllerAnimatedTransitioning protocol, or nil if the default
