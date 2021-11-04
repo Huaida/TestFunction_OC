@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130BBFCC272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */; };
+		130BBFD0272BF5EA0005CF6B /* HDCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCF272BF5E90005CF6B /* HDCustomPresentationController.m */; };
+		130BBFD3272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFD2272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m */; };
 		131D6CEE24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
 		133C4F3726F44CA90091E252 /* HDCustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3626F44CA90091E252 /* HDCustomTransitionViewController.m */; };
 		133C4F3E26F488180091E252 /* HDCustomTransitionFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3926F488180091E252 /* HDCustomTransitionFirstVC.m */; };
@@ -172,6 +175,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130BBFCA272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomPresentationFirstViewController.h; sourceTree = "<group>"; };
+		130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomPresentationFirstViewController.m; sourceTree = "<group>"; };
+		130BBFCE272BF5E90005CF6B /* HDCustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomPresentationController.h; sourceTree = "<group>"; };
+		130BBFCF272BF5E90005CF6B /* HDCustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomPresentationController.m; sourceTree = "<group>"; };
+		130BBFD1272BF69B0005CF6B /* HDCustomPresentationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomPresentationSecondViewController.h; sourceTree = "<group>"; };
+		130BBFD2272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomPresentationSecondViewController.m; sourceTree = "<group>"; };
 		131D6CEC24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDPageSwitchZHIHUViewController.h; sourceTree = "<group>"; };
 		131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDPageSwitchZHIHUViewController.m; sourceTree = "<group>"; };
 		133C4F3526F44CA90091E252 /* HDCustomTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomTransitionViewController.h; sourceTree = "<group>"; };
@@ -455,6 +464,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130BBFC9272AAF810005CF6B /* Custom Presentaion */ = {
+			isa = PBXGroup;
+			children = (
+				130BBFCA272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.h */,
+				130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */,
+				130BBFD1272BF69B0005CF6B /* HDCustomPresentationSecondViewController.h */,
+				130BBFD2272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m */,
+				130BBFCE272BF5E90005CF6B /* HDCustomPresentationController.h */,
+				130BBFCF272BF5E90005CF6B /* HDCustomPresentationController.m */,
+			);
+			path = "Custom Presentaion";
+			sourceTree = "<group>";
+		};
 		131D6CEB24ADE58200C2DB2B /* pageSwitchZHIHU */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +561,7 @@
 			children = (
 				13874C7C26FB13FE0069271F /* HDNewCustomTransitionVC.h */,
 				13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */,
+				130BBFC9272AAF810005CF6B /* Custom Presentaion */,
 				134DEB5F26FDBD0D003B0E87 /* Swipe */,
 				134DEB5E26FDBCF6003B0E87 /* CrossDissolve */,
 			);
@@ -1369,6 +1392,7 @@
 				134DEB6526FDBDF8003B0E87 /* HDSwipeSecondViewController.m in Sources */,
 				B1B1477722CC91B900A96AB9 /* HDImageView.m in Sources */,
 				B1BE371523FA86F8004B063D /* BTEvent.m in Sources */,
+				130BBFD0272BF5EA0005CF6B /* HDCustomPresentationController.m in Sources */,
 				13E3512226DE0AE600374157 /* HDStringCalculationViewController.m in Sources */,
 				B10292F6229E535D0030B0A3 /* NSMutableArray+SafeForData.m in Sources */,
 				B1FAA23923138AE0008200C8 /* HDNavBarCaptureViewController.m in Sources */,
@@ -1389,6 +1413,7 @@
 				B1EEA313232659EF00C16268 /* MZSectionHeaderCollectionView.m in Sources */,
 				B1AAB5CF2417AD9E002FDD9C /* HDChangeLanguageViewController.m in Sources */,
 				B15CA64523050A8800434AC7 /* HDDownloadAnimationsPresenter.m in Sources */,
+				130BBFCC272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m in Sources */,
 				B107FCDF21E6F5E500AAF725 /* Person+Cat.m in Sources */,
 				B1FAA2422313E5B7008200C8 /* HDAutoADCollectionView.m in Sources */,
 				133C4F3F26F488180091E252 /* HDCustomTransitionThirdVC.m in Sources */,
@@ -1412,6 +1437,7 @@
 				B1ECF3B823570F5100268E39 /* HDContainerCollectionViewCell.m in Sources */,
 				B13A9FF5229BB78D00BC84EA /* HDBarrageSwitch.m in Sources */,
 				B13D7E662322299A00C82848 /* MZCustomTableView.m in Sources */,
+				130BBFD3272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m in Sources */,
 				B1A6BF2C22D8565A00AD35A2 /* HDADScrollView.m in Sources */,
 				B1F5D29A21C49DCA001D763B /* Person.m in Sources */,
 				B1F5D11221C2B9B9001D763B /* AppDelegate.m in Sources */,

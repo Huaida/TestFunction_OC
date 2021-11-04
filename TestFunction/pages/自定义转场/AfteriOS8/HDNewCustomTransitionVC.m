@@ -9,6 +9,7 @@
 #import "HDNewCustomTransitionVC.h"
 #import "HDCrossDissolveFirstViewController.h"
 #import "HDSwipeFirstViewController.h"
+#import "HDCustomPresentationFirstViewController.h"
 
 @interface HDNewCustomTransitionVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -175,7 +176,9 @@
     }
     if ([text isEqualToString:@"Swipe"]) {
         toVC = [[HDSwipeFirstViewController alloc] init];
-        
+    }
+    if ([text isEqualToString:@"Custom Presentation"]) {
+        toVC = [[HDCustomPresentationFirstViewController alloc] init];
     }
     if (toVC) {
         
