@@ -32,6 +32,8 @@
 #import "UIView+drawCornerRadius.h"
 
 // test
+///
+///4
 
 #define MakeColorRGB(hex)  ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
 
