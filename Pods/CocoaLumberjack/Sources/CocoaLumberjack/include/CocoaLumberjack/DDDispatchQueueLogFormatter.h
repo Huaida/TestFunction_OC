@@ -202,6 +202,11 @@ FOUNDATION_EXPORT DDQualityOfServiceName const DDQualityOfServiceUnspecified NS_
  */
 - (NSString *)queueThreadLabelForLogMessage:(DDLogMessage *)logMessage;
 
+/**
+ *  The actual method that formats a message (transforms a `DDLogMessage` model into a printable string)
+ */
+- (NSString *)formatLogMessage:(DDLogMessage *)logMessage;
+
 @end
 
 #pragma mark - DDAtomicCountable
