@@ -16,6 +16,11 @@ pod 'SSZipArchive'
 #pod 'YYText'
 pod 'YYKit'
 
+pod 'ReactiveObjC', '~> 3.0.0'
+pod 'JXCategoryView'
+pod 'JXPagingView/Pager'
+
+
 #  DoKit
   pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选
   pod 'DoraemonKit/WithGPS', '~> 3.0.4', :configurations => ['Debug'] #可选
