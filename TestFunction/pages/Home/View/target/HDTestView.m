@@ -18,7 +18,6 @@
     CGContextSetLineCap(context, kCGLineCapSquare);
     //设置线条粗细宽度
     CGContextSetLineWidth(context, 1.0);
-    
     //设置颜色
     CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
     //开始一个起始路径
@@ -36,5 +35,16 @@
     //连接上面定义的坐标点
     CGContextStrokePath(context);
 }
-
+-(instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        UILabel *label = [UILabel new];
+        [self addSubview:label];
+        label.frame = CGRectMake(0, 0, 300, 30);
+        label.text = @"target：TestFunction_copy";
+        label.textColor = UIColor.greenColor;
+        label.font = [UIFont systemFontOfSize:20];
+    }
+    return self;
+}
 @end

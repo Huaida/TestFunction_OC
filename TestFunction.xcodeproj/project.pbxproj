@@ -7,6 +7,171 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046C6B9927CFB86C0079C4A9 /* HDCustomTransitionSecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3C26F488180091E252 /* HDCustomTransitionSecondVC.m */; };
+		046C6B9A27CFB86C0079C4A9 /* HDNavBarFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930A22E983BF00B4E1AA /* HDNavBarFourViewController.m */; };
+		046C6B9B27CFB86C0079C4A9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930D22E9868F00B4E1AA /* BaseViewController.m */; };
+		046C6B9C27CFB86C0079C4A9 /* HDNewCustomTransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 13874C7D26FB13FE0069271F /* HDNewCustomTransitionVC.m */; };
+		046C6B9D27CFB86C0079C4A9 /* HDCustomTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3626F44CA90091E252 /* HDCustomTransitionViewController.m */; };
+		046C6B9E27CFB86C0079C4A9 /* HDDisableTouchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2E22DD7B9500CD4FDD /* HDDisableTouchTextField.m */; };
+		046C6BA027CFB86C0079C4A9 /* HDNavBarThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930722E983B500B4E1AA /* HDNavBarThreeViewController.m */; };
+		046C6BA127CFB86C0079C4A9 /* TestOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C682269DDE7005CEF6C /* TestOneModel.m */; };
+		046C6BA227CFB86C0079C4A9 /* HDNavBarOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930122E9801B00B4E1AA /* HDNavBarOneViewController.m */; };
+		046C6BA327CFB86C0079C4A9 /* HDRedEnvelopeErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F3A22DD983F00CD4FDD /* HDRedEnvelopeErrorModel.m */; };
+		046C6BA427CFB86C0079C4A9 /* HDSwipeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6126FDBD3B003B0E87 /* HDSwipeFirstViewController.m */; };
+		046C6BA527CFB86C0079C4A9 /* HDShowADViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9931122E9E49000B4E1AA /* HDShowADViewsViewController.m */; };
+		046C6BA627CFB86C0079C4A9 /* HDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B789226381DD0097AF63 /* HDViewController.m */; };
+		046C6BA727CFB86C0079C4A9 /* HDAutoADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA23B2313CF09008200C8 /* HDAutoADScrollView.m */; };
+		046C6BA827CFB86C0079C4A9 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDB21E5B25A00AAF725 /* Son.m */; };
+		046C6BA927CFB86C0079C4A9 /* HDViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = B164B78C226382B20097AF63 /* HDViewController+Logging.m */; };
+		046C6BAA27CFB86C0079C4A9 /* HDCustomTransitionFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3926F488180091E252 /* HDCustomTransitionFirstVC.m */; };
+		046C6BAB27CFB86C0079C4A9 /* HDOC_JSInteractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DC575923C5E36F00E20C5F /* HDOC_JSInteractionViewController.m */; };
+		046C6BAC27CFB86C0079C4A9 /* HDSwipeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6426FDBDF8003B0E87 /* HDSwipeSecondViewController.m */; };
+		046C6BAD27CFB86C0079C4A9 /* HDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1477622CC91B900A96AB9 /* HDImageView.m */; };
+		046C6BAE27CFB86C0079C4A9 /* BTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BE371323FA86F8004B063D /* BTEvent.m */; };
+		046C6BAF27CFB86C0079C4A9 /* HDCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCF272BF5E90005CF6B /* HDCustomPresentationController.m */; };
+		046C6BB027CFB86C0079C4A9 /* HDStringCalculationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512126DE0AE600374157 /* HDStringCalculationViewController.m */; };
+		046C6BB127CFB86C0079C4A9 /* NSMutableArray+SafeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = B10292F5229E535D0030B0A3 /* NSMutableArray+SafeForData.m */; };
+		046C6BB227CFB86C0079C4A9 /* HDNavBarCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA23823138AE0008200C8 /* HDNavBarCaptureViewController.m */; };
+		046C6BB327CFB86C0079C4A9 /* HDHomePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475D22C9FB3B00A96AB9 /* HDHomePresenter.m */; };
+		046C6BB427CFB86C0079C4A9 /* NSObject+SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06E23546B52007E8B76 /* NSObject+SwizzleMethod.m */; };
+		046C6BB527CFB86C0079C4A9 /* NSDictionary+ErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE06A23546B24007E8B76 /* NSDictionary+ErrorHandle.m */; };
+		046C6BB627CFB86C0079C4A9 /* HDSwipeTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6726FDBEB9003B0E87 /* HDSwipeTransitionDelegate.m */; };
+		046C6BB727CFB86C0079C4A9 /* constant.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EF230410160063C80B /* constant.m */; };
+		046C6BB827CFB86C0079C4A9 /* HDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F3622DD80C600CD4FDD /* HDTools.m */; };
+		046C6BB927CFB86C0079C4A9 /* HDRedEnvelopeDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26D22DF204B00E9FE0D /* HDRedEnvelopeDataView.m */; };
+		046C6BBA27CFB86C0079C4A9 /* HDAutoADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA24723140A96008200C8 /* HDAutoADModel.m */; };
+		046C6BBB27CFB86C0079C4A9 /* HDHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F1E22DD758E00CD4FDD /* HDHomeTableViewCell.m */; };
+		046C6BBC27CFB86C0079C4A9 /* UIView+drawCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D7D826E9F0F400987A2B /* UIView+drawCornerRadius.m */; };
+		046C6BBD27CFB86C0079C4A9 /* HDNavBarTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A9930322E9829E00B4E1AA /* HDNavBarTwoViewController.m */; };
+		046C6BBE27CFB86C0079C4A9 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B153A7A0226D91FD002A6184 /* NetworkTool.m */; };
+		046C6BBF27CFB86C0079C4A9 /* HDTestNavigationBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A992FD22E97A1500B4E1AA /* HDTestNavigationBarModel.m */; };
+		046C6BC027CFB86C0079C4A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11F21C2B9B9001D763B /* main.m */; };
+		046C6BC127CFB86C0079C4A9 /* MZSectionHeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EEA312232659EF00C16268 /* MZSectionHeaderCollectionView.m */; };
+		046C6BC227CFB86C0079C4A9 /* HDChangeLanguageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AAB5CE2417AD9E002FDD9C /* HDChangeLanguageViewController.m */; };
+		046C6BC327CFB86C0079C4A9 /* HDDownloadAnimationsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CA64423050A8800434AC7 /* HDDownloadAnimationsPresenter.m */; };
+		046C6BC427CFB86C0079C4A9 /* HDCustomPresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */; };
+		046C6BC527CFB86C0079C4A9 /* Person+Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCDE21E6F5E500AAF725 /* Person+Cat.m */; };
+		046C6BC627CFB86C0079C4A9 /* HDAutoADCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA2412313E5B7008200C8 /* HDAutoADCollectionView.m */; };
+		046C6BC727CFB86C0079C4A9 /* HDCustomTransitionThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 133C4F3B26F488180091E252 /* HDCustomTransitionThirdVC.m */; };
+		046C6BC827CFB86C0079C4A9 /* HDCustomTextADModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA24A23140B06008200C8 /* HDCustomTextADModel.m */; };
+		046C6BC927CFB86C0079C4A9 /* HDTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10342B422EED6860054A8B9 /* HDTestDeallocViewController.m */; };
+		046C6BCA27CFB86C0079C4A9 /* NSBundle+CLLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1AAB5C92417ABCC002FDD9C /* NSBundle+CLLanguage.m */; };
+		046C6BCB27CFB86C0079C4A9 /* HDSwipeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6A26FDD7D9003B0E87 /* HDSwipeTransitionAnimator.m */; };
+		046C6BCC27CFB86C0079C4A9 /* HDStringCalculateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512326DE131100374157 /* HDStringCalculateCell.m */; };
+		046C6BCD27CFB86C0079C4A9 /* MZFullScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE61122E6B71300CB8BC7 /* MZFullScreenViewModel.m */; };
+		046C6BCE27CFB86C0079C4A9 /* MZHomepageSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = B15AF2C72338A5DD004CB9C9 /* MZHomepageSegment.m */; };
+		046C6BCF27CFB86C0079C4A9 /* HDHomeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1475922C9FAA100A96AB9 /* HDHomeTableView.m */; };
+		046C6BD027CFB86C0079C4A9 /* HDPageSwitchZHIHUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131D6CED24ADE5C600C2DB2B /* HDPageSwitchZHIHUViewController.m */; };
+		046C6BD127CFB86C0079C4A9 /* HDSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BE371123FA86AC004B063D /* HDSignalViewController.m */; };
+		046C6BD227CFB86C0079C4A9 /* HDTestNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC26A22DF1C2C00E9FE0D /* HDTestNavigationBarViewController.m */; };
+		046C6BD327CFB86C0079C4A9 /* HDScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF542923151E3300B09ED3 /* HDScrollTextView.m */; };
+		046C6BD427CFB86C0079C4A9 /* HDCheckArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B148B6E62260A74700C8BFDA /* HDCheckArray.m */; };
+		046C6BD527CFB86C0079C4A9 /* BBXMarginSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1346BBAE2530196700B44E0B /* BBXMarginSliderView.m */; };
+		046C6BD627CFB86C0079C4A9 /* HDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CCC27222DF251E00E9FE0D /* HDNavigationController.m */; };
+		046C6BD727CFB86C0079C4A9 /* HDCrossDissolveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5926FDAE5D003B0E87 /* HDCrossDissolveSecondViewController.m */; };
+		046C6BD827CFB86C0079C4A9 /* TestTwoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1954C6B2269DE7C005CEF6C /* TestTwoModel.m */; };
+		046C6BD927CFB86C0079C4A9 /* HDContainerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1ECF3B723570F5100268E39 /* HDContainerCollectionViewCell.m */; };
+		046C6BDA27CFB86C0079C4A9 /* HDBarrageSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */; };
+		046C6BDB27CFB86C0079C4A9 /* MZCustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E652322299A00C82848 /* MZCustomTableView.m */; };
+		046C6BDC27CFB86C0079C4A9 /* HDCustomPresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFD2272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m */; };
+		046C6BDD27CFB86C0079C4A9 /* HDADScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A6BF2A22D8565A00AD35A2 /* HDADScrollView.m */; };
+		046C6BDE27CFB86C0079C4A9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D29921C49DCA001D763B /* Person.m */; };
+		046C6BDF27CFB86C0079C4A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5D11121C2B9B9001D763B /* AppDelegate.m */; };
+		046C6BE027CFB86C0079C4A9 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9623C876B500149B14 /* WebViewJavascriptBridge.m */; };
+		046C6BE127CFB86C0079C4A9 /* NSString+BBXTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512926DE1C3300374157 /* NSString+BBXTool.m */; };
+		046C6BE227CFB86C0079C4A9 /* HDNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B186049D2233EA3200C93644 /* HDNetworkTool.m */; };
+		046C6BE327CFB86C0079C4A9 /* HDAutoADCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA2442313FDD9008200C8 /* HDAutoADCollectionViewCell.m */; };
+		046C6BE427CFB86C0079C4A9 /* HDCrossDissolveFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5626FDA9A1003B0E87 /* HDCrossDissolveFirstViewController.m */; };
+		046C6BE527CFB86C0079C4A9 /* SubView.m in Sources */ = {isa = PBXBuildFile; fileRef = B107FCD821DFACED00AAF725 /* SubView.m */; };
+		046C6BE627CFB86C0079C4A9 /* NSNumber+BBXExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512F26DE279200374157 /* NSNumber+BBXExtend.m */; };
+		046C6BE727CFB86C0079C4A9 /* NSObject+run.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC070B224A3E1F0030FED3 /* NSObject+run.m */; };
+		046C6BE827CFB86C0079C4A9 /* HDHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B1476022C9FD1000A96AB9 /* HDHomeModel.m */; };
+		046C6BE927CFB86C0079C4A9 /* UIImage+drawCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D7D526E9E30900987A2B /* UIImage+drawCircle.m */; };
+		046C6BEA27CFB86C0079C4A9 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9523C876B500149B14 /* WKWebViewJavascriptBridge.m */; };
+		046C6BEB27CFB86C0079C4A9 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B150DBCE2285C22500498D86 /* WKWebViewController.m */; };
+		046C6BED27CFB86C0079C4A9 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9923C876B500149B14 /* WebViewJavascriptBridge_JS.m */; };
+		046C6BEE27CFB86C0079C4A9 /* HDDownloadAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD58623040B4B0063C80B /* HDDownloadAnimationViewController.m */; };
+		046C6BEF27CFB86C0079C4A9 /* HDFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16FE0672354678C007E8B76 /* HDFunctionViewController.m */; };
+		046C6BF027CFB86C0079C4A9 /* HDAutoADTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FAA23E2313CF67008200C8 /* HDAutoADTableView.m */; };
+		046C6BF127CFB86C0079C4A9 /* HDFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DD5EC23040F630063C80B /* HDFileManager.m */; };
+		046C6BF227CFB86C0079C4A9 /* HDSwipeTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB6D26FDDB18003B0E87 /* HDSwipeTransitionInteractionController.m */; };
+		046C6BF327CFB86C0079C4A9 /* HDGiveRedEnvelopePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F3122DD7C3500CD4FDD /* HDGiveRedEnvelopePresenter.m */; };
+		046C6BF427CFB86C0079C4A9 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 137F4C9423C876B500149B14 /* WebViewJavascriptBridgeBase.m */; };
+		046C6BF527CFB86C0079C4A9 /* HDCustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E68232229DB00C82848 /* HDCustomTableViewController.m */; };
+		046C6BF627CFB86C0079C4A9 /* HDNavigartionBarPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A992F922E9792300B4E1AA /* HDNavigartionBarPresenter.m */; };
+		046C6BF727CFB86C0079C4A9 /* HDPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF542423150AB400B09ED3 /* HDPageControl.m */; };
+		046C6BF827CFB86C0079C4A9 /* HDShowAsynchronismViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE60E22E6B5EC00CB8BC7 /* HDShowAsynchronismViewViewController.m */; };
+		046C6BF927CFB86C0079C4A9 /* MZHorizontalScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D7E6B232268B200C82848 /* MZHorizontalScrollTableViewCell.m */; };
+		046C6BFA27CFB86C0079C4A9 /* HDRedEnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E72F2122DD791200CD4FDD /* HDRedEnvelopeViewController.m */; };
+		046C6BFB27CFB86C0079C4A9 /* HDStringCalculateTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E3512626DE138E00374157 /* HDStringCalculateTableView.m */; };
+		046C6BFC27CFB86C0079C4A9 /* HDCrossDissolveTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 134DEB5C26FDB566003B0E87 /* HDCrossDissolveTransitionAnimator.m */; };
+		046C6BFE27CFB86C0079C4A9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17E6E3223043F9E003BC1F2 /* libz.tbd */; };
+		046C6BFF27CFB86C0079C4A9 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B18604A12233EAE300C93644 /* libSDWebImage.a */; };
+		046C6C0027CFB86C0079C4A9 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B186049F2233EADC00C93644 /* libAFNetworking.a */; };
+		046C6C0127CFB86C0079C4A9 /* libPods-TestFunction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B823C7A01753B3E9483091A /* libPods-TestFunction.a */; };
+		046C6C0327CFB86C0079C4A9 /* 圆圆满满.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A723040C6E0063C80B /* 圆圆满满.json */; };
+		046C6C0427CFB86C0079C4A9 /* 天长地久.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A623040C6E0063C80B /* 天长地久.json */; };
+		046C6C0527CFB86C0079C4A9 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD12286BC1100498D86 /* JStoOC.html */; };
+		046C6C0627CFB86C0079C4A9 /* 一生一世-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59023040C6D0063C80B /* 一生一世-X.json */; };
+		046C6C0727CFB86C0079C4A9 /* 超级一路發.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B123040C6E0063C80B /* 超级一路發.json */; };
+		046C6C0827CFB86C0079C4A9 /* mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 136D029E254ACE6F000B4DC3 /* mono.ttf */; };
+		046C6C0927CFB86C0079C4A9 /* fff.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A423040C6E0063C80B /* fff.json */; };
+		046C6C0A27CFB86C0079C4A9 /* 一生一世-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59E23040C6E0063C80B /* 一生一世-h.json */; };
+		046C6C0B27CFB86C0079C4A9 /* 超级一路發-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AC23040C6E0063C80B /* 超级一路發-h-X.json */; };
+		046C6C0C27CFB86C0079C4A9 /* gift_连击.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58D23040C6D0063C80B /* gift_连击.json */; };
+		046C6C0D27CFB86C0079C4A9 /* tcdj.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AA23040C6E0063C80B /* tcdj.json */; };
+		046C6C0E27CFB86C0079C4A9 /* wytcdj.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3BA62293920D00D6E34B /* wytcdj.json */; };
+		046C6C0F27CFB86C0079C4A9 /* button_gift_福袋.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AB23040C6E0063C80B /* button_gift_福袋.json */; };
+		046C6C1027CFB86C0079C4A9 /* gift_烟花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B423040C6E0063C80B /* gift_烟花.json */; };
+		046C6C1127CFB86C0079C4A9 /* button_gift_干杯.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A023040C6E0063C80B /* button_gift_干杯.json */; };
+		046C6C1227CFB86C0079C4A9 /* button_gift_跑车.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59F23040C6E0063C80B /* button_gift_跑车.json */; };
+		046C6C1327CFB86C0079C4A9 /* 超级顺顺顺-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B223040C6E0063C80B /* 超级顺顺顺-h.json */; };
+		046C6C1427CFB86C0079C4A9 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD42286E11600498D86 /* girl.png */; };
+		046C6C1527CFB86C0079C4A9 /* ysys.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59423040C6E0063C80B /* ysys.json */; };
+		046C6C1627CFB86C0079C4A9 /* button_gift_摇钱树.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B323040C6E0063C80B /* button_gift_摇钱树.json */; };
+		046C6C1727CFB86C0079C4A9 /* button_gift_给力.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59323040C6D0063C80B /* button_gift_给力.json */; };
+		046C6C1827CFB86C0079C4A9 /* 一生一世-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B923040C6E0063C80B /* 一生一世-h-X.json */; };
+		046C6C1927CFB86C0079C4A9 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD82286E11600498D86 /* backbutton@2x.png */; };
+		046C6C1A27CFB86C0079C4A9 /* cjwyf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B023040C6E0063C80B /* cjwyf.json */; };
+		046C6C1B27CFB86C0079C4A9 /* gift_摇钱树.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AE23040C6E0063C80B /* gift_摇钱树.json */; };
+		046C6C1C27CFB86C0079C4A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11B21C2B9B9001D763B /* LaunchScreen.storyboard */; };
+		046C6C1D27CFB86C0079C4A9 /* 超级一路發-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A123040C6E0063C80B /* 超级一路發-h.json */; };
+		046C6C1E27CFB86C0079C4A9 /* button_gift_鼓掌.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B723040C6E0063C80B /* button_gift_鼓掌.json */; };
+		046C6C1F27CFB86C0079C4A9 /* button_gift_锦鲤.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AD23040C6E0063C80B /* button_gift_锦鲤.json */; };
+		046C6C2027CFB86C0079C4A9 /* button_gift_金元宝.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58B23040C6D0063C80B /* button_gift_金元宝.json */; };
+		046C6C2127CFB86C0079C4A9 /* button_gift_加油.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59823040C6E0063C80B /* button_gift_加油.json */; };
+		046C6C2227CFB86C0079C4A9 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD92286E11700498D86 /* webRefreshButton@2x.png */; };
+		046C6C2327CFB86C0079C4A9 /* button_gift_皇冠.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59523040C6E0063C80B /* button_gift_皇冠.json */; };
+		046C6C2427CFB86C0079C4A9 /* button_gift_谢谢.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59C23040C6E0063C80B /* button_gift_谢谢.json */; };
+		046C6C2527CFB86C0079C4A9 /* button_gift_鲜花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B523040C6E0063C80B /* button_gift_鲜花.json */; };
+		046C6C2627CFB86C0079C4A9 /* cjsss_big.json in Resources */ = {isa = PBXBuildFile; fileRef = B18E3B962293898700D6E34B /* cjsss_big.json */; };
+		046C6C2727CFB86C0079C4A9 /* 圆圆满满-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58A23040C6D0063C80B /* 圆圆满满-h-X.json */; };
+		046C6C2827CFB86C0079C4A9 /* ylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A923040C6E0063C80B /* ylf.json */; };
+		046C6C2927CFB86C0079C4A9 /* backbutton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD72286E11600498D86 /* backbutton@3x.png */; };
+		046C6C2A27CFB86C0079C4A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B1AAB5C224178CBA002FDD9C /* Localizable.strings */; };
+		046C6C2B27CFB86C0079C4A9 /* 超级一路發-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59223040C6D0063C80B /* 超级一路發-X.json */; };
+		046C6C2C27CFB86C0079C4A9 /* 超级我要發.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59B23040C6E0063C80B /* 超级我要發.json */; };
+		046C6C2D27CFB86C0079C4A9 /* yymm.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A523040C6E0063C80B /* yymm.json */; };
+		046C6C2E27CFB86C0079C4A9 /* button_gift_为你打call.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59623040C6E0063C80B /* button_gift_为你打call.json */; };
+		046C6C2F27CFB86C0079C4A9 /* 圆圆满满-h.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59123040C6D0063C80B /* 圆圆满满-h.json */; };
+		046C6C3027CFB86C0079C4A9 /* 超级顺顺顺-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59D23040C6E0063C80B /* 超级顺顺顺-X.json */; };
+		046C6C3127CFB86C0079C4A9 /* button_gift_666.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59723040C6E0063C80B /* button_gift_666.json */; };
+		046C6C3227CFB86C0079C4A9 /* button_gift_烟花.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59A23040C6E0063C80B /* button_gift_烟花.json */; };
+		046C6C3327CFB86C0079C4A9 /* gift_跑车.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58E23040C6D0063C80B /* gift_跑车.json */; };
+		046C6C3427CFB86C0079C4A9 /* wan.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A323040C6E0063C80B /* wan.json */; };
+		046C6C3527CFB86C0079C4A9 /* 圆圆满满-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A223040C6E0063C80B /* 圆圆满满-X.json */; };
+		046C6C3627CFB86C0079C4A9 /* button_gift_么么哒.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58923040C6D0063C80B /* button_gift_么么哒.json */; };
+		046C6C3727CFB86C0079C4A9 /* 超级顺顺顺-h-X.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58F23040C6D0063C80B /* 超级顺顺顺-h-X.json */; };
+		046C6C3827CFB86C0079C4A9 /* cjylf.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD58C23040C6D0063C80B /* cjylf.json */; };
+		046C6C3927CFB86C0079C4A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1F5D11921C2B9B9001D763B /* Assets.xcassets */; };
+		046C6C3A27CFB86C0079C4A9 /* button_gift_幸运星.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B823040C6E0063C80B /* button_gift_幸运星.json */; };
+		046C6C3B27CFB86C0079C4A9 /* 一生一世.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5A823040C6E0063C80B /* 一生一世.json */; };
+		046C6C3C27CFB86C0079C4A9 /* button_gift_金话筒.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5AF23040C6E0063C80B /* button_gift_金话筒.json */; };
+		046C6C3D27CFB86C0079C4A9 /* webRefreshButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B150DBD52286E11600498D86 /* webRefreshButton@3x.png */; };
+		046C6C3E27CFB86C0079C4A9 /* 超级顺顺顺.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD5B623040C6E0063C80B /* 超级顺顺顺.json */; };
+		046C6C3F27CFB86C0079C4A9 /* cjsss.json in Resources */ = {isa = PBXBuildFile; fileRef = B10DD59923040C6E0063C80B /* cjsss.json */; };
+		046C6C4727CFBD3C0079C4A9 /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1353556426EB64EF002D9A53 /* HDHomeViewController.m */; };
+		046C6C4B27CFBE5B0079C4A9 /* HDTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C6C4927CFBE4D0079C4A9 /* HDTestView.m */; };
 		130BBFCC272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */; };
 		130BBFD0272BF5EA0005CF6B /* HDCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFCF272BF5E90005CF6B /* HDCustomPresentationController.m */; };
 		130BBFD3272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130BBFD2272BF69B0005CF6B /* HDCustomPresentationSecondViewController.m */; };
@@ -175,6 +340,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046C6C4527CFB86C0079C4A9 /* TestFunction_copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFunction_copy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046C6C4627CFB86C0079C4A9 /* TestFunction copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestFunction copy-Info.plist"; path = "/Users/mac/Desktop/Test_projects/TestFunction_OC/TestFunction copy-Info.plist"; sourceTree = "<absolute>"; };
+		046C6C4827CFBE4D0079C4A9 /* HDTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDTestView.h; sourceTree = "<group>"; };
+		046C6C4927CFBE4D0079C4A9 /* HDTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDTestView.m; sourceTree = "<group>"; };
 		130BBFCA272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomPresentationFirstViewController.h; sourceTree = "<group>"; };
 		130BBFCB272AB1FC0005CF6B /* HDCustomPresentationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDCustomPresentationFirstViewController.m; sourceTree = "<group>"; };
 		130BBFCE272BF5E90005CF6B /* HDCustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCustomPresentationController.h; sourceTree = "<group>"; };
@@ -450,6 +619,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		046C6BFD27CFB86C0079C4A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046C6BFE27CFB86C0079C4A9 /* libz.tbd in Frameworks */,
+				046C6BFF27CFB86C0079C4A9 /* libSDWebImage.a in Frameworks */,
+				046C6C0027CFB86C0079C4A9 /* libAFNetworking.a in Frameworks */,
+				046C6C0127CFB86C0079C4A9 /* libPods-TestFunction.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1F5D10A21C2B9B9001D763B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +644,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046C6C4C27CFBE790079C4A9 /* target_copy */ = {
+			isa = PBXGroup;
+			children = (
+				046C6C4827CFBE4D0079C4A9 /* HDTestView.h */,
+				046C6C4927CFBE4D0079C4A9 /* HDTestView.m */,
+			);
+			path = target_copy;
+			sourceTree = "<group>";
+		};
+		046C6C4D27CFC11C0079C4A9 /* target */ = {
+			isa = PBXGroup;
+			children = (
+				13A8D7D026E76A4300987A2B /* HDTestView.h */,
+				13A8D7D126E76A4300987A2B /* HDTestView.m */,
+			);
+			path = target;
+			sourceTree = "<group>";
+		};
 		130BBFC9272AAF810005CF6B /* Custom Presentaion */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,6 +1088,8 @@
 		B1B1475422C9F98000A96AB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				046C6C4D27CFC11C0079C4A9 /* target */,
+				046C6C4C27CFBE790079C4A9 /* target_copy */,
 				B1B1475B22C9FABA00A96AB9 /* layout */,
 				B164B788226381DD0097AF63 /* HDViewController.h */,
 				B164B789226381DD0097AF63 /* HDViewController.m */,
@@ -899,8 +1099,6 @@
 				1353556426EB64EF002D9A53 /* HDHomeViewController.m */,
 				B13A9FF3229BB78D00BC84EA /* HDBarrageSwitch.h */,
 				B13A9FF4229BB78D00BC84EA /* HDBarrageSwitch.m */,
-				13A8D7D026E76A4300987A2B /* HDTestView.h */,
-				13A8D7D126E76A4300987A2B /* HDTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1139,6 +1337,7 @@
 				B1F5D10E21C2B9B9001D763B /* Products */,
 				2E53F32AC740AB7BF22ACC8A /* Pods */,
 				79541E1C940988EB6C6C3244 /* Frameworks */,
+				046C6C4627CFB86C0079C4A9 /* TestFunction copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1146,6 +1345,7 @@
 			isa = PBXGroup;
 			children = (
 				B1F5D10D21C2B9B9001D763B /* TestFunction.app */,
+				046C6C4527CFB86C0079C4A9 /* TestFunction_copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1168,6 +1368,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		046C6B9627CFB86C0079C4A9 /* TestFunction_copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046C6C4227CFB86C0079C4A9 /* Build configuration list for PBXNativeTarget "TestFunction_copy" */;
+			buildPhases = (
+				046C6B9727CFB86C0079C4A9 /* [CP] Check Pods Manifest.lock */,
+				046C6B9827CFB86C0079C4A9 /* Sources */,
+				046C6BFD27CFB86C0079C4A9 /* Frameworks */,
+				046C6C0227CFB86C0079C4A9 /* Resources */,
+				046C6C4027CFB86C0079C4A9 /* [CP] Embed Pods Frameworks */,
+				046C6C4127CFB86C0079C4A9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestFunction_copy;
+			productName = TestFunction;
+			productReference = 046C6C4527CFB86C0079C4A9 /* TestFunction_copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B1F5D10C21C2B9B9001D763B /* TestFunction */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1F5D12321C2B9B9001D763B /* Build configuration list for PBXNativeTarget "TestFunction" */;
@@ -1198,6 +1418,9 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = white;
 				TargetAttributes = {
+					046C6B9627CFB86C0079C4A9 = {
+						ProvisioningStyle = Automatic;
+					};
 					B1F5D10C21C2B9B9001D763B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1219,11 +1442,80 @@
 			projectRoot = "";
 			targets = (
 				B1F5D10C21C2B9B9001D763B /* TestFunction */,
+				046C6B9627CFB86C0079C4A9 /* TestFunction_copy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		046C6C0227CFB86C0079C4A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046C6C0327CFB86C0079C4A9 /* 圆圆满满.json in Resources */,
+				046C6C0427CFB86C0079C4A9 /* 天长地久.json in Resources */,
+				046C6C0527CFB86C0079C4A9 /* JStoOC.html in Resources */,
+				046C6C0627CFB86C0079C4A9 /* 一生一世-X.json in Resources */,
+				046C6C0727CFB86C0079C4A9 /* 超级一路發.json in Resources */,
+				046C6C0827CFB86C0079C4A9 /* mono.ttf in Resources */,
+				046C6C0927CFB86C0079C4A9 /* fff.json in Resources */,
+				046C6C0A27CFB86C0079C4A9 /* 一生一世-h.json in Resources */,
+				046C6C0B27CFB86C0079C4A9 /* 超级一路發-h-X.json in Resources */,
+				046C6C0C27CFB86C0079C4A9 /* gift_连击.json in Resources */,
+				046C6C0D27CFB86C0079C4A9 /* tcdj.json in Resources */,
+				046C6C0E27CFB86C0079C4A9 /* wytcdj.json in Resources */,
+				046C6C0F27CFB86C0079C4A9 /* button_gift_福袋.json in Resources */,
+				046C6C1027CFB86C0079C4A9 /* gift_烟花.json in Resources */,
+				046C6C1127CFB86C0079C4A9 /* button_gift_干杯.json in Resources */,
+				046C6C1227CFB86C0079C4A9 /* button_gift_跑车.json in Resources */,
+				046C6C1327CFB86C0079C4A9 /* 超级顺顺顺-h.json in Resources */,
+				046C6C1427CFB86C0079C4A9 /* girl.png in Resources */,
+				046C6C1527CFB86C0079C4A9 /* ysys.json in Resources */,
+				046C6C1627CFB86C0079C4A9 /* button_gift_摇钱树.json in Resources */,
+				046C6C1727CFB86C0079C4A9 /* button_gift_给力.json in Resources */,
+				046C6C1827CFB86C0079C4A9 /* 一生一世-h-X.json in Resources */,
+				046C6C1927CFB86C0079C4A9 /* backbutton@2x.png in Resources */,
+				046C6C1A27CFB86C0079C4A9 /* cjwyf.json in Resources */,
+				046C6C1B27CFB86C0079C4A9 /* gift_摇钱树.json in Resources */,
+				046C6C1C27CFB86C0079C4A9 /* LaunchScreen.storyboard in Resources */,
+				046C6C1D27CFB86C0079C4A9 /* 超级一路發-h.json in Resources */,
+				046C6C1E27CFB86C0079C4A9 /* button_gift_鼓掌.json in Resources */,
+				046C6C1F27CFB86C0079C4A9 /* button_gift_锦鲤.json in Resources */,
+				046C6C2027CFB86C0079C4A9 /* button_gift_金元宝.json in Resources */,
+				046C6C2127CFB86C0079C4A9 /* button_gift_加油.json in Resources */,
+				046C6C2227CFB86C0079C4A9 /* webRefreshButton@2x.png in Resources */,
+				046C6C2327CFB86C0079C4A9 /* button_gift_皇冠.json in Resources */,
+				046C6C2427CFB86C0079C4A9 /* button_gift_谢谢.json in Resources */,
+				046C6C2527CFB86C0079C4A9 /* button_gift_鲜花.json in Resources */,
+				046C6C2627CFB86C0079C4A9 /* cjsss_big.json in Resources */,
+				046C6C2727CFB86C0079C4A9 /* 圆圆满满-h-X.json in Resources */,
+				046C6C2827CFB86C0079C4A9 /* ylf.json in Resources */,
+				046C6C2927CFB86C0079C4A9 /* backbutton@3x.png in Resources */,
+				046C6C2A27CFB86C0079C4A9 /* Localizable.strings in Resources */,
+				046C6C2B27CFB86C0079C4A9 /* 超级一路發-X.json in Resources */,
+				046C6C2C27CFB86C0079C4A9 /* 超级我要發.json in Resources */,
+				046C6C2D27CFB86C0079C4A9 /* yymm.json in Resources */,
+				046C6C2E27CFB86C0079C4A9 /* button_gift_为你打call.json in Resources */,
+				046C6C2F27CFB86C0079C4A9 /* 圆圆满满-h.json in Resources */,
+				046C6C3027CFB86C0079C4A9 /* 超级顺顺顺-X.json in Resources */,
+				046C6C3127CFB86C0079C4A9 /* button_gift_666.json in Resources */,
+				046C6C3227CFB86C0079C4A9 /* button_gift_烟花.json in Resources */,
+				046C6C3327CFB86C0079C4A9 /* gift_跑车.json in Resources */,
+				046C6C3427CFB86C0079C4A9 /* wan.json in Resources */,
+				046C6C3527CFB86C0079C4A9 /* 圆圆满满-X.json in Resources */,
+				046C6C3627CFB86C0079C4A9 /* button_gift_么么哒.json in Resources */,
+				046C6C3727CFB86C0079C4A9 /* 超级顺顺顺-h-X.json in Resources */,
+				046C6C3827CFB86C0079C4A9 /* cjylf.json in Resources */,
+				046C6C3927CFB86C0079C4A9 /* Assets.xcassets in Resources */,
+				046C6C3A27CFB86C0079C4A9 /* button_gift_幸运星.json in Resources */,
+				046C6C3B27CFB86C0079C4A9 /* 一生一世.json in Resources */,
+				046C6C3C27CFB86C0079C4A9 /* button_gift_金话筒.json in Resources */,
+				046C6C3D27CFB86C0079C4A9 /* webRefreshButton@3x.png in Resources */,
+				046C6C3E27CFB86C0079C4A9 /* 超级顺顺顺.json in Resources */,
+				046C6C3F27CFB86C0079C4A9 /* cjsss.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1F5D10B21C2B9B9001D763B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1295,6 +1587,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		046C6B9727CFB86C0079C4A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFunction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		046C6C4027CFB86C0079C4A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-frameworks.sh",
+				"${PODS_ROOT}/DoraemonKit/iOS/DoraemonKit/Framework/DoraemonLoadAnalyze.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonLoadAnalyze.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		046C6C4127CFB86C0079C4A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/DoraemonKit/DoraemonKit.bundle",
+				"${PODS_ROOT}/GCDWebServer/GCDWebUploader/GCDWebUploader.bundle",
+				"${PODS_ROOT}/WeexSDK/pre-build/native-bundle-main.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-main-jsfm.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-polyfill.js",
+				"${PODS_ROOT}/WeexSDK/pre-build/weex-rax-api.js",
+				"${PODS_ROOT}/WeexSDK/ios/sdk/WeexSDK/Resources/wx_load_error@3x.png",
+				"${PODS_ROOT}/YYDebugDatabase/DebugDatabase/Web.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DoraemonKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GCDWebUploader.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/native-bundle-main.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-main-jsfm.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-polyfill.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/weex-rax-api.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/wx_load_error@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Web.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFunction/Pods-TestFunction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8EBBEC5E3464E321966BFE60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1366,6 +1726,113 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		046C6B9827CFB86C0079C4A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046C6B9927CFB86C0079C4A9 /* HDCustomTransitionSecondVC.m in Sources */,
+				046C6B9A27CFB86C0079C4A9 /* HDNavBarFourViewController.m in Sources */,
+				046C6B9B27CFB86C0079C4A9 /* BaseViewController.m in Sources */,
+				046C6B9C27CFB86C0079C4A9 /* HDNewCustomTransitionVC.m in Sources */,
+				046C6B9D27CFB86C0079C4A9 /* HDCustomTransitionViewController.m in Sources */,
+				046C6B9E27CFB86C0079C4A9 /* HDDisableTouchTextField.m in Sources */,
+				046C6BA027CFB86C0079C4A9 /* HDNavBarThreeViewController.m in Sources */,
+				046C6BA127CFB86C0079C4A9 /* TestOneModel.m in Sources */,
+				046C6BA227CFB86C0079C4A9 /* HDNavBarOneViewController.m in Sources */,
+				046C6BA327CFB86C0079C4A9 /* HDRedEnvelopeErrorModel.m in Sources */,
+				046C6BA427CFB86C0079C4A9 /* HDSwipeFirstViewController.m in Sources */,
+				046C6BA527CFB86C0079C4A9 /* HDShowADViewsViewController.m in Sources */,
+				046C6BA627CFB86C0079C4A9 /* HDViewController.m in Sources */,
+				046C6BA727CFB86C0079C4A9 /* HDAutoADScrollView.m in Sources */,
+				046C6BA827CFB86C0079C4A9 /* Son.m in Sources */,
+				046C6BA927CFB86C0079C4A9 /* HDViewController+Logging.m in Sources */,
+				046C6BAA27CFB86C0079C4A9 /* HDCustomTransitionFirstVC.m in Sources */,
+				046C6BAB27CFB86C0079C4A9 /* HDOC_JSInteractionViewController.m in Sources */,
+				046C6BAC27CFB86C0079C4A9 /* HDSwipeSecondViewController.m in Sources */,
+				046C6BAD27CFB86C0079C4A9 /* HDImageView.m in Sources */,
+				046C6BAE27CFB86C0079C4A9 /* BTEvent.m in Sources */,
+				046C6BAF27CFB86C0079C4A9 /* HDCustomPresentationController.m in Sources */,
+				046C6BB027CFB86C0079C4A9 /* HDStringCalculationViewController.m in Sources */,
+				046C6BB127CFB86C0079C4A9 /* NSMutableArray+SafeForData.m in Sources */,
+				046C6BB227CFB86C0079C4A9 /* HDNavBarCaptureViewController.m in Sources */,
+				046C6BB327CFB86C0079C4A9 /* HDHomePresenter.m in Sources */,
+				046C6BB427CFB86C0079C4A9 /* NSObject+SwizzleMethod.m in Sources */,
+				046C6BB527CFB86C0079C4A9 /* NSDictionary+ErrorHandle.m in Sources */,
+				046C6BB627CFB86C0079C4A9 /* HDSwipeTransitionDelegate.m in Sources */,
+				046C6BB727CFB86C0079C4A9 /* constant.m in Sources */,
+				046C6BB827CFB86C0079C4A9 /* HDTools.m in Sources */,
+				046C6BB927CFB86C0079C4A9 /* HDRedEnvelopeDataView.m in Sources */,
+				046C6BBA27CFB86C0079C4A9 /* HDAutoADModel.m in Sources */,
+				046C6BBB27CFB86C0079C4A9 /* HDHomeTableViewCell.m in Sources */,
+				046C6BBC27CFB86C0079C4A9 /* UIView+drawCornerRadius.m in Sources */,
+				046C6BBD27CFB86C0079C4A9 /* HDNavBarTwoViewController.m in Sources */,
+				046C6BBE27CFB86C0079C4A9 /* NetworkTool.m in Sources */,
+				046C6BBF27CFB86C0079C4A9 /* HDTestNavigationBarModel.m in Sources */,
+				046C6BC027CFB86C0079C4A9 /* main.m in Sources */,
+				046C6BC127CFB86C0079C4A9 /* MZSectionHeaderCollectionView.m in Sources */,
+				046C6BC227CFB86C0079C4A9 /* HDChangeLanguageViewController.m in Sources */,
+				046C6BC327CFB86C0079C4A9 /* HDDownloadAnimationsPresenter.m in Sources */,
+				046C6BC427CFB86C0079C4A9 /* HDCustomPresentationFirstViewController.m in Sources */,
+				046C6BC527CFB86C0079C4A9 /* Person+Cat.m in Sources */,
+				046C6BC627CFB86C0079C4A9 /* HDAutoADCollectionView.m in Sources */,
+				046C6BC727CFB86C0079C4A9 /* HDCustomTransitionThirdVC.m in Sources */,
+				046C6BC827CFB86C0079C4A9 /* HDCustomTextADModel.m in Sources */,
+				046C6BC927CFB86C0079C4A9 /* HDTestDeallocViewController.m in Sources */,
+				046C6BCA27CFB86C0079C4A9 /* NSBundle+CLLanguage.m in Sources */,
+				046C6BCB27CFB86C0079C4A9 /* HDSwipeTransitionAnimator.m in Sources */,
+				046C6BCC27CFB86C0079C4A9 /* HDStringCalculateCell.m in Sources */,
+				046C6BCD27CFB86C0079C4A9 /* MZFullScreenViewModel.m in Sources */,
+				046C6BCE27CFB86C0079C4A9 /* MZHomepageSegment.m in Sources */,
+				046C6BCF27CFB86C0079C4A9 /* HDHomeTableView.m in Sources */,
+				046C6BD027CFB86C0079C4A9 /* HDPageSwitchZHIHUViewController.m in Sources */,
+				046C6BD127CFB86C0079C4A9 /* HDSignalViewController.m in Sources */,
+				046C6BD227CFB86C0079C4A9 /* HDTestNavigationBarViewController.m in Sources */,
+				046C6BD327CFB86C0079C4A9 /* HDScrollTextView.m in Sources */,
+				046C6BD427CFB86C0079C4A9 /* HDCheckArray.m in Sources */,
+				046C6BD527CFB86C0079C4A9 /* BBXMarginSliderView.m in Sources */,
+				046C6BD627CFB86C0079C4A9 /* HDNavigationController.m in Sources */,
+				046C6BD727CFB86C0079C4A9 /* HDCrossDissolveSecondViewController.m in Sources */,
+				046C6BD827CFB86C0079C4A9 /* TestTwoModel.m in Sources */,
+				046C6BD927CFB86C0079C4A9 /* HDContainerCollectionViewCell.m in Sources */,
+				046C6BDA27CFB86C0079C4A9 /* HDBarrageSwitch.m in Sources */,
+				046C6BDB27CFB86C0079C4A9 /* MZCustomTableView.m in Sources */,
+				046C6BDC27CFB86C0079C4A9 /* HDCustomPresentationSecondViewController.m in Sources */,
+				046C6BDD27CFB86C0079C4A9 /* HDADScrollView.m in Sources */,
+				046C6BDE27CFB86C0079C4A9 /* Person.m in Sources */,
+				046C6BDF27CFB86C0079C4A9 /* AppDelegate.m in Sources */,
+				046C6BE027CFB86C0079C4A9 /* WebViewJavascriptBridge.m in Sources */,
+				046C6BE127CFB86C0079C4A9 /* NSString+BBXTool.m in Sources */,
+				046C6BE227CFB86C0079C4A9 /* HDNetworkTool.m in Sources */,
+				046C6BE327CFB86C0079C4A9 /* HDAutoADCollectionViewCell.m in Sources */,
+				046C6BE427CFB86C0079C4A9 /* HDCrossDissolveFirstViewController.m in Sources */,
+				046C6BE527CFB86C0079C4A9 /* SubView.m in Sources */,
+				046C6BE627CFB86C0079C4A9 /* NSNumber+BBXExtend.m in Sources */,
+				046C6BE727CFB86C0079C4A9 /* NSObject+run.m in Sources */,
+				046C6BE827CFB86C0079C4A9 /* HDHomeModel.m in Sources */,
+				046C6BE927CFB86C0079C4A9 /* UIImage+drawCircle.m in Sources */,
+				046C6BEA27CFB86C0079C4A9 /* WKWebViewJavascriptBridge.m in Sources */,
+				046C6BEB27CFB86C0079C4A9 /* WKWebViewController.m in Sources */,
+				046C6BED27CFB86C0079C4A9 /* WebViewJavascriptBridge_JS.m in Sources */,
+				046C6BEE27CFB86C0079C4A9 /* HDDownloadAnimationViewController.m in Sources */,
+				046C6BEF27CFB86C0079C4A9 /* HDFunctionViewController.m in Sources */,
+				046C6BF027CFB86C0079C4A9 /* HDAutoADTableView.m in Sources */,
+				046C6BF127CFB86C0079C4A9 /* HDFileManager.m in Sources */,
+				046C6BF227CFB86C0079C4A9 /* HDSwipeTransitionInteractionController.m in Sources */,
+				046C6BF327CFB86C0079C4A9 /* HDGiveRedEnvelopePresenter.m in Sources */,
+				046C6BF427CFB86C0079C4A9 /* WebViewJavascriptBridgeBase.m in Sources */,
+				046C6BF527CFB86C0079C4A9 /* HDCustomTableViewController.m in Sources */,
+				046C6BF627CFB86C0079C4A9 /* HDNavigartionBarPresenter.m in Sources */,
+				046C6C4727CFBD3C0079C4A9 /* HDHomeViewController.m in Sources */,
+				046C6BF727CFB86C0079C4A9 /* HDPageControl.m in Sources */,
+				046C6BF827CFB86C0079C4A9 /* HDShowAsynchronismViewViewController.m in Sources */,
+				046C6BF927CFB86C0079C4A9 /* MZHorizontalScrollTableViewCell.m in Sources */,
+				046C6C4B27CFBE5B0079C4A9 /* HDTestView.m in Sources */,
+				046C6BFA27CFB86C0079C4A9 /* HDRedEnvelopeViewController.m in Sources */,
+				046C6BFB27CFB86C0079C4A9 /* HDStringCalculateTableView.m in Sources */,
+				046C6BFC27CFB86C0079C4A9 /* HDCrossDissolveTransitionAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1F5D10921C2B9B9001D763B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1496,6 +1963,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		046C6C4327CFB86C0079C4A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D523E5FAB604D4BFF4440BF /* Pods-TestFunction.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEVELOPMENT_TEAM = ZYZK25W38T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TATGET_COPY=1",
+				);
+				INFOPLIST_FILE = "TestFunction copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		046C6C4427CFB86C0079C4A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F25502DE0976FAA6BEA1EE1 /* Pods-TestFunction.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEVELOPMENT_TEAM = ZYZK25W38T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TATGET_COPY=1",
+				);
+				INFOPLIST_FILE = "TestFunction copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
 		B1F5D12121C2B9B9001D763B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1617,6 +2136,11 @@
 				DEVELOPMENT_TEAM = ZYZK25W38T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TATGET_MAIN=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction2;
@@ -1638,6 +2162,11 @@
 				DEVELOPMENT_TEAM = ZYZK25W38T;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/TestFunction.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TATGET_MAIN=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TestFunction/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.white.TestFunction2;
@@ -1651,6 +2180,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		046C6C4227CFB86C0079C4A9 /* Build configuration list for PBXNativeTarget "TestFunction_copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046C6C4327CFB86C0079C4A9 /* Debug */,
+				046C6C4427CFB86C0079C4A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B1F5D10821C2B9B9001D763B /* Build configuration list for PBXProject "TestFunction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -76,12 +76,12 @@ typedef void (^someBlock)(void);
      
 
 //    模拟点击第N个cell
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:15 inSection:0];
-
-        [self.tableView tableView:self.tableView didSelectRowAtIndexPath:indexPath];
-
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:15 inSection:0];
+//
+//        [self.tableView tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+//
+//    });
 
     
     
@@ -150,12 +150,27 @@ typedef void (^someBlock)(void);
 //    [self  testStandardNumber];
 //    [self testOFFScreenRedering];
 //    [self testSubThreadDrawCircle];
-    
+    [self testDifferentTarget];
     
     
     
     CFAbsoluteTime time = CFAbsoluteTimeGetCurrent() - first;
         NSLog(@"testSubThreadDrawCircle：%f ms",time*1000.0);
+}
+- (void)testDifferentTarget{
+    HDTestView *testView =[[HDTestView alloc] initWithFrame:CGRectMake(50, 100, 500, 250)];
+        [self.view addSubview:testView];
+    
+//    testView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"testImage2"]];
+    
+#if TATGET_MAIN
+    testView.backgroundColor = UIColor.blueColor;
+#endif
+    
+#if TATGET_COPY
+    testView.backgroundColor = UIColor.yellowColor;
+#endif
+    
 }
 - (void)testSubThreadDrawCircle{
     
