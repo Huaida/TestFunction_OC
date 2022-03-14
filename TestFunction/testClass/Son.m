@@ -28,7 +28,7 @@
 }
 - (instancetype)init{
     if (self = [super init]) {
-        self.btn = [[UIButton alloc] init];
+//        self.btn = [[UIButton alloc] init];
 //        [self.btn addTarget:self action:@selector(btnPress) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;

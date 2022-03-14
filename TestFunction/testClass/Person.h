@@ -9,13 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface Person : NSObject<NSCopying>
+@interface SubClass1 : NSObject<NSSecureCoding>
+@property (nonatomic,copy) NSString *name;
+@property (nonatomic,assign) int age;
+
+@end
+
+@interface Person : NSObject<NSCopying,NSCoding,NSSecureCoding>
 //{
 //    NSString *name;
 //}
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,assign) int age;
-@property (nonatomic, strong) UIButton *btn;
+//@property (nonatomic, strong) UIButton *btn;
+
+@property (nonatomic, strong) SubClass1 *sub;
 
 //@synthesize NSString *name = _name;
 - (void)run;

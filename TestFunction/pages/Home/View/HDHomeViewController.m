@@ -154,12 +154,40 @@ typedef void (^someBlock)(void);
 //    [self  testStandardNumber];
 //    [self testOFFScreenRedering];
 //    [self testSubThreadDrawCircle];
-    [self testDifferentTarget];
+//    [self testDifferentTarget];
+    [self testArchive];
     
     
     
     CFAbsoluteTime time = CFAbsoluteTimeGetCurrent() - first;
         NSLog(@"testSubThreadDrawCircle：%f ms",time*1000.0);
+}
+- (void)testArchive{
+    Person *p = [Person new];
+    p.name = @"zhangsan";
+    p.age = 19;
+    
+    SubClass1 *sub = [SubClass1 new];
+    sub.name = @"sub1";
+    sub.age = 16;
+    
+    p.sub = sub;
+    
+    NSError * error = nil;
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:p requiringSecureCoding:YES error:&error];
+    if (error) {
+        NSLog(@"归档失败error---%@",[error localizedDescription]);
+    }
+    NSLog(@"%@",data);
+    
+    NSError * error2 = nil;
+    
+    id model = [NSKeyedUnarchiver unarchivedObjectOfClass:Person.class fromData:data error:&error];
+    if (error2) {
+        NSLog(@"解档失败error---%@",[error2 localizedDescription]);
+    }
+    NSLog(@"getModel %@",model);
+    
 }
 - (void)testDifferentTarget{
     HDTestView *testView =[[HDTestView alloc] initWithFrame:CGRectMake(50, 100, 500, 250)];
@@ -606,9 +634,9 @@ typedef void (^someBlock)(void);
 //    [s run];
     self.son = s;
     
-    self.son.btn.frame = CGRectMake(100, 100, 100, 100);
-    self.son.btn.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:self.son.btn];
+//    self.son.btn.frame = CGRectMake(100, 100, 100, 100);
+//    self.son.btn.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:self.son.btn];
 }
 - (void)setState{
     self.button.selected = !self.button.selected;

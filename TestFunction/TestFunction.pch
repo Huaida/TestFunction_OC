@@ -47,4 +47,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #import "NSString+BBXTool.h"
 #import "NSNumber+BBXExtend.h"
 
+#import <YYKit/YYKit.h>
+
 #endif /* TestFunction_h */
